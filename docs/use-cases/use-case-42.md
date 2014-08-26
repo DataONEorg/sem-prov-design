@@ -43,12 +43,9 @@ get ..> query: <<includes>>
      mn_api <- mn_api: bytes
      app_client <- mn_api: bytes
      
-     == Query Event == 
+     == Query for Derivations of this Dataset == 
        
      app_client -> cn_api: query(session, query)
-     note right of app_client
-     query for any derived datasets
-     end note
      activate cn_api
 	   cn_api -> cn_api: search -> objectList
 	   note right of cn_api
