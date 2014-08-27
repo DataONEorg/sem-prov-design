@@ -43,7 +43,7 @@ get ..> query: <<includes>>
      mn_api <- mn_api: bytes
      app_client <- mn_api: bytes
      
-     == Query for Derivations of this Dataset == 
+     == Query for the Primary Sources of this Dataset == 
        
      app_client -> cn_api: query(session, query)
      activate cn_api
