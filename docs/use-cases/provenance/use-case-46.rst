@@ -32,7 +32,7 @@ and the associated provenance
 relationship between the script and the input dataset is captured. This dataset is 
 then used to create a derived dataset, then the provenance relationship between the script and derived dataset is recorded.
 
-.. image:: sequence-46.png
+.. image:: images/sequence-46.png
 
 Preconditions
 -------------
