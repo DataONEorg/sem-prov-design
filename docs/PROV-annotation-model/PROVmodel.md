@@ -41,13 +41,14 @@ This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR
  Entity 	   | Data, Visualization, Program	
  Activity          | Execution
  
+ 
  | PROV-O Properties |
 |-------------------|
-|  hadPlan 	   	   |	
-| used			   |
-| wasAssociatedWith | 
+|  hadPlan 	    |	
+| used	  	    |
+| wasAssociatedWith |
 | wasDerivedFrom    |
-| wasGeneratedBy	|
+| wasGeneratedBy    |
 | wasInformedBy     |
  
 
