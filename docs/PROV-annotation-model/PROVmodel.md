@@ -27,7 +27,7 @@ This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR
 	* **Subclass** [Plan](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan)
 		* PROV-O definition: A plan is an entity that represents a set of actions or steps intended by one or more agents to achieve some goals.
 			* Note from PROV-O:
-				> Since plans may evolve over time, it may become necessary to track their provenance, so plans themselves are entities. Representing the plan explicitly in the provenance can be useful for various tasks: for example, to validate the execution as represented in the provenance record, to manage expectation failures, or to provide explanations.
+			> Since plans may evolve over time, it may become necessary to track their provenance, so plans themselves are entities. Representing the plan explicitly in the provenance can be useful for various tasks: for example, to validate the execution as represented in the provenance record, to manage expectation failures, or to provide explanations.
 		* DataONE: A plan would most likely be a program, such as a script or code file.
 * [Activity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity)
 	* PROV-O definition: An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.
