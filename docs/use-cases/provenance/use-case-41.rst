@@ -117,11 +117,11 @@ Use Case Implementation Examples
 
 (… create DataONE data objects and a DataONE data package…)
 
-insertRelationship(data.package, id.result, c(id.script), "http://www.w3.org/ns/prov", "http://www.w3.org/ns/prov#wasGeneratedBy")
+    ``insertRelationship(data.package, id.result, c(id.script), "http://www.w3.org/ns/prov",      "http://www.w3.org/ns/prov#wasGeneratedBy")``
 
-insertRelationship(data.package, id.script, c(id.data), "http://www.w3.org/ns/prov", "http://www.w3.org/ns/prov#used")
+    ``insertRelationship(data.package, id.script, c(id.data), "http://www.w3.org/ns/prov", "http://www.w3.org/ns/prov#used")``
 
-insertRelationship(data.package, id.data, c(id.data2, id.data3), "http://www.w3.org/ns/prov", "http://www.w3.org/ns/prov#wasDerivedFrom")
+    ``insertRelationship(data.package, id.data, c(id.data2, id.data3), "http://www.w3.org/ns/prov", "http://www.w3.org/ns/prov#wasDerivedFrom")``
 
-createDataPackage(d1client, data.package)
+    ``createDataPackage(d1client, data.package)``
 
