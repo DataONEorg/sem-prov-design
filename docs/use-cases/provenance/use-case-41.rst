@@ -115,7 +115,7 @@ Use Case Implementation Examples
 
 * An R Client example of Use Case 41 (Scientists can provide tracking information about derived products):
 
-(… create DataONE data objects and a DataONE data package…)
+    #``(… create DataONE data objects and a DataONE data package…)``
 
     ``insertRelationship(data.package, id.result, c(id.script), "http://www.w3.org/ns/prov",      "http://www.w3.org/ns/prov#wasGeneratedBy")``
 
