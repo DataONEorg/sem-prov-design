@@ -95,3 +95,7 @@ Postconditions
 
 Notes
 -----
+User interface mockups of Use Cases 42, 43, and 44 are in PDF format here: 
+Science Metadata view: https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/images/metadata_view_with_use_cases.pdf?raw=true
+
+Data search view: https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/images/data_search_with_use_case.pdf?raw=true
