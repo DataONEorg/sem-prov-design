@@ -36,12 +36,22 @@ This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR
 		
 ## Model Specification
 
-### Classes
-
  PROV-O Superclass | DataONE Subclass |
 -------------------|------------------|
  Entity 	   | Data, Visualization, Program	
  Activity          | Execution
+ 
+ | PROV-O Properties |
+|-------------------|
+|  hadPlan 	   	   |	
+| used			   |
+| wasAssociatedWith | 
+| wasDerivedFrom    |
+| wasGeneratedBy	|
+| wasInformedBy     |
+ 
+
+### Classes
 
 
 ### Data class 
