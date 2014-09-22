@@ -21,17 +21,18 @@ The DataONE PROV data model will be used to describe the relationships between:
 This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR/prov-o/) to define classes of objects and the relationships between them. 
 
 ### Two classes and one subclass of objects are used in the DataONE PROV model:
-1. **[Entity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity)**
+1.) **[Entity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity)**
 	* PROV-O definition: An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.
 	* DataONE: An entity is a [DataONE object](http://mule1.dataone.org/ArchitectureDocs-current/overview.html), such as a data table, or scientific metadata.
-2. **Entity Subclass [Plan](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan)**
+	
+2.) **Entity Subclass [Plan](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan)**
 	* PROV-O definition: A plan is an entity that represents a set of actions or steps intended by one or more agents to achieve some goals.
 	* DataONE: A plan would most likely be a program, such as a script or code file.
 
 Note:
 > Since plans may evolve over time, it may become necessary to track their provenance, so plans themselves are entities. Representing the plan explicitly in the provenance can be useful for various tasks: for example, to validate the execution as represented in the provenance record, to manage expectation failures, or to provide explanations.
 
-3. **[Activity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity)**
+3.) **[Activity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity)**
 	* PROV-O definition: An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.
 	* DataONE: An activity represents a program execution and is stored as data about that execution.
 	
