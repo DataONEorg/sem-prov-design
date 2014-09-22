@@ -74,6 +74,8 @@ A scientist that has searched for data relevant to their studies has found a syn
       deactivate cn_api
 @enduml
 
+.. image:: images/42_seq.png
+
 Actors
 ------
 * Investigator
