@@ -22,6 +22,7 @@ This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR
 ##### [Activity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity) 
 PROV-O definition: An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.
 ##### [Entity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity)
+Prov-O definition: An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.
 ##### [Plan](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan) 
 PROV-O definition: A plan is an entity that represents a set of actions or steps intended by one or more agents to achieve some goals.
 ##### [Agent](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent) 
