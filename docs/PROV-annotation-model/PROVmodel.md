@@ -42,14 +42,15 @@ This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR
  Activity          | Execution
  
  
- | PROV-O Properties |
-|-------------------|
-|  hadPlan 	    |	
-| used	  	    |
-| wasAssociatedWith |
-| wasDerivedFrom    |
-| wasGeneratedBy    |
-| wasInformedBy     |
+ 
+PROV-O Properties 
+------------------
+  hadPlan 	    	
+ used	  	    
+ wasAssociatedWith 
+ wasDerivedFrom    
+ wasGeneratedBy    
+ wasInformedBy     
  
 
 ### Classes
