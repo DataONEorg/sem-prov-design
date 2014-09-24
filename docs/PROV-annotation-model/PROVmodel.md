@@ -11,6 +11,11 @@ The DataONE PROV data model will be used to describe the relationships between:
 ### Diagram of the PROV Model
 ![PROV Model Diagram](images/PROV_Annotation_Diagram.png)
 
+### Including the Association PROV-O entity
+![PROV Model Diagram](images/PROV_Annotation_Diagram_Association.png)
+See the [qualified terms figure](http://www.w3.org/TR/prov-o/#qualified-terms-figure) in the PROV-O documentation for details.
+From PROV-O:
+> Similarly in subfigure j, the prov:qualifiedAssociation property parallels the prov:wasAssociatedWith property and references an instance of prov:Association, which in turn provides attributes of the prov:wasAssociatedWith relation between the Activity and Agent. The prov:agent property is used to cite the Agent that influenced the Activity. In this case, the plan of actions and steps that the Agent used to achieve its goals is provided using the prov:hadPlan property and an instance of prov:Plan.  
 
 ### Diagram of a PROV Model Example
 ![PROV Model Diagram](images/PROV_Annotation_Diagram_Example.png)
