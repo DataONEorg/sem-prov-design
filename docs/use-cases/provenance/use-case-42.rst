@@ -15,6 +15,10 @@ Goal
 Scientists examining a derived dataset in DataONE are able to determine which dataset(s) from DataONE Member Nodes were used in the derivation and can examine those source datasets.
 
 
+Scenario
+--------
+"As a scientist, I want to be able to examine the original datasets used in a derived dataset I’ve found through DataONE so I can understand the history and composition of the derived dataset."
+
 Summary
 -------
 A scientist that has searched for data relevant to their studies has found a synthetic dataset in DataONE.  They are able to view the relationships between the original and derived datasets, and can download the originals for examination.

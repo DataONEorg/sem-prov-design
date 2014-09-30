@@ -12,6 +12,10 @@ Goal
 ----
 To assist reproducible science by providing a link between script or models, the input data used, and the generated output.
 
+Scenario
+--------
+"As a scientist reviewing derived tables or figures, I want to be able to examine the original datasets and the original script used to generate them so I can understand their history and composition."
+
 Summary
 -------
 A scientist reviewing a data table or figure in DataONE can discover the script or model that was used to generate it. The scientist can subsequently download and rerun the script to reproduce the same results as the original run.

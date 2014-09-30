@@ -15,6 +15,10 @@ Goal
 ----
 Scientist can track, list and examine script executions
 
+Scenario
+--------
+"As a data analyst using R or Matlab, I want to keep track of my data input files, data output files and scripts so I can review and compare my runs and the data products they produced."
+
 Summary
 -------
 The user specifies a script (or program, function, etc., as appropriate for their computing environment) for which provenance information will be collected. 

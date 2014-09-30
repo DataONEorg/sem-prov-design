@@ -14,6 +14,10 @@ Goal
 ----
 To provide a traceable link to derived works for each dataset.
 
+Scenario
+--------
+"As a scientist, I want to be able to find all derived datasets in DataONE that use my dataset so I can understand how my data are being used and by which colleagues."
+
 Summary
 -------
 A scientist that has uploaded their dataset to DataONE and has allowed derived works in their intellectual rights statement can view and understand which derived works have used their dataset.
