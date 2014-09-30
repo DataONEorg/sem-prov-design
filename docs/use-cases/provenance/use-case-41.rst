@@ -1,25 +1,28 @@
 
-===================
 DataONE Use Case 41
 ===================
 
-------------------------------------------------------------------
 Scientists can provide tracking information about derived products
 ------------------------------------------------------------------
 
 Revisions
 ---------
-2014-09-22-01
+2014-09-29-01
 
 Goal
 ----
 In DataONE-enabled client software, investigators can easily provide tracking information as they create new products from existing data files.
 
+Scenario
+--------
+"As a data analyst using R or Matlab, I want to keep track of my data input files, data output files and scripts so I can review my runs and potentially choose those to share with colleagues through an established DataONE repository."
 
 Summary
 -------
-Investigators can upload derived datasets to a Member Node and provide traceable links to the primary resources used to create them. Within scientific analysis environments (particularly R and Matlab), scientists can choose which input datasets to track in their workflow scripts, and can manage the product outputs of each run.
+In both R and Matlab, investigators can choose which input datasets to track in their workflow scripts, and can manage the product outputs of each run.  They can then review their runs and upload derived datasets to a DataONE Member Node repository and provide traceable links to the primary datasets used to create them.  
 
+Use Case Diagram
+----------------
 .. 
     @startuml images/41_uc.png       
       actor "Investigator" as client 
@@ -48,6 +51,8 @@ Investigators can upload derived datasets to a Member Node and provide traceable
 
 .. image:: images/41_uc.png
 
+Sequence Diagram
+----------------
 .. 
     @startuml images/41_seq.png 
         Actor Investigator 
