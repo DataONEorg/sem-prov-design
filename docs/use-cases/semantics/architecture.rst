@@ -30,104 +30,105 @@ The [OA ontology](http://www.openannotation.org/spec/core/) will be used to capt
 Proposed components
 --------------------
 
+.. image:: images/semantic_architecture.png
+
 ..
 
-@startuml images/semantic_architecture.png  
-  participant "Ontology repository" as ontrepo
-  participant "Annotation generator" as autoann
-  participant "Object Store" as store
-  participant "[Triple Store]" as triplestore
-  participant "Index" as index  
-  participant "Web UI" as webui
-  actor "User" as user
-    
-  note left of ontrepo: e.g., BioPortal
-  note left of autoann: TBD
-  note left of store: e.g., Metacat
-  note left of triplestore: e.g., Jena  
-  note left of index: e.g., SOLR
-  note left of webui: e.g., MetacatUI
+	@startuml images/semantic_architecture.png  
+	  participant "Ontology repository" as ontrepo
+	  participant "Annotation generator" as autoann
+	  participant "Object Store" as store
+	  participant "[Triple Store]" as triplestore
+	  participant "Index" as index  
+	  participant "Web UI" as webui
+	  actor "User" as user
+	    
+	  note left of ontrepo: e.g., BioPortal
+	  note left of autoann: TBD
+	  note left of store: e.g., Metacat
+	  note left of triplestore: e.g., Jena  
+	  note left of index: e.g., SOLR
+	  note left of webui: e.g., MetacatUI
+	
+	  == Auto-generate annotations ==
+	  
+	  autoann -> store: getMetadata()
+	  store -> autoann: metadata
+	  note left
+	  	retrieve existing
+	  	metadata
+	  end note
+	  autoann -> ontrepo: getConcepts(metadata)e
+	  ontrepo -> autoann: concepts
+	  note right
+	  	Parse existing 
+	  	metadata to find
+	  	concept matches
+	  end note
+	  autoann -> autoann: generate annotation  
+	  autoann -> store: save(annotation)
+	  note left
+	  	Generated annotation
+	  	as OpeanAnnotation model
+	  	instance (likely RDF/XML)
+	  end note
+	  
+	  store --> triplestore
+	  note left
+	  	load OA model into triplestore
+	  end note
+	  triplestore --> index: fields
+	  note right
+	  	query triplestore
+	  	to populate index
+	  end note
+	   
+	  == Verify/Edit annotations ==
+	  
+	  store -> webui: metadata
+	  store -> webui: annotations
+	  note right
+	  	MetacatUI renders metadata;
+	  	Annotations displayed with
+	  	AnnotatorJS
+	  end note
+	  webui --> user: rendered metadata
+	  
+	  webui --> ontrepo: getConcepts()
+	  ontrepo --> webui: concepts
+	  note right
+	  	Concept recommendations
+	  	presented to user based 
+	  	on metadata content and/or
+	  	existing automated annotations
+	  end note
+	  user -> webui: annotate metadata
+	  webui -> store: save(annotation)
+	  note right
+	  	User confirms and/or edits
+	  	automated annotations
+	  end note
+	  
+	  store --> triplestore: annotation
+	  triplestore --> index: fields
+	  note left
+	  	Annotations reindexed 
+	  	as before
+	  end note
+	  
+	  == Query annotations ==
+	  
+	  webui -> index: query()
+	  index -> webui: search results
+	  note right
+	  	query against
+	  	semantic fields 
+	  	in index return 
+	  	metadata document
+	  	matches
+	  end note
+	  webui --> user: rendered results
+	  
+	@enduml
 
-  == Auto-generate annotations ==
-  
-  autoann -> store: getMetadata()
-  store -> autoann: metadata
-  note left
-  	retrieve existing
-  	metadata
-  end note
-  autoann -> ontrepo: getConcepts(metadata)e
-  ontrepo -> autoann: concepts
-  note right
-  	Parse existing 
-  	metadata to find
-  	concept matches
-  end note
-  autoann -> autoann: generate annotation  
-  autoann -> store: save(annotation)
-  note left
-  	Generated annotation
-  	as OpeanAnnotation model
-  	instance (likely RDF/XML)
-  end note
-  
-  store --> triplestore
-  note left
-  	load OA model into triplestore
-  end note
-  triplestore --> index: fields
-  note right
-  	query triplestore
-  	to populate index
-  end note
-   
-  == Verify/Edit annotations ==
-  
-  store -> webui: metadata
-  store -> webui: annotations
-  note right
-  	MetacatUI renders metadata;
-  	Annotations displayed with
-  	AnnotatorJS
-  end note
-  webui --> user: rendered metadata
-  
-  webui --> ontrepo: getConcepts()
-  ontrepo --> webui: concepts
-  note right
-  	Concept recommendations
-  	presented to user based 
-  	on metadata content and/or
-  	existing automated annotations
-  end note
-  user -> webui: annotate metadata
-  webui -> store: save(annotation)
-  note right
-  	User confirms and/or edits
-  	automated annotations
-  end note
-  
-  store --> triplestore: annotation
-  triplestore --> index: fields
-  note left
-  	Annotations reindexed 
-  	as before
-  end note
-  
-  == Query annotations ==
-  
-  webui -> index: query()
-  index -> webui: search results
-  note right
-  	query against
-  	semantic fields 
-  	in index return 
-  	metadata document
-  	matches
-  end note
-  webui --> user: rendered results
-  
-@enduml
-
-.. image:: images/semantic_architecture.png
 
