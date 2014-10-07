@@ -7,6 +7,10 @@ The DataONE PROV data model will be used to describe the relationships between:
 * Data resources and the activities used to create them
 * Programs (e.g. software, scripts) that were implemented to create a data resource
 
+##UI Mockups
+* [Metadata View](../use-cases/provenance/images/metadata_view_with_use_cases.pdf)
+* [Data Search View](../use-cases/provenance/images/data_search_with_use_case.pdf)
+
 ## Diagrams
 ### Diagram of the PROV Model
 ![PROV Model Diagram](images/PROV_Annotation_Diagram.png)
