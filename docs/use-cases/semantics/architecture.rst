@@ -9,12 +9,12 @@ Goal: Describe components to be used and/or built to support semantic annotation
 
 Summary:
   
-  This architecture attempts to re-use as many existing DataONE components as possible while also building on existing efforts in the 
-  annotation realm
-  This annotation model uses the [OA ontology](http://www.openannotation.org/spec/core/) to describe
-  the annotation assertions about metadata resources and fragments. PROV, FOAF, DCTERMS, and OBOE concepts are also utilized.
-  There is ongoing investigation in the Open Knowledge Foundation's annotation tools, including: 
-  [AnnotatorJS](http://annotatorjs.org/) and their [AnnotateIt](http://annotateit.org/) storage service. 
+This architecture attempts to re-use as many existing DataONE components as possible while also building on existing efforts in the 
+annotation realm
+This annotation model uses the OA ontology (http://www.openannotation.org/spec/core/) to describe
+the annotation assertions about metadata resources and fragments. PROV, FOAF, DCTERMS, and OBOE concepts are also utilized.
+There is ongoing investigation in the Open Knowledge Foundation's annotation tools, including: 
+AnnotatorJS (http://annotatorjs.org/) and their AnnotateIt (http://annotateit.org/) storage service. 
   
   
 Overview
