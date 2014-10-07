@@ -30,8 +30,9 @@ The [OA ontology](http://www.openannotation.org/spec/core/) will be used to capt
 Proposed components
 --------------------
 
-@startuml images/semantic_architecture.png
-  
+..
+
+@startuml images/semantic_architecture.png  
   participant "Ontology repository" as ontrepo
   participant "Annotation generator" as autoann
   participant "Object Store" as store
@@ -79,8 +80,7 @@ Proposed components
   	query triplestore
   	to populate index
   end note
-  
-  
+   
   == Verify/Edit annotations ==
   
   store -> webui: metadata
@@ -114,7 +114,6 @@ Proposed components
   	as before
   end note
   
-  
   == Query annotations ==
   
   webui -> index: query()
@@ -128,7 +127,7 @@ Proposed components
   end note
   webui --> user: rendered results
   
-  
-
 @enduml
+
+.. image:: images/semantic_architecture.png
 
