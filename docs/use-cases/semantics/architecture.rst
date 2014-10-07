@@ -32,9 +32,8 @@ Proposed components
 
 .. image:: images/semantic_architecture.png
 
-..
-
-	@startuml images/semantic_architecture.png  
+.. 
+    @startuml images/semantic_architecture.png  
 	  participant "Ontology repository" as ontrepo
 	  participant "Annotation generator" as autoann
 	  participant "Object Store" as store
