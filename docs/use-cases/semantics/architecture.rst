@@ -25,7 +25,17 @@ There will be a component for indexing and querying annotations.
 
 Model
 ------------------
-The [OA ontology](http://www.openannotation.org/spec/core/) will be used to capture and communicate annotations.
+The OA ontology (http://www.openannotation.org/spec/core/) will be used to capture and communicate annotations.
+The serialization of this model can take multiple forms and can be included in other objects that may already be indexed by DataONE.
+Some examples include:
+
+* Atomic OA documents that contain one or more annotations (sserialized as RDF/XML and/or) JSON-LD
+* Extended ORE documents	
+* Embedded OA annotations in XML metadata (e.g., EML's additionalMetadata section)
+
+We will initially focus on atomic annotation documents that can be parsed and loaded into a triplestore (which may or may not be persistent)
+and that can then be queried to populate a discovery index (e.g., SOLR)
+
 
 Proposed components
 --------------------
