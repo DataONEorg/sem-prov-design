@@ -23,6 +23,7 @@ provide more precise query results while also expanding our query criteria to in
 Summary
 -------
 Using natural language to do a "first pass" at assigning semantic annotations will help organize our holdings and [hopefully] provide better search recall.
+This can be done on existing "legacy" content as well as on any new incoming data packages. Perhaps at the discretion of the MN that contributes the objects?
 
 
 Sequence Diagram
@@ -44,7 +45,7 @@ Sequence Diagram
 	  end note
 	  store -> autoann: metadata
 	  
-	  autoann -> ontrepo: getConcepts(metadata)e
+	  autoann -> ontrepo: getConcepts(metadata)
 	  ontrepo -> autoann: concepts
 	  note right
 	  	Parse existing 
@@ -70,14 +71,14 @@ Actors
 
 Preconditions
 -------------
-* Datapackages with attribute-level metadata needs to be registered in DataONE network
+* Datapackages with attribute-level metadata need to be registered in DataONE network
 * The annotation generator must have read-access to the metadata
 * The annotation generator must have write access to the CN/MN store. TBD.
 
 Postconditions
 --------------
 * The generated annotations are stored on the Coordinating Node.
-* The annotations are marked as being created by the automatic process
+* The annotations are marked as being created by the automatic process.
 * The annotations share the same permissions as the metadata upon which they are based.
 
 Notes
