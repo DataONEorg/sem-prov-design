@@ -22,7 +22,6 @@ rather than just the semantic concepts contained.
 
 Summary
 -------
-Using a simple checkbox, 
 
 
 Sequence Diagram
