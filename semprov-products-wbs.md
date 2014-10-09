@@ -1,0 +1,104 @@
+# Semantics and Provenance Products
+
+These products are to be produced by the semantics and provenance team during the first 18 months of the DataONE phase II project.  They represent all of the systems and features needed to accomplish semantic measurement search and provenance tracking and display within the DataONE federation of data repositories.  
+
+## Provenance Products
+
+- Product: [__Provenance Design Documentation__]
+	- Description: Documents providing the detailed use cases, user interface mockups, and architecture of the DataONE provenance services.
+    - Formalized Use Cases, Oct 2014
+    - Lauren (mockups): Drafted by Oct 2014, full design complete by end of November 2014
+		- All these mockups should be created in 4-5 working days - so by Oct 20-21 (Mon and Tues).
+		- Lauren should get a review of the mockups back within 5 business days (according to Rachel at the AHM), so Oct 28 - for first design & review iteration.
+		- Second revision and later should only take 1 day or less to make edits to mockups and send out for review.
+- Product: [__Provenance Test Corpus__]
+	- Description: Example data and script collection to be used to design and test DataONE provenance services
+    - TODO: Get representative examples of R, Matlab, and Python scripts from Christopher, Debbie, Yaxing, etc. (10/08: Yaxing is working on it)
+    - TODO: Get representative examples of data (netCDF, .mat, etc.) (10/08: Yaxing is working on it)
+    - Chris/Yaxing: Oct 2014
+    - Yaxing will commit sample model driver files, scripts, and standardized model outputs by Oct 10. I've picked the most appropriate model driver data processing use case (in my opinion), which produces C3/C4 grassland fractions using present climate (temperature and precipitation) and SYNMAP land cover data as inputs.
+- Product: [__SemProv Test Environment__]
+    - Description: A hardware and software environment deploying both test Coordinating Node and test Member Node instances to be used for semantics and provenance service testing
+    - Chris: Oct 2014
+- Product: [__Provenance Model and Syntax__]
+    - Description: A formal OWL specification of the model to be used to represent provenance information in DataONE, along with one or more syntax representations of the model for storage on Member Nodes. The Provenance model will adopt, incorporate, or extend existing community standards such as PROV for compatbility with wider efforts.
+    - RDFS model specification
+    - Chris: start Nov 2014, end Dec 2014
+- Product: [__Provenance Index and Query Service__]
+    - Description: A centralized index of all provenance information in DataONE that provides efficient and expressive means for client software to issue provenance queries that describe the derivation relationships among objects in DataONE.  The Provenance Query service is an extension of the existing DataONE query service with specific operators for provenance information.
+    - Prov indexer/query API (built on existing query API)
+    - Possible upgrade to Solr 4? if Solr is used as indexer. Current plan is to have SOLR4 in production in December, so this fits in well.
+        - Plan to start working on SOLR4 when the CN 1.6 branch is created after CN 1.5 is released
+    - Chris: start Dec 2014, end Jan 2015
+- Product: [__Provenance Web User Interface__]
+	- Description: A web-based user interface which displays provenance information in the context of other metadata about data packages, and provides the ability to browse and navigate across data derivation relationships from the proveance system.  Also includes the ability to search for data using relevant provenance relationships.
+    - Feature: Prov display of individual data objects
+		- Already partially implemented - just needs some finishing up - 1-2 days
+    - Feature: Prov browser on the data package level
+    	- In the Data Search view
+        	- Can use same/similar design and code from the Metadata View (see above) - just need to create new query in data search and insert them
+        	- 2 days for initial implementation - add on more days for reviewing, making changes based on feedback, etc.
+	    - In the Metadata view ("provenance browser")
+	    	- Lauren: I can have a more accurate estimate after I do the mockup and see how complicated this provenance browser will be. Based on the ideas we talked about at AHM I can estimate about 10-12 working days to implement this (at a minimum) - the more dynamic and interactive, the more time it will take
+	   - Question (for Usability): How long is the review process for a web UI review and usability test?
+    - Lauren: start Nov 2014, end Jan 2015
+- Product: [__Provenance Client API and Comment Syntax__]
+    - Description: An application programming interface and language-independent comment syntax for provenance markup. The API and Comment syntax represent the cross-language mechanisms that client tools implement to enable scientists to record provenance information using a client software tool.
+    - Feature: Function RunManager API
+    	- e.g., markAsTraceable(x) versus inline comment; deal with loops;
+    - Feature: Comment language
+    - Chris: start Nov 2014, end Feb 2015
+- Product: [__Matlab Provenance Toolbox__]
+    - Description: An implementation of the 'Provenance Client API and Comment Syntax' in Matlab that enables scientists to describe, capture, store, and publish provenance information about their computational activites.
+    - Chris: start Dec 2014, end Feb 2015
+
+## Semantics Products
+
+- Product: [__Semantics Design Documentation__]
+	- Description: Documents providing the detailed use cases, user interface mockups, and architecture of the DataONE semantic services for measurement search.
+    - Use cases
+    	- Xixi, Ben, Matt: Oct 2014
+    - Architecture proposal
+        - Ben, Xixi, Matt: Oct 2014
+    - Web UI Mockups
+        - Lauren: Oct 2014
+- Product: [__Semantics Test Corpus__]
+    - Description: Example semantic queries and data to be used to design and test DataONE semantic measurement search services
+    - Margaret, Matt: Oct 2014
+- Product: [__Carbon Cycle Knowledge Model__]
+    - Description: A knowledge model of ecological carbon cycle concepts that is described in OWL and provides the classes needed to fully annotate measurements from carbon cycle and primary production data sets.
+    - general enough to cover semantic needs of both MsTMIP and LTER/ANPP use cases
+    -  Mark, Margaret: Nov 2014: 45 mstmip output vars, Jan 2015: LTER methods (simple, typing)
+- Product: [__Ontology repository__]
+    - Description: A storage system for ontology documents that specify knowledge models in particular domains.  The ontology repository may be a persistent external service or an internal service operated by DataONE that provides reliable, multi-decade storage, download, and querying across a wide variety of ontologies.
+    - evaluate BioPortal first
+    - either adopt (e.g., BioPortal) or possibly productize another (e.g., ESOR)
+    - Ben Dec 2014
+- Product: [__Semantic Annotation Model and Syntax__]
+    - Description: A formal OWL specification of the model to be used to represent semantic measurement annotations in DataONE, along with one or more syntax representations of the model. Semantic measurement annotations are the means by which semantic concepts from the 'Carbon Cycle Knowledge Model' are linked to specific data instances stored in DataONE member nodes. The Semantic Annotation model will adopt, incorporate, or extend existing community standards such as PROV and the Open Annotation Ontology for compatbility with wider efforts.
+    - Feature: ability to specify agent making the assertion and their authority level
+    - Whole group? Nov 2014 
+- Product: [__Coordinating Node Annotation Store__]
+    - Description: A storage and access system operated on the DataONE Coordinating Nodes that provides the ability to uniquely identify and store semantic annotation documents and can reliably provide the original annotation that was stored.
+    - Note: we originally conceived of annotations being stored on Member Nodes, but have shifted towards CN storage as the desire for centralized, automated annotation arose.
+    - Ben start Dec 1, end Mar 2015
+- Product: [__Semi-automated Annotation Service__]
+    - Description: A service that executes on the DataONE coordinating node infrastructure to examine data and associated structured metadata and can produce a weighted match score between the attributes in the data sets and concepts from Knowledge Models using one or more algorithms.  The service contains an extension mechanism to allow improved algorithms to be developed and configured for use at run time.
+    - Q: does RPI's "matching" (entity linking) algorithm in ESOR assist with this?  Xixi/Deborah to clarify access to grad student code.
+    - Xixi: start Nov 2014, end Mar 2015
+- Product: [__Semantic Measurements Query Service__]
+    - Description: A service that operates as an extension of the DataONE query service and provides indexing, reasoning, and query capabilities over semantic measurement models and annotations.  This service enables both higher precision and higher recall for data that is semantically annotated than for data that is not.
+    - Feature: inference, reasoning
+    - Ben: Dec 2014
+- Product: [__Semantic Measurement Search Web User Interface__]
+    - Description: A web-based user interface that provides search fields that utilize semantic measurment concepts and annotations to drive precise and complete queries for particular types of measurements within DataONE.  The semantic search service provides a targeted solution to data discovery across the vastly heterogeneous collection of data in DataONE.
+    - Lauren: Jan 2015
+- Product: [__Semantic Annotation Web User Interface__]
+    - Description: A web-based user interface that Integrates a data package display with the ability to view and modify annotations on data attributes within particular data sets.  This interface displays the results of the 'Semi-automated Annotation Service' and allows both data owners and 3rd parties to confirm the correctness of annotations and to suggest alternative annotations for data attributes.
+	- Feature: Semantic type display in web UI
+	- Lauren: In metadata view, a tag next to the data attributes: 3-4 days. 8-10 days for a complete design/review iteration.
+	- Lauren: Confirmation of annotations in the metadata view (clicking a button to say OK, REJECT, etc): 3-4 days for a prototype. 8-10 days for a complete design/review iteration.
+	- Feature: general annotation framework for 3rd party commentary; mechanism for owner to "promote" comment as authoritative mechanism for resolving conflicting annotations
+	- Feature: Sem annotation review and confirmation web UI
+	- Lauren: June 2015
+
