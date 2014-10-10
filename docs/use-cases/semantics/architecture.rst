@@ -139,5 +139,135 @@ Proposed components
 	  webui --> user: rendered results
 	  
 	@enduml
+	
+	
+Annotation life-cycle
+---------------------
+This figure attempts to show the route that annotations take throughout
+the system. First, automated annotations are generated from existing metadata,
+then the annotation is saved to the object store, then an indexing process loads the 
+Open Annotation model in a triplestore to use a semantic query to extract index fields
+from it that are saved to the SOLR index.
+Finally, the UI shows the search results and annotation details for further manual editing 
+of the annotations.
+
+.. image:: images/annotation_flow.png
+
+.. 
+    @startuml images/annotation_flow.png
+				
+		partition "Automated annotation" {
+			"get metadata" --> "generate OA model"
+			"get matching concepts" --> "generate OA model"
+			-left-> [object store] "store annotation"
+		}
+		
+		partition Indexing {
+			--> "load OA model"
+			--> "triple store"
+			--> "SPARQL query model"
+			--> "index semantic fields"
+			--> "SOLR index"
+			
+		}
+		
+		partition "Manual annotation" {
+			
+			"render annotations" -> "metadata UI"
+			"render metadata" --> "metadata UI"
+			"metadata UI" -up-> "create/update annotation"
+			-right-> [object store] "store annotation"
+			
+		}
+		
+		partition "Querying" {
+			"query UI" --> "query SOLR index"
+			--> "SOLR index"
+			--> "render results"
+			if "" then
+				--> [match?]"show details"
+				--> "metadata UI"
+			else 
+				--> "query UI"	
+			endif
+
+			
+
+		}
+	@enduml		
+
+
+
+Annotation components
+----------------------
+This diagram attempts to illustrate the different components involved in 
+automatically generating annotations, saving them, indexing them, querying them, 
+displaying them, and then editing them manually.
+
+.. image:: images/annotation_components.png
+
+.. 
+    @startuml images/annotation_components.png
+		
+		"Annotation generator" --> [getConcepts] "Ontology repository"
+		
+		"Ontology repository" --> [concepts] "Annotation generator"
+		note left
+			Recommends concepts 
+			using existing attribute 
+			metadata
+		end note
+		"Annotation generator" -->[Save OA] "Store"
+		note right
+			Use coordinating node
+			as the annotation store.
+			Also holds metadata documents
+		end note
+		
+		"Web UI" --> [Save OA] "Store"
+		"Store" --> [Rendered OA] "Web UI"			
+		"Store" --> [Rendered Metadata] "Web UI"
+		note left
+			UI renders metadata
+			and overlays annotations
+			on the page
+		end note
+		note right
+			UI creates and 
+			edits annotations
+			using suggestions 
+			from ontology repo
+		end note
+		
+		"Web UI" --> [getConcepts] "Ontology repository"
+		"Ontology repository" --> [concepts] "Web UI"
+		
+		
+		"Store" --> [Get OA] "Indexer"
+		note right
+			When annotations are updated,
+			indexer reloads and queries 
+			the model for indexing
+		end note
+		"Indexer" -->[Load OA] "Triple store"
+		note right
+			Optionally expose
+			triple store for 
+			other clients to query
+		end note
+		"Indexer" --> [SPARQL query] "Triple store"	
+		"Triple store" --> [SPARQL results] "Indexer"
+		"Indexer"-->[SOLR fields] "SOLR index"
+		note left
+			Existing SOLR index
+			includes semantic fields
+			for quick searching
+		end note
+		"Web UI" --> [SOLR query] "SOLR index"
+		"SOLR index" --> [SOLR results] "Web UI"
+	
+		
+
+	@enduml	
 
 
