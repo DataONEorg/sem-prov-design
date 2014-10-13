@@ -57,18 +57,13 @@ Sequence Diagram
         participant "Client Software" as app_client << Application >> 
         participant "MN API" as mn_api << Member Node >> 
         participant "CN API" as cn_api << Coordinating Node >>
-        loop
-        Investigator -> app_client: record(scriptName)
-        app_client --> Investigator: runId
-        Investigator -> app_client: view(runId)
-        alt derived products are ready to publish
         Investigator -> app_client: publish(runId)
-        app_client -> app_client: insertRelationship()
-        app_client -> mn_api: create(auth_token, dataPackage) 
-        note right of app_client 
-        Create request is sent 
-        for each data object 
-        end note
+        loop for each relationship
+            app_client -> app_client: insertRelationship()
+        end
+        loop for each dataPackage member
+            app_client -> mn_api: create(auth_token, member) 
+        end
         mn_api -> mn_api: store()
         cn_api -> mn_api: listObjects()
         mn_api --> cn_api: object list
@@ -76,18 +71,15 @@ Sequence Diagram
         cn_api -> mn_api: getSystemMetadata(pid) mn_api --> cn_api: systemMetadata
         cn_api -> cn_api: store() cn_api -> cn_api: index() 
         note right of cn_api 
-        Relationships are 
-        indexed and searchable 
+            Relationships are 
+            indexed and searchable 
         end note
-        else derived products not ready to publish
         note right of Investigator
-        At this point, the Investigator 
-        may decide to modify their script 
-        and perform the ecord() and view() 
-        process again.
+            At this point, the Investigator 
+            may decide to modify their script 
+            and perform the ecord() and view() 
+            process again.
         end note
-        end
-        end    
     @enduml
    
 .. image:: images/41_seq.png
