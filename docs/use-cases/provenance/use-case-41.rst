@@ -11,23 +11,21 @@ Revisions
 
 Goal
 ----
-In DataONE-enabled client software, investigators can easily provide tracking information as they create new products from existing data files.
+In DataONE-enabled client software, investigators can easily publish new products from existing data files and provide tracking information.
 
 Scenario
 --------
-"As a data analyst using R or Matlab, I want to keep track of my data input files, data output files and scripts so I can review my runs and potentially choose those to share with colleagues through an established DataONE repository."
+"As a data analyst using R or Matlab, I want to publish my data and their history so I can share them with colleagues through an established DataONE repository."
 
 Summary
 -------
-In both R and Matlab, investigators can choose which input datasets to track in their workflow scripts, and can manage the product outputs of each run.  They can then review their runs and upload derived datasets to a DataONE Member Node repository and provide traceable links to the primary datasets used to create them.  
+In both R and Matlab, investigators can upload derived datasets to a DataONE Member Node repository.  They can assign citable identifiers to  their dataset (e.g., a DOI), and provide traceable links to the primary datasets used to create them.  
 
 Use Case Diagram
 ----------------
 .. 
     @startuml images/41_uc.png       
       actor "Investigator" as client 
-      usecase "41. Record/Review" as record
-      client -- record    
       usecase "12. Authentication" as authen 
       note top of authen 
         Authentication may be provided by an external service 
