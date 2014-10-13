@@ -2,8 +2,8 @@
 DataONE Use Case 41
 ===================
 
-Scientists can provide tracking information about derived products
-------------------------------------------------------------------
+Scientists can publish derived datasets and tracking information to DataONE
+---------------------------------------------------------------------------
 
 Revisions
 ---------
