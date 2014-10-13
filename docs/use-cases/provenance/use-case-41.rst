@@ -74,12 +74,6 @@ Sequence Diagram
             Relationships are 
             indexed and searchable 
         end note
-        note right of Investigator
-            At this point, the Investigator 
-            may decide to modify their script 
-            and perform the ecord() and view() 
-            process again.
-        end note
     @enduml
    
 .. image:: images/41_seq.png
