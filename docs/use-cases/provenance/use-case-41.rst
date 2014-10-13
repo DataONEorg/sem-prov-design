@@ -96,6 +96,7 @@ Preconditions
 * The primary resource dataset needs to be registered on the Member Node.
 * The Investigator needs write access to a Member Node.
 * The client software must be DataONE-enabled and provenance-aware.
+* The client software has been configured appropriately 
 
 Postconditions
 --------------
