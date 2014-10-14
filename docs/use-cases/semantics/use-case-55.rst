@@ -26,8 +26,7 @@ Typical query operations involving concepts in an ontology are:
 * locating applicable ontologies given some free text about a subject (e.g., which ontologies pertain to my domain?)
 * locating concepts within one or more different ontologies given some free text (e.g., which concepts best capture this particular variable or attribute?)
 * locating concepts within ontologies with a combination of text and other constraints like units of measurement (e.g., if we know the unit is "meters per second" then we know the characteristic will be some kind of velocity concept)
-* locating subclasses and parents of given concepts 
-(e.g., expanding queries to include child concepts or for building UI widgets that show these relationships)
+* locating subclasses and parents of given concepts (e.g., expanding queries to include child concepts or for building UI widgets that show these relationships)
 	
 
 Sequence Diagram
