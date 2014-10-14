@@ -89,8 +89,7 @@ Preconditions
 Postconditions
 --------------
 * The ontologies should be accessible via clear APIs for different clients to consume
-* Concept matches should be returned in order or with a weighted score reflecting how
-confident a match was made
+* Concept matches should be returned in order or with a weighted score reflecting how confident a match was made
 
 Notes
 -----
