@@ -64,41 +64,89 @@ These products are to be produced by the semantics and provenance team during th
         - Lauren: Oct 2014
 - Product: [__Semantics Test Corpus__]
     - Description: Example semantic queries and data to be used to design and test DataONE semantic measurement search services
-    - Margaret, Matt: Oct 2014
+    - Requirement: corpus is wholly hosted within the DataONE network
+    - Deliverable: list of DataONE pids?
+    - Owner: Margaret, Matt
+    - Timeline: Oct 2014
 - Product: [__Carbon Cycle Knowledge Model__]
     - Description: A knowledge model of ecological carbon cycle concepts that is described in OWL and provides the classes needed to fully annotate measurements from carbon cycle and primary production data sets.
-    - general enough to cover semantic needs of both MsTMIP and LTER/ANPP use cases
-    -  Mark, Margaret: Nov 2014: 45 mstmip output vars, Jan 2015: LTER methods (simple, typing)
+    - Dependency: 'Semantics Test Corpus'
+    - Requirement: general enough to cover semantic needs of both MsTMIP and LTER/ANPP use cases
+    - Feature: stable namespace and intelligent versioning for any model revisions
+    - Feature: Compatibility with observational ontology models (e.g., OBOE and O&M [lite])
+    - Owner: Mark, Margaret
+    - Timeline: 
+        - Nov 2014: 45 mstmip output vars, 
+        - Jan 2015: LTER methods (simple, typing)
 - Product: [__Ontology repository__]
     - Description: A storage system for ontology documents that specify knowledge models in particular domains.  The ontology repository may be a persistent external service or an internal service operated by DataONE that provides reliable, multi-decade storage, download, and querying across a wide variety of ontologies.
-    - evaluate BioPortal first
-    - either adopt (e.g., BioPortal) or possibly productize another (e.g., ESOR)
-    - Ben Dec 2014
+    - Feature: query for concept recommendations using existing science metadata.
+    - Feature: hosts the 'Carbon Cycle Knowledge Model' referenced above and makes concepts available for discovery, exploration, and reasoning.
+    - Task: evaluate BioPortal
+    - Task: evaluate another repository with different concept matching algorithm (e.g., ESOR)
+    - Owner: Ben. Xixi
+    - Timeline:
+        - Nov 2014: adopt BioPortal (Ben)
+        - Dec 2014: or productize ESOR (Xixi)
 - Product: [__Semantic Annotation Model and Syntax__]
-    - Description: A formal OWL specification of the model to be used to represent semantic measurement annotations in DataONE, along with one or more syntax representations of the model. Semantic measurement annotations are the means by which semantic concepts from the 'Carbon Cycle Knowledge Model' are linked to specific data instances stored in DataONE member nodes. The Semantic Annotation model will adopt, incorporate, or extend existing community standards such as PROV and the Open Annotation Ontology for compatbility with wider efforts.
-    - Feature: ability to specify agent making the assertion and their authority level
-    - Whole group? Nov 2014 
+    - Description: A formal OWL specification of the model to be used to represent semantic measurement annotations in DataONE, along with one or more syntax representations of the model. 
+    Semantic measurement annotations are the means by which semantic concepts from the 'Carbon Cycle Knowledge Model' are linked to specific data instances stored in DataONE member nodes. 
+    The Semantic Annotation model will adopt, incorporate, or extend existing community standards such as PROV and the Open Annotation Ontology for compatbility with wider efforts.
+    - Feature: ability to consistently and unambiguously target specific parts of metadata/data objects for annotation.
+    - Feature: ability to specify agent making the assertion and their role/authority level
+    - Feature: JSON-LD and RDF/XML serialization options
+    - Note: The Open Annotation (OA) model is already specified with RDFS. We plan to have our annotations conform to the OA model for consistency and interoperability.
+    - Owner: Ben
+    - Timeline:
+        - Nov 2014: adopt proposal (whole group needs to understand and agree on recommended practices)
 - Product: [__Coordinating Node Annotation Store__]
     - Description: A storage and access system operated on the DataONE Coordinating Nodes that provides the ability to uniquely identify and store semantic annotation documents and can reliably provide the original annotation that was stored.
     - Note: we originally conceived of annotations being stored on Member Nodes, but have shifted towards CN storage as the desire for centralized, automated annotation arose.
-    - Ben start Dec 1, end Mar 2015
+    - Dependency: 'Semantic Annotation Model and Syntax'
+    - Task: evaluate existing Annotation store implementations in the Open Annotation software stack
+    - Task: evaluate D1 CRUD API for storing annotations
+    - Task: implement annotation-store overlay for D1 CRUD API if existing storage implementations are found to be inadequte.
+    - Owner: Ben  
+    - Timeline: 
+        - start Nov 2014
+        - end Mar 2015
 - Product: [__Semi-automated Annotation Service__]
-    - Description: A service that executes on the DataONE coordinating node infrastructure to examine data and associated structured metadata and can produce a weighted match score between the attributes in the data sets and concepts from Knowledge Models using one or more algorithms.  The service contains an extension mechanism to allow improved algorithms to be developed and configured for use at run time.
-    - Q: does RPI's "matching" (entity linking) algorithm in ESOR assist with this?  Xixi/Deborah to clarify access to grad student code.
-    - Xixi: start Nov 2014, end Mar 2015
+    - Description: A service that executes on the DataONE coordinating node infrastructure to examine data and associated structured metadata and can produce a weighted match score between the attributes in the data sets and concepts from Knowledge Models using one or more algorithms. Recommended concepts are then used to generate annotations for the attribute metadata input.
+    The service contains an extension mechanism to allow improved algorithms to be developed and configured for use at run time.
+    - Dependencies:
+      - 'Ontology repository'
+      - 'Semantic Annotation Model and Syntax'
+      - 'Coordinating Node Annotation Store'
+    - Feature: Generate OA-compatible annotations for provided metadata input
+    - Feature: re-unable as algorithms and knowledge models evolve over time (hopefully improving results)
+    - Feature: can target a subset of DataONE-hosted data with a domain specific set of ontologies. Proffing ground before auto-annotating contents of entire network.
+    - Task: Evaluate efficacy of RPI's "entity linking" matching algorithm in ESOR as compared to existing text-based matching available in BioPortla (Xixi/Deborah to clarify access to grad student code)
+    - Owner: Xixi
+    - Timeline: 
+        - start Nov 2014, 
+        - end Mar 2015
 - Product: [__Semantic Measurements Query Service__]
     - Description: A service that operates as an extension of the DataONE query service and provides indexing, reasoning, and query capabilities over semantic measurement models and annotations.  This service enables both higher precision and higher recall for data that is semantically annotated than for data that is not.
-    - Feature: inference, reasoning
-    - Ben: Dec 2014
+    - Dependency: 'Coordinating Node Annotation Store'
+    - Feature: annotation indexing for quick easy search that works with existing DataONE query mechanisms
+    - Feature: inference, reasoning using annotations and associated ontologies (subsumption hierarchies, in particular)
+    - Owner: Ben
+    - Timeline: Dec 2014
 - Product: [__Semantic Measurement Search Web User Interface__]
     - Description: A web-based user interface that provides search fields that utilize semantic measurment concepts and annotations to drive precise and complete queries for particular types of measurements within DataONE.  The semantic search service provides a targeted solution to data discovery across the vastly heterogeneous collection of data in DataONE.
-    - Lauren: Jan 2015
+    - Dependency: 'Semantic Measurements Query Service' 
+    - Feature: integrates with/uses exising DataONE query API
+    - Feature: easy to understand concept navigation/selection using some or all of: auto-complete suggestions, tree-browsing, graph-browsing, concept labels and definitions
+    - Owner: Lauren
+    - Timeline: Jan 2015
 - Product: [__Semantic Annotation Web User Interface__]
-    - Description: A web-based user interface that Integrates a data package display with the ability to view and modify annotations on data attributes within particular data sets.  This interface displays the results of the 'Semi-automated Annotation Service' and allows both data owners and 3rd parties to confirm the correctness of annotations and to suggest alternative annotations for data attributes.
-	- Feature: Semantic type display in web UI
-	- Lauren: In metadata view, a tag next to the data attributes: 3-4 days. 8-10 days for a complete design/review iteration.
-	- Lauren: Confirmation of annotations in the metadata view (clicking a button to say OK, REJECT, etc): 3-4 days for a prototype. 8-10 days for a complete design/review iteration.
-	- Feature: general annotation framework for 3rd party commentary; mechanism for owner to "promote" comment as authoritative mechanism for resolving conflicting annotations
-	- Feature: Sem annotation review and confirmation web UI
-	- Lauren: June 2015
+    - Description: A web-based user interface that integrates a data package display with the ability to view and modify annotations on data attributes within particular data sets.  This interface displays the results of the 'Semi-automated Annotation Service' along with any original or 3rd-party manual annotations. Data owners can reject incorrect annotations while 3rd-parties can suggest alternative annotations for data attributes.
+	- Dependency: 'Annotation Store'
+  - Feature: Display all semantic annotations in web UI
+  - Feature: Allow for 3rd party annotation contributions
+  - Feature: Mechanism for owner to reject other (auto or 3rd-party) annotations in order to resolve conflicts
+	- Feature: Display annotation tags near the data attributes in the metadata view. (Design est. 3-4 days. 8-10 days for a complete design/review iteration)
+	- Feature:  Annotation moderation in the metadata view; clicking a button to REJECT, etc. (Design est. 3-4 days for a prototype. 8-10 days for a complete design/review iteration)
+	- Owner: Ben, Lauren
+  - Timeline: June 2015
 
