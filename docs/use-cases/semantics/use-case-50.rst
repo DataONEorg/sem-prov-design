@@ -8,6 +8,7 @@ Measurement Characteristics and Standards can be assigned automatically using ex
 Revisions
 ---------
 2014-10-07: Created
+2014-10-13: Updated to reflect discussion at weekly meeting
 
 Goal
 ----
@@ -23,7 +24,11 @@ provide more precise query results while also expanding our query criteria to in
 Summary
 -------
 Using natural language to do a "first pass" at assigning semantic annotations will help organize our holdings and [hopefully] provide better search recall.
-This can be done on existing "legacy" content as well as on any new incoming data packages. Perhaps at the discretion of the MN that contributes the objects?
+This can be done on existing "legacy" content as well as on any new incoming data packages. Perhaps at the discretion of the MN that contributes the objects.
+
+Initially, we will target a focused set of data packages in order to evaluate the efficacy of adding automated annotations. Probably SBC-LTER primary production data.
+This is intended more as an internal validation step and not so much the end-game for automatic annotation. Ideally, we will automate annotations for all content,
+assuming we have appropriate ontologies from which to select concepts.
 
 
 Sequence Diagram
@@ -71,15 +76,20 @@ Actors
 
 Preconditions
 -------------
-* Datapackages with attribute-level metadata need to be registered in DataONE network
-* The annotation generator must have read-access to the metadata
-* The annotation generator must have write access to the CN/MN store. TBD.
+* Datapackages with attribute-level metadata need to be registered in DataONE network.
+	* Either as raw metadata (requires annotator to parse various metadata formats)
+	* Attribute metadata as exposed in the existing DataONE SOLR index. If done as-is, we loose the structural source of the attribute information
+	(first data table, third column).
+* The annotation generator must have read-access to the metadata. 
+	* public documents, of course
+	* private documents, as well (run the annotator as admin role that has access to all content).
+* The annotation generator must have write access to the CN/MN store.
 
 Postconditions
 --------------
 * The generated annotations are stored on the Coordinating Node.
 * The annotations are marked as being created by the automatic process.
-* The annotations share the same permissions as the metadata upon which they are based.
+* The annotations share the same permissions as the metadata upon which they are based (editable by the original document owner).
 
 Notes
 -----

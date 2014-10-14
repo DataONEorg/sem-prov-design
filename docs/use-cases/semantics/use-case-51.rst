@@ -8,6 +8,7 @@ User edits or adds annotations to DataONE-hosted data packages
 Revisions
 ---------
 2014-10-07: Created
+2014-10-13: Updated to reflect discussion at weekly meeting
 
 Goal
 ----
@@ -15,14 +16,15 @@ Using a web UI, a user can add or edit annotations about the measurement charact
 
 Scenario
 --------
-When viewing metadata for existing data packages, a user can select concepts from one [or more?] ontologies that describe the measurement 
+When viewing metadata for existing data packages, a user can easily and clearly select concepts from one [or more?] ontologies that describe the measurement 
 characteristics (e.g., Temperature) and standards (e.g., Celsius) used. These concepts are the body of the annotations.
 
 Summary
 -------
-The user may wish to confirm or refute the automatically generated annotations (see UC 50). This is similar to authoring annotations
-from scratch, but will hopefully be easier since we can constrain the list of possible concepts using recommendations from the ontology repository
-given values from our existing metadata descriptions of the attributes.
+The user may add annotations from scratch or edit an existing one. 
+If we can constrain the list of possible concepts using recommendations from the ontology repository
+given values from our existing metadata descriptions of the attributes it could be helpful, but not necessarily required especially if the UI for selecting 
+concepts is easy to navigate.
 
 
 Sequence Diagram
@@ -77,18 +79,27 @@ Preconditions
 -------------
 * Datapackages with attribute-level metadata needs to be registered in DataONE network
 * The user must have read-access to the metadata
-* The user must have write access to the object in order to approve or remove recommended annotations
+* The user must have write access to update annotations
 * The user must have write access to the CN/MN to save annotations
 
 Postconditions
 --------------
 * The new/updated annotations are stored on the Coordinating Node.
-* The annotations are marked as being updated and verified by the user as applicable
-* Existing annotations share the same permissions as the metadata upon which they are based.
-* New annotations have all permission for the creator, read-only access for everyone else. Other options TBD.
+* The annotations are marked as being created/edited by the user as applicable
+* Annotation permission options:
+	* share the same permissions as the metadata upon which they are based
+	* have all permission for the creator, read-only access for everyone else
 
 Notes
 -----
+We anticipate annotations be added by these three types of users:
+* original datapackage owner ("owner")
+* some other user of the system, perhpas someone who has used the data in their own research and would like to 
+clarify the attribute-level metadata ("3rd party")
+* the automated annotator process ("annotation generator")
+
+The UI for selecting concepts needs to clearly show differences in concepts, espically for MsTMIP concepts that are similar but cann differ in 
+subtle ways.
 
 Use Case Implementation Examples
 --------------------------------
