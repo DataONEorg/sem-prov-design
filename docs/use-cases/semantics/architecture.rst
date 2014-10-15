@@ -85,8 +85,8 @@ We have not endeavored to annotate DATA objects directly (e.g., tabular text/csv
 	
 	package "metadata option" {
 	    object "oa:SpecificResource" as target
-	    object "oa:Source" as source {
-	    	metadata URI
+	    object "xs:URI" as source {
+	    	metadata URL
 	    }
 	    object "xs:string" as identifier {
 	    	e.g., metadata.1.2.3
@@ -105,8 +105,8 @@ We have not endeavored to annotate DATA objects directly (e.g., tabular text/csv
 	
 	package "data option" {
 	    object "oa:SpecificResource" as d_target
-	    object "oa:Source" as d_source {
-	    	data URI
+	    object "xs:URI" as d_source {
+	    	data URL
 	    }
 	    object "xs:string" as d_identifier {
 	    	e.g., data.1.2.3
