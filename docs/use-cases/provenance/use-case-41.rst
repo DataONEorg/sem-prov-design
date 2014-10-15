@@ -1,5 +1,5 @@
 
-DataONE Use Case 41 (Track History)
+DataONE Use Case 41 (Track Run History)
 ===================================
 
 Scientists can track, list, and examine script executions
