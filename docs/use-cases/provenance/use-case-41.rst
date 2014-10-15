@@ -1,117 +1,115 @@
 
-DataONE Use Case 41
-===================
+DataONE Use Case 41 (Track Run History)
+===================================
 
-Scientists can publish derived datasets and tracking information to DataONE
----------------------------------------------------------------------------
+Scientists can track, list, and examine script executions
+---------------------------------------------------------
 
 Revisions
 ---------
-2014-09-29-01
+| Created: 2014-09-23
+| Revised: 2014-10-14
 
 Goal
 ----
-In DataONE-enabled client software, investigators can easily publish new products from existing data files and provide tracking information.
+Scientist can track, list and examine script executions
 
-Scenario
---------
-"As a data analyst using R or Matlab, I want to publish my data and their history so I can share them with colleagues through an established DataONE repository."
+.. sidebar:: Scenario
+    
+    "As a data analyst using R or Matlab, I want to keep track of my data input files, data output files and scripts so I can review and compare my runs and the data products they produced."
 
 Summary
 -------
-In both R and Matlab, investigators can upload derived datasets to a DataONE Member Node repository.  They can assign citable identifiers to  their dataset (e.g., a DOI), and provide traceable links to the primary datasets used to create them.  
+The analyst specifies a script (or program, function, etc., as appropriate for their computing environment) for which provenance information will be collected. 
+The script is then executed and the input datasets, derived datasets and execution environment attributes that are to be tracked are automatically determined 
+and the provenance relationships between these objects is persisted on the local machine. Data products such as analysis output, graphical output, etc.,
+that are created by an execution are copied to a local archive.
 
-Use Case Diagram
-----------------
+The scientist can then list recorded script executions, possibly filtering the list by attributes such as execution date and time.
+From this list individual executions can be selected for detailed review, such as viewing the provenance relationships between items
+and inspecting each data product produced by the execution.
+
+The scientist can then select an execution that has produced the desired data producs, and send them to DataONE 
+as detailed in use case #45 (Publish to DataONE).
+
+*Use case diagram*
+
+.. image:: images/use-case-41.png
+
 .. 
-    @startuml images/41_uc.png       
-      actor "Investigator" as client 
-      usecase "12. Authentication" as authen 
-      note top of authen 
-        Authentication may be provided by an external service 
-      end note    
-      package "DataONE" { 
-        actor "Coordinating Node" as CN 
-        actor "Member Node" as MN 
-        usecase "13. Authorization" as author 
-        usecase "04. Create" as create 
-        usecase "41. Publish" as publish
-        usecase "06. MN Synchronize" as mn_sync 
-        client -- publish
-        CN -- publish
-        MN -- publish 
-        publish ..> author: <includes> 
-        publish ..> authen: <includes> 
-        publish ..> mn_sync: <includes> 
-        publish ..> create: <includes>
-      }       
+    @startuml images/use-case-41.png
+        package "Investigator's local machine" {
+        actor "Investigator" as client
+        usecase "41. Track Run History" as record
+        client -- record
+        }
     @enduml
 
-.. image:: images/41_uc.png
+*Sequence diagram*
 
-Sequence Diagram
-----------------
+.. image:: images/sequence-41.png
+
 .. 
-    @startuml images/41_seq.png 
-        Actor Investigator 
-        participant "Client Software" as app_client << Application >> 
-        participant "MN API" as mn_api << Member Node >> 
-        participant "CN API" as cn_api << Coordinating Node >>
-        Investigator -> app_client: publish(runId)
-        loop for each relationship
-            app_client -> app_client: insertRelationship()
-        end
-        loop for each dataPackage member
-            app_client -> mn_api: create(auth_token, member) 
-        end
-        mn_api -> mn_api: store()
-        cn_api -> mn_api: listObjects()
-        mn_api --> cn_api: object list
-        cn_api -> mn_api: get(pid) mn_api --> cn_api: object
-        cn_api -> mn_api: getSystemMetadata(pid) mn_api --> cn_api: systemMetadata
-        cn_api -> cn_api: store() cn_api -> cn_api: index() 
-        note right of cn_api 
-            Relationships are 
-            indexed and searchable 
+    @startuml images/sequence-41.png
+        !include ../plantuml.conf
+        title: Run Manager record()
+        actor scientist
+        == Record ==
+        scientist -> "run manager" : record(scriptName)
+        "run manager" -> "data package" : init()
+        "data package" --> "run manager" : packageId
+        note right of "run manager"
+        scientist's script read() is
+        overloaded by run manager
         end note
-    @enduml
-   
-.. image:: images/41_seq.png
+        "run manager" -> "run manager" : read()
+        "run manager" -> "data package" : insertRelationship()
+        note right of "run manager"
+        scientist's script write() is
+        overloaded by run manager
+        end note
+        "run manager" -> "run manager" : write()
+        "run manager" -> "data package" : insertRelationship()
+        "run manager" -> "run manager" : close()
+        "run manager" -> "data package" : archive(packageId)
+        "data package" -> "provenance store" : save()
+        "provenance store" --> "run manager" : status
+        == Review ==
+        scientist -> "run manager" : list(search terms)
+        "run manager" -> "provenance store" : list(search terms)
+        "provenance store" --> scientist : package list
+        note right of "scientist"
+        scientist selects a packge 
+        to view from the list
+        end note
+        scientist -> "run manager" : view(packageId)
+        "run manager" -> "provenance store" : view(packageId)
+        "provenance store" --> scientist : complete package description
+    @endumld
 
 Actors
 ------
 * Investigator
-* Client software
-* Member Node
-* Coordinating Node
+* Client Software
+
+The following diagram shows a script execution on a client machine where a single dataset is read
+and the associated provenance 
+relationship between the script and the input dataset is captured. This dataset is 
+then used to create a derived dataset, then the provenance relationship between the script and derived dataset is recorded.
 
 Preconditions
 -------------
-* The primary resource dataset needs to be registered on the Member Node.
-* The Investigator needs write access to a Member Node.
-* The client software must be DataONE-enabled and provenance-aware.
-* The client software has been configured appropriately 
+* The necessary DataONE run manager packages have been installed
+  
+Triggers
+--------
+* Scientist invokes the run manager record() function, providing their script name
+* Scientist invokes the run manager list() function, providing search terms to select matching executions
+* Scientist invokes the run manager view() function, providing a package identifier
 
-Postconditions
---------------
-* The derived datasets are stored on the Member Node
-* The data package includes formal links between the primary and derived datasets
-
-Notes
------
-
-Use Case Implementation Examples
---------------------------------
-
-* An R Client example of Use Case 41 (Scientists can provide tracking information about derived products):
-
-    #``(… create DataONE data objects and a DataONE data package…)``
-
-    ``insertRelationship(data.package, id.result, c(id.script), "http://www.w3.org/ns/prov",      "http://www.w3.org/ns/prov#wasGeneratedBy")``
-
-    ``insertRelationship(data.package, id.script, c(id.data), "http://www.w3.org/ns/prov", "http://www.w3.org/ns/prov#used")``
-
-    ``insertRelationship(data.package, id.data, c(id.data2, id.data3), "http://www.w3.org/ns/prov", "http://www.w3.org/ns/prov#wasDerivedFrom")``
-
-    ``createDataPackage(d1client, data.package)``
+Post Conditions
+---------------
+* The scientist has created one or more derived datasets.
+* The DataONE run manager has stored provenance information locally for the newly created derived datasets.
+* The DataONE run manager has archived derived datasets locally so they will not be overwritten by subsequent runs
 

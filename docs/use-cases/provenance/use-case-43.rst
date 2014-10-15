@@ -1,84 +1,84 @@
-===================
-DataONE Use Case 43
-===================
 
-----------------------------------------------------------------------------------
-Scientists can discover synthetic research that uses their dataset within DataONE.
-----------------------------------------------------------------------------------
+DataONE Use Case 43 (Publish to DataONE)
+========================================
+
+Scientists can publish derived datasets and tracking information to DataONE
+---------------------------------------------------------------------------
 
 Revisions
 ---------
-2014-09-22-01
+| Created: 2014-09-29
+| Revised: 2014-10-14
 
 Goal
 ----
-To provide a traceable link to derived works for each dataset.
+In DataONE-enabled client software, investigators can easily publish new products from existing data files and provide tracking information.
 
-Scenario
---------
-"As a scientist, I want to be able to find all derived datasets in DataONE that use my dataset so I can understand how my data are being used and by which colleagues."
+.. sidebar:: Scenario
+    
+    "As a data analyst using R or Matlab, I want to publish my data and their history so I can share them with colleagues through an established DataONE repository."
 
 Summary
 -------
-A scientist that has uploaded their dataset to DataONE and has allowed derived works in their intellectual rights statement can view and understand which derived works have used their dataset.
+In both R and Matlab, investigators can upload derived datasets to a DataONE Member Node repository.  They can assign citable identifiers to  their dataset (e.g., a DOI), and provide traceable links to the primary datasets used to create them.  
+
+*Use Case Diagram*
 
 .. 
-    @startuml images/use-case-43.png
-        actor "Investigator" as client
-        usecase "12. Authentication" as authn
-        note top of authn
-          Authentication may be provided 
-          by an external service
+    @startuml images/43_uc.png       
+        actor "Investigator" as client 
+        usecase "12. Authentication" as authen 
+        note top of authen 
+          Authentication may be provided by an external service 
+        end note    
+        package "DataONE" { 
+          actor "Coordinating Node" as CN 
+          actor "Member Node" as MN 
+          usecase "13. Authorization" as author 
+          usecase "04. Create" as create 
+          usecase "43. Publish" as publish
+          usecase "06. MN Synchronize" as mn_sync 
+          client -- publish
+          CN -- publish
+          MN -- publish 
+          publish ..> author: <includes> 
+          publish ..> authen: <includes> 
+          publish ..> mn_sync: <includes> 
+          publish ..> create: <includes>
+        }       
+    @enduml
+
+.. image:: images/43_uc.png
+
+*Sequence diagram*
+
+.. 
+    @startuml images/43_seq.png 
+        !include ../plantuml.conf
+        Actor Investigator 
+        participant "Client Software" as app_client << Application >> 
+        participant "MN API" as mn_api << Member Node >> 
+        participant "CN API" as cn_api << Coordinating Node >>
+        Investigator -> app_client: publish(runId)
+        loop for each relationship
+            app_client -> app_client: insertRelationship()
+        end
+        loop for each dataPackage member
+            app_client -> mn_api: create(auth_token, member) 
+        end
+        mn_api -> mn_api: store()
+        cn_api -> mn_api: listObjects()
+        mn_api --> cn_api: object list
+        cn_api -> mn_api: get(pid) mn_api --> cn_api: object
+        cn_api -> mn_api: getSystemMetadata(pid) mn_api --> cn_api: systemMetadata
+        cn_api -> cn_api: store() cn_api -> cn_api: index() 
+        note right of cn_api 
+            Relationships are 
+            indexed and searchable 
         end note
-        package "DataONE"
-          actor "Coordinating Node" as CN
-          actor "Member Node" as MN
-          usecase "13. Authorization" as authz
-          usecase "43. Discover Derived Products" as discover
-          client -- discover
-          CN -- discover
-          MN -- discover
-          discover ..> authz: <<includes>>
-          discover ..> authn: <<includes>>
     @enduml
-
-.. image:: images/use-case-43.png
-
-.. 
-    @startuml images/sequence-43.png
-        !include plantuml.conf
-         actor Investigator
-         participant "Client Software" as app_client << Application >>
-         participant "MN API" as mn_api << Member Node >>
-         participant "CN API" as cn_api << Coordinating Node >>
-         == Retreive primary dataset ==    
-         Investigator -> app_client   
-         app_client -> mn_api: get(session, PID)
-         activate mn_api #D74F57
-           mn_api -> mn_api: isAuthorized(session, PID, READ)
-           mn_api -> mn_api: read(session,PID)
-           mn_api <- mn_api: bytes
-         deactivate mn_api
-         app_client <-- mn_api: bytes   
-         == Search derivations based on primary dataset ==      
-         app_client -> cn_api: query(session, query)
-         note right of app_client
-          Query for any derived datasets
-         end note
-         activate cn_api #D74F57
-           cn_api -> cn_api: prov_search() -> objectList
-           note right of cn_api
-             The query response is a list 
-             of PIDs of primary resources 
-             this dataset is derived from
-           end note
-           cn_api -> cn_api: isAuthorized(session, pid, OP_GET)
-           app_client <-- cn_api: objectList
-         deactivate cn_api
-           app_client -> app_client: render()
-    @enduml
-    
-.. image:: images/sequence-43.png
+   
+.. image:: images/43_seq.png
 
 Actors
 ------
@@ -89,22 +89,18 @@ Actors
 
 Preconditions
 -------------
-* The client software and user interface must be DataONE-enabled and provenance-aware.
-* The synthetic and primary dataset(s) have been indexed by the DataONE Coordinating Nodes.
-* The scientist who uploaded the synthetic dataset to a Member Node provided provenance information.
-* The intellectual rights of the primary dataset allows for derived works.
-
-
+* The primary resource dataset needs to be registered on the Member Node.
+* The Investigator needs write access to a Member Node.
+* The client software must be DataONE-enabled and provenance-aware.
+* The client software has been configured appropriately 
 
 Postconditions
 --------------
-* DataONE users can examine a list of derived works of each dataset.
+* The derived datasets are stored on the Member Node
+* The data package includes formal links between the primary and derived datasets
 
 Notes
 -----
-Notes
------
-User interface mockups of Use Cases 42, 43, and 44 are in PDF format here: 
-Science Metadata view: https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/images/metadata_view_with_use_cases.pdf?raw=true
 
-Data search view: https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/images/data_search_with_use_case.pdf?raw=true
+Use Case Implementation Examples
+--------------------------------
