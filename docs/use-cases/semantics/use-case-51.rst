@@ -31,8 +31,8 @@ Sequence Diagram
 ----------------
 .. 
     @startuml images/uc_51_seq.png 
-		participant "Ontology repository" as ontrepo
-		participant "Object Store" as store 
+		database "Ontology repository" as ontrepo
+		database "Object Store" as store 
 		participant "Web UI" as webui
 	  	actor "User" as user
 		

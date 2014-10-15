@@ -33,7 +33,7 @@ Sequence Diagram
 ----------------
 .. 
     @startuml images/uc_55_seq.png 
-		participant "Ontology repository" as ontrepo
+		database "Ontology repository" as ontrepo
 		participant "Annotation generator" as autoann
 		participant "Web UI" as webui 
 		

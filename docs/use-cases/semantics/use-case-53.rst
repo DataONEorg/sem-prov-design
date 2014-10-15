@@ -29,7 +29,7 @@ Sequence Diagram
 ----------------
 .. 
     @startuml images/uc_53_seq.png 
-		participant "Object Store" as store 
+		database "Object Store" as store 
 		participant "Web UI" as webui
 	  	actor "User" as user
 		

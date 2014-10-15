@@ -35,9 +35,9 @@ Sequence Diagram
 ----------------
 .. 
     @startuml images/uc_50_seq.png 
-		participant "Ontology repository" as ontrepo
+		database "Ontology repository" as ontrepo
 		participant "Annotation generator" as autoann
-		participant "Object Store" as store 
+		database "Object Store" as store 
 		
 		note left of ontrepo: e.g., BioPortal
 		note left of autoann: TBD
