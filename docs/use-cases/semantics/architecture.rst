@@ -83,20 +83,43 @@ We have not endeavored to annotate DATA objects directly (e.g., tabular text/csv
 
 	}
 	
-	package identification {
+	package "metadata option" {
 	    object "oa:SpecificResource" as target
 	    object "oa:Source" as source {
 	    	metadata URI
 	    }
-	    object "xs:String" as identifier {
-	    	e.g., pid.1.2.3
+	    object "xs:string" as identifier {
+	    	e.g., metadata.1.2.3
 	    }
-	    object "oa:FragmentSelector" as selector
-	    object "xs:String" as selectorValue {
+	    object "oa:FragmentSelector" as selector {
+	    	For selecting fragments from
+	    	XML, text, images
+	    }
+	    object "xs:string" as selectorValue {
 	    	e.g., #xpointer(/a/b/c)
 	    }
-	    object "xs:String" as syntax {
+	    object "xs:string" as syntax {
 	    	e.g., http://tools.ietf.org/rfc/rfc3023
+	    }
+	}
+	
+	package "data option" {
+	    object "oa:SpecificResource" as d_target
+	    object "oa:Source" as d_source {
+	    	data URI
+	    }
+	    object "xs:string" as d_identifier {
+	    	e.g., data.1.2.3
+	    }
+	    object "oa:DataPositionSelector" as d_selector {
+	    	For selecting ranges 
+	    	within the data bytestream
+	    }
+	    object "xs:integer" as d_start {
+	    	e.g., 0
+	    }
+	    object "xs:integer" as d_end {
+	    	e.g., 20
 	    }
 	}
     
@@ -108,28 +131,42 @@ We have not endeavored to annotate DATA objects directly (e.g., tabular text/csv
 	    }
 	}  
     
+    'setup annotation
     annotation --> body: "oa:hasBody"
-    annotation --> target: "oa:hasTarget"
+    annotation --> motivation: "oa:isMotivatedBy"
+    
+    'provenance
     annotation --> person: "oa:annotatedBy"
     person --> string : "foaf:name"
     person --> url : "foaf:account"
-    annotation --> motivation: "oa:isMotivatedBy"
-    target --> source: "oa:hasSource"
-    source --> identifier: "dcterms:identifier"
-    target --> selector: "oa:hasSelector"
-    selector --> syntax: "dcterms:conformsTo"
-    selector --> selectorValue: "rdf:value"
+    
+    'the body of the annotation
     body --> measurement: "rdf:type"
-    
     body --> semanticTag: "rdf:type"
-    
-    
     
     measurement --> characteristic: "oboe:hasCharacteristic"
     measurement --> standard: "oboe:usesStandard"
    	measurement <-- observation: "oboe:hasMeasurement"
    	observation --> entity: "oboe:ofEntity"
     
+    'data target
+    annotation --> d_target: "oa:hasTarget"
+    d_target --> d_source: "oa:hasSource"
+    d_source --> d_identifier: "dcterms:identifier"
+    d_target --> d_selector: "oa:hasSelector"
+    d_selector --> d_start: "oa:start"
+    d_selector --> d_end: "oa:end"
+    
+    'metadata target
+    annotation --> target: "oa:hasTarget"
+    target --> source: "oa:hasSource"
+    source --> identifier: "dcterms:identifier"
+    target --> selector: "oa:hasSelector"
+    selector --> syntax: "dcterms:conformsTo"
+    selector --> selectorValue: "rdf:value"
+    
+    'relationship between the two
+    'source -> d_source: "cito:documents"    
     
     @enduml
 
