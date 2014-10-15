@@ -46,7 +46,7 @@ The *record()* method should return the runId of the recorded run, and then the 
 
 The following diagram shows a single invocation of record() and how provenance would be captured for reading a CSV file:
 
-.. image:: ../use-cases/provenance/images/sequence-46.png
+.. image:: ../use-cases/provenance/images/sequence-41.png
     
 *publish(DataPackage, Client)*
 
