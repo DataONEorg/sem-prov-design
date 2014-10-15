@@ -7,8 +7,8 @@ Scientists can publish derived datasets and tracking information to DataONE
 
 Revisions
 ---------
-|Created: 2014-09-29
-|Revised: 2014-10-14
+| Created: 2014-09-29
+| Revised: 2014-10-14
 
 Goal
 ----

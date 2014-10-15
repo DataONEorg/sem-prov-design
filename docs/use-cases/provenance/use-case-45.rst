@@ -7,8 +7,8 @@ Scientists can discover synthetic research that uses their dataset within DataON
 
 Revisions
 ---------
-|Created: 2014-09-22
-|Revised: 2014-10-14
+| Created: 2014-09-22
+| Revised: 2014-10-14
 
 Goal
 ----

@@ -24,8 +24,6 @@ While writing a script in R or Matlab, the analyst uses inline comments that com
 
 *Use case diagram*
 
-
-
 .. 
     @startuml images/use-case-42.png  
         package "Investigator's local machine" {

@@ -40,7 +40,7 @@ as detailed in use case #45 (Publish to DataONE).
     @startuml images/use-case-41.png
         package "Investigator's local machine" {
         actor "Investigator" as client
-        usecase "41. Track Locally" as record
+        usecase "41. Track Run History" as record
         client -- record
         }
     @enduml

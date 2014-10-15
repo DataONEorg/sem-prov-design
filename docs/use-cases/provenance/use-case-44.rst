@@ -6,8 +6,8 @@ Scientists can examine original dataset(s) that were used to create a synthetic 
 
 Revisions
 ---------
-|Created: 2014-09-22
-|Revised: 2014-10-14
+| Created: 2014-09-22
+| Revised: 2014-10-14
 
 Goal
 ----
