@@ -7,8 +7,8 @@ Scientists can track, list, and examine script executions
 
 Revisions
 ---------
-|Created: 2014-09-23
-|Revised: 2014-10-14
+| Created: 2014-09-23
+| Revised: 2014-10-14
 
 Goal
 ----
