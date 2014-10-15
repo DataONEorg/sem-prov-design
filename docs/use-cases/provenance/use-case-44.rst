@@ -1,4 +1,4 @@
-DataONE Use Case 44 (Explore)
+DataONE Use Case 44 (Explore Derived Data)
 =============================
 
 Scientists can examine original dataset(s) that were used to create a synthetic dataset found in DataONE.
