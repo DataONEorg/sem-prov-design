@@ -33,6 +33,8 @@ While writing a script in R or Matlab, the analyst uses inline comments that com
         }
     @enduml
 
+.. image:: images/use-case-42.png
+
 Actors
 ------
 * Investigator
