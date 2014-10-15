@@ -36,6 +36,103 @@ Some examples include:
 We will initially focus on atomic annotation documents that can be parsed and loaded into a triplestore (which may or may not be persistent)
 and that can then be queried to populate a discovery index (e.g., SOLR)
 
+Notes:
+
+The model proposal follows the OA specification as interpreted for our DataONE uses. 
+Please review the section where the 'oa:hasBody' property is used to associate an OBOE concept as there are many possible
+ways to reference OBOE concepts depending on the KR we use to define measurements, characteristics and standards.
+Also, take note of how we are targeting the METADATA object using an xpointer to a specific part of the document (XML).
+We have not endeavored to annotate DATA objects directly (e.g., tabular text/csv). In order to accommodate that, 
+'oa:hasSource' would reference a data URI and the selector would be some alternative 'oa:Selector' subclass.
+
+
+.. image:: images/oa_model.png
+
+.. 
+    @startuml images/oa_model.png  
+    
+    object "oa:Annotation" as annotation
+    
+
+    package "tagging" {
+    
+    	object "oa:tagging" as motivation
+    	object "oa:SemanticTag" as semanticTag
+	   	object "rdf:resource" as body {
+	   		There are some options for pointing at a semantic concept in the body.
+	   		Really, any concept in a KR could be referenced.
+	   		#Measurement
+	   		#Characteristic
+	   		#Standard
+			Also see these for more discussion:
+	   		http://www.openannotation.org/spec/core/core.html#Tagging 
+	   		http://www.openannotation.org/spec/extension/#StructuredBody
+		}
+	    
+	    package OBOE {
+		    
+		    object "oboe:Measurement" as measurement		    
+		   	object "oboe:Characteristic" as characteristic
+	    	object "oboe:Standard" as standard
+	    	
+	    	package optional {
+			    object "oboe:Observation" as observation
+			    object "oboe:Entity" as entity
+			} 
+		}
+
+	}
+	
+	package identification {
+	    object "oa:SpecificResource" as target
+	    object "oa:Source" as source {
+	    	metadata URI
+	    }
+	    object "xs:String" as identifier {
+	    	e.g., pid.1.2.3
+	    }
+	    object "oa:FragmentSelector" as selector
+	    object "xs:String" as selectorValue {
+	    	e.g., #xpointer(/a/b/c)
+	    }
+	    object "xs:String" as syntax {
+	    	e.g., http://tools.ietf.org/rfc/rfc3023
+	    }
+	}
+    
+    package provenance {
+	    object "prov:Person" as person
+	    object "xs:String" as string
+	    object "xs:URL" as url {
+	    	e.g. ORCID or DN
+	    }
+	}  
+    
+    annotation --> body: "oa:hasBody"
+    annotation --> target: "oa:hasTarget"
+    annotation --> person: "oa:annotatedBy"
+    person --> string : "foaf:name"
+    person --> url : "foaf:account"
+    annotation --> motivation: "oa:isMotivatedBy"
+    target --> source: "oa:hasSource"
+    source --> identifier: "dcterms:identifier"
+    target --> selector: "oa:hasSelector"
+    selector --> syntax: "dcterms:conformsTo"
+    selector --> selectorValue: "rdf:value"
+    body --> measurement: "rdf:type"
+    
+    body --> semanticTag: "rdf:type"
+    
+    
+    
+    measurement --> characteristic: "oboe:hasCharacteristic"
+    measurement --> standard: "oboe:usesStandard"
+   	measurement <-- observation: "oboe:hasMeasurement"
+   	observation --> entity: "oboe:ofEntity"
+    
+    
+    @enduml
+
 
 Proposed components
 --------------------
