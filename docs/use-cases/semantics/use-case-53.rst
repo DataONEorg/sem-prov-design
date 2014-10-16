@@ -72,10 +72,11 @@ Postconditions
 --------------
 * The updated annotations are stored on the Coordinating Node.
 * The annotations are marked as being rejected by the owner as applicable
+* Index is updated to reflect the change in status of the annotation
 
 Notes
 -----
-This is a simplified approach to our intitial "confirm or refute annotation" plan. Until explicitly marked as incorrect,
+This is a simplified approach to our initial "confirm or refute annotation" plan. Until explicitly marked as incorrect,
 all current annotations will be used to populate the search index for discovery. Ultimately, the owner of the original data package
 has the final say in what is correct when it comes to annotations in the system.
 
