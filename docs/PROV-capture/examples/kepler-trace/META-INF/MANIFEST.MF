@@ -1,0 +1,25 @@
+Manifest-Version: 1.4.2
+KAR-Version: 2.1
+module-dependencies: reporting-2.4.0;workflow-run-manager-2.4.0;proven
+ ance-2.4.0;tagging-2.4.0;workflow-scheduler-gui-1.1.0;kepler-2.4.0;ou
+ treach-2.3.0;apple-extensions-2.2.0;r-2.4.0;loader-2.3.1;display-redi
+ rect-1.0.0;actors-2.4.1;directors-2.1.0;opendap-2.1.0;dataturbine-2.3
+ .0;ecogrid-2.4.0;authentication-gui-2.3.0;gui-2.4.1;module-manager-gu
+ i-2.4.0;authentication-2.3.0;repository-2.4.0;job-2.2.1;io-2.0.0;ssh-
+ 2.2.0;data-handling-2.2.0;sms-2.2.0;component-library-2.3.0;util-2.2.
+ 0;event-state-2.1.0;core-2.4.1;common-2.4.1;module-manager-2.4.0;conf
+ iguration-manager-2.4.0;kepler-tasks-2.4.0;ptolemy-kepler-2.4.1
+lsid: urn:lsid:kepler-project.org/ns/:57207:7:1
+
+Name: WorkflowRun.199.xml
+dependsOn: urn:lsid:kepler-project.org/ns/:37586:12:1
+type: org.kepler.util.WorkflowRun
+lsid: urn:lsid:kepler-project.org/ns/:45144:195:1
+handler: org.kepler.kar.handlers.WorkflowRunEntryHandler
+
+Name: 05-LinearRegression.urn.lsid.kepler-project.org.ns..37586.12.1.x
+ ml
+type: ptolemy.actor.TypedCompositeActor
+lsid: urn:lsid:kepler-project.org/ns/:37586:12:1
+handler: org.kepler.kar.handlers.ActorMetadataKAREntryHandler
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE property PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<property name="WorkflowRun" class="org.kepler.util.WorkflowRun">
+    <property name="execLSID" class="ptolemy.kernel.util.StringAttribute" value="urn:lsid:kepler-project.org/ns/:45144:195:1">
+    </property>
+    <property name="derivedFrom" class="org.kepler.moml.NamedObjIdReferralList">
+    </property>
+    <property name="user" class="ptolemy.kernel.util.StringAttribute" value="jones">
+    </property>
+    <property name="workflowName" class="ptolemy.kernel.util.StringAttribute" value="05-LinearRegression">
+    </property>
+    <property name="workflowLSID" class="ptolemy.kernel.util.StringAttribute" value="urn:lsid:kepler-project.org/ns/:37586:12:1">
+    </property>
+    <property name="startTime" class="ptolemy.kernel.util.StringAttribute" value="2014-02-05T11:03:08.442-09:00">
+    </property>
+    <property name="duration" class="ptolemy.kernel.util.StringAttribute" value="1">
+    </property>
+    <property name="execId" class="ptolemy.kernel.util.StringAttribute" value="199">
+    </property>
+    <property name="errorMessages" class="ptolemy.kernel.util.StringAttribute">
+    </property>
+    <property name="hostId" class="ptolemy.kernel.util.StringAttribute" value="dhcp238.nceas.ucsb.edu">
+    </property>
+    <property name="annotation" class="ptolemy.kernel.util.StringAttribute">
+    </property>
+    <property name="moduleDependencies" class="ptolemy.kernel.util.StringAttribute" value="reporting-2.4.0;workflow-run-manager-2.4.0;provenance-2.4.0;tagging-2.4.0;workflow-scheduler-gui-1.1.0;kepler-2.4.0;outreach-2.3.0;apple-extensions-2.2.0;r-2.4.0;loader-2.3.1;display-redirect-1.0.0;actors-2.4.1;directors-2.1.0;opendap-2.1.0;dataturbine-2.3.0;ecogrid-2.4.0;authentication-gui-2.3.0;gui-2.4.1;module-manager-gui-2.4.0;authentication-2.3.0;repository-2.4.0;job-2.2.1;io-2.0.0;ssh-2.2.0;data-handling-2.2.0;sms-2.2.0;component-library-2.3.0;util-2.2.0;event-state-2.1.0;core-2.4.1;common-2.4.1;module-manager-2.4.0;configuration-manager-2.4.0;kepler-tasks-2.4.0;ptolemy-kepler-2.4.1">
+    </property>
+    <property name="type" class="ptolemy.kernel.util.StringAttribute" value="complete">
+    </property>
+    <property name="entityId" class="org.kepler.moml.NamedObjId" value="urn:lsid:kepler-project.org/ns/:45144:195:1">
+    </property>
+    <property name="workflowTags" class="ptolemy.kernel.util.StringAttribute">
+    </property>
+</property>
