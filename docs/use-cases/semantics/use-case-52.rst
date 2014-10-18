@@ -97,16 +97,16 @@ Sample Queries
 ---------------
 TODO: sample semantic queries should be shared here.
 
-- In natural language, the kinds of questions people would like to ask
-  - Show datasets with data on
-  - rate of release of carbon dioxide from soil 
-  - carbon dioxide experimentally added to a grassland 
-  - above ground net primary productivity 
-  - heterotrophic soil respiration at the ecosystem level 
-  - soil microbe carbon pools 
-  - methane release from soil 
-  - CO2 uptake by the ocean
-  - ocean carbonate chemistry 
+* In natural language, the kinds of questions people would like to ask
+  * Show datasets with data on
+  * rate of release of carbon dioxide from soil 
+  * carbon dioxide experimentally added to a grassland 
+  * above ground net primary productivity 
+  * heterotrophic soil respiration at the ecosystem level 
+  * soil microbe carbon pools 
+  * methane release from soil 
+  * CO2 uptake by the ocean
+  * ocean carbonate chemistry 
 
 
 
