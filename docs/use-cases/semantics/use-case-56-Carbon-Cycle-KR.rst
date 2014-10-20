@@ -1,5 +1,5 @@
 
-DataONE Use Case 56 (Carbon cycle KR)
+DataONE Use Case 56 (Carbon Cycle KR)
 ==========================================
 
 Onotology for carbon cycle measurement concepts
