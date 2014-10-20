@@ -9,6 +9,8 @@ Revisions
 ---------
 2014-10-07: Created
 2014-10-13: Updated to reflect discussion at weekly meeting
+2014-10-20:  expanded name - it is difficult to just look at the use case number format when you are looking at a long listing - it is nice to have longer names.  i just put one in here and did not change all of the names in case there is another reason for keeping them short.
+
 
 Goal
 ----
