@@ -21,7 +21,7 @@ These products are to be produced by the semantics and provenance team during th
     - Description: A hardware and software environment deploying both test Coordinating Node and test Member Node instances to be used for semantics and provenance service testing
     - Chris: Oct 2014
 - Product: [__Provenance Model and Syntax__]
-    - Description: A formal OWL specification of the model to be used to represent provenance information in DataONE, along with one or more syntax representations of the model for storage on Member Nodes. The Provenance model will adopt, incorporate, or extend existing community standards such as PROV for compatbility with wider efforts.
+    - Description: A formal OWL specification of the model to be used to represent provenance information in DataONE, along with one or more syntax representations of the model for storage on Member Nodes. The Provenance model will adopt, incorporate, or extend existing community standards such as PROV for compatibility with wider efforts.
     - RDFS model specification
     - Chris: start Nov 2014, end Dec 2014
 - Product: [__Provenance Index and Query Service__]
@@ -31,7 +31,7 @@ These products are to be produced by the semantics and provenance team during th
         - Plan to start working on SOLR4 when the CN 1.6 branch is created after CN 1.5 is released
     - Chris: start Dec 2014, end Jan 2015
 - Product: [__Provenance Web User Interface__]
-	- Description: A web-based user interface which displays provenance information in the context of other metadata about data packages, and provides the ability to browse and navigate across data derivation relationships from the proveance system.  Also includes the ability to search for data using relevant provenance relationships.
+	- Description: A web-based user interface which displays provenance information in the context of other metadata about data packages, and provides the ability to browse and navigate across data derivation relationships from the provenance system.  Also includes the ability to search for data using relevant provenance relationships.
     - Feature: Prov display of individual data objects
 		- Already partially implemented - just needs some finishing up - 1-2 days
     - Feature: Prov browser on the data package level
@@ -49,7 +49,7 @@ These products are to be produced by the semantics and provenance team during th
     - Feature: Comment language
     - Chris: start Nov 2014, end Feb 2015
 - Product: [__Matlab Provenance Toolbox__]
-    - Description: An implementation of the 'Provenance Client API and Comment Syntax' in Matlab that enables scientists to describe, capture, store, and publish provenance information about their computational activites.
+    - Description: An implementation of the 'Provenance Client API and Comment Syntax' in Matlab that enables scientists to describe, capture, store, and publish provenance information about their computational activities.
     - Chris: start Dec 2014, end Feb 2015
 
 ## Semantics Products
@@ -91,7 +91,7 @@ These products are to be produced by the semantics and provenance team during th
 - Product: [__Semantic Annotation Model and Syntax__]
     - Description: A formal OWL specification of the model to be used to represent semantic measurement annotations in DataONE, along with one or more syntax representations of the model. 
     Semantic measurement annotations are the means by which semantic concepts from the 'Carbon Cycle Knowledge Model' are linked to specific data instances stored in DataONE member nodes. 
-    The Semantic Annotation model will adopt, incorporate, or extend existing community standards such as PROV and the Open Annotation Ontology for compatbility with wider efforts.
+    The Semantic Annotation model will adopt, incorporate, or extend existing community standards such as PROV and the Open Annotation Ontology for compatibility with wider efforts.
     - Feature: ability to consistently and unambiguously target specific parts of metadata/data objects for annotation.
     - Feature: ability to specify agent making the assertion and their role/authority level
     - Feature: JSON-LD and RDF/XML serialization options
@@ -105,7 +105,7 @@ These products are to be produced by the semantics and provenance team during th
     - Dependency: 'Semantic Annotation Model and Syntax'
     - Task: evaluate existing Annotation store implementations in the Open Annotation software stack
     - Task: evaluate D1 CRUD API for storing annotations
-    - Task: implement annotation-store overlay for D1 CRUD API if existing storage implementations are found to be inadequte.
+    - Task: implement annotation-store overlay for D1 CRUD API if existing storage implementations are found to be inadequate.
     - Owner: Ben  
     - Timeline: 
         - start Nov 2014
@@ -119,8 +119,8 @@ These products are to be produced by the semantics and provenance team during th
       - 'Coordinating Node Annotation Store'
     - Feature: Generate OA-compatible annotations for provided metadata input
     - Feature: re-unable as algorithms and knowledge models evolve over time (hopefully improving results)
-    - Feature: can target a subset of DataONE-hosted data with a domain specific set of ontologies. Proffing ground before auto-annotating contents of entire network.
-    - Task: Evaluate efficacy of RPI's "entity linking" matching algorithm in ESOR as compared to existing text-based matching available in BioPortla (Xixi/Deborah to clarify access to grad student code)
+    - Feature: can target a subset of DataONE-hosted data with a domain specific set of ontologies. Proofing ground before auto-annotating contents of entire network.
+    - Task: Evaluate efficacy of RPI's "entity linking" matching algorithm in ESOR as compared to existing text-based matching available in BioPortal (Xixi/Deborah to clarify access to grad student code)
     - Owner: Xixi
     - Timeline: 
         - start Nov 2014, 
@@ -133,9 +133,9 @@ These products are to be produced by the semantics and provenance team during th
     - Owner: Ben
     - Timeline: Dec 2014
 - Product: [__Semantic Measurement Search Web User Interface__]
-    - Description: A web-based user interface that provides search fields that utilize semantic measurment concepts and annotations to drive precise and complete queries for particular types of measurements within DataONE.  The semantic search service provides a targeted solution to data discovery across the vastly heterogeneous collection of data in DataONE.
+    - Description: A web-based user interface that provides search fields that utilize semantic measurement concepts and annotations to drive precise and complete queries for particular types of measurements within DataONE.  The semantic search service provides a targeted solution to data discovery across the vastly heterogeneous collection of data in DataONE.
     - Dependency: 'Semantic Measurements Query Service' 
-    - Feature: integrates with/uses exising DataONE query API
+    - Feature: integrates with/uses existing DataONE query API
     - Feature: easy to understand concept navigation/selection using some or all of: auto-complete suggestions, tree-browsing, graph-browsing, concept labels and definitions
     - Owner: Lauren
     - Timeline: Jan 2015

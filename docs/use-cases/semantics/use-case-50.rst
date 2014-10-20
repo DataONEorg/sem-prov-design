@@ -90,6 +90,7 @@ Postconditions
 * The generated annotations are stored on the Coordinating Node.
 * The annotations are marked as being created by the automatic process.
 * The annotations share the same permissions as the metadata upon which they are based (editable by the original document owner).
+* Index is updated to reflect the new annotation
 
 Notes
 -----

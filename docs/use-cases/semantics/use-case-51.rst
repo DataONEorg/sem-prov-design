@@ -42,7 +42,7 @@ Sequence Diagram
 		
 			  
 	  store -> webui: metadata
-	  store -> webui: annotations
+	  store -> webui: annotations (?)
 	  note right
 	  	MetacatUI renders metadata;
 	  	Annotations displayed with
@@ -50,12 +50,19 @@ Sequence Diagram
 	  end note
 	  webui --> user: rendered metadata
 	  
+	  user --> webui: enter concept text
+	  note right
+	  	User can enter text in order 
+	  	to locate relevant concepts
+	  end note
+	  
 	  webui --> ontrepo: getConcepts()
 	  ontrepo --> webui: concepts
 	  note right
 	  	Concept recommendations
 	  	presented to user based 
-	  	on metadata content and/or
+	  	on entered text, 
+	  	metadata content and/or
 	  	existing automated annotations
 	  end note
 	  user -> webui: annotate metadata
