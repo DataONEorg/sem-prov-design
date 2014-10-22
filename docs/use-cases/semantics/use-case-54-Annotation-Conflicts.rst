@@ -1,5 +1,5 @@
 
-DataONE Use Case 54 (Annotation conflicts)
+DataONE Use Case 54 (Annotation Conflicts)
 ==========================================
 
 Conflicting annotations are shown to users

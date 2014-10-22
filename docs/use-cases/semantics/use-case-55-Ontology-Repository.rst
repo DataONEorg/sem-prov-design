@@ -1,5 +1,5 @@
 
-DataONE Use Case 55 (Ontology repository)
+DataONE Use Case 55 (Ontology Repository)
 ==========================================
 
 Need repository for storing and querying ontology concepts

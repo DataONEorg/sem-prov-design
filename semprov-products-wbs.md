@@ -42,7 +42,7 @@ These products are to be produced by the semantics and provenance team during th
 	    	- Lauren: I can have a more accurate estimate after I do the mockup and see how complicated this provenance browser will be. Based on the ideas we talked about at AHM I can estimate about 10-12 working days to implement this (at a minimum) - the more dynamic and interactive, the more time it will take
 	   - Question (for Usability): How long is the review process for a web UI review and usability test?
     - Lauren: start Nov 2014, end Jan 2015
-- Product: [__Provenance Client API and Comment Syntax__]
+- Product: [__Provenance Client Instrumentation API__]
     - Description: An application programming interface and language-independent comment syntax for provenance markup. The API and Comment syntax represent the cross-language mechanisms that client tools implement to enable scientists to record provenance information using a client software tool.
     - Feature: Function RunManager API
     	- e.g., markAsTraceable(x) versus inline comment; deal with loops;
