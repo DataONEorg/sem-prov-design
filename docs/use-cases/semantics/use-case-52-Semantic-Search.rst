@@ -95,22 +95,35 @@ Postconditions
 
 Sample Queries
 ---------------
-TODO: sample semantic queries should be shared here.
+Sample queries that we can support, in increasing order of complexity.  These will be divided into implementation phases.
 
-* In natural language, the kinds of questions people would like to ask
-
-    * Show datasets with data on
+- Queries using only oboe:Characteristic
+    - List datasets with measurements of
     
-    	* rate of release of carbon dioxide from soil 
-    	* carbon dioxide experimentally added to a grassland 
-    	* above ground net primary productivity 
-    	* heterotrophic soil respiration at the ecosystem level 
-    	* soil microbe carbon pools 
-    	* methane release from soil 
-    	* CO2 uptake by the ocean
-    	* ocean carbonate chemistry 
-
-
+        Q1: above ground net primary productivity
+            SELECT ?identifier {
+                ?agnpp a lter:AboveGroundNetPrimaryProduction
+                lter:AboveGroundNetPrimaryProduction a oboe:Characteristic
+            }
+        Q2: heterotrophic soil respiration at the ecosystem level
+            SELECT ?identifier {
+                ?heterresp a lter:HeterotrophicSoilRespiration
+                lter:HeterotrophicSoilRespiration a oboe:Characteristic
+            }
+        Q3: soil microbe carbon pools
+        
+        Q4: CO2 uptake by the ocean
+        
+        Q5: ocean carbonate chemistry
+        
+- Queries using oboe:Characteristic and oboe:Entity
+    - List datasets with measurements of
+    
+        Q6: rate of release of carbon dioxide from soil
+        
+        Q7: carbon dioxide experimentally added to a grassland 
+        
+        Q8: methane release from soil
 
 Notes
 -----
