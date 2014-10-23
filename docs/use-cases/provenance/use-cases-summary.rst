@@ -16,9 +16,9 @@ The following table lists the DataONE provenance use cases under development.
 +-------------+------------------------------+------------------------------------------------------------------+
 | Use Case 46 | `Double Check`_              | Examine scripts used in derived works                            |
 +-------------+------------------------------+------------------------------------------------------------------+
-| Use Case 47 | `Workflow Visualization`_    | Visualize script as a workflow graph local and via web           |
+| Use Case 47 | `Visualize Workflow`_        | Visualize script as a workflow graph local and via web           |
 +-------------+------------------------------+------------------------------------------------------------------+
-| Use Case 48 | `Run Visualization`_         | Visualize script execution as a workflow graph local and via web |
+| Use Case 48 | `Visualize Run`_             | Visualize script execution as a workflow graph local and via web |
 +-------------+------------------------------+------------------------------------------------------------------+
 
 .. _Track Run History:         ./use-case-41-Track-Run-History.rst
@@ -27,5 +27,5 @@ The following table lists the DataONE provenance use cases under development.
 .. _Explore Derived Data:      ./use-case-44-Explore-Derived-Data.rst
 .. _Discover Derived Products: ./use-case-45-Discover-Derived-Products.rst
 .. _Double Check:              ./use-case-46-Double-Check.rst
-.. _Workflow Visualization:    ./use-case-47-Workflow-Visualization.rst
-.. _Run Visualization:         ./use-case-48-Run-Visualization.rst
+.. _Visualize Workflow:        ./use-case-47--Visualize-Workflow.rst
+.. _Visualize Run:             ./use-case-48--Visualize-Run.rst
