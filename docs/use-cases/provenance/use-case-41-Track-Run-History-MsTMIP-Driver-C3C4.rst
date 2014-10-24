@@ -46,7 +46,8 @@ Inputs/Ouputs
 * Usability: scientist can view relationships between items in *MSTMIP-PROVENANCE-RELATIONSHIP-LIST*
 * Usability: scientist can select desired MsTMIP data products and send them to DataONE 
 
-*Use case diagram*
+Use case diagram
+-------
 
 .. image:: images/use-case-41.png
 
@@ -59,7 +60,8 @@ Inputs/Ouputs
         }
     @enduml
 
-*Sequence diagram*
+Sequence diagram
+-------
 
 .. image:: images/sequence-41.png
 
