@@ -25,15 +25,13 @@ The researcher specifies a Matlab script for which provenance information will b
 The Matlab script is then executed and the input datasets, derived datasets (not applicable in this case) and execution environment attributes (not applicable in this case) that are to be tracked are automatically determined and the provenance relationships between these objects is persisted on the local machine. Data products such as analysis output from the Matlab script, graphical output, etc., that are created by an execution are copied to a local archive.
 
 The scientist can then list recorded script executions, possibly filtering the list by attributes such as execution date and time.
-From this list individual executions can be selected for detailed review, such as viewing the provenance relationships between items
-and inspecting each data product produced by the execution.
+From this list individual executions can be selected for detailed review, such as viewing the provenance relationships between items and inspecting each data product produced by the execution.
 
-The scientist can then select an execution that has produced the desired data producs, and send them to DataONE 
-as detailed in use case #45 (Publish to DataONE).
+The scientist can then select an execution that has produced the desired data producs, and send them to DataONE as detailed in use case #45 (Publish to DataONE).
 
 Inputs/Ouputs
 -------
-
+*MsTMIP Driver Provenance Use Case (C3C4)
 
 *Use case diagram*
 
