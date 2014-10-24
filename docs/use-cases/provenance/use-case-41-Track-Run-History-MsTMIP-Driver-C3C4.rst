@@ -8,7 +8,11 @@ Scientists can track, list, and examine script executions
 Revisions
 ---------
 | Created: 2014-09-23
-| Revised: 2014-10-23
+| Revised: 2014-10-24
+
+Title
+----
+MsTMIP Driver Provenance Use Case (C3C4)
 
 Goal
 ----
@@ -31,7 +35,6 @@ The scientist can then select an execution that has produced the desired data pr
 
 Inputs/Ouputs
 -------
-* MsTMIP Driver Provenance Use Case (C3C4)
 * Input script is MSTMIP-INPUT-SCRIPT-NAME (C3_C4_map_present.m)
 * Input datasets are MSTMIP-INPUT-DATASET-LIST (North American 1/4-degree resolution land cover map, monthly mean surface air temperature between 2000 and 2010, and monthly mean precipitation between 2000 and 2010)
 * Input derived datasets are MSTMIP-INPUT-DERIVED-DATASET-LIST (Not applicable in this case)
