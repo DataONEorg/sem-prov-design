@@ -36,7 +36,7 @@ The scientist can then select an execution that has produced the desired data pr
 Inputs/Ouputs
 -------
 * Input script is *MSTMIP-INPUT-SCRIPT-NAME (C3_C4_map_present.m: https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/C3_C4_map_present.m)*
-* Input datasets are *MSTMIP-INPUT-DATASET-LIST (North American 1/4-degree resolution land cover map, monthly mean surface air temperature between 2000 and 2010, and monthly mean precipitation between 2000 and 2010)*
+* Input datasets are *MSTMIP-INPUT-DATASET-LIST (North American 1/4-degree resolution land cover map, monthly mean surface air temperature between 2000 and 2010, and monthly mean precipitation between 2000 and 2010. https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/inputs)*
 * Input derived datasets are *MSTMIP-INPUT-DERIVED-DATASET-LIST (Not applicable in this case)*
 * Input execution environment attributes are *MSTMIP-INPUT-EXECUTION-ENVIRONMENT-ATTRIBUTE-LIST (Not applicable in this case)*
 * Output recorded script execution is *MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST (the list provided by DataONE)*
