@@ -36,14 +36,14 @@ The scientist can then select an execution that has produced the desired data pr
 Inputs/Ouputs
 -------
 * Input script is *MSTMIP-INPUT-SCRIPT-NAME (C3_C4_map_present.m)*
-* Input datasets are MSTMIP-INPUT-DATASET-LIST (North American 1/4-degree resolution land cover map, monthly mean surface air temperature between 2000 and 2010, and monthly mean precipitation between 2000 and 2010)
-* Input derived datasets are MSTMIP-INPUT-DERIVED-DATASET-LIST (Not applicable in this case)
-* Input execution environment attributes are MSTMIP-INPUT-EXECUTION-ENVIRONMENT-ATTRIBUTE-LIST (Not applicable in this case)
-* Output recorded script execution is MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST (the list provided by DataONE)
-* Output provenance relationship list is MSTMIP-PROVENANCE-RELATIONSHIP-LIST (the list provided by DataONE)
-* Output provenance relationship visualization is MSTMIP-PROVENANCE-RELATIONSHIP-VISUALIZATION (the visualization provided by DataONE)
-* Usability: scientist can filter MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST by execution date, time, input dataset, input derived dataset, output dataset, ...
-* Usability: scientist can view relationships between items in MSTMIP-PROVENANCE-RELATIONSHIP-LIST
+* Input datasets are *MSTMIP-INPUT-DATASET-LIST (North American 1/4-degree resolution land cover map, monthly mean surface air temperature between 2000 and 2010, and monthly mean precipitation between 2000 and 2010)*
+* Input derived datasets are *MSTMIP-INPUT-DERIVED-DATASET-LIST (Not applicable in this case)*
+* Input execution environment attributes are *MSTMIP-INPUT-EXECUTION-ENVIRONMENT-ATTRIBUTE-LIST (Not applicable in this case)*
+* Output recorded script execution is *MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST (the list provided by DataONE)*
+* Output provenance relationship list is *MSTMIP-PROVENANCE-RELATIONSHIP-LIST (the list provided by DataONE)*
+* Output provenance relationship visualization is *MSTMIP-PROVENANCE-RELATIONSHIP-VISUALIZATION (the visualization provided by DataONE)*
+* Usability: scientist can filter *MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST by execution date, time, input dataset, input derived dataset, output dataset, ...*
+* Usability: scientist can view relationships between items in *MSTMIP-PROVENANCE-RELATIONSHIP-LIST*
 * Usability: scientist can select desired MsTMIP data products and send them to DataONE 
 
 *Use case diagram*
