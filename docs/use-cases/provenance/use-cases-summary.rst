@@ -4,9 +4,9 @@ Provenance Use Cases
 The following table lists the DataONE provenance use cases under development.
 
 +-------------+------------------------------+------------------------------------------------------------------+
-| Use Case 41 | `Track Run History`_         | Track file level PROV in R, Matlab locally                       |
+| Use Case 41 | `Document Script`_           | Track process, subprocess, workflow stages/timing in R, Matlab   |
 +-------------+------------------------------+------------------------------------------------------------------+
-| Use Case 42 | `Document Script`_           | Track process, subprocess, workflow stages/timing in R, Matlab   |
+| Use Case 42 | `Track Run History`_         | Track file level PROV in R, Matlab locally                       |
 +-------------+------------------------------+------------------------------------------------------------------+
 | Use Case 43 | `Publish in DataONE`_        | Publish captured PROV to DataONE                                 |
 +-------------+------------------------------+------------------------------------------------------------------+
