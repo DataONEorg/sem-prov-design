@@ -1,5 +1,5 @@
-MsTMIP and DataONE: A Science Workflow Scenario
-===============================================
+MsTMIP and DataONE: A Science Workflow Scenario for Tracking Provenance
+=======================================================================
 
 Improving scientific model sharing and communication through provenance
 -----------------------------------------------------------------------
