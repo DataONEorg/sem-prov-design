@@ -8,7 +8,7 @@ The North American Carbon Program's (NACP) Multiscale Terrestrial Model Intercom
 
 [Add more here. This paragraph will describe the overall steps in the MsTMIP workflow where we are applying the provenance use cases, starting from model driver data ingestion to the published figures, etc. Reference the overview image ...]
 
-.. figure:: figures/mstmip-workflow-overview.svg
+.. figure:: figures/mstmip-workflow-overview.png
    :width: 80%
    :alt: MsTMIP workflow overview diagram
    :align: center
