@@ -21,8 +21,8 @@ The following table lists the DataONE provenance use cases under development.
 | Use Case 48 | `Visualize Run`_             | Visualize script execution as a workflow graph local and via web |
 +-------------+------------------------------+------------------------------------------------------------------+
 
-.. _Track Run History:         ./use-case-41-Track-Run-History.rst
-.. _Document Script:           ./use-case-42-Document-Script.rst
+.. _Document Script:           ./use-case-41-Document-Script.rst
+.. _Track Run History:         ./use-case-42-Track-Run-History.rst
 .. _Publish in DataONE:        ./use-case-43-Publish-in-DataONE.rst
 .. _Explore Derived Data:      ./use-case-44-Explore-Derived-Data.rst
 .. _Discover Derived Products: ./use-case-45-Discover-Derived-Products.rst
