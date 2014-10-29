@@ -41,7 +41,8 @@ Expected Inputs and Outputs
 
 .. _`Input datasets`: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/inputs)
 
-- Input derived datasets are MSTMIP-INPUT-DERIVED-DATASET-LIST (Not applicable in this case)
+- Input derived datasets are MSTMIP-INPUT-DERIVED-DATASET-LIST
+    - Not applicable in this case
     
 - Input execution environment attributes are MSTMIP-INPUT-EXECUTION-ENVIRONMENT-ATTRIBUTE-LIST
     - Not applicable in this case
@@ -55,12 +56,10 @@ Expected Inputs and Outputs
 - Output provenance relationship visualization is MSTMIP-PROVENANCE-RELATIONSHIP-VISUALIZATION
     - The visualization provided by DataONE
 
-- Usability: Scientist can filter MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST 
-    - by execution date, time, input dataset, input derived dataset, output dataset, ...
-
-- Usability: scientist can view relationships between items in MSTMIP-PROVENANCE-RELATIONSHIP-LIST
-
-- Usability: scientist can select desired MsTMIP data products and send them to DataONE
+- Usability: 
+    - Scientist can filter MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST by execution date, time, input dataset, input derived dataset, output dataset, ...
+    - Scientist can view relationships between items in MSTMIP-PROVENANCE-RELATIONSHIP-LIST
+    - Scientist can select desired MsTMIP data products and send them to DataONE
 
 Step 2: Instrumenting and running terrestrial biospheric models
 ---------------------------------------------------------------
