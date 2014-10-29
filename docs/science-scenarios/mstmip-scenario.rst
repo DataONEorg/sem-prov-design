@@ -29,7 +29,8 @@ It will then calculate relative fractions of C3 and C4 grass in each 1/4-degree 
 Expected Inputs and Outputs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Input script is MSTMIP-INPUT-SCRIPT-NAME (`C3_C4_map_present.m`_)
+- Input script is MSTMIP-INPUT-SCRIPT-NAME
+    - `C3_C4_map_present.m`_
 
 .. _`C3_C4_map_present.m`: https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/C3_C4_map_present.m)
 
