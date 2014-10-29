@@ -40,7 +40,7 @@ data resources with their entity and attribute descriptions in a way that existi
 
 Figure 1. Diagram illustrating the annotation model for a sample data package
 
-![figure 1](images/oa_model.png)
+![figure 1](images/oa_example.png)
 
    
 In an effort to illustrate as many features of the proposed model, the example makes the following assumptions:
