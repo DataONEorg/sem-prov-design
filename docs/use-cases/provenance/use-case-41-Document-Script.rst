@@ -1,5 +1,5 @@
 
-DataONE Use Case 42 (Document Script)
+DataONE Use Case 41 (Document Script)
 ===================================
 
 Scientists can document a script's workflow using standardized inline comments.
@@ -25,15 +25,15 @@ While writing a script in R or Matlab, the analyst uses inline comments that com
 *Use case diagram*
 
 .. 
-    @startuml images/use-case-42.png  
+    @startuml images/use-case-41.png  
         package "Investigator's local machine" {
         actor "Investigator" as client
-        usecase "42. Document Script" as document
+        usecase "41. Document Script" as document
         client -- document
         }
     @enduml
 
-.. image:: images/use-case-42.png
+.. image:: images/use-case-41.png
 
 Actors
 ------
