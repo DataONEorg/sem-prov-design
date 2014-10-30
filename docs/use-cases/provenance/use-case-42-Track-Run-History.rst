@@ -1,5 +1,5 @@
 
-DataONE Use Case 41 (Track Run History)
+DataONE Use Case 42 (Track Run History)
 ===================================
 
 Scientists can track, list, and examine script executions
@@ -30,27 +30,27 @@ From this list individual executions can be selected for detailed review, such a
 and inspecting each data product produced by the execution.
 
 The scientist can then select an execution that has produced the desired data producs, and send them to DataONE 
-as detailed in use case #45 (Publish to DataONE).
+as detailed in use case #43 (Publish to DataONE).
 
 *Use case diagram*
 
-.. image:: images/use-case-41.png
+.. image:: images/use-case-42.png
 
 .. 
-    @startuml images/use-case-41.png
+    @startuml images/use-case-42.png
         package "Investigator's local machine" {
         actor "Investigator" as client
-        usecase "41. Track Run History" as record
+        usecase "42. Track Run History" as record
         client -- record
         }
     @enduml
 
 *Sequence diagram*
 
-.. image:: images/sequence-41.png
+.. image:: images/sequence-42.png
 
 .. 
-    @startuml images/sequence-41.png
+    @startuml images/sequence-42.png
         !include ../plantuml.conf
         title: Run Manager record()
         actor scientist
