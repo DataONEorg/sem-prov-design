@@ -48,32 +48,24 @@
             </text>
             <path d="M3164.05,679 L3164.05,497.843 C3164.05,487.172 3172.655,478.5 3183.327,478.5 L3687.723,478.5 C3698.395,478.5 3707.05,487.172 3707.05,497.843 L3707.05,679.199 C3707.05,689.87 3698.395,698.5 3687.723,698.5 L3183.327,698.5 C3172.655,698.5 3164.05,689.671 3164.05,679 L3164.05,679 Z" id="Fill-27" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
             <path d="M3164.0495,679 L3164.0495,497.84305 C3164.0495,487.171776 3172.65478,478.499951 3183.32605,478.499951 L3687.723,478.499951 C3698.3942,478.499951 3707.0495,487.171776 3707.0495,497.84305 L3707.0495,679.1989 C3707.0495,689.8702 3698.3942,698.5 3687.723,698.5 L3183.32605,698.5 C3172.65478,698.5 3164.0495,689.6712 3164.0495,679 L3164.0495,679 Z" id="Stroke-28" stroke="#85888D" stroke-width="3" sketch:type="MSShapeGroup"></path>
-            <text id="SG1" sketch:type="MSTextLayer" font-family="Helvetica" font-size="72" font-weight="260" fill="#000000">
-                <tspan x="3365.5" y="611.704">SG1</tspan>
+            <text id="SG1/SR1" sketch:type="MSTextLayer" font-family="Helvetica" font-size="72" font-weight="260" sketch:alignment="middle" fill="#000000">
+                <tspan x="3289.948" y="611.704">SG1/SR1</tspan>
             </text>
             <path d="M3164.05,955 L3164.05,774.273 C3164.05,763.449 3172.779,754.5 3183.604,754.5 L3687.446,754.5 C3698.271,754.5 3707.05,763.449 3707.05,774.273 L3707.05,955.074 C3707.05,965.899 3698.271,974.5 3687.446,974.5 L3183.604,974.5 C3172.779,974.5 3164.05,965.824 3164.05,955 L3164.05,955 Z" id="Fill-31" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
             <path d="M3164.0495,955.0003 L3164.0495,774.27339 C3164.0495,763.448948 3172.77895,754.500292 3183.60339,754.500292 L3687.4456,754.500292 C3698.2701,754.500292 3707.0495,763.448948 3707.0495,774.27339 L3707.0495,955.0746 C3707.0495,965.8991 3698.2701,974.5003 3687.4456,974.5003 L3183.60339,974.5003 C3172.77895,974.5003 3164.0495,965.8247 3164.0495,955.0003 L3164.0495,955.0003 Z" id="Stroke-33" stroke="#85888D" stroke-width="3" sketch:type="MSShapeGroup"></path>
-            <text id="SG2" sketch:type="MSTextLayer" font-family="Helvetica" font-size="72" font-weight="260" fill="#000000">
-                <tspan x="3365.5" y="887.856">SG2</tspan>
+            <text id="SG2/SR2" sketch:type="MSTextLayer" font-family="Helvetica" font-size="72" font-weight="260" sketch:alignment="middle" fill="#000000">
+                <tspan x="3289.948" y="887.856">SG2/SR2</tspan>
             </text>
-            <path d="M3164.05,1231 L3164.05,1050.426 C3164.05,1039.601 3172.779,1030.5 3183.604,1030.5 L3687.446,1030.5 C3698.271,1030.5 3707.05,1039.601 3707.05,1050.426 L3707.05,1231.227 C3707.05,1242.051 3698.271,1250.5 3687.446,1250.5 L3183.604,1250.5 C3172.779,1250.5 3164.05,1241.824 3164.05,1231 L3164.05,1231 Z" id="Fill-36" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M3164.05,1050.426 C3164.05,1039.601 3172.779,1030.5 3183.604,1030.5 L3687.446,1030.5 C3698.271,1030.5 3707.05,1039.601 3707.05,1050.426 L3707.05,1231.227 C3707.05,1242.051 3698.271,1250.5 3687.446,1250.5 L3183.604,1250.5 C3172.779,1250.5 3164.05,1241.824 3164.05,1231 L3164.05,1050.426 Z" id="Fill-36" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
             <path d="M3164.0495,1230.9996 L3164.0495,1050.42539 C3164.0495,1039.60095 3172.77895,1030.49963 3183.60339,1030.49963 L3687.4456,1030.49963 C3698.2701,1030.49963 3707.0495,1039.60095 3707.0495,1050.42539 L3707.0495,1231.2266 C3707.0495,1242.0511 3698.2701,1250.4996 3687.4456,1250.4996 L3183.60339,1250.4996 C3172.77895,1250.4996 3164.0495,1241.8241 3164.0495,1230.9996 L3164.0495,1230.9996 Z" id="Stroke-38" stroke="#85888D" stroke-width="3" sketch:type="MSShapeGroup"></path>
-            <text id="SG3" sketch:type="MSTextLayer" font-family="Helvetica" font-size="72" font-weight="260" fill="#000000">
-                <tspan x="3365.5" y="1164.009">SG3</tspan>
+            <text id="SG3/SR3" sketch:type="MSTextLayer" font-family="Helvetica" font-size="72" font-weight="260" sketch:alignment="middle" fill="#000000">
+                <tspan x="3289.948" y="1164.009">SG3/SR3</tspan>
             </text>
             <path d="M3164.05,1507 L3164.05,1326.5784 C3164.05,1315.754 3172.779,1306.5 3183.604,1306.5 L3687.446,1306.5 C3698.271,1306.5 3707.05,1315.754 3707.05,1326.5784 L3707.05,1507.3796 C3707.05,1518.2041 3698.271,1526.5 3687.446,1526.5 L3183.604,1526.5 C3172.779,1526.5 3164.05,1517.8244 3164.05,1507 L3164.05,1507 Z" id="Fill-41" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
             <path d="M3164.0495,1507 L3164.0495,1326.57839 C3164.0495,1315.75395 3172.77895,1306.49997 3183.60339,1306.49997 L3687.4456,1306.49997 C3698.2701,1306.49997 3707.0495,1315.75395 3707.0495,1326.57839 L3707.0495,1507.3796 C3707.0495,1518.2041 3698.2701,1526.5 3687.4456,1526.5 L3183.60339,1526.5 C3172.77895,1526.5 3164.0495,1517.8244 3164.0495,1507 L3164.0495,1507 Z" id="Stroke-43" stroke="#85888D" stroke-width="3" sketch:type="MSShapeGroup"></path>
-            <text id="BG1" sketch:type="MSTextLayer" font-family="Helvetica" font-size="72" font-weight="260" fill="#000000">
-                <tspan x="3363.484" y="1440.1615">BG1</tspan>
+            <text id="BG1/BR1" sketch:type="MSTextLayer" font-family="Helvetica" font-size="72" font-weight="260" sketch:alignment="middle" fill="#000000">
+                <tspan x="3285.9" y="1440.1615">BG1/BR1</tspan>
             </text>
-            <g id="Group-48" sketch:type="MSLayerGroup" transform="translate(3237.550000, 231.000000)" font-size="72" font-family="Helvetica" fill="#000000" font-weight="260">
-                <text id="Global-" sketch:type="MSTextLayer">
-                    <tspan x="77.798" y="69.272">Global </tspan>
-                </text>
-                <text id="Simulations" sketch:type="MSTextLayer">
-                    <tspan x="-0.214" y="155.272">Simulations</tspan>
-                </text>
-            </g>
             <path d="M3305.376,949.1 L3305.55,922.558 C3305.55,915.866 3310.8,910 3317.492,910 L3409.252,910 C3415.943,910 3421.55,915.866 3421.55,922.558 L3421.55,949.1 C3421.55,955.792 3415.943,961 3409.252,961 L3317.492,961 C3310.8,961 3305.376,955.792 3305.376,949.1 L3305.376,949.1 Z" id="Fill-51" fill="#5F327C" sketch:type="MSShapeGroup"></path>
             <path d="M3175.376,949.1 L3175.55,922.558 C3175.55,915.866 3180.8,910 3187.492,910 L3279.252,910 C3285.943,910 3291.55,915.866 3291.55,922.558 L3291.55,949.1 C3291.55,955.792 3285.943,961 3279.252,961 L3187.492,961 C3180.8,961 3175.376,955.792 3175.376,949.1 L3175.376,949.1 Z" id="Fill-52" fill="#A84031" sketch:type="MSShapeGroup"></path>
             <path d="M3175.376,672.1 L3175.55,645.558 C3175.55,638.866 3180.8,633 3187.492,633 L3279.252,633 C3285.943,633 3291.55,638.866 3291.55,645.558 L3291.55,672.1 C3291.55,678.792 3285.943,684 3279.252,684 L3187.492,684 C3180.8,684 3175.376,678.792 3175.376,672.1 L3175.376,672.1 Z" id="Fill-53" fill="#A84031" sketch:type="MSShapeGroup"></path>
@@ -198,12 +190,6 @@
                 <tspan x="4084.982" y="2399">Published Data,</tspan>
                 <tspan x="4065.65" y="2485">Scripts &amp; Figures</tspan>
             </text>
-            <g id="Oval-1-+-47" sketch:type="MSLayerGroup" transform="translate(1368.000000, 1186.000000)">
-                <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
-                <text id="41" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
-                    <tspan x="23" y="65">41</tspan>
-                </text>
-            </g>
             <g id="Oval-1-+-53" sketch:type="MSLayerGroup" transform="translate(4139.000000, 547.000000)">
                 <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
                 <text id="41" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
@@ -252,72 +238,6 @@
                     <tspan x="23" y="65">48</tspan>
                 </text>
             </g>
-            <g id="Oval-1-+-54" sketch:type="MSLayerGroup" transform="translate(1498.000000, 1186.000000)">
-                <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
-                <text id="42" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
-                    <tspan x="23" y="65">42</tspan>
-                </text>
-            </g>
-            <g id="Oval-1-+-55" sketch:type="MSLayerGroup" transform="translate(1628.000000, 1186.000000)">
-                <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
-                <text id="47" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
-                    <tspan x="23" y="65">47</tspan>
-                </text>
-            </g>
-            <g id="Oval-1-+-56" sketch:type="MSLayerGroup" transform="translate(1758.000000, 1186.000000)">
-                <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
-                <text id="48" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
-                    <tspan x="23" y="65">48</tspan>
-                </text>
-            </g>
-            <g id="Oval-1-+-49" sketch:type="MSLayerGroup" transform="translate(1368.000000, 2606.000000)">
-                <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
-                <text id="41" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
-                    <tspan x="23" y="65">41</tspan>
-                </text>
-            </g>
-            <g id="Oval-1-+-57" sketch:type="MSLayerGroup" transform="translate(1498.000000, 2606.000000)">
-                <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
-                <text id="42" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
-                    <tspan x="23" y="65">42</tspan>
-                </text>
-            </g>
-            <g id="Oval-1-+-62" sketch:type="MSLayerGroup" transform="translate(1628.000000, 2606.000000)">
-                <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
-                <text id="47" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
-                    <tspan x="23" y="65">47</tspan>
-                </text>
-            </g>
-            <g id="Oval-1-+-63" sketch:type="MSLayerGroup" transform="translate(1758.000000, 2606.000000)">
-                <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
-                <text id="48" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
-                    <tspan x="23" y="65">48</tspan>
-                </text>
-            </g>
-            <g id="Oval-1-+-48" sketch:type="MSLayerGroup" transform="translate(3188.000000, 1693.000000)">
-                <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
-                <text id="41" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
-                    <tspan x="23" y="65">41</tspan>
-                </text>
-            </g>
-            <g id="Oval-1-+-64" sketch:type="MSLayerGroup" transform="translate(3318.000000, 1693.000000)">
-                <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
-                <text id="42" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
-                    <tspan x="23" y="65">42</tspan>
-                </text>
-            </g>
-            <g id="Oval-1-+-65" sketch:type="MSLayerGroup" transform="translate(3448.000000, 1693.000000)">
-                <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
-                <text id="47" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
-                    <tspan x="23" y="65">47</tspan>
-                </text>
-            </g>
-            <g id="Oval-1-+-66" sketch:type="MSLayerGroup" transform="translate(3578.000000, 1693.000000)">
-                <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
-                <text id="48" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
-                    <tspan x="23" y="65">48</tspan>
-                </text>
-            </g>
             <g id="Oval-1-+-50" sketch:type="MSLayerGroup" transform="translate(3176.000000, 2604.000000)">
                 <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
                 <text id="41" sketch:type="MSTextLayer" font-family="Helvetica" font-size="48" font-weight="260" fill="#FFFFFF">
@@ -348,7 +268,7 @@
                     <tspan x="23" y="63">43</tspan>
                 </text>
             </g>
-            <g id="Oval-1-+-52" sketch:type="MSLayerGroup" transform="translate(2310.000000, 2562.000000)">
+            <g id="Oval-1-+-52" sketch:type="MSLayerGroup" transform="translate(2339.000000, 2562.000000)">
                 <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
                 <text id="43" sketch:type="MSTextLayer" font-family="Helvetica" font-size="47.1724138" font-weight="260" fill="#FFFFFF">
                     <tspan x="23" y="63">43</tspan>
@@ -372,13 +292,13 @@
                     <tspan x="23" y="63">46</tspan>
                 </text>
             </g>
-            <g id="Oval-1-+-74" sketch:type="MSLayerGroup" transform="translate(2442.050000, 2562.000000)">
+            <g id="Oval-1-+-74" sketch:type="MSLayerGroup" transform="translate(2471.050000, 2562.000000)">
                 <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
                 <text id="47" sketch:type="MSTextLayer" font-family="Helvetica" font-size="47.1724138" font-weight="260" fill="#FFFFFF">
                     <tspan x="23" y="63">47</tspan>
                 </text>
             </g>
-            <g id="Oval-1-+-73" sketch:type="MSLayerGroup" transform="translate(2572.050000, 2562.000000)">
+            <g id="Oval-1-+-73" sketch:type="MSLayerGroup" transform="translate(2601.050000, 2562.000000)">
                 <circle id="Oval-1" stroke="#FFFFFF" stroke-width="10" fill="#85888D" sketch:type="MSShapeGroup" cx="50" cy="50" r="50"></circle>
                 <text id="48" sketch:type="MSTextLayer" font-family="Helvetica" font-size="47.1724138" font-weight="260" fill="#FFFFFF">
                     <tspan x="23" y="63">48</tspan>
@@ -422,6 +342,11 @@
             </text>
             <text id="Diagram-derived-from" sketch:type="MSTextLayer" font-family="Helvetica" font-size="72" font-weight="260" fill="#979A9F">
                 <tspan x="242" y="2901.4998">Diagram derived from Huntzinger et al., Geosci. Model Dev., 6, 2121– 2133, 2013 (doi:10.5194/gmd-6-2121-2013)</tspan>
+            </text>
+            <text id="Global-&amp;" sketch:type="MSTextLayer" font-family="Helvetica" font-size="72" font-weight="260" sketch:alignment="middle" fill="#000000">
+                <tspan x="3295.46" y="270.500667">Global &amp;</tspan>
+                <tspan x="3182.78" y="356.500667">North American</tspan>
+                <tspan x="3251.468" y="442.500667">Simulations</tspan>
             </text>
         </g>
     </g>
