@@ -32,9 +32,9 @@ Expected Inputs and Outputs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Input script is MSTMIP-INPUT-SCRIPT-NAME
-    - `C3_C4_map_present.m`_
+    - `C3_C4_map_present_Global_Global_Global_Global_Global_Global_Global_Global_Global.m`_
 
-.. _`C3_C4_map_present.m`: https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/C3_C4_map_present.m
+.. _`C3_C4_map_present.m`: https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/C3_C4_map_present_Global.m
 
 
 - `Input datasets`_ are MSTMIP-INPUT-DATASET-LIST
