@@ -6,7 +6,7 @@ Improving scientific model sharing and communication through provenance
 
 The North American Carbon Program's (NACP) Multiscale Terrestrial Model Intercomparison Project (MsTMIP) is a formal model intercomparison and evaluation effort focused on improving the diagnosis and attribution of carbon exchange at regional and global scales [1].  The MsTMIP effort is being used as a concrete scientific research scenario to evaluate tools being developed within the `DataONE`_ program to track and share scientific workflows and the products that are derived from them or other scientific efforts.
 
-[Add more here. This paragraph will describe the overall steps in the MsTMIP workflow where we are applying the provenance use cases, starting from model driver data ingestion to the published figures, etc. Reference the overview image ...]
+The MsTMIP is a highly collaborative activity and being conducted in 4 major steps: model driver data preparation [2], model simulations, QA/QC and standardization of model output, and analysis and model run intercomparisons.
 
 .. figure:: figures/mstmip-workflow-overview.png
    :width: 80%
@@ -89,7 +89,10 @@ References
 ----------
 
 [1] Huntzinger, et al.: The North American Carbon Program Multi-Scale Synthesis and Terrestrial Model Intercomparison Project – Part 1: Overview and experimental design, Geosci. Model Dev., 6, 2121-2133, doi:10.5194/gmd-6-2121-2013, 2013. `http://dx.doi.org/10.5194/gmd-6-2121-2013`_
+[2] Wei, Y., Liu, S., Huntzinger, D., Michalak, A., Viovy, N., Post, W., et al. (2013). The North American Carbon Program Multi-scale Synthesis and Terrestrial Model Intercomparison Project: Part 2 - Environmental Driver Data. Geoscientific Model Development Discussions, 6, 5375-5422, doi:`10.5194/gmdd-6-5375-2013`_.
 
 .. _`http://dx.doi.org/10.5194/gmd-6-2121-2013`: http://dx.doi.org/10.5194/gmd-6-2121-2013
+
+.. _`10.5194/gmdd-6-5375-2013`: http://dx.doi.org/10.5194/gmdd-6-5375-2013
 
 .. _`DataONE`: http://dataone.org
