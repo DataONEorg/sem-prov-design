@@ -89,6 +89,7 @@ References
 ----------
 
 [1] Huntzinger, et al.: The North American Carbon Program Multi-Scale Synthesis and Terrestrial Model Intercomparison Project – Part 1: Overview and experimental design, Geosci. Model Dev., 6, 2121-2133, doi:10.5194/gmd-6-2121-2013, 2013. `http://dx.doi.org/10.5194/gmd-6-2121-2013`_
+
 [2] Wei, Y., Liu, S., Huntzinger, D., Michalak, A., Viovy, N., Post, W., et al. (2013). The North American Carbon Program Multi-scale Synthesis and Terrestrial Model Intercomparison Project: Part 2 - Environmental Driver Data. Geoscientific Model Development Discussions, 6, 5375-5422, doi:`10.5194/gmdd-6-5375-2013`_.
 
 .. _`http://dx.doi.org/10.5194/gmd-6-2121-2013`: http://dx.doi.org/10.5194/gmd-6-2121-2013
