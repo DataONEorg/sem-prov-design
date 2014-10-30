@@ -25,7 +25,7 @@ netcdf.close(sncid)
 %% Load input: long-term monthly mean air temperature data
 Tair=zeros(ncols,nrows,12);
 for m=1:12
-    tncid=netcdf.open(strcat('inputs/air.2m_monthly/air.2m_monthly_2000_2010_mean.',num2str(m),'.nc'), 'NC_NOWRITE');
+    tncid=netcdf.open(strcat('inputs/narr_air.2m_monthly/air.2m_monthly_2000_2010_mean.',num2str(m),'.nc'), 'NC_NOWRITE');
     tvid=netcdf.inqVarID(tncid, 'Tair_monthly_mean');
     Tair(:,:,m)=netcdf.getVar(tncid,tvid);
     netcdf.close(tncid)
@@ -34,7 +34,7 @@ end
 %% Load input: long-term monthly mean precipitation data
 Rain=zeros(ncols,nrows,12);
 for m=1:12
-    rncid=netcdf.open(strcat('inputs/apcp_rescaled_monthly/apcp_monthly_2000_2010_mean.',num2str(m),'.nc'), 'NC_NOWRITE');
+    rncid=netcdf.open(strcat('inputs/narr_apcp_rescaled_monthly/apcp_monthly_2000_2010_mean.',num2str(m),'.nc'), 'NC_NOWRITE');
     rvid=netcdf.inqVarID(rncid, 'apcp_monthly_mean');
     Rain(:,:,m)=netcdf.getVar(rncid,rvid);
     netcdf.close(rncid)
