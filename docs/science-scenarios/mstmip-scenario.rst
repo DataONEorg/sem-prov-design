@@ -34,7 +34,7 @@ Expected Inputs and Outputs
 - Input script is MSTMIP-INPUT-SCRIPT-NAME
     - `C3_C4_map_present.m`_
 
-.. _`C3_C4_map_present.m`: https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/C3_C4_map_present.m)
+.. _`C3_C4_map_present.m`: https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/C3_C4_map_present.m
 
 
 - `Input datasets`_ are MSTMIP-INPUT-DATASET-LIST
@@ -42,7 +42,7 @@ Expected Inputs and Outputs
     - monthly mean surface air temperature between 2000 and 2010
     - monthly mean precipitation between 2000 and 2010. 
 
-.. _`Input datasets`: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/inputs)
+.. _`Input datasets`: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/inputs
 
 - Input derived datasets are MSTMIP-INPUT-DERIVED-DATASET-LIST
     - Not applicable in this case
@@ -54,7 +54,7 @@ Expected Inputs and Outputs
     - global 1/2-degree C3 grass relative fraction
     - global 1/2-degree C4 grass relative fraction
     - global 1/2-degree grass fraction
-.. _`Output datasets`: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/outputs)
+.. _`Output datasets`: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/outputs
 
 - Output recorded script execution is MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST
     - The list provided by DataONE
