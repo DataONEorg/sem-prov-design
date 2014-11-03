@@ -54,6 +54,7 @@ Expected Inputs and Outputs
     - global 1/2-degree C3 grass relative fraction
     - global 1/2-degree C4 grass relative fraction
     - global 1/2-degree grass fraction
+
 .. _`Output datasets`: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/outputs
 
 - Output recorded script execution is MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST
