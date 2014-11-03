@@ -92,7 +92,6 @@ This scientist is analyzing MsTMIP model output data using Matlab, we want to ke
 - global 1/2-degree monthly GPP model outputs in 1901-2010 from a MsTMIP model simulation
 - 1-month variant of Standardized Precipitation-Evapotranspiration Index (SPEI)
 
-
 Expected Inputs and Outputs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -117,6 +116,7 @@ Expected Inputs and Outputs
     - global 1/2-degree predrought effect variable map
     - global 1/2-degree drought variable map
     - global 1/2-degree drought number map
+
 .. _`Output datasets`: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Outputs/Drought/outputs
 
 - Output recorded script execution is MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST
