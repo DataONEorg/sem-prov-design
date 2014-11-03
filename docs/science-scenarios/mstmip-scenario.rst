@@ -50,12 +50,12 @@ Expected Inputs and Outputs
 - Input execution environment attributes are MSTMIP-INPUT-EXECUTION-ENVIRONMENT-ATTRIBUTE-LIST
     - Not applicable in this case
 
-- `Output datasets`_ are MSTMIP-OUTPUT-DATASET-LIST
+- `Output datasets for C3C4 analysis`_ are MSTMIP-OUTPUT-DATASET-LIST
     - global 1/2-degree C3 grass relative fraction
     - global 1/2-degree C4 grass relative fraction
     - global 1/2-degree grass fraction
 
-.. _`Output datasets`: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/outputs
+.. _`Output datasets for C3C4 analysis`: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Driver/C3C4/outputs
 
 - Output recorded script execution is MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST
     - The list provided by DataONE
@@ -112,13 +112,13 @@ Expected Inputs and Outputs
 - Input execution environment attributes are MSTMIP-INPUT-EXECUTION-ENVIRONMENT-ATTRIBUTE-LIST
     - Not applicable in this case
 
-- `Output datasets`_ are MSTMIP-OUTPUT-DATASET-LIST
+- `Output datasets for drought analysis`_ are MSTMIP-OUTPUT-DATASET-LIST
     - global 1/2-degree drought recovery time map
     - global 1/2-degree predrought effect variable map
     - global 1/2-degree drought variable map
     - global 1/2-degree drought number map
 
-.. _`Output datasets`: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Outputs/Drought/outputs
+.. _`Output datasets for drought analysis`: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Outputs/Drought/outputs
 
 - Output recorded script execution is MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST
     - The list provided by DataONE
