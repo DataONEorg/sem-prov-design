@@ -103,7 +103,7 @@ Expected Inputs and Outputs
 
 
 - Input datasets are MSTMIP-INPUT-DATASET-LIST
-    - global 1/2-degree monthly GPP model outputs in 1901-2010 from a MsTMIP model simulation
+    - global 1/2-degree monthly GPP model outputs in 1901-2010 from a MsTMIP model simulation (This may be related to semantics use case #52. When scientist re-runs this script, he needs to search DataONE to find appropriate GPP data files as input.)
     - 1-month variant of Standardized Precipitation-Evapotranspiration Index (SPEI)
 
 - Input derived datasets are MSTMIP-INPUT-DERIVED-DATASET-LIST
