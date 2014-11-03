@@ -85,6 +85,54 @@ Step 4: Analysis and model run intercomparisons
 
 Researchers in the MsTMIP community access standardized model outputs and benchmark data sets from the MsTMIP central data repository, perform additional data processing as needed, analyze and compare data, and create figures and/or plots to be used in their scientific manuscripts.
 
+A scientist is analyzing the MsTMIP global model outputs for drought recovery time research. A drought variable (DV, an index of drought severity) and effect variable (EV) are used to determine recovery time. For this research the EV is gross primary productivity (GPP) as simulated by MsTMIP models. The initial DV used here, the 1-month variant of Standardized Precipitation-Evapotranspiration Index (SPEI), is taken from the Digital.CSIC.  Both DV and EV are gridded products from 1901 to 2010 at a monthly time step. A drought event, which occurs for a given grid cell, is defined using two parameters: severity and length. For example, when mean DV is less than -1 (lower values indicate higher drought severity) for at least 3 consecutive months. Recovery time is then determined as the length of time that passes after the drought event begins before the EV reattains (meets or exceeds) its immediate pre-drought level. The severity and duration parameters as well as DV and EV are varied to assess the variability in drought recovery time.
+
+This scientist is analyzing MsTMIP model output data using Matlab, we want to keep track of our data input files, data output files and scripts so we can review and compare our runs for different participating models/simulations. The Matlab ingestion script takes 2 data sets as inputs:
+
+- global 1/2-degree monthly GPP model outputs in 1901-2010 from a MsTMIP model simulation
+- 1-month variant of Standardized Precipitation-Evapotranspiration Index (SPEI)
+
+
+Expected Inputs and Outputs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Input script is MSTMIP-INPUT-SCRIPT-NAME
+    - `DroughtTimeScale.m`_
+
+.. _`DroughtTimeScale.m`: https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/provenance/example-files/mstmip/Outputs/Drought/DroughtTimeScale.m
+
+
+- Input datasets are MSTMIP-INPUT-DATASET-LIST
+    - global 1/2-degree monthly GPP model outputs in 1901-2010 from a MsTMIP model simulation
+    - 1-month variant of Standardized Precipitation-Evapotranspiration Index (SPEI)
+
+- Input derived datasets are MSTMIP-INPUT-DERIVED-DATASET-LIST
+    - Not applicable in this case
+
+- Input execution environment attributes are MSTMIP-INPUT-EXECUTION-ENVIRONMENT-ATTRIBUTE-LIST
+    - Not applicable in this case
+
+- `Output datasets`_ are MSTMIP-OUTPUT-DATASET-LIST
+    - global 1/2-degree drought recovery time map
+    - global 1/2-degree predrought effect variable map
+    - global 1/2-degree drought variable map
+    - global 1/2-degree drought number map
+.. _`Output datasets`: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/example-files/mstmip/Outputs/Drought/outputs
+
+- Output recorded script execution is MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST
+    - The list provided by DataONE
+
+- Output provenance relationship list is MSTMIP-PROVENANCE-RELATIONSHIP-LIST
+    - The list provided by DataONE
+
+- Output provenance relationship visualization is MSTMIP-PROVENANCE-RELATIONSHIP-VISUALIZATION
+    - The visualization provided by DataONE
+
+- Usability:
+    - Scientist can filter MSTMIP-OUTPUT-RECORDED-SCRIPT-EXECUTION-LIST by execution date, time, input dataset, input derived dataset, output dataset, ...
+    - Scientist can view relationships between items in MSTMIP-PROVENANCE-RELATIONSHIP-LIST
+    - Scientist can select desired MsTMIP data products and send them to DataONE
+
 References
 ----------
 
