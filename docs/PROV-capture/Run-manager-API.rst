@@ -13,7 +13,8 @@ Several use cases for storing provenance have been outlined: UseCases_
 .. _UseCases: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance
 
 This document summarizes the session “Provenance Capture in R” at Open Science Codefest, 
-a Community Dynamics working group meeting, and other DataONE Semantics and Provenance Working Group discussions.
+a Community Dynamics working group meeting, and other DataONE Semantics and Provenance Working Group discussions
+and describes the design of a proposed run manager that will be implemented in Matlab and in R.
 
 A way to capture provenance as conveniently for the scientist as possible is through a run manager. 
 A run manager can capture provenance while a script is running, requiring very little extra code from the scientist. 
@@ -28,15 +29,54 @@ method call such as *publish()*.
 Run Manager API
 ---------------
 
+.. list-table:: Run Manager API
+   :widths: 15 20 20 30
+   :header-rows: 1
+
+   * - Function
+     - Parameters
+     - Return Value
+     - Description
+   * - `record()`_
+     - object, tag
+     - DataONE data package
+     - Execute program, record provenance from execution and create DataONE data package from derived products.
+   * - `startRecord()`_
+     - tag
+     -
+     - Provenance capture is started and will continue until `endRecord()`_ is called.
+   * - `endRecord()`_
+     -
+     - DataONE data package
+     - Provenance capture is stopped and a DataONE data package is created and returned to the user.
+   * - `listRuns()`_
+     - quiet, startDate, endDate, tags
+     - object containing execution information
+     - Retrieve information for all selected recorded executions and output to the display
+   * - `deleteRuns()`_
+     - runIdList, startDate, endDate, tags
+     - list of identifiers of deleted runs
+     - Delete information for all matching executions.
+   * - `view()`_
+     - packageID
+     - None
+     - Display detailed information about a data package.
+   * - `publish()`_
+     - packageID
+     - DataONE identifier for the package
+     - Upload a package to a DataONE member node.
+
+.. _`record()`:
+
 *record(filePath)*
 
 The record method executes the specified script and records the files read and created by the script. 
 In-memory objects need to be considered also. It's possible that a script never writes to disk, but just
 creates an in-memory final product. This may be specified in a configuration API
 Provenance relationships for the script execution are automatically determined based on the run 
-manager’s built-in knowledge of the provenance ontology. 
+manager’s built-in knowledge of the provenance ontology.
 
-The record method creates and returns a DataPackage that contains the provenance relationships and derived data 
+The record method creates and returns a DataONE DataPackage object that contains the provenance relationships and derived data 
 objects for a single script invocation. 
 
 Since record() returns the DataPackage, the DataPackage can be viewed and manipulated before publishing. For example, 
@@ -48,10 +88,29 @@ The following diagram shows a single invocation of record() and how provenance w
 
 .. image:: ../use-cases/provenance/images/sequence-41.png
 
-.. raw:: html
+.. _`startRecord()`:
 
-  <font color="red">
+*startRecord(tag)*
+
+Recording is started immediately from the current processing context. A character string *tag* can be specified that will be associated with the 
+current execution. The string specified for *tag* can be any string that has meaning to the user, and can be used by other functions 
+to select executions for listing, deletion or other operations.
+
+Provenance collection will continue for this execution until the *endRecord()* call is issued.
+
+The use of the *startRecord()* and *endRecord()* functions is an alternative to using the *record()* funciton. Using this alternative approach
+may be appropriate when finer grained control is required that is provided by *record()* or for use with interpreted languages such as R where the user
+is working in the console and wished to record provenance for processing performed in the console environment.
+
+.. _`endRecord()`:
   
+*endRecord()*
+
+Recording is stopped, execution information is persisted to disk and a data package is finalized and returned to the caller. Any cached information
+in memory is erased and any subsequent calls to *startRecord()* will begin a new execution.
+
+.. _`listRuns()`:
+ 
 *listRuns()*
 
 The *listruns* function retrieves information for recorded script exections 
@@ -61,25 +120,39 @@ to the display.
 Output values:
 
 * scriptName - the script used to invoke a run, the argument passed to *record(fileName)*
-* publishedTime - the date and time that the package from this run was uploaded to DataONE
-* completion Status - indication of the run completing successfully
 * startTime - the date and time when *record()* was called
 * endTime - the date and time when *record()* ended
+* publishedTime - the date and time that the package from this run was uploaded to DataONE
+* runId - the unique identifier for this execution
+* packageId - the unique identifier for the DataONE data package created by an execution
+* errorMessage - an error message that caused processing to terminate
 
 Below is an example of the output from the *listRuns* function:
 
 ::
 
-  Script          Published Time             Completion Status       StartTime            EndTime                    Run Identifier                         Package Identifier 
-  calcISR.R       2014-01-02T10:10:10Z       success                 2014-01-01T09:09:09Z 2014-01-01T09:10:10Z       C85A188-B72E-49F1-AEF4-7BFC24DA186B    948E4B78-F5B8-444D-85CD-D3453A9F06C5
-  rankshift.R     unpublished                success                 2014-1014T16:32:41Z  2014-10-14T16:32:41Z       E42EF61C-230A-44F8-A33E-D69B6F4C13E9   C1713504-1005-4BD9-A935-C7BFDC670CEF
-  speciesPlots.R  unpublished                error                   2013-12-24T01:01:01Z                            7E75D1E8-F171-4DB5-A91E-F0A4082DBFCC   8452DD63-76DC-4BBD-9672-5C99A8F075AF
+  Script                 StartTime            EndTime              Published Time       Run Identifier                       Package Identifier                   Error Message
+  calcISR.R              2014-01-01T09:09:09Z 2014-01-01T09:10:10Z 2014-03-01T09:10:10Z C85A188-B72E-49F1-AEF4-7BFC24DA186B  948E4B78-F5B8-444D-85CD-D3453A9F06C5
+  rankshift.R            2014-1014T16:32:41Z  2014-10-14T16:32:41Z unpublished          E42EF61C-230A-44F8-A33E-D69B6F4C13E9 C1713504-1005-4BD9-A935-C7BFDC670CEF 
+  speciesPlots.R         2013-12-24T01:01:01Z                      unpublished          E75D1E8-F171-4DB5-A91E-F0A4082DBFCC  8452DD63-76DC-4BBD-9672-5C99A8F075AF file species-site1.csv not found
 
 This information will also be returned to the calling function as a data structure.
 
-.. raw:: html
+.. _`deleteRuns()`:
+ 
+*deleteRuns(runIdList, startDateTime, endDateTime, tags, noop, quiet)*
 
-  </font>
+Locally archived information for executions that match the input arguments is deleted. For *runIdList*, each execution with
+a matching execution identifier is deleted. Executions after *startDateTime* and before *endDateTime* 
+inclusive, are deleted. The argument *tags* can be specified using wildcard charaters, and any executions
+with matching tags are deleted. The arguments *runIdList* and *tags* are processed separately, so the
+relationship between them can be considered a logical AND, as it relates to the set of executions that
+are deleted. Information about each deleted execution is printed to the display, unless the argument
+*quiet* is TRUE.
+
+The argument *noop* causes *deleteRuns* to display matching executions without deleting them.
+
+.. _`publish()`:
 
 *publish(DataPackage, Client)*
 
@@ -95,11 +168,9 @@ A configuration API will allow the scientist to set default properties like Acce
 
 It may be useful for the publish() function to include a parameter for the ID format, such as a preferred DOI prefix.
 Identifier creation will be configurable so the scientist have control over the format of the identifiers that they create.
-
-.. raw:: html
-
-  <font color="red">
   
+.. _`view()`:
+
 *view(packakeId)*
 
 This function can be called after *record()* and before *publish()* as an easy way to preview a DataPackage 
@@ -152,11 +223,6 @@ The following is example output from the the view() function:
   speciesCounts-20131211.csv      102K            2014-10-14T15:33:10Z
   QL-dist-20131210.eml            220K            2014-09-20T10:10:00Z
   resourceMap.rdf                 76K             2014-10-14T15:33:10Z
-
-
-.. raw:: html
-
-  </font>
 
 Run Manager Provenance Capture
 ------------------------------
@@ -239,10 +305,6 @@ Phase II
 Run Manager Storage
 -------------------
 
-.. raw:: html
-
-  <font color="red">
-
 The Run Manager stores data objects and provenance information and execution metadata in a local directory
 uniquely named for each *record* invocation, for example "~/.recordr/runs/ED6A8081-65ED-414C-93C6-29C29DF3543D".
 
@@ -283,10 +345,5 @@ Run Manager execution metadata will be serialized to a JSON-LD file as shown by 
 .. Note::
 
   This example JSON-LD file is based on a proposed schema for software executions that may be submitted to schema.org.
- 
-.. raw:: html
-
-  </font>
-
-
+  
 
