@@ -12,23 +12,16 @@ The DataONE PROV data model will be used to describe the relationships between:
 * [Data Search View](../use-cases/provenance/images/data_search_with_use_case.pdf)
 
 ## Diagrams
-### Diagram of the PROV Model
-![PROV Model Diagram](images/PROV_Annotation_Diagram.png)
-
-### Alternative Version That Includes the prov:Association entity
-![PROV Model Diagram](images/PROV_Annotation_Diagram_Association.png)
-
-See the [qualified terms figure](http://www.w3.org/TR/prov-o/#qualified-terms-figure) in the PROV-O documentation for details.
-
-From PROV-O:
-> Similarly in subfigure j, the prov:qualifiedAssociation property parallels the prov:wasAssociatedWith property and references an instance of prov:Association, which in turn provides attributes of the prov:wasAssociatedWith relation between the Activity and Agent. The prov:agent property is used to cite the Agent that influenced the Activity. In this case, the plan of actions and steps that the Agent used to achieve its goals is provided using the prov:hadPlan property and an instance of prov:Plan.  
-
-### Alternative Model using a proposed revision of the ProvONE model
+### Diagram of the PROV Model using a proposed revision of the ProvONE model
 ![ProvONE Model Diagram](images/ProvONE-model-revised.png)
 
 ### Diagram of a PROV Model Example
 ![PROV Model Diagram](images/PROV_Annotation_Diagram_Example.png)
 
+See the [qualified terms figure](http://www.w3.org/TR/prov-o/#qualified-terms-figure) in the PROV-O documentation for details about prov:qualifiedAssociation.
+
+From PROV-O:
+> Similarly in subfigure j, the prov:qualifiedAssociation property parallels the prov:wasAssociatedWith property and references an instance of prov:Association, which in turn provides attributes of the prov:wasAssociatedWith relation between the Activity and Agent. The prov:agent property is used to cite the Agent that influenced the Activity. In this case, the plan of actions and steps that the Agent used to achieve its goals is provided using the prov:hadPlan property and an instance of prov:Plan.  
 
 This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR/prov-o/) to define classes of objects and the relationships between them. 
 
