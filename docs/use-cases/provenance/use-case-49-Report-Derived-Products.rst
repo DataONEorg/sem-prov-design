@@ -1,4 +1,4 @@
-DataONE Use Case 45 (Discover Derived Products)
+DataONE Use Case 49 (Discover Derived Products)
 ===============================================
 
 
