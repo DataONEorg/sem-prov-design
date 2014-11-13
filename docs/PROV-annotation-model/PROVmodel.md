@@ -8,8 +8,8 @@ The DataONE PROV data model will be used to describe the relationships between:
 * Programs (e.g. software, scripts) that were implemented to create a data resource
 
 ##UI Mockups
-* [Metadata View](../use-cases/provenance/images/metadata_view_with_use_cases.pdf)
-* [Data Search View](../use-cases/provenance/images/data_search_with_use_case.pdf)
+* View Web UI Mockups in the [DataONE project in the Invision App](https://projects.invisionapp.com/d/main#/projects/1959670)
+* Or [in this repository](https://github.com/DataONEorg/sem-prov-design/tree/master/docs/Web-UI-mockups).
 
 ## Diagrams
 ### Diagram of the PROV Model using a proposed revision of the ProvONE model
