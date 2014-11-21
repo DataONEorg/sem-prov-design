@@ -131,14 +131,14 @@ These products are to be produced by the semantics and provenance team during th
     - Feature: annotation indexing for quick easy search that works with existing DataONE query mechanisms
     - Feature: inference, reasoning using annotations and associated ontologies (subsumption hierarchies, in particular)
     - Owner: Ben
-    - Timeline: Dec 2014
+    - Timeline: Aug 2015
 - Product: [__Semantic Measurement Search Web User Interface__]
     - Description: A web-based user interface that provides search fields that utilize semantic measurement concepts and annotations to drive precise and complete queries for particular types of measurements within DataONE.  The semantic search service provides a targeted solution to data discovery across the vastly heterogeneous collection of data in DataONE.
     - Dependency: 'Semantic Measurements Query Service' 
     - Feature: integrates with/uses existing DataONE query API
     - Feature: easy to understand concept navigation/selection using some or all of: auto-complete suggestions, tree-browsing, graph-browsing, concept labels and definitions
     - Owner: Lauren
-    - Timeline: Jan 2015
+    - Timeline: Oct 2015
 - Product: [__Semantic Annotation Web User Interface__]
     - Description: A web-based user interface that integrates a data package display with the ability to view and modify annotations on data attributes within particular data sets.  This interface displays the results of the 'Semi-automated Annotation Service' along with any original or 3rd-party manual annotations. Data owners can reject incorrect annotations while 3rd-parties can suggest alternative annotations for data attributes.
 	- Dependency: 'Annotation Store'
@@ -148,5 +148,5 @@ These products are to be produced by the semantics and provenance team during th
 	- Feature: Display annotation tags near the data attributes in the metadata view. (Design est. 3-4 days. 8-10 days for a complete design/review iteration)
 	- Feature:  Annotation moderation in the metadata view; clicking a button to REJECT, etc. (Design est. 3-4 days for a prototype. 8-10 days for a complete design/review iteration)
 	- Owner: Ben, Lauren
-  - Timeline: June 2015
+  - Timeline: Oct 2015
 
