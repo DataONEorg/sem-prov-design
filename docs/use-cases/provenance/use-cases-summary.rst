@@ -29,6 +29,6 @@ The following table lists the DataONE provenance use cases under development.
 .. _Explore Derived Data:      ./use-case-44-Explore-Derived-Data.rst
 .. _Discover Derived Products: ./use-case-45-Discover-Derived-Products.rst
 .. _Double Check:              ./use-case-46-Double-Check.rst
-.. _Visualize Workflow:        ./use-case-47--Visualize-Workflow.rst
-.. _Visualize Run:             ./use-case-48--Visualize-Run.rst
+.. _Visualize Workflow:        ./use-case-47-Visualize-Workflow.rst
+.. _Visualize Run:             ./use-case-48-Visualize-Run.rst
 .. _Report Derived Products:   ./use-case-49-Report-Derived-Products.rst

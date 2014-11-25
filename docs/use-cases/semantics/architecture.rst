@@ -61,15 +61,14 @@ We have not endeavored to annotate DATA objects directly (e.g., tabular text/csv
 	   	object "rdf:resource" as body {
 	   		There are some options for pointing at a semantic concept in the body.
 	   		Really, any concept in a KR could be referenced.
-	   		#Measurement
-	   		#Characteristic
-	   		#Standard
+	   		For this illustration, we have pulled concepts from the OBOE model,
+	   		but anything is conceivably possible.
 			Also see these for more discussion:
 	   		http://www.openannotation.org/spec/core/core.html#Tagging 
 	   		http://www.openannotation.org/spec/extension/#StructuredBody
 		}
 	    
-	    package OBOE {
+	    package "OBOE (optional)" {
 		    
 		    object "oboe:Measurement" as measurement		    
 		   	object "oboe:Characteristic" as characteristic
@@ -83,7 +82,7 @@ We have not endeavored to annotate DATA objects directly (e.g., tabular text/csv
 
 	}
 	
-	package "metadata option" {
+	package "metadata pointer" {
 	    object "oa:SpecificResource" as target
 	    object "xs:URI" as source {
 	    	metadata URL
@@ -103,7 +102,7 @@ We have not endeavored to annotate DATA objects directly (e.g., tabular text/csv
 	    }
 	}
 	
-	package "data option" {
+	package "data pointer (optional)" {
 	    object "oa:SpecificResource" as d_target
 	    object "xs:URI" as d_source {
 	    	data URL
