@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="1120px" height="510px" viewBox="0 0 1120 510" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="890px" height="510px" viewBox="0 0 890 510" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
     <title>Artboard</title>
     <desc>Created with Sketch.</desc>
@@ -60,11 +60,6 @@
                 <path d="M6.5,79.5 L6.5,-52.594663" id="Line-2" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
                 <path d="M6.5,88.6212121 C8.6756672,88.6212121 10.4393939,86.8303511 10.4393939,84.6212121 C10.4393939,82.4120731 8.6756672,80.6212121 6.5,80.6212121 C4.3243328,80.6212121 2.56060606,82.4120731 2.56060606,84.6212121 C2.56060606,86.8303511 4.3243328,88.6212121 6.5,88.6212121 Z" id="Oval-1" fill="#000000" sketch:type="MSShapeGroup" transform="translate(6.500000, 84.621212) rotate(-90.000000) translate(-6.500000, -84.621212) "></path>
                 <path d="M0.0898336502,79.7870518 L6.4306659,66.9102848 L12.7714981,79.7870518" id="Triangle-1" sketch:type="MSShapeGroup" transform="translate(6.430666, 73.348668) rotate(-181.000000) translate(-6.430666, -73.348668) "></path>
-            </g>
-            <g id="usedChannel-arrow-2" sketch:type="MSLayerGroup" transform="translate(985.500000, 219.000000) rotate(-180.000000) translate(-985.500000, -219.000000) translate(979.000000, 177.000000)" stroke="#000000">
-                <path d="M6.5,74.5 L6.5,0.5" id="Line-2" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
-                <path d="M6.5,83.6212121 C8.6756672,83.6212121 10.4393939,81.8303511 10.4393939,79.6212121 C10.4393939,77.4120731 8.6756672,75.6212121 6.5,75.6212121 C4.3243328,75.6212121 2.56060606,77.4120731 2.56060606,79.6212121 C2.56060606,81.8303511 4.3243328,83.6212121 6.5,83.6212121 Z" id="Oval-1" fill="#000000" sketch:type="MSShapeGroup" transform="translate(6.500000, 79.621212) rotate(-90.000000) translate(-6.500000, -79.621212) "></path>
-                <path d="M0.0898336502,74.7870518 L6.4306659,61.9102848 L12.7714981,74.7870518" id="Triangle-1" sketch:type="MSShapeGroup" transform="translate(6.430666, 68.348668) rotate(-181.000000) translate(-6.430666, -68.348668) "></path>
             </g>
             <g id="hasDefaultParam-arrow" sketch:type="MSLayerGroup" transform="translate(655.293322, 219.676951) rotate(242.000000) translate(-655.293322, -219.676951) translate(648.793322, 132.676951)" stroke="#000000">
                 <path d="M6.5,164.5 L6.5,0.914950311" id="Line-2" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
@@ -161,36 +156,6 @@
                     <tspan x="31.8574219" y="22.7675781">Entity</tspan>
                 </text>
             </g>
-            <g id="Data-Box-+-Data-2" sketch:type="MSLayerGroup" transform="translate(938.000000, 19.000000)">
-                <rect id="Data-Box" stroke="#000000" fill="url(#linearGradient-5)" sketch:type="MSShapeGroup" x="0" y="0" width="100" height="37"></rect>
-                <text id="Data" sketch:type="MSTextLayer" font-family="Cambria" font-size="14" font-weight="normal" fill="#000000">
-                    <tspan x="36" y="22.7675781">Data</tspan>
-                </text>
-            </g>
-            <g id="Data-Box-+-Data-3" sketch:type="MSLayerGroup" transform="translate(938.000000, 260.000000)">
-                <rect id="Data-Box" stroke="#000000" fill="url(#linearGradient-5)" sketch:type="MSShapeGroup" x="0" y="0" width="100" height="37"></rect>
-                <text id="Scientific-Work" sketch:type="MSTextLayer" font-family="Cambria" font-size="14" font-weight="normal" sketch:alignment="middle" fill="#000000">
-                    <tspan x="4.8828125" y="22.7675781">Scientific Work</tspan>
-                </text>
-            </g>
-            <g id="Data-Box-+-Data-5" sketch:type="MSLayerGroup" transform="translate(879.000000, 380.500000)">
-                <rect id="Data-Box" stroke="#000000" fill="url(#linearGradient-5)" sketch:type="MSShapeGroup" x="0" y="0" width="100" height="37"></rect>
-                <text id="Publication" sketch:type="MSTextLayer" font-family="Cambria" font-size="14" font-weight="normal" sketch:alignment="middle" fill="#000000">
-                    <tspan x="16.0424805" y="22.7675781">Publication</tspan>
-                </text>
-            </g>
-            <g id="Data-Box-+-Data-6" sketch:type="MSLayerGroup" transform="translate(999.000000, 380.000000)">
-                <rect id="Data-Box" stroke="#000000" fill="url(#linearGradient-5)" sketch:type="MSShapeGroup" x="0" y="0" width="100" height="37"></rect>
-                <text id="Report" sketch:type="MSTextLayer" font-family="Cambria" font-size="14" font-weight="normal" sketch:alignment="middle" fill="#000000">
-                    <tspan x="29.4921875" y="22.7675781">Report</tspan>
-                </text>
-            </g>
-            <g id="Data-Box-+-Data-4" sketch:type="MSLayerGroup" transform="translate(938.007630, 139.500000)">
-                <rect id="Data-Box" stroke="#000000" fill="url(#linearGradient-5)" sketch:type="MSShapeGroup" x="0" y="0" width="100" height="37"></rect>
-                <text id="Visualization" sketch:type="MSTextLayer" font-family="Cambria" font-size="14" font-weight="normal" sketch:alignment="middle" fill="#000000">
-                    <tspan x="11.1582031" y="22.7675781">Visualization</tspan>
-                </text>
-            </g>
             <g id="Collection-Box-+-Collection" sketch:type="MSLayerGroup" transform="translate(708.000000, 19.000000)">
                 <rect id="Collection-Box" stroke="#000000" fill="url(#linearGradient-5)" sketch:type="MSShapeGroup" x="0" y="0" width="100" height="37"></rect>
                 <text id="Collection" sketch:type="MSTextLayer" font-family="Cambria" font-size="14" font-weight="normal" fill="#000000">
@@ -241,7 +206,7 @@
                 <tspan x="747.193359" y="242" font-style="italic">»</tspan>
             </text>
             <text id="hasInPort" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#000000">
-                <tspan x="370" y="291">hasInPort</tspan>
+                <tspan x="397" y="322">hasInPort</tspan>
             </text>
             <text id="isPartOf" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#000000">
                 <tspan x="483" y="97">isPartOf</tspan>
@@ -253,13 +218,10 @@
                 <tspan x="643" y="407">outputsTo</tspan>
             </text>
             <text id="hasOutPort" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#000000">
-                <tspan x="387" y="358">hasOutPort</tspan>
+                <tspan x="397" y="364">hasOutPort</tspan>
             </text>
             <text id="inputsTo" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#000000">
                 <tspan x="640.99237" y="290.199219">inputsTo</tspan>
-            </text>
-            <text id="hasPart" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#000000">
-                <tspan x="997" y="222.300781">hasPart</tspan>
             </text>
             <text id="outputsFrom" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#000000">
                 <tspan x="584" y="367.256007">outputsFrom</tspan>
@@ -313,18 +275,18 @@
                 <tspan x="379.619141" y="272" font-style="italic">»</tspan>
             </text>
             <text id="«agent»" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#000000">
-                <tspan x="162" y="210">«</tspan>
-                <tspan x="167.853516" y="210">agent</tspan>
-                <tspan x="196.253906" y="210" font-style="italic">»</tspan>
+                <tspan x="172" y="216">«</tspan>
+                <tspan x="177.853516" y="216">agent</tspan>
+                <tspan x="206.253906" y="216" font-style="italic">»</tspan>
             </text>
             <text id="controlledBy" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#000000">
-                <tspan x="151" y="324">controlledBy</tspan>
+                <tspan x="150" y="324">controlledBy</tspan>
             </text>
             <text id="controls" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#000000">
-                <tspan x="161" y="361">controls</tspan>
+                <tspan x="159" y="360">controls</tspan>
             </text>
             <text id="[*]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="131" y="366">[*]</tspan>
+                <tspan x="125" y="366">[*]</tspan>
             </text>
             <text id="[*]-3" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
                 <tspan x="144" y="472">[*]</tspan>
@@ -336,19 +298,19 @@
                 <tspan x="343" y="369">[*]</tspan>
             </text>
             <text id="[*]-7" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="440" y="379">[*]</tspan>
+                <tspan x="460" y="385.800781">[*]</tspan>
             </text>
             <text id="[*]-8" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="440" y="272">[*]</tspan>
+                <tspan x="461" y="303">[*]</tspan>
             </text>
             <text id="[*]-2" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="131" y="317">[*]</tspan>
+                <tspan x="125.00763" y="319.5">[*]</tspan>
             </text>
             <text id="[1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="143" y="194">[1]</tspan>
+                <tspan x="143" y="198">[1]</tspan>
             </text>
-            <text id="[1]-9" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="143" y="151">[1]</tspan>
+            <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="143" y="151">[0..1]</tspan>
             </text>
             <text id="[*]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
                 <tspan x="229" y="226">[*]</tspan>
@@ -377,9 +339,6 @@
             <text id="[*]-20" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
                 <tspan x="739.99237" y="190">[*]</tspan>
             </text>
-            <text id="[*]-25" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="997" y="193">[*]</tspan>
-            </text>
             <text id="[*]-21" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
                 <tspan x="706.99237" y="386">[*]</tspan>
             </text>
@@ -392,11 +351,11 @@
             <text id="[*]-24" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
                 <tspan x="695.99237" y="309">[*]</tspan>
             </text>
-            <text id="[1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="601.99237" y="300.800781">[1]</tspan>
+            <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="601.99237" y="302.800781">[0..1]</tspan>
             </text>
-            <text id="[1]-14" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="601.99237" y="275">[1]</tspan>
+            <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="601.99237" y="275">[0..1]</tspan>
             </text>
             <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
                 <tspan x="768" y="70">[0..1]</tspan>
@@ -409,9 +368,6 @@
             </text>
             <text id="[0..1]-2" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
                 <tspan x="724" y="308">[0..1]</tspan>
-            </text>
-            <text id="[0..1]-5" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="997" y="252">[0..1]</tspan>
             </text>
             <text id="[1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
                 <tspan x="460" y="118.5">[1]</tspan>
@@ -437,51 +393,39 @@
             <text id="[*]-10" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
                 <tspan x="459.535325" y="189">[*]</tspan>
             </text>
-            <text id="[1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="223" y="366">[1]</tspan>
+            <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="220" y="366">[0..1]</tspan>
             </text>
-            <text id="[1]-3" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="311" y="369">[1]</tspan>
+            <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="304" y="369">[0..1]</tspan>
             </text>
-            <text id="[1]-12" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="587" y="427">[1]</tspan>
+            <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="587" y="427">[0..1]</tspan>
             </text>
-            <text id="[1]-13" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="587" y="384.060918">[1]</tspan>
+            <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="587" y="384.060918">[0..1]</tspan>
             </text>
-            <text id="[1]-5" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="354" y="341">[1]</tspan>
+            <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="359" y="351">[0..1]</tspan>
             </text>
-            <text id="[1]-6" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="354" y="314">[1]</tspan>
+            <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="359" y="335">[0..1]</tspan>
             </text>
             <text id="[1]-7" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
                 <tspan x="335" y="299">[1]</tspan>
             </text>
-            <text id="[1]-8" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="378" y="222">[1]</tspan>
+            <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="378" y="222">[0..1]</tspan>
             </text>
-            <text id="[1]-2" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="223" y="317">[1]</tspan>
+            <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="220" y="320">[0..1]</tspan>
             </text>
-            <text id="[1]-4" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
-                <tspan x="289" y="307">[1]</tspan>
+            <text id="[0..1]" sketch:type="MSTextLayer" font-family="Cambria" font-size="12" font-weight="normal" fill="#4A4A4A">
+                <tspan x="284" y="307">[0..1]</tspan>
             </text>
             <g id="Collection-Subclass-arrow" sketch:type="MSLayerGroup" transform="translate(722.000000, 55.000000)" stroke="#000000">
                 <path d="M15.0491306,73.9499102 L7.86944729,83.2549181 L0.369397568,74.2061459 L15.0491306,73.9499102 Z" id="Triangle-1" sketch:type="MSShapeGroup"></path>
                 <path d="M7.5,73.5 L7.5,1.5" id="Line" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
-            </g>
-            <g id="Collection-Subclass-arrow-2" sketch:type="MSLayerGroup" transform="translate(873.500000, 158.500000) rotate(-270.000000) translate(-873.500000, -158.500000) translate(866.000000, 94.000000)" stroke="#000000">
-                <path d="M15.0491306,119.94991 L7.86944729,129.254918 L0.369397568,120.206146 L15.0491306,119.94991 Z" id="Triangle-1" sketch:type="MSShapeGroup"></path>
-                <path d="M7.5,119.5 L7.5,0.5" id="Line" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
-            </g>
-            <g id="Collection-Subclass-arrow-3" sketch:type="MSLayerGroup" transform="translate(955.500000, 339.199219) rotate(-180.000000) translate(-955.500000, -339.199219) translate(948.000000, 297.699219)" stroke="#000000">
-                <path d="M15.0491306,73.9499102 L7.86944729,83.2549181 L0.369397568,74.2061459 L15.0491306,73.9499102 Z" id="Triangle-1" sketch:type="MSShapeGroup"></path>
-                <path d="M7.5,73.5 L7.5,0.19921875" id="Line" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
-            </g>
-            <g id="Collection-Subclass-arrow-4" sketch:type="MSLayerGroup" transform="translate(1020.500000, 338.699219) rotate(-180.000000) translate(-1020.500000, -338.699219) translate(1013.000000, 297.699219)" stroke="#000000">
-                <path d="M15.0491306,72.9499102 L7.86944729,82.2549181 L0.369397568,73.2061459 L15.0491306,72.9499102 Z" id="Triangle-1" sketch:type="MSShapeGroup"></path>
-                <path d="M7.5,72.5 L7.5,0.19921875" id="Line" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
             </g>
             <g id="Workflow-Subclass-arrow" sketch:type="MSLayerGroup" transform="translate(283.500000, 399.000000) rotate(-180.000000) translate(-283.500000, -399.000000) translate(276.000000, 358.000000)" stroke="#000000">
                 <path d="M15.0491306,72.9499102 L7.86944729,82.2549181 L0.369397568,73.2061459 L15.0491306,72.9499102 Z" id="Triangle-1" sketch:type="MSShapeGroup"></path>
@@ -512,8 +456,6 @@
                 <path d="M6.5,125.621212 C8.6756672,125.621212 10.4393939,123.830351 10.4393939,121.621212 C10.4393939,119.412073 8.6756672,117.621212 6.5,117.621212 C4.3243328,117.621212 2.56060606,119.412073 2.56060606,121.621212 C2.56060606,123.830351 4.3243328,125.621212 6.5,125.621212 Z" id="Oval-1" fill="#000000" sketch:type="MSShapeGroup" transform="translate(6.500000, 121.621212) rotate(-90.000000) translate(-6.500000, -121.621212) "></path>
                 <path d="M0.0898336502,116.787052 L6.4306659,103.910285 L12.7714981,116.787052" id="Triangle-1" sketch:type="MSShapeGroup" transform="translate(6.430666, 110.348668) rotate(-181.000000) translate(-6.430666, -110.348668) "></path>
             </g>
-            <path d="M938,39.6992188 L874.098453,39.6992188 L874.098453,158" id="Path-51" stroke="#000000" sketch:type="MSShapeGroup"></path>
-            <path d="M938,158 L874.098453,158 L874.098453,276.300781" id="Path-52" stroke="#000000" sketch:type="MSShapeGroup" transform="translate(906.049227, 217.150391) scale(1, -1) translate(-906.049227, -217.150391) "></path>
         </g>
     </g>
 </svg>
