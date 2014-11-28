@@ -2,7 +2,7 @@
 
 
 ## Intro
-The DataONE PROV data model will be used to describe the relationships between:
+The DataONE provenance data model will be used to describe the relationships between:
 * Derived resources and the original resources used to create them
 * Data resources and the activities used to create them
 * Programs (e.g. software, scripts) that were implemented to create a data resource
@@ -31,6 +31,9 @@ This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR
 * PROV-O definition: An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.
 * DataONE may not capture information about agents during the first phase of the semantics and provenance work, but it is one of the major classes of the PROV-O ontology.
 
+##### [Location](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Location) 
+* PROV-O definition: A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column.
+
 ##### [Association](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Association)
 * Qualifies: prov:wasAssociatedWith
 * PROV-O definition: An Execution association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity. It further allows for a plan to be specified, which is the plan intended by the agent to achieve some goals in the context of this activity.
@@ -47,7 +50,7 @@ This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR
 
  PROV-O Superclass | DataONE Subclass |
 -------------------|------------------|
- Entity 	   | Data, Visualization, Program	
+ Entity            | Data, Visualization, Program, Publication, Report	
  Activity          | Execution
  
  
@@ -68,8 +71,18 @@ e.g. script, software
 From PROV-O
 > Since plans may evolve over time, it may become necessary to track their provenance, so plans themselves are entities. Representing the plan explicitly in the provenance can be useful for various tasks: for example, to validate the execution as represented in the provenance record, to manage expectation failures, or to provide explanations.
 
+#### Publication class
+##### has superclass [prov:Entity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity)
+A Publication object represents a published document of scientific work.
+e.g. scholarly journal article
+
+#### Report class
+##### has superclass [prov:Entity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity)
+A Report object represents a document communicating scientific work.
+e.g. annual government report
+
 #### Execution class
-##### has superclass [prov:Activity]()
+##### has superclass [prov:Activity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity)
 An Execution object represents a single implementation of a Program
 e.g. script run
 
