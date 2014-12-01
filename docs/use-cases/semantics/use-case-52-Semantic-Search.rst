@@ -26,18 +26,18 @@ datapackages that include measurement annotations matching desired concepts for 
 
 Five Science Scenarios are included here to illustrate how scientist use data:
 
-A. Coastal marine primary production: A scientist wants to know total annual net ecosystem primary production in a  coastal marine environment in southern California.  This will entail  discovering and processing (summing) the areal production rates for several groups of primary  producers, eg, a) phytoplankton, b) benthic turf algae, c) seagrass  beds, d) kelp. Individual measurements required different methods due to differences in organism size and growth rate. Some measurements may be reported for  an entire community (phytoplankton, algal turf). Some may be  species-specific (kelp, seagrass, turf). The scientist expects to  discover measurements in a variety of time scales (daily to annual), and  spatial dimensions (volumetric or areal); possibly but less likley, different spatial scales (most scaled to meter).
+A. Coastal marine primary production: A scientist wants to know total annual net ecosystem primary production in a  coastal marine environment in southern California. This will entail discovering and processing (e.g., summing) the areal production rates for several groups of primary  producers, e.g., a) phytoplankton, b) benthic turf algae, c) seagrass  beds, d) kelp. Individual measurements required different methods due to differences in organism size and growth rate. Some measurements may be reported for  an entire community (phytoplankton, algal turf). Some may be  species-specific (kelp, seagrass, turf). The scientist expects to  discover measurements in a variety of time scales (daily to annual), and  spatial dimensions (volumetric or areal); possibly but less likley, different spatial scales (most scaled to meter).
 
 Possible queries the KR will need to address: Q4, Q9
  
 
-B. Processes contributing to NEE in a forest: Terrestrial carbon budgets are generally constructed either by a) measuring specific size and change of pools over time, b) directly measuring fluxes , or c) modeling. A scientist wants to compare the results of different carbon budget construction methods in a forest, and os will need access to many different measurements, eg. foliar, woody, root, litter and soil carbon mass, accumulation rates (for same pools), autotoropthic, heterotrophic respiration rates, eddy  covariance (NEE) (from Table 1,  http://www.geos.ed.ac.uk/home/homes/mwilliam/Williams05a.pdf)
+B. Processes contributing to NEE in a forest: Terrestrial carbon budgets are generally constructed either by a) measuring specific sizes and changes in pools over time, b) directly measuring fluxes, or c) modeling. A scientist wants to compare the results of different methods of constructing carbon budgets in a forest, and so will need access to many different measurements, eg. mass of foliar, woody, root, litter and soil carbon, accumulation rates (for the same pools), autotoropthic, heterotrophic respiration rates, eddy  covariance (NEE) (e.g., from Table 1,  http://www.geos.ed.ac.uk/home/homes/mwilliam/Williams05a.pdf)
 
 Possible queries the KR will need to address: Q1, Q2
 
 
-D. Annual above-ground npp in a grassland (during droughts) [NOTE: this scenario was adapted from the mstmip scenario in use case 42, but is now for a data-discovery POV. ]
-A scientist studying drought recovery in grasslands. He wants to compare  the MsTMIP model output to other benchmark data sets, so needs data  from the MsTMIP central data repository, plus other data relating above  ground NPP to precipitation rates in grasslands. He will perform  additional data processing.
+D. Annual above-ground NPP in a grassland during droughts [NOTE: this scenario was adapted from the MsTMiP scenario in use case 42, but is now for a data-discovery point of view. ]
+A scientist is studying drought recovery in grasslands. He wants to compare  the MsTMIP model output to other "benchmark" data sets, so needs data  from the MsTMIP central data repository, plus other data relating above  ground NPP to precipitation rates in grasslands. He will perform  additional data processing.
 
 Possible queries the KR will need to address: Q1, Q3, Q6, Q7, Q8
 
@@ -47,9 +47,9 @@ D. Compare biomes: A scientist has a study to compare primary production rates a
 Possible queries the KR will need to address: Q1, Q3, Q6, Q7, Q8
 
 
-Lastly, this scenario is for an ontology extension. A likely extension will add terms related to ocean acidification and carbonate chemistry. This research domain is not directly pertinent to primary production, but closely related to effects of anthropogenic CO2.
+Lastly, this scenario would necessitate a KR extension. A likely extenstion would be to add terms related to ocean acidification and carbonate chemistry. Like research in primary production, the study of ocean acidification also addresses the effects of anthropogenic CO2. The form of CO2 found in natural water bodies is bicarbonate ion (HCO3-), and bicarbonate is consumed by phytoplankton during photosynthesis. 
 
-E. ocean acidification and carbonate chemistry: The ocean has absorbed one-third to half the atmospheric CO2 produced by human fossil fuel combustion. Dissolved CO2 in the ocean becomes carbonic  acid, driving the pH down and causing large shifts in seawater carbonate  chemistry speciation. A scientist wants to understand possible changes to calcium carbonate saturation states, which impact shell-forming marine  organisms (eg, molluscs, echinoderms, and corals). For this, she needs to find environmental observations on pH, alkalinity, and carbonate-system parameters. The scientists knows that given a minimum set of inputs, a suite of carbonate chemisrty parameters can be calculated (concentatrions, equilibrium constants, indices).
+E. Ocean acidification and carbonate chemistry: The ocean has absorbed one-third to half the atmospheric CO2 produced by human fossil fuel combustion. Dissolved CO2 in the ocean becomes carbonic acid, driving the pH down and causing large shifts in seawater carbonate  chemistry speciation. A scientist wants to understand possible changes to calcium carbonate saturation states, which impact shell-forming marine  organisms (e.g., molluscs, echinoderms and corals). For this, she needs to find environmental observations on pH, alkalinity, and carbonate-system parameters. The scientists knows that given a minimum set of inputs, a suite of carbonate chemisrty parameters can be calculated (concentrations, equilibrium constants, indices).
 
 Possible queries the KR will need to address: Q5, Q10
 
@@ -146,24 +146,26 @@ Sample queries that we can support, in increasing order of complexity.  These wi
                 ?heterresp a lter:HeterotrophicSoilRespiration
                 lter:HeterotrophicSoilRespiration a oboe:Characteristic
             }
-        Q3: soil microbe carbon pools
             
-        Q4: CO2 uptake by phytoplankton
+        Q5: concentration of carbonate species in the ocean (C02, bicarbonate, carbonate)
         
-        Q5: ocean carbonate chemistry
         
 - Queries using oboe:Characteristic and oboe:Entity
     - List datasets with measurements of
+        
+        Q3: the amount of carbon (grams) in soil microbial communities
+            
+        Q4: areal CO2 uptake rate by natural phytoplankton communities  
     
         Q6: rate of release of carbon dioxide from soil
         
-        Q7: carbon dioxide experimentally added to a grassland 
+        Q7: uptake of CO2 in a grassland when CO2 is experimentally added 
         
-        Q8: methane release from soil
+        Q8: areal rate of methane released from soil
         
-        Q9: net primary production of macroalgae
+        Q9: annual rate of net primary production for coastal macroalgae
         
-        Q10: CO2 flux into the ocean
+        Q10: CO2 absorption by the ocean
 
 Notes
 -----
