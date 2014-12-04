@@ -26,7 +26,7 @@ datapackages that include measurement annotations matching desired concepts for 
 
 Five Science Scenarios are included here to illustrate how scientist use data:
 
-A. Coastal marine primary production: A scientist wants to know total annual net ecosystem primary production in a  coastal marine environment in southern California. This will entail discovering and processing (e.g., summing) the areal production rates for several groups of primary  producers, e.g., a) phytoplankton, b) benthic turf algae, c) seagrass  beds, d) kelp. Individual measurements required different methods due to differences in organism size and growth rate. Some measurements may be reported for  an entire community (phytoplankton, algal turf). Some may be  species-specific (kelp, seagrass, turf). The scientist expects to  discover measurements in a variety of time scales (daily to annual), and  spatial dimensions (volumetric or areal); possibly but less likley, different spatial scales (most scaled to meter).
+A. Coastal marine primary production: A scientist wants to know total annual net ecosystem primary production in a  coastal marine environment in southern California. This will entail discovering and processing (e.g., summing) the areal production rates for several groups of primary  producers, e.g., a) phytoplankton, b) benthic turf algae, c) seagrass  beds, d) kelp. Individual measurements required different methods due to differences in organism size and growth rate. Some measurements may be reported for  an entire community (phytoplankton, algal turf). Some may be  species-specific (kelp, seagrass, turf). The scientist expects to  discover measurements in a variety of time scales (daily to annual), and  spatial dimensions (volumetric or areal); possibly but less likely, different spatial scales (most scaled to meter).
 
 Possible queries the KR will need to address: Q4, Q9
  
@@ -37,7 +37,7 @@ Possible queries the KR will need to address: Q1, Q2
 
 
 D. Annual above-ground NPP in a grassland during droughts [NOTE: this scenario was adapted from the MsTMiP scenario in use case 42, but is now for a data-discovery point of view. ]
-A scientist is studying drought recovery in grasslands. He wants to compare  the MsTMIP model output to other "benchmark" data sets, so needs data  from the MsTMIP central data repository, plus other data relating above  ground NPP to precipitation rates in grasslands. He will perform  additional data processing.
+A scientist is studying drought recovery in grasslands. He wants to compare  the MsTMIP model output to other "benchmark" data sets, so needs data  from the MsTMIP central data repository, plus other data relating above-ground NPP to precipitation rates in grasslands. He will perform  additional data processing.
 
 Possible queries the KR will need to address: Q1, Q3, Q6, Q7, Q8
 
@@ -47,9 +47,9 @@ D. Compare biomes: A scientist has a study to compare primary production rates a
 Possible queries the KR will need to address: Q1, Q3, Q6, Q7, Q8
 
 
-Lastly, this scenario would necessitate a KR extension. A likely extenstion would be to add terms related to ocean acidification and carbonate chemistry. Like research in primary production, the study of ocean acidification also addresses the effects of anthropogenic CO2. The form of CO2 found in natural water bodies is bicarbonate ion (HCO3-), and bicarbonate is consumed by phytoplankton during photosynthesis. 
+Lastly, this scenario would necessitate a KR extension. A likely extension would be to add terms related to ocean acidification and carbonate chemistry. Like research in primary production, the study of ocean acidification also addresses the effects of anthropogenic CO2. The form of CO2 found in natural water bodies is bicarbonate ion (HCO3-), and bicarbonate is consumed by phytoplankton during photosynthesis. 
 
-E. Ocean acidification and carbonate chemistry: The ocean has absorbed one-third to half the atmospheric CO2 produced by human fossil fuel combustion. Dissolved CO2 in the ocean becomes carbonic acid, driving the pH down and causing large shifts in seawater carbonate  chemistry speciation. A scientist wants to understand possible changes to calcium carbonate saturation states, which impact shell-forming marine  organisms (e.g., molluscs, echinoderms and corals). For this, she needs to find environmental observations on pH, alkalinity, and carbonate-system parameters. The scientists knows that given a minimum set of inputs, a suite of carbonate chemisrty parameters can be calculated (concentrations, equilibrium constants, indices).
+E. Ocean acidification and carbonate chemistry: The ocean has absorbed one-third to half the atmospheric CO2 produced by human fossil fuel combustion. Dissolved CO2 in the ocean becomes carbonic acid, driving the pH down and causing large shifts in seawater carbonate  chemistry speciation. A scientist wants to understand possible changes to calcium carbonate saturation states, which impact shell-forming marine  organisms (e.g., molluscs, echinoderms and corals). For this, she needs to find environmental observations on pH, alkalinity, and carbonate-system parameters. The scientists knows that given a minimum set of inputs, a suite of carbonate chemistry parameters can be calculated (concentrations, equilibrium constants, indices).
 
 Possible queries the KR will need to address: Q5, Q10
 
