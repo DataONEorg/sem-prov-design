@@ -32,7 +32,7 @@ A scientist that has uploaded their dataset to DataONE and has allowed derived w
           Authentication may be provided 
           by an external service
         end note
-        package "DataONE"
+        package "DataONE" {
           actor "Coordinating Node" as CN
           actor "Member Node" as MN
           usecase "13. Authorization" as authz
@@ -42,6 +42,7 @@ A scientist that has uploaded their dataset to DataONE and has allowed derived w
           MN -- discover
           discover ..> authz: <<includes>>
           discover ..> authn: <<includes>>
+        }
     @enduml
 
 .. image:: images/use-case-45.png
