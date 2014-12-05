@@ -31,12 +31,13 @@ A scientist reviewing a data table or figure in DataONE can discover the script 
           Authentication may be provided 
           by an external service
         end note
-        package "DataONE"
+        package "DataONE" {
             actor "Client Software" as client
             actor "Member Node" as mn
             actor "Coordinating Node" as cn
             usecase "46. Double Check" as dblcheck
             usecase "13. Authorization" as authz
+        }
         scientist -- client
         client -- dblcheck
         mn -- dblcheck
