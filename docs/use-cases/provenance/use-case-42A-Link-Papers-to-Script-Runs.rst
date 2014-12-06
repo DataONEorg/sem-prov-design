@@ -52,6 +52,7 @@ In R or Matlab, after executing a script and recording provenance information ab
         to update from the list
         end note
         scientist -> "run manager" : insertRelationship(wasDerivedFrom, doi, runId)
+        "run manager" -> "provenance store": insertRelationship(wasDerivedFrom, doi, runId)
     @endumld
 
 Actors
