@@ -20,7 +20,7 @@ The following table lists the DataONE provenance use cases under development.
 +--------------+-----------------------------------+------------------------------------------------------------------+
 | Use Case 45A | `Discover by Paper`_              | Find the data and scripts used in research papers                |
 +--------------+-----------------------------------+------------------------------------------------------------------+
-| Use Case 45B | `Discover by Person`_             | Find the data and scripts used to by a given person              |
+| Use Case 45B | `Discover by Person`_             | Find the data and scripts used by a given person                 |
 +--------------+-----------------------------------+------------------------------------------------------------------+
 | Use Case 46  | `Double Check`_                   | Examine scripts used in derived works                            |
 +--------------+-----------------------------------+------------------------------------------------------------------+
@@ -38,7 +38,7 @@ The following table lists the DataONE provenance use cases under development.
 .. _Publish in DataONE:             ./use-case-43-Publish-in-DataONE.rst
 .. _Explore Derived Data:           ./use-case-44-Explore-Derived-Data.rst
 .. _Discover by Paper:              ./use-case-45A-Discover-by-Paper.rst
-.. _Discover by Person:             ./use-case-45A-Discover-by-Person.rst
+.. _Discover by Person:             ./use-case-45B-Discover-by-Person.rst
 .. _Double Check:                   ./use-case-46-Double-Check.rst
 .. _Visualize Workflow:             ./use-case-47-Visualize-Workflow.rst
 .. _Visualize Run:                  ./use-case-48-Visualize-Run.rst
