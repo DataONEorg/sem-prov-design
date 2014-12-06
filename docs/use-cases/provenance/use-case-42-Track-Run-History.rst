@@ -29,7 +29,7 @@ The scientist can then list recorded script executions, possibly filtering the l
 From this list individual executions can be selected for detailed review, such as viewing the provenance relationships between items
 and inspecting each data product produced by the execution.
 
-The scientist can then select an execution that has produced the desired data producs, and send them to DataONE 
+The scientist can then select an execution that has produced the desired data products, and send them to DataONE 
 as detailed in use case #43 (Publish to DataONE).
 
 *Use case diagram*
@@ -46,6 +46,11 @@ as detailed in use case #43 (Publish to DataONE).
     @enduml
 
 *Sequence diagram*
+
+The following diagram shows a script execution on a client machine where a single dataset is read
+and the associated provenance 
+relationship between the script and the input dataset is captured. This dataset is 
+then used to create a derived dataset, then the provenance relationship between the script and derived dataset is recorded.
 
 .. image:: images/sequence-42.png
 
@@ -79,7 +84,7 @@ as detailed in use case #43 (Publish to DataONE).
         "run manager" -> "provenance store" : list(search terms)
         "provenance store" --> scientist : package list
         note right of "scientist"
-        scientist selects a packge 
+        scientist selects a package 
         to view from the list
         end note
         scientist -> "run manager" : view(packageId)
@@ -91,11 +96,6 @@ Actors
 ------
 * Investigator
 * Client Software
-
-The following diagram shows a script execution on a client machine where a single dataset is read
-and the associated provenance 
-relationship between the script and the input dataset is captured. This dataset is 
-then used to create a derived dataset, then the provenance relationship between the script and derived dataset is recorded.
 
 Preconditions
 -------------
