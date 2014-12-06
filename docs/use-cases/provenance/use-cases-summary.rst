@@ -37,6 +37,7 @@ The following table lists the DataONE provenance use cases under development.
 .. _Link Scientists to Script Runs: ./use-case-42B-Link-Scientists-to-Script-Runs.rst
 .. _Publish in DataONE:             ./use-case-43-Publish-in-DataONE.rst
 .. _Explore Derived Data:           ./use-case-44-Explore-Derived-Data.rst
+.. _Discover Derived Products:      ./use-case-45-Discover-Derived-Products.rst
 .. _Discover by Paper:              ./use-case-45A-Discover-by-Paper.rst
 .. _Discover by Person:             ./use-case-45B-Discover-by-Person.rst
 .. _Double Check:                   ./use-case-46-Double-Check.rst
