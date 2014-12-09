@@ -13,7 +13,7 @@ The DataONE provenance data model will be used to describe the relationships bet
 
 ## Diagrams
 ### Diagram of the PROV Model using a proposed revision of the ProvONE model
-![ProvONE Model Diagram](images/ProvONE-model-revised.png)
+![ProvONE Model Diagram](https://github.com/DataONEorg/sem-prov-ontologies/raw/master/provenance/ProvONE/v1/uml/provone-model.png)
 
 This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR/prov-o/) to define classes of objects and the relationships between them. 
 
@@ -71,15 +71,10 @@ e.g. script, software
 From PROV-O
 > Since plans may evolve over time, it may become necessary to track their provenance, so plans themselves are entities. Representing the plan explicitly in the provenance can be useful for various tasks: for example, to validate the execution as represented in the provenance record, to manage expectation failures, or to provide explanations.
 
-#### Publication class
+#### Document class
 ##### has superclass [prov:Entity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity)
-A Publication object represents a published document of scientific work.
-e.g. scholarly journal article
-
-#### Report class
-##### has superclass [prov:Entity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity)
-A Report object represents a document communicating scientific work.
-e.g. annual government report
+A Document object represents a potenttially but not necessarily published document of scientific work.
+e.g. scholarly journal article, government report
 
 #### Execution class
 ##### has superclass [prov:Activity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity)
