@@ -21,18 +21,18 @@ This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR
 ##### [Activity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity) 
 * PROV-O definition: An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.
 
-##### [Entity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity)
-* PROV-O definition: An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.
-
-##### [Plan](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan) 
-* PROV-O definition: A plan is an entity that represents a set of actions or steps intended by one or more agents to achieve some goals.
-
 ##### [Agent](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent) 
 * PROV-O definition: An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.
 * DataONE may not capture information about agents during the first phase of the semantics and provenance work, but it is one of the major classes of the PROV-O ontology.
 
+##### [Entity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity)
+* PROV-O definition: An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.
+
 ##### [Location](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Location) 
 * PROV-O definition: A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column.
+
+##### [Plan](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan) 
+* PROV-O definition: A plan is an entity that represents a set of actions or steps intended by one or more agents to achieve some goals.
 
 ##### [Association](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Association)
 * Qualifies: prov:wasAssociatedWith
@@ -41,8 +41,13 @@ This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR
 * From PROV-O:
 	* Similarly in subfigure j, the prov:qualifiedAssociation property parallels the prov:wasAssociatedWith property and references an instance of prov:Association, which in turn provides attributes of the prov:wasAssociatedWith relation between the Activity and Agent. The prov:agent property is used to cite the Agent that influenced the Activity. In this case, the plan of actions and steps that the Agent used to achieve its goals is provided using the prov:hadPlan property and an instance of prov:Plan.  
 
-	
+##### [Usage](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Usage)
+* Qualifies: prov:used
+* PROV-O definition: Usage is the beginning of utilizing an entity by an activity. Before usage, the activity had not begun to utilize this entity and could not have been affected by the entity.
 
+##### [Generation](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Generation)
+* Qualifies: prov:wasGeneratedBy
+* PROV-O definition: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.
 		
 ## Model Specification
 
