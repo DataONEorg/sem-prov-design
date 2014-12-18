@@ -1,6 +1,6 @@
 YesWorkflow draft architecture 
 ==============================
-The following sequence diagram describes a draft architecture for the prototype YesWrkflow application.  The components would include:
+The following sequence diagram describes a draft architecture for the prototype YesWorkflow application.  The components would include:
 
 - The main YesWorkflow Java application
 - The Apache Jena TDB database for storing and retrieving a graph model
@@ -60,7 +60,7 @@ The following sequence diagram describes a draft architecture for the prototype 
                 yw_extract -> model: addProperty(INPUT, inputLabel)
             end
             loop for each output directive
-                yw_extract -> model: addProperty(OUTPUT, inputLabel)
+                yw_extract -> model: addProperty(OUTPUT, outputLabel)
             end
         end
         yw_extract -> tdb: end()
