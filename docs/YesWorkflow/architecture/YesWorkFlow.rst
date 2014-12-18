@@ -35,7 +35,7 @@ The following sequence diagram describes a draft architecture for the prototype 
             The application passes the path and storeDataset
             to YWExtract for parsing
         end note
-        yw_app -> yw_extract: extracted = extract(/path/to/script, model)
+        yw_app -> yw_extract: extracted = extract(/path/to/script, storeDataset)
         note left of model
             YWExtract gets the Jena Model backed by the TDB database
             to begin populating the graph
