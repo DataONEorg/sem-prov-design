@@ -95,6 +95,9 @@ The annotations are currently stored as JSON objects that loosely correspond to 
 the library, but it currently does not "speak" OA natively. Below is an example annotation about a web-accessible resource using their JSON model followed by a mapping of those fields to 
 the more formal OA model described above.
 
+Online docs for AnnotatorJS model is available [here](http://docs.annotatorjs.org/en/v1.2.x/annotation-format.html) but an example is included here where I have tagged the "T_AIR" column in the
+metadata to be a Temperature concept taken from the OBOE ontology.
+
 
   {
     "user": "uid=kepler,o=unaffiliated,dc=ecoinformatics,dc=org", 
