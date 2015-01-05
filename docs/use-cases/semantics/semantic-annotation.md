@@ -88,6 +88,71 @@ we have found that the current ORE maps are not sufficiently descriptive on thei
 
 By incorporating the metadata pointer within the annotation model, we hope to be able to hanlde data packages that use manu different metadata serializations without having to write custom handlers for each formatId.
 
+AnnotatorJS model (JSON)
+------------------------
+In an effort to reduce the amount of de novo development activities se undertake, we've investigated the AnnotatorJS library for adding and editing annotations for metadata records.
+The annotations are currently stored as JSON objects that loosely correspond to fields in the OA model. The maintainers of the AnnotatorJS library intend to use the OA model for v2.x of 
+the library, but it currently does not "speak" OA natively. Below is an example annotation about a web-accessible resource using their JSON model followed by a mapping of those fields to 
+the more formal OA model described above.
+
+
+  {
+    "user": "uid=kepler,o=unaffiliated,dc=ecoinformatics,dc=org", 
+    "consumer": "f780f3e398cf45cbb4e84ed9ec91622a", 
+    "id": "48hAIW6TQJyg4uW5Utq7iA", 
+    "resource": "#xpointer(/eml/dataset/dataTable[1]/attributeList/attribute[3])", 
+    "text": "", 
+    "created": "2014-11-18T05:12:08.331690+00:00", 
+    "pid": "tao.1.6", 
+    "ranges": [
+      {
+        "start": "/section[1]/article[1]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/div[6]/div[1]/div[2]/div[3]/div[1]/div[1]", 
+        "end": "/section[1]/article[1]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/div[6]/div[1]/div[2]/div[3]/div[1]/div[1]", 
+        "startOffset": 0, 
+        "endOffset": 5
+      }
+    ], 
+    "uri": "http://localhost:8080/metacat/d1/mn/v1/object/tao.1.6", 
+    "links": [
+      {
+        "type": "text/html", 
+        "rel": "alternate", 
+        "href": "http://annotateit.org/annotations/48hAIW6TQJyg4uW5Utq7iA"
+      }
+    ], 
+    "permissions": {
+      "read": [
+        "group:__world__"
+      ], 
+      "delete": [], 
+      "admin": [], 
+      "update": []
+    }, 
+    "updated": "2014-11-26T20:46:44.576047+00:00", 
+    "quote": "T_AIR", 
+    "tags": [
+      "http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"
+    ]
+  }
+  
+  
+Mapping from AnnotatorJS to OA model
+
+|  JS field                 | OA property               | Comments                  | 
+|---------------------------|---------------------------|---------------------------|
+| id                        | dcterms:identifier        | identifier of the annotaiton itself
+| user                      | oa:annotatedBy            | the user who created the annotation
+| created                   | oa:annotatedAt            | timestamp for annotation creation
+| updated                   | oa: annotatedAt           | Allow mutable annotations?
+| uri                       | oa:hasSource              | D1 resolve endpoint
+| pid                       | dcterms:identifier        | identifier of the object being annotated
+| resource                  | oa:hasSelector            | oa:FragmentSelectors allow selction in different kinds of resources
+| ranges                    | oa:hasSelector            | range selector uses xpaths and character offsets to pinpoint the exact part that the annotation applies to
+| quote                     | oa:hasSelector            | the text value of the range being annotated
+| text                      | oa:hasBody                | the text content of the annotation (e.g. comment)
+| tags                      | oa:hasBody                | the URI of one or more tags (this would be our semantic annotation from a controlled vocabulary/ontology)
+
+
 Indexing
 --------
 The Metacat Index component has been enhanced to parse semantic models provided as RDF. 
