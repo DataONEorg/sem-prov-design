@@ -24,19 +24,15 @@ annotator.getMatchingConcepts describes the function that will be called wheneve
 
 **parameters**:
 
-- query(String): queries are composed of one or more keywords. 
-
-	- All keywords are separate by ",". ex. snow, depth, meter,….
-	- To describe the type of keywords use "()". ex. depth(thickness). 
-	- Accepts multiple types, separated by ";". ex. meter(unit; length).
+- query(string)
+	- queries are composed of one or more keywords 
+	- all keywords are separate by ",". ex. snow, depth, meter,…
+	- to describe the type of keywords use "()". ex. depth(thickness) 
+	- accepts multiple types, separated by ";". ex. meter(unit; length)
 
 
 **return**:
 
-	- type: ArrayList<Annotation>
-	- Annotation{keyword, concept, score}
+- ArrayList<Annotation>
+	-Annotation{keyword, concept, score}
 
-
-
-.. _uc50:https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/semantics/use-case-50-Automatic-Annotation.rst
-.. _uc52:https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/semantics/use-case-52-Semantic-Search.rst
