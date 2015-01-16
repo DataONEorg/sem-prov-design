@@ -17,6 +17,14 @@ The DataONE provenance data model will be used to describe the relationships bet
 
 This data model uses the [W3C PROV Ontology and Data Model](http://www.w3.org/TR/prov-o/) to define classes of objects and the relationships between them. 
 
+### Instance Diagram showing usage of ProvONE model classes and properties
+![ProvONE Instance Diagram](https://github.com/DataONEorg/sem-prov-ontologies/raw/master/provenance/ProvONE/v1/examples/Provenance-instance-example-one-run.png)
+This instance diagram illustrates the application of the ProvONE model to a typical scenario in which a set of source data sets are processed by an R script to generate a derived data product, which in turn is used to generate two visualizations.
+
+### Example RDF for the ProvONE model diagram above
+    
+	Note: To Be Produced
+
 ## PROV-O Classes
 ##### [Activity](http://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity) 
 * PROV-O definition: An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.
