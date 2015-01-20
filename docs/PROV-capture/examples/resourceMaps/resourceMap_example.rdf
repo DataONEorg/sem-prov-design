@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:cito="http://purl.org/spar/cito/" 
+         xmlns:dc="http://purl.org/dc/elements/1.1/" 
+         xmlns:dcterms="http://purl.org/dc/terms/" 
+         xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+         xmlns:ore="http://www.openarchives.org/ore/terms/" 
+         xmlns:prov="http://www.w3.org/ns/prov#" 
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/dfCombinedData_20150120115739">
+    <dcterms:identifier>dfCombinedData_20150120115739^^xsd:string</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/dfCombinedData_20150120115739">
+    <prov:wasDerivedFrom rdf:resource="https://cn.dataone.org/cn/v1/resolve/df35b.56.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7">
+    <ore:describes rdf:resource="https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7#aggregation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/combineData.R_4fead187-f104-4c55-a004-992d91d6d7bd">
+    <dcterms:identifier>combineData.R_4fead187-f104-4c55-a004-992d91d6d7bd^^xsd:string</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7#aggregation">
+    <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7#aggregation">
+    <ore:isDescribedBy rdf:resource="https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7">
+    <dcterms:identifier>resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7^^xsd:string</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/dfCombinedData_20150120115739">
+    <prov:wasGeneratedBy rdf:resource="https://cn.dataone.org/cn/v1/resolve/execution_f6190dd3-8ecd-48c0-a7b9-f7feddbf5784"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/execution_f6190dd3-8ecd-48c0-a7b9-f7feddbf5784">
+    <prov:used rdf:resource="https://cn.dataone.org/cn/v1/resolve/df35b.56.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/association_d3ad6773-f8fa-4167-bccf-983a3850ec04">
+    <prov:hadPlan rdf:resource="https://cn.dataone.org/cn/v1/resolve/combineData.R_4fead187-f104-4c55-a004-992d91d6d7bd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/execution_f6190dd3-8ecd-48c0-a7b9-f7feddbf5784">
+    <prov:qualifiedAssociation rdf:resource="https://cn.dataone.org/cn/v1/resolve/association_d3ad6773-f8fa-4167-bccf-983a3850ec04"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/execution_f6190dd3-8ecd-48c0-a7b9-f7feddbf5784">
+    <prov:wasAssociatedWith>CN=Peter Slaughter A10499,O=Google,C=US,DC=cilogon,DC=org</prov:wasAssociatedWith>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7#aggregation">
+    <ore:aggregates rdf:resource="https://cn.dataone.org/cn/v1/resolve/dfCombinedData_20150120115739"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7#aggregation">
+    <ore:aggregates rdf:resource="https://cn.dataone.org/cn/v1/resolve/combineData.R_4fead187-f104-4c55-a004-992d91d6d7bd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7">
+    <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/ResourceMap"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/association_d3ad6773-f8fa-4167-bccf-983a3850ec04">
+    <prov:Agent>CN=Peter Slaughter A10499,O=Google,C=US,DC=cilogon,DC=org"</prov:Agent>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/dfCombinedData_20150120115739">
+    <ore:isAggregatedBy rdf:resource="https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7#aggregation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn.dataone.org/cn/v1/resolve/combineData.R_4fead187-f104-4c55-a004-992d91d6d7bd">
+    <ore:isAggregatedBy rdf:resource="https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7#aggregation"/>
+  </rdf:Description>
+</rdf:RDF>
+

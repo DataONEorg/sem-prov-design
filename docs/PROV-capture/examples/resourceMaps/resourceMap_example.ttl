@@ -1,0 +1,33 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ns0: <http://www.openarchives.org/ore/terms/> .
+
+<https://cn.dataone.org/cn/v1/resolve/dfCombinedData_20150120115739>
+  dc:identifier "dfCombinedData_20150120115739^^xsd:string" ;
+  prov:wasDerivedFrom <https://cn.dataone.org/cn/v1/resolve/df35b.56.2> ;
+  prov:wasGeneratedBy <https://cn.dataone.org/cn/v1/resolve/execution_f6190dd3-8ecd-48c0-a7b9-f7feddbf5784> ;
+  ns0:isAggregatedBy <https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7#aggregation> .
+
+<https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7>
+  ns0:describes <https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7#aggregation> ;
+  dc:identifier "resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7^^xsd:string" ;
+  a ns0:ResourceMap .
+
+<https://cn.dataone.org/cn/v1/resolve/combineData.R_4fead187-f104-4c55-a004-992d91d6d7bd>
+  dc:identifier "combineData.R_4fead187-f104-4c55-a004-992d91d6d7bd^^xsd:string" ;
+  ns0:isAggregatedBy <https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7#aggregation> .
+
+<https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7#aggregation>
+  a ns0:Aggregation ;
+  ns0:isDescribedBy <https://cn.dataone.org/cn/v1/resolve/resourceMap_5cbcdecd-6b0e-4b24-a0be-20291b2e49a7> ;
+  ns0:aggregates <https://cn.dataone.org/cn/v1/resolve/dfCombinedData_20150120115739>, <https://cn.dataone.org/cn/v1/resolve/combineData.R_4fead187-f104-4c55-a004-992d91d6d7bd> .
+
+<https://cn.dataone.org/cn/v1/resolve/execution_f6190dd3-8ecd-48c0-a7b9-f7feddbf5784>
+  prov:used <https://cn.dataone.org/cn/v1/resolve/df35b.56.2> ;
+  prov:qualifiedAssociation <https://cn.dataone.org/cn/v1/resolve/association_d3ad6773-f8fa-4167-bccf-983a3850ec04> ;
+  prov:wasAssociatedWith "CN=Peter Slaughter A10499,O=Google,C=US,DC=cilogon,DC=org" .
+
+<https://cn.dataone.org/cn/v1/resolve/association_d3ad6773-f8fa-4167-bccf-983a3850ec04>
+  prov:hadPlan <https://cn.dataone.org/cn/v1/resolve/combineData.R_4fead187-f104-4c55-a004-992d91d6d7bd> ;
+  prov:Agent "CN=Peter Slaughter A10499,O=Google,C=US,DC=cilogon,DC=org\"" .
+
