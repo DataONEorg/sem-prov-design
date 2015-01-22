@@ -97,7 +97,7 @@
 .
 
 # Users
-_:user_25679c53-cb6c-498c-a434-e7ffe5669830
+<urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830>
     a provone:User;
     a foaf:Person;
     foaf:name "Yaxing Wei"^^xsd:string;
