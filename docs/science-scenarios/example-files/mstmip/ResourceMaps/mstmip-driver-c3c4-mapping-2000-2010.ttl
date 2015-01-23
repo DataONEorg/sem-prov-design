@@ -6,6 +6,7 @@
 @prefix prov:    <http://www.w3.org/ns/prov#> .
 @prefix provone: <http://purl.org/provone/2015/15/ontology#> .
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix cito:    <http://purl.org/spar/cito/> .
 
 # Resource Map
 <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_dd0e566b-7043-4ad1-a6ad-f1d532c28597>
@@ -20,7 +21,8 @@
     a ore:Aggregation;
     dcterms:identifier "resourceMap_dd0e566b-7043-4ad1-a6ad-f1d532c28597#aggregation"^^xsd:string;
     ore:isDescribedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_dd0e566b-7043-4ad1-a6ad-f1d532c28597>;    
-    ore:aggregates <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc>,
+    ore:aggregates <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc>,
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc>,
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc>,
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc>,
@@ -28,7 +30,15 @@
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3_C4_map_present_NA.m>,
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc>;
 .
-                      
+
+# Metadata Entities
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_dd0e566b-7043-4ad1-a6ad-f1d532c28597#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc>;
+.
+
 # Data Input Entities
 <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc> 
     a provone:Data;
@@ -76,11 +86,11 @@
               <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc>,
               <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc>,
               <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.1.nc>;
-    prov:wasAssociatedWith <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/user_25679c53-cb6c-498c-a434-e7ffe5669830>;
+    prov:wasAssociatedWith <urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830>;
     prov:qualifiedAssociation [
         a prov:Association;
         prov:hadPlan <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3_C4_map_present_NA.m>;
-        prov:agent <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/user_25679c53-cb6c-498c-a434-e7ffe5669830>;
+        prov:agent <urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830>;
     ];
 .
 
@@ -89,6 +99,7 @@
     a provone:Data;
     dcterms:identifier "mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc"^^xsd:string;
     ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_dd0e566b-7043-4ad1-a6ad-f1d532c28597#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml>
     prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_1050bd0e-b415-4337-9270-a3187583a17f>;
     prov:wasDerivedFrom <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc>,
