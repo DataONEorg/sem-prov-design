@@ -28,7 +28,8 @@
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc>,
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.1.nc>,
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3_C4_map_present_NA.m>,
-                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc>;
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml>;
 .
 
 # Metadata Entities
