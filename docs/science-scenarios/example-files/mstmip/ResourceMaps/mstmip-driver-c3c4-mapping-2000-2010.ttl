@@ -11,6 +11,7 @@
 <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_dd0e566b-7043-4ad1-a6ad-f1d532c28597>
     a ore:ResourceMap;
     dcterms:identifier "resourceMap_dd0e566b-7043-4ad1-a6ad-f1d532c28597"^^xsd:string;
+    dcterms:creator <urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E>;
     ore:describes <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_dd0e566b-7043-4ad1-a6ad-f1d532c28597#aggregation>;
 .
 
