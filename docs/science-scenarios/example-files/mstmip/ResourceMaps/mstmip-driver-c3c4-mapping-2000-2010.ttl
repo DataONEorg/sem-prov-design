@@ -102,3 +102,10 @@
     a foaf:Person;
     foaf:name "Yaxing Wei"^^xsd:string;
 .
+
+# Software Agents
+<urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E>
+    a dcterms:Agent;
+    foaf:name "DataONE Java Libclient Version 2.0.0"^^xsd:string;
+.
+
