@@ -99,7 +99,7 @@
     a provone:Data;
     dcterms:identifier "mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc"^^xsd:string;
     ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_dd0e566b-7043-4ad1-a6ad-f1d532c28597#aggregation>;
-    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml>
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml>;
     prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_1050bd0e-b415-4337-9270-a3187583a17f>;
     prov:wasDerivedFrom <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc>,
