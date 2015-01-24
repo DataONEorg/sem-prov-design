@@ -9,9 +9,9 @@
 @prefix cito:    <http://purl.org/spar/cito/> .
 
 # Resource Map
-<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_430328EF-8CF9-4718-9F95-06188FAC892D>
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB>
     a ore:ResourceMap;
-    dcterms:identifier "resourceMap_430328EF-8CF9-4718-9F95-06188FAC892D"^^xsd:string;
+    dcterms:identifier "resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB"^^xsd:string;
     dcterms:creator <urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E>;
     ore:describes <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB#aggregation>;
 .
@@ -20,7 +20,7 @@
 <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB#aggregation>
     a ore:Aggregation;
     dcterms:identifier "resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB#aggregation"^^xsd:string;
-    ore:isDescribedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_430328EF-8CF9-4718-9F95-06188FAC892D>;    
+    ore:isDescribedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB>;    
     ore:aggregates <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_Global_v2.0.xml>,
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc>,
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc>,

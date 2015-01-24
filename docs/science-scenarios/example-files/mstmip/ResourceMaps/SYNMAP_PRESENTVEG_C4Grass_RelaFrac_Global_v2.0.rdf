@@ -9,12 +9,6 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:cito="http://purl.org/spar/cito/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
-  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_430328EF-8CF9-4718-9F95-06188FAC892D">
-    <ore:describes rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB#aggregation"/>
-    <dcterms:creator rdf:resource="urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E"/>
-    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resourceMap_430328EF-8CF9-4718-9F95-06188FAC892D</dcterms:identifier>
-    <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/ResourceMap"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_Global_v2.0.xml">
     <cito:documents rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_Global_v2.0.nc"/>
     <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB#aggregation"/>
@@ -41,20 +35,26 @@
     <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
     <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_Global_v2.0.xml"/>
     <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB#aggregation</dcterms:identifier>
+    <ore:isDescribedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB"/>
     <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc"/>
     <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc"/>
-    <ore:isDescribedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_430328EF-8CF9-4718-9F95-06188FAC892D"/>
     <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3_C4_map_present_NA.m"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <prov:agent rdf:resource="urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830"/>
-    <prov:hadPlan rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3_C4_map_present_NA.m"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.1.nc">
     <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB#aggregation"/>
     <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.1.nc</dcterms:identifier>
     <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB">
+    <ore:describes rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB#aggregation"/>
+    <dcterms:creator rdf:resource="urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resourceMap_088F59F9-855C-485A-93C7-5587E18C3FCB</dcterms:identifier>
+    <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/ResourceMap"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <prov:agent rdf:resource="urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830"/>
+    <prov:hadPlan rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3_C4_map_present_NA.m"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E">
     <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataONE Java Libclient Version 2.0.0</foaf:name>
