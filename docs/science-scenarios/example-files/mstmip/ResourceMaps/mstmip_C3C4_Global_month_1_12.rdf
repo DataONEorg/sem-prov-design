@@ -1,0 +1,331 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:provone="http://purl.org/provone/2015/15/ontology#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ore="http://www.openarchives.org/ore/terms/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:cito="http://purl.org/spar/cito/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_8.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_Tair_8.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_3.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_3.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_7.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_7.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_4.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_4.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4">
+    <ore:describes rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:creator rdf:resource="urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4</dcterms:identifier>
+    <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/ResourceMap"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation">
+    <ore:isDescribedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_7.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_11.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_4.nc"/>
+    <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_3.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_9.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_5.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_Global_v2.0.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_Global_v2.0.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_2.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_Global_month_1_12.xml"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_7.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_9.nc"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation</dcterms:identifier>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_6.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_2.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_10.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_Global_HD_new.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_10.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_6.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_4.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_3.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_11.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_12.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_Global_v2.0.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_8.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_8.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_12.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_5.nc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_Global_v2.0.nc">
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_7.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_6.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_8.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_11.nc"/>
+    <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_Global_month_1_12.xml"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_10.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_2.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_3.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_12.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_9.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_5.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_4.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_8.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_2.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_4.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_11.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_Global_HD_new.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_10.nc"/>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_Global_v2.0.nc</dcterms:identifier>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_3.nc"/>
+    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_7CD4CFA1-6553-419C-9825-EC0215CA688A"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_6.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_7.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_5.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_9.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_12.nc"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_6.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_6.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_12.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_Tair_12.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_2.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_2.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_9.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_9.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_8.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_8.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_7CD4CFA1-6553-419C-9825-EC0215CA688A">
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_7.nc"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">execution_7CD4CFA1-6553-419C-9825-EC0215CA688A</dcterms:identifier>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_9.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_7.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_10.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_10.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_12.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_2.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_11.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_6.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc"/>
+    <prov:qualifiedAssociation rdf:nodeID="A0"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_5.nc"/>
+    <prov:wasAssociatedWith rdf:resource="urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_6.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_4.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_12.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_8.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_9.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_4.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_3.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_3.nc"/>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Execution"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_2.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_5.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_11.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_8.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_Global_HD_new.nc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830">
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yaxing Wei</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_Global_v2.0.nc">
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_12.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_7.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_4.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_9.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_8.nc"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_5.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_10.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_5.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_2.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_11.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_11.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_2.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_7.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_4.nc"/>
+    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_7CD4CFA1-6553-419C-9825-EC0215CA688A"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_Global_v2.0.nc</dcterms:identifier>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_6.nc"/>
+    <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_Global_month_1_12.xml"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_8.nc"/>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_3.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_10.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_6.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_9.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_Global_HD_new.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_3.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_12.nc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_Global_HD_new.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_SYNMAP_Global_HD_new.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_10.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_Tair_10.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3_C4_map_present_Global.m">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_C3_C4_map_present_Global.m</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Program"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_5.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_Tair_5.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_12.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_12.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_6.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_Tair_6.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_11.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_11.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_Global_month_1_12.xml">
+    <cito:documents rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_Global_v2.0.nc"/>
+    <cito:documents rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_Global_v2.0.nc"/>
+    <cito:documents rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_Global_v2.0.nc"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_C3C4_Global_month_1_12.xml</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_2.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_Tair_2.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_5.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_5.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_11.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_Tair_11.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_4.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_Tair_4.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_9.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_Tair_9.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E">
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataONE Java Libclient Version 2.0.0</foaf:name>
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <prov:agent rdf:resource="urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830"/>
+    <prov:hadPlan rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3_C4_map_present_Global.m"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_10.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_10.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_3.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_Tair_3.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_Global_v2.0.nc">
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_7.nc"/>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_12.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_7.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_6.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_8.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_10.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_2.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_6.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_Global_HD_new.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_2.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_9.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_5.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_3.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_5.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_3.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_8.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_4.nc"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_11.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_12.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_10.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_9.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_4.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_11.nc"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_Global_v2.0.nc</dcterms:identifier>
+    <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_Global_month_1_12.xml"/>
+    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_7CD4CFA1-6553-419C-9825-EC0215CA688A"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_7.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_Tair_7.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,331 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:provone="http://purl.org/provone/2015/15/ontology#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ore="http://www.openarchives.org/ore/terms/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:cito="http://purl.org/spar/cito/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.7.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_air.2m_monthly_2000_2010_mean.7.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.3.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_air.2m_monthly_2000_2010_mean.3.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.12.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_air.2m_monthly_2000_2010_mean.12.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.10.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.10.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.5.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.5.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.12.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.12.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.1.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.1.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.2.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.2.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.5.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_air.2m_monthly_2000_2010_mean.5.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3_C4_map_present_NA.m">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_C3_C4_map_present_NA.m</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Program"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <prov:agent rdf:resource="urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830"/>
+    <prov:hadPlan rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3_C4_map_present_NA.m"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Association"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830">
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yaxing Wei</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_air.2m_monthly_2000_2010_mean.1.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.7.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.7.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.10.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_air.2m_monthly_2000_2010_mean.10.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.6.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_air.2m_monthly_2000_2010_mean.6.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.11.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_air.2m_monthly_2000_2010_mean.11.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation">
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.8.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.1.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.8.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.6.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.9.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.2.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.11.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.3.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.12.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.11.nc"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation</dcterms:identifier>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.9.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_NA_month_1_12.xml"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.5.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.7.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.7.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.nc"/>
+    <ore:isDescribedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.3.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.5.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.4.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.6.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.10.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.2.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.12.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.4.nc"/>
+    <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.10.nc"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.4.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.4.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.11.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.11.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A">
+    <ore:describes rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:creator rdf:resource="urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A</dcterms:identifier>
+    <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/ResourceMap"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.8.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.8.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.9.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.9.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.4.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_air.2m_monthly_2000_2010_mean.4.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638">
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.11.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.9.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.8.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.4.nc"/>
+    <prov:wasAssociatedWith rdf:resource="urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.4.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.11.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.1.nc"/>
+    <prov:qualifiedAssociation rdf:nodeID="A0"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.3.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.7.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.12.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.2.nc"/>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Execution"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638</dcterms:identifier>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.7.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.6.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.12.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.9.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.10.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.8.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.10.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.3.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.2.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.6.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.5.nc"/>
+    <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.5.nc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.8.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_air.2m_monthly_2000_2010_mean.8.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.6.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.6.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.nc">
+    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.3.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.5.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.7.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.12.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.2.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.11.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.4.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.9.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.6.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.9.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.8.nc"/>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.12.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.7.nc"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.nc</dcterms:identifier>
+    <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_NA_month_1_12.xml"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.10.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.3.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.10.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.11.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.5.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.2.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.4.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.6.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.1.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.8.nc"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E">
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataONE Java Libclient Version 2.0.0</foaf:name>
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_SYNMAP_NA_QD.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.2.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_air.2m_monthly_2000_2010_mean.2.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_NA_month_1_12.xml">
+    <cito:documents rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.nc"/>
+    <cito:documents rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.nc"/>
+    <cito:documents rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_C3C4_NA_month_1_12.xml</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.nc">
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.3.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.8.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.4.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.10.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.8.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.12.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.7.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.11.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.4.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.10.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.9.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.9.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.7.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.2.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.11.nc"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.nc</dcterms:identifier>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.6.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.1.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.3.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.5.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.12.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.6.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.5.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.2.nc"/>
+    <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_NA_month_1_12.xml"/>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.3.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_apcp_monthly_2000_2010_mean.3.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.9.nc">
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_air.2m_monthly_2000_2010_mean.9.nc</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc">
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.3.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.7.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.5.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.2.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.9.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.5.nc"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc</dcterms:identifier>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.12.nc"/>
+    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.10.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.3.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.6.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.6.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.7.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.4.nc"/>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.2.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.11.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.8.nc"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.10.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc"/>
+    <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_NA_month_1_12.xml"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.4.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.9.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.8.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.1.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.11.nc"/>
+    <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.12.nc"/>
+  </rdf:Description>
+</rdf:RDF>
