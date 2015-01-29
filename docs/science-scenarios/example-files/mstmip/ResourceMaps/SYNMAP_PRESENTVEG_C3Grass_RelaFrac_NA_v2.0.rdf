@@ -9,7 +9,7 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:cito="http://purl.org/spar/cito/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
-  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_1050bd0e-b415-4337-9270-a3187583a17f">
+  <rdf:Description rdf:about="urn:uuid:1050bd0e-b415-4337-9270-a3187583a17f">
     <prov:qualifiedAssociation rdf:nodeID="A0"/>
     <prov:wasAssociatedWith rdf:resource="urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830"/>
     <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.1.nc"/>
@@ -17,7 +17,7 @@
     <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc"/>
     <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc"/>
     <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc"/>
-    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">execution_1050bd0e-b415-4337-9270-a3187583a17f</dcterms:identifier>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:uuid:1050bd0e-b415-4337-9270-a3187583a17f</dcterms:identifier>
     <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Execution"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_dd0e566b-7043-4ad1-a6ad-f1d532c28597#aggregation">
@@ -90,7 +90,7 @@
     <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc">
-    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_1050bd0e-b415-4337-9270-a3187583a17f"/>
+    <prov:wasGeneratedBy rdf:resource="urn:uuid:1050bd0e-b415-4337-9270-a3187583a17f"/>
     <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc"/>
     <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc</dcterms:identifier>
     <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml"/>

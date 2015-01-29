@@ -92,7 +92,7 @@
     <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
     <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_Global_v2.0.nc</dcterms:identifier>
     <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_3.nc"/>
-    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_7CD4CFA1-6553-419C-9825-EC0215CA688A"/>
+    <prov:wasGeneratedBy rdf:resource="urn:uuid:7CD4CFA1-6553-419C-9825-EC0215CA688A"/>
     <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_6.nc"/>
     <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_7.nc"/>
     <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_5.nc"/>
@@ -126,9 +126,9 @@
     <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_cruncep_monthly_2000_2010_mean_rain_8.nc</dcterms:identifier>
     <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_7CD4CFA1-6553-419C-9825-EC0215CA688A">
+  <rdf:Description rdf:about="urn:uuid:7CD4CFA1-6553-419C-9825-EC0215CA688A">
     <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_7.nc"/>
-    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">execution_7CD4CFA1-6553-419C-9825-EC0215CA688A</dcterms:identifier>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:uuid:7CD4CFA1-6553-419C-9825-EC0215CA688A</dcterms:identifier>
     <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_9.nc"/>
     <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_7.nc"/>
     <prov:used rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_10.nc"/>
@@ -179,7 +179,7 @@
     <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_2.nc"/>
     <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_7.nc"/>
     <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_4.nc"/>
-    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_7CD4CFA1-6553-419C-9825-EC0215CA688A"/>
+    <prov:wasGeneratedBy rdf:resource="urn:uuid:7CD4CFA1-6553-419C-9825-EC0215CA688A"/>
     <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_Global_v2.0.nc</dcterms:identifier>
     <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_6.nc"/>
     <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_Global_month_1_12.xml"/>
@@ -316,7 +316,7 @@
     <prov:wasDerivedFrom rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_11.nc"/>
     <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_Global_v2.0.nc</dcterms:identifier>
     <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_Global_month_1_12.xml"/>
-    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_7CD4CFA1-6553-419C-9825-EC0215CA688A"/>
+    <prov:wasGeneratedBy rdf:resource="urn:uuid:7CD4CFA1-6553-419C-9825-EC0215CA688A"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_7.nc">
     <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation"/>

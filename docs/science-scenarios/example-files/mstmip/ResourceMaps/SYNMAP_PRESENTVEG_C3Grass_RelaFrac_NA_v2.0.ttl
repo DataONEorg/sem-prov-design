@@ -79,9 +79,9 @@
 .
 
 # Execution Activities
-<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_1050bd0e-b415-4337-9270-a3187583a17f>
+<urn:uuid:1050bd0e-b415-4337-9270-a3187583a17f>
     a provone:Execution;
-    dcterms:identifier "execution_1050bd0e-b415-4337-9270-a3187583a17f"^^xsd:string;
+    dcterms:identifier "urn:uuid:1050bd0e-b415-4337-9270-a3187583a17f"^^xsd:string;
     prov:used <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc>,
               <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc>,
               <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc>,
@@ -101,7 +101,7 @@
     dcterms:identifier "mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc"^^xsd:string;
     ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_dd0e566b-7043-4ad1-a6ad-f1d532c28597#aggregation>;
     cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml>;
-    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_1050bd0e-b415-4337-9270-a3187583a17f>;
+    prov:wasGeneratedBy <urn:uuid:1050bd0e-b415-4337-9270-a3187583a17f>;
     prov:wasDerivedFrom <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_1.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc>,
