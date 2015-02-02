@@ -49,7 +49,8 @@
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_apcp_monthly_2000_2010_mean.12.nc>,
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc>,
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.nc>,
-                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.nc>;
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3_C4_map_present_NA.m>;
 .
 
 # Metadata Entities
@@ -221,9 +222,9 @@
 .
 
 # Execution Activities
-<urn:uuid:5C462D2B-ED42-49E0-BC89-75D3E50FA638>
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638>
     a provone:Execution;
-    dcterms:identifier "urn:uuid:5C462D2B-ED42-49E0-BC89-75D3E50FA638"^^xsd:string;
+    dcterms:identifier "execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638"^^xsd:string;
     prov:used <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc>,
               <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc>,
               <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.2.nc>,
@@ -263,7 +264,7 @@
     dcterms:identifier "mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc"^^xsd:string;
     ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
     cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_NA_month_1_12.xml>;
-    prov:wasGeneratedBy <urn:uuid:5C462D2B-ED42-49E0-BC89-75D3E50FA638>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638>;
     prov:wasDerivedFrom <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.2.nc>,
@@ -296,7 +297,7 @@
     dcterms:identifier "mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.nc"^^xsd:string;
     ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
     cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_NA_month_1_12.xml>;
-    prov:wasGeneratedBy <urn:uuid:5C462D2B-ED42-49E0-BC89-75D3E50FA638>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638>;
     prov:wasDerivedFrom <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.2.nc>,
@@ -329,7 +330,7 @@
     dcterms:identifier "mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.nc"^^xsd:string;
     ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
     cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_NA_month_1_12.xml>;
-    prov:wasGeneratedBy <urn:uuid:5C462D2B-ED42-49E0-BC89-75D3E50FA638>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638>;
     prov:wasDerivedFrom <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_NA_QD.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.1.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_air.2m_monthly_2000_2010_mean.2.nc>,
