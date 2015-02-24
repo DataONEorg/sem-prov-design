@@ -99,44 +99,44 @@ Online docs for AnnotatorJS model is available [here](http://docs.annotatorjs.or
 metadata to be a Temperature concept taken from the OBOE ontology.
 
 
-  {
-    "user": "uid=kepler,o=unaffiliated,dc=ecoinformatics,dc=org", 
-    "consumer": "f780f3e398cf45cbb4e84ed9ec91622a", 
-    "id": "48hAIW6TQJyg4uW5Utq7iA", 
-    "resource": "#xpointer(/eml/dataset/dataTable[1]/attributeList/attribute[3])", 
-    "text": "", 
-    "created": "2014-11-18T05:12:08.331690+00:00", 
-    "pid": "tao.1.6", 
-    "ranges": [
-      {
-        "start": "/section[1]/article[1]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/div[6]/div[1]/div[2]/div[3]/div[1]/div[1]", 
-        "end": "/section[1]/article[1]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/div[6]/div[1]/div[2]/div[3]/div[1]/div[1]", 
-        "startOffset": 0, 
-        "endOffset": 5
-      }
-    ], 
-    "uri": "http://localhost:8080/metacat/d1/mn/v1/object/tao.1.6", 
-    "links": [
-      {
-        "type": "text/html", 
-        "rel": "alternate", 
-        "href": "http://annotateit.org/annotations/48hAIW6TQJyg4uW5Utq7iA"
-      }
-    ], 
-    "permissions": {
-      "read": [
-        "group:__world__"
+    {
+      "user": "uid=kepler,o=unaffiliated,dc=ecoinformatics,dc=org", 
+      "consumer": "f780f3e398cf45cbb4e84ed9ec91622a", 
+      "id": "48hAIW6TQJyg4uW5Utq7iA", 
+      "resource": "#xpointer(/eml/dataset/dataTable[1]/attributeList/attribute[3])", 
+      "text": "", 
+      "created": "2014-11-18T05:12:08.331690+00:00", 
+      "pid": "tao.1.6", 
+      "ranges": [
+        {
+          "start": "/section[1]/article[1]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/div[6]/div[1]/div[2]/div[3]/div[1]/div[1]", 
+          "end": "/section[1]/article[1]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/div[6]/div[1]/div[2]/div[3]/div[1]/div[1]", 
+          "startOffset": 0, 
+          "endOffset": 5
+        }
       ], 
-      "delete": [], 
-      "admin": [], 
-      "update": []
-    }, 
-    "updated": "2014-11-26T20:46:44.576047+00:00", 
-    "quote": "T_AIR", 
-    "tags": [
-      "http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"
-    ]
-  }
+      "uri": "http://localhost:8080/metacat/d1/mn/v1/object/tao.1.6", 
+      "links": [
+        {
+          "type": "text/html", 
+          "rel": "alternate", 
+          "href": "http://annotateit.org/annotations/48hAIW6TQJyg4uW5Utq7iA"
+        }
+      ], 
+      "permissions": {
+        "read": [
+          "group:__world__"
+        ], 
+        "delete": [], 
+        "admin": [], 
+        "update": []
+      }, 
+      "updated": "2014-11-26T20:46:44.576047+00:00", 
+      "quote": "T_AIR", 
+      "tags": [
+        "http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"
+      ]
+    }
   
   
 Mapping from AnnotatorJS to OA model
