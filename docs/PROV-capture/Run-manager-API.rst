@@ -5,26 +5,17 @@ DataONE Run Manager and API for Capturing Provenance in Script Executions
 Overview
 --------
 
-Scientists need a way to easily capture provenance for their data processing and analysis and have 
-an automated way to upload provenance and derived data products from their analysis to a data repository such as those in the DataONE network. 
+Scientists need a way to easily capture provenance for their data processing and analysis and have an automated way to upload provenance and derived data products from their analysis to a data repository such as those in the DataONE network.
 
 Several use cases for storing provenance have been outlined: UseCases_
 
 .. _UseCases: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance
 
-This document summarizes the session “Provenance Capture in R” at Open Science Codefest, 
-a Community Dynamics working group meeting, and other DataONE Semantics and Provenance Working Group discussions
-and describes the design of a proposed run manager that will be implemented in Matlab and in R.
+This document summarizes the session “Provenance Capture in R” at Open Science Codefest, a Community Dynamics working group meeting, and other DataONE Semantics and Provenance Working Group discussions and describes the design of a proposed run manager that will be implemented in Matlab and in R.
 
-A way to capture provenance as conveniently for the scientist as possible is through a run manager. 
-A run manager can capture provenance while a script is running, requiring very little extra code from the scientist. 
-The run manager is aware of the provenance relationships and how to recognize those relationships based on the 
-actions of the script. 
+A way to capture provenance as conveniently for the scientist as possible is through a run manager. A run manager can capture provenance while a script is running, requiring very little extra code from the scientist. The run manager is aware of the provenance relationships and how to recognize those relationships based on the actions of the script.
 
-To use the run manager, a user needs to start recording, such as with a function *record()*
-All information recorded by the run manager can then be viewed after the script execution has ended. This allows 
-the scientist to re-record the script execution and once satisfied, publish to a DataONE-enabled repository via a
-method call such as *publish()*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+To use the run manager, a user needs to start recording, such as with a function *record()*. All information recorded by the run manager can then be viewed after the script execution has ended. This allows the scientist to re-record the script execution and once satisfied, publish to a DataONE-enabled repository via a method call such as *publish()*.
 
 Run Manager API
 ---------------
@@ -65,7 +56,27 @@ Run Manager API
      - packageID
      - DataONE identifier for the package
      - Upload a package to a DataONE member node.
-
+   * - `set()`_
+     - session, name, value
+     - None
+     - Set a configuration paramemter in the given session
+   * - `get()`_
+     - session, name
+     - The named parameter value
+     - Retrieve the value of a named configuration parameter from the given session
+   * - `saveSession()`_
+     - session, path
+     - None
+     - Save the session to disk at the given filename path
+   * - `loadSession()`_
+     - path
+     - The saved Session
+     - Load a saved session from disk using the given filename path
+   * - `listSession()`_
+     - session
+     - the list of configuration parameters in the given session
+     - Show all Session configuration parameters
+     
 .. _`record()`:
 
 *record(filePath)*
@@ -223,6 +234,169 @@ The following is example output from the the view() function:
   speciesCounts-20131211.csv      102K            2014-10-14T15:33:10Z
   QL-dist-20131210.eml            220K            2014-09-20T10:10:00Z
   resourceMap.rdf                 76K             2014-10-14T15:33:10Z
+
+.. _`set()`:
+
+*set(session, name, value)*
+
+The set method sets the value of the named parameter in the given Session. Parameters names can be any string, and the values may be any serializable type supported by R (when implemented in R) or Matlab (when implemented in Matlab).  A number of categories of configuration parameters are supported, including:
+
++---------------------------+--------------------------------+-----------------------------------+
+| Configuration Category    |        Parameter               |          Description              |
++---------------------------+--------------------------------+-----------------------------------+
+| Operating System Config   | account_name                   | The OS account username           |
++---------------------------+--------------------------------+-----------------------------------+
+| Science Metadata Config   | scimeta_template_path          | The file system path to a science |
+|                           |                                | metadata template file. See the   |
+|                           |                                | section on `templates`_.          |
+|                           +--------------------------------+-----------------------------------+
+|                           | scimeta_title                  | The title of the dataset          |
+|                           |                                | being described. This value will  |
+|                           |                                | be used to replace all            |
+|                           |                                | 'SCIMETA_TITLE' placeholder       |
+|                           |                                | strings in the template file.     |
+|                           +--------------------------------+-----------------------------------+
+|                           | scimeta_abstract               | The abstract  of the dataset      |
+|                           |                                | being described. this value will  |
+|                           |                                | be used to replace all            |
+|                           |                                | 'SCIMETA_ABSTRACT' placeholder    |
+|                           |                                | strings in the template file.     |
+|                           +--------------------------------+-----------------------------------+
+|                           | [More science metadata fields to be added here]                    |
++---------------------------+--------------------------------+-----------------------------------+
+| DataONE Config            | member_node_base_url           | The base URL of the DataONE       |
+|                           |                                | Member Node server used to store  |
+|                           |                                | and retrieve files.               |
+|                           +--------------------------------+-----------------------------------+
+|                           | coordinating_node_base_url     | The base URL of the DataONE       |
+|                           |                                | Coordinating Node server.         |
+|                           +--------------------------------+-----------------------------------+
+|                           | format_id                      | The default object format         |
+|                           |                                | identifier when creating system   |
+|                           |                                | metadata and uploading files to a |
+|                           |                                | Member Node. Defaults to          |
+|                           |                                | application/octet-stream          |
+|                           +--------------------------------+-----------------------------------+
+|                           | submitter                      | The DataONE Subject DN string of  |
+|                           |                                | account uploading the file to a   |
+|                           |                                | Member Node.                      |
+|                           +--------------------------------+-----------------------------------+
+|                           | rights_holder                  | The DataONE Subject DN string of  |
+|                           |                                | account with read, write, and     |
+|                           |                                | changePermission permissions for  |
+|                           |                                | the file being uploaded.          |
+|                           +--------------------------------+-----------------------------------+
+|                           | public_read_allowed            | Allow public read access to       |
+|                           |                                | uploaded files. Defaults to true. |
+|                           +--------------------------------+-----------------------------------+
+|                           | replication_allowed            | Allow replication of files to     |
+|                           |                                | preserve the integrity of the     |
+|                           |                                | data file over time.              |
+|                           +--------------------------------+-----------------------------------+
+|                           | number_of_replicas             | The desired number of replicas of |
+|                           |                                | each file uploaded to the DataONE |
+|                           |                                | network.                          |
+|                           +--------------------------------+-----------------------------------+
+|                           | preferred_replica_node_list    | A comma-separated list of Member  |
+|                           |                                | Node identifiers that are         |
+|                           |                                | preferred for replica storage.    |
+|                           +--------------------------------+-----------------------------------+
+|                           | blocked_replica_node_list      | A comma-separated list of Member  |
+|                           |                                | Node identifiers that are         |
+|                           |                                | blocked from replica storage.     |
++---------------------------+--------------------------------+-----------------------------------+
+| Identity Config           | orcid_identifier               | The researcher's ORCID identifier |
+|                           |                                | from http://orcid.org. Identity   |
+|                           |                                | information found via the ORCID   |
+|                           |                                | API will populate or override     |
+|                           |                                | other identity fields as          |
+|                           |                                | appropriate.                      |
+|                           +--------------------------------+-----------------------------------+
+|                           | subject_dn                     | The researcher's DataONE Subject  |
+|                           |                                | as a Distinguished Name string.   |
+|                           |                                | If not set, defaults to the       |
+|                           |                                | Subject DN found in the CILogon   |
+|                           |                                | X509 certificate at the given     |
+|                           |                                | certificate path.                 |
+|                           +--------------------------------+-----------------------------------+
+|                           | certificate_path               | The absolute file system path to  |
+|                           |                                | the X509 certificate downloaded   |
+|                           |                                | from https://cilogon.org. The path|
+|                           |                                | includes the file name itself.    |
+|                           +--------------------------------+-----------------------------------+
+|                           | foaf_name                      | The Friend of a friend 'name'     |
+|                           |                                | vocabulary term as defined at     |
+|                           |                                | http://xmlns.com/foaf/spec/,      |
+|                           |                                | typically the researchers given   |
+|                           |                                | and family name together.         |
++---------------------------+--------------------------------+-----------------------------------+
+| Execution Config          | execution_id                   | A unique identifier for each      |
+|                           |                                | execution, typically a UUID       |
+|                           |                                | assigned at run time.             |
+|                           +--------------------------------+-----------------------------------+
+|                           | tag                            | A label used to help categorize   |
+|                           |                                | an execution to make it searchable|
+|                           |                                | or more memorable.                |
++---------------------------+--------------------------------+-----------------------------------+
+| Provenance Capture Config | provenance_storage_directory   | The directory used to store per   |
+|                           |                                | execution provenance information. |
+|                           |                                | Defaults to '~/.d1/provenance'    |
++                           +--------------------------------+-----------------------------------+
+|                           | capture_file_reads             | When set to true, provenance      |
+|                           |                                | capture will be triggered when    |
+|                           |                                | reading from files based on       |
+|                           |                                | specific read commands in the     |
+|                           |                                | scripting language. Default: true |
+|                           +--------------------------------+-----------------------------------+
+|                           | capture_file_writes            | When set to true, provenance      |
+|                           |                                | capture will be triggered when    |
+|                           |                                | writing to files based on         |
+|                           |                                | specific write commands in the    |
+|                           |                                | scripting language. Default: true |
+|                           +--------------------------------+-----------------------------------+
+|                           | capture_dataone_reads          | When set to true, provenance      |
+|                           |                                | capture will be triggered when    |
+|                           |                                | reading from DataONE MNRead.get() |
+|                           |                                | API calls. Default: true          |
+|                           +--------------------------------+-----------------------------------+
+|                           | capture_dataone_writes         | When set to true, provenance      |
+|                           |                                | capture will be triggered when    |
+|                           |                                | writing with DataONE              |
+|                           |                                | MNStorage.create() or             |
+|                           |                                | MNStorage.update() API calls.     |
+|                           |                                | Default: true                     |
+|                           +--------------------------------+-----------------------------------+
+|                           | capture_yesworkflow_comments   | When set to true, provenance      |
+|                           |                                | capture will be triggered when    |
+|                           |                                | encountering YesWorkflow inline   |
+|                           |                                | comments. Default: true           |
++---------------------------+--------------------------------+-----------------------------------+
+
+.. _`get()`:
+
+*get(session, name)*
+
+The get method retrieves the value of the named parameter in the given Session. Parameters names can be any string, many of which are listed in the categories above in the `set()`_ command.
+
+.. _`saveSession()`:
+
+*saveSession(session, path)*
+
+Save all of the configuration parameters in the current Session to disk, given the path to a file. The
+path defaults to ~/.d1/session.json.
+
+.. _`loadSession()`:
+
+*loadSession(path)*
+
+Load all of the configuration parameters from a saved Session on disk from the given path. Returns the
+Session object. The path defaults to ~/.d1/session.json.
+
+.. _`listSession()`:
+
+*listSession()*
+
+List all of the session parameters from the loaded session a structured object, depending on the script language.
 
 Run Manager Provenance Capture
 ------------------------------
