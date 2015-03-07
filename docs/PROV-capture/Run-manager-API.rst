@@ -330,14 +330,6 @@ The set method sets the value of the named parameter in the given Session. Param
 |                           |                                | typically the researchers given   |
 |                           |                                | and family name together.         |
 +---------------------------+--------------------------------+-----------------------------------+
-| Execution Config          | execution_id                   | A unique identifier for each      |
-|                           |                                | execution, typically a UUID       |
-|                           |                                | assigned at run time.             |
-|                           +--------------------------------+-----------------------------------+
-|                           | tag                            | A label used to help categorize   |
-|                           |                                | an execution to make it searchable|
-|                           |                                | or more memorable.                |
-+---------------------------+--------------------------------+-----------------------------------+
 | Provenance Capture Config | provenance_storage_directory   | The directory used to store per   |
 |                           |                                | execution provenance information. |
 |                           |                                | Defaults to '~/.d1/provenance'    |
