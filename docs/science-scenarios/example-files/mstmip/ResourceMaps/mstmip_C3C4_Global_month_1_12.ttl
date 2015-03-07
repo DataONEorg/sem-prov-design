@@ -49,7 +49,8 @@
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_rain_12.nc>,
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_Global_v2.0.nc>,
                    <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_Global_v2.0.nc>,
-                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_Global_v2.0.nc>;
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_Global_v2.0.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3_C4_map_present_Global.m>;
 .
 
 # Metadata Entities
@@ -221,9 +222,9 @@
 .
 
 # Execution Activities
-<urn:uuid:7CD4CFA1-6553-419C-9825-EC0215CA688A>
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_7CD4CFA1-6553-419C-9825-EC0215CA688A>
     a provone:Execution;
-    dcterms:identifier "urn:uuid:7CD4CFA1-6553-419C-9825-EC0215CA688A"^^xsd:string;
+    dcterms:identifier "execution_7CD4CFA1-6553-419C-9825-EC0215CA688A"^^xsd:string;
     prov:used <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_Global_HD_new.nc>,
               <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc>,
               <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_2.nc>,
@@ -263,7 +264,7 @@
     dcterms:identifier "mstmip_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_Global_v2.0.nc"^^xsd:string;
     ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation>;
     cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_Global_month_1_12.xml>;
-    prov:wasGeneratedBy <urn:uuid:7CD4CFA1-6553-419C-9825-EC0215CA688A>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_7CD4CFA1-6553-419C-9825-EC0215CA688A>;
     prov:wasDerivedFrom <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_Global_HD_new.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_2.nc>,
@@ -296,7 +297,7 @@
     dcterms:identifier "mstmip_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_Global_v2.0.nc"^^xsd:string;
     ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation>;
     cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_Global_month_1_12.xml>;
-    prov:wasGeneratedBy <urn:uuid:7CD4CFA1-6553-419C-9825-EC0215CA688A>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_7CD4CFA1-6553-419C-9825-EC0215CA688A>;
     prov:wasDerivedFrom <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_Global_HD_new.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_2.nc>,
@@ -329,7 +330,7 @@
     dcterms:identifier "mstmip_SYNMAP_PRESENTVEG_Grass_Fraction_Global_v2.0.nc"^^xsd:string;
     ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_F4472CA3-21C2-4969-983F-77792E0751E4#aggregation>;
     cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_C3C4_Global_month_1_12.xml>;
-    prov:wasGeneratedBy <urn:uuid:7CD4CFA1-6553-419C-9825-EC0215CA688A>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_7CD4CFA1-6553-419C-9825-EC0215CA688A>;
     prov:wasDerivedFrom <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_SYNMAP_Global_HD_new.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_1.nc>,
                         <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_cruncep_monthly_2000_2010_mean_Tair_2.nc>,
