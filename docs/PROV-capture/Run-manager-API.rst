@@ -264,9 +264,13 @@ The set method sets the value of the named parameter in the given Session. Param
 |                           +--------------------------------+-----------------------------------+
 |                           | [More science metadata fields to be added here]                    |
 +---------------------------+--------------------------------+-----------------------------------+
-| DataONE Config            | member_node_base_url           | The base URL of the DataONE       |
-|                           |                                | Member Node server used to store  |
-|                           |                                | and retrieve files.               |
+| DataONE Config            | source_member_node_id          | The identifier of the DataONE     |
+|                           |                                | Member Node server used as a read |
+|                           |                                | only source to retrieve files.    |
+|                           +--------------------------------+-----------------------------------+
+|                           | target_member_node_id          | The identifier of the DataONE     |
+|                           |                                | Member Node server used as a read |
+|                           |                                | or write target for files.        |
 |                           +--------------------------------+-----------------------------------+
 |                           | coordinating_node_base_url     | The base URL of the DataONE       |
 |                           |                                | Coordinating Node server.         |
