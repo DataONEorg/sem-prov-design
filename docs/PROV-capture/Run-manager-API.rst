@@ -57,25 +57,25 @@ Run Manager API
      - DataONE identifier for the package
      - Upload a package to a DataONE member node.
    * - `set()`_
-     - session, name, value
+     - configuration, name, value
      - None
-     - Set a configuration paramemter in the given session
+     - Set a configuration paramemter in the given configuration
    * - `get()`_
-     - session, name
+     - configuration, name
      - The named parameter value
-     - Retrieve the value of a named configuration parameter from the given session
-   * - `saveSession()`_
-     - session, path
+     - Retrieve the value of a named configuration parameter from the given configuration
+   * - `saveConfig()`_
+     - configuration, path
      - None
-     - Save the session to disk at the given filename path
-   * - `loadSession()`_
+     - Save the configuration to disk at the given filename path
+   * - `loadConfig()`_
      - path
-     - The saved Session
-     - Load a saved session from disk using the given filename path
-   * - `listSession()`_
-     - session
-     - the list of configuration parameters in the given session
-     - Show all Session configuration parameters
+     - The saved Configuration
+     - Load a saved configuration from disk using the given filename path
+   * - `listConfig()`_
+     - configuration
+     - the list of configuration parameters in the given configuration
+     - Show all Configuration configuration parameters
      
 .. _`record()`:
 
@@ -237,34 +237,17 @@ The following is example output from the the view() function:
 
 .. _`set()`:
 
-*set(session, name, value)*
+*set(configuration, name, value)*
 
-The set method sets the value of the named parameter in the given Session. Parameters names can be any string, and the values may be any serializable type supported by R (when implemented in R) or Matlab (when implemented in Matlab).  A number of categories of configuration parameters are supported, including:
+The set method sets the value of the named parameter in the given Configuration. Parameters names can be any string, and the values may be any serializable type supported by R (when implemented in R) or Matlab (when implemented in Matlab).  A number of categories of configuration parameters are supported, including:
 
 +---------------------------+--------------------------------+-----------------------------------+
 | Configuration Category    |        Parameter               |          Description              |
 +---------------------------+--------------------------------+-----------------------------------+
-| Operating System Config   | account_name                   | The OS account username           |
+| Operating System          | account_name                   | The OS account username           |
+| Configuration             |                                |                                   |
 +---------------------------+--------------------------------+-----------------------------------+
-| Science Metadata Config   | scimeta_template_path          | The file system path to a science |
-|                           |                                | metadata template file. See the   |
-|                           |                                | section on `templates`_.          |
-|                           +--------------------------------+-----------------------------------+
-|                           | scimeta_title                  | The title of the dataset          |
-|                           |                                | being described. This value will  |
-|                           |                                | be used to replace all            |
-|                           |                                | 'SCIMETA_TITLE' placeholder       |
-|                           |                                | strings in the template file.     |
-|                           +--------------------------------+-----------------------------------+
-|                           | scimeta_abstract               | The abstract  of the dataset      |
-|                           |                                | being described. this value will  |
-|                           |                                | be used to replace all            |
-|                           |                                | 'SCIMETA_ABSTRACT' placeholder    |
-|                           |                                | strings in the template file.     |
-|                           +--------------------------------+-----------------------------------+
-|                           | [More science metadata fields to be added here]                    |
-+---------------------------+--------------------------------+-----------------------------------+
-| DataONE Config            | source_member_node_id          | The identifier of the DataONE     |
+| DataONE Configuration     | source_member_node_id          | The identifier of the DataONE     |
 |                           |                                | Member Node server used as a read |
 |                           |                                | only source to retrieve files.    |
 |                           +--------------------------------+-----------------------------------+
@@ -309,7 +292,7 @@ The set method sets the value of the named parameter in the given Session. Param
 |                           |                                | Node identifiers that are         |
 |                           |                                | blocked from replica storage.     |
 +---------------------------+--------------------------------+-----------------------------------+
-| Identity Config           | orcid_identifier               | The researcher's ORCID identifier |
+| Identity Configuration    | orcid_identifier               | The researcher's ORCID identifier |
 |                           |                                | from http://orcid.org. Identity   |
 |                           |                                | information found via the ORCID   |
 |                           |                                | API will populate or override     |
@@ -334,10 +317,10 @@ The set method sets the value of the named parameter in the given Session. Param
 |                           |                                | typically the researchers given   |
 |                           |                                | and family name together.         |
 +---------------------------+--------------------------------+-----------------------------------+
-| Provenance Capture Config | provenance_storage_directory   | The directory used to store per   |
-|                           |                                | execution provenance information. |
+| Provenance Capture        | provenance_storage_directory   | The directory used to store per   |
+| Configuration             |                                | execution provenance information. |
 |                           |                                | Defaults to '~/.d1/provenance'    |
-+                           +--------------------------------+-----------------------------------+
+|                           +--------------------------------+-----------------------------------+
 |                           | capture_file_reads             | When set to true, provenance      |
 |                           |                                | capture will be triggered when    |
 |                           |                                | reading from files based on       |
@@ -370,29 +353,29 @@ The set method sets the value of the named parameter in the given Session. Param
 
 .. _`get()`:
 
-*get(session, name)*
+*get(configuration, name)*
 
-The get method retrieves the value of the named parameter in the given Session. Parameters names can be any string, many of which are listed in the categories above in the `set()`_ command.
+The get method retrieves the value of the named parameter in the given Configuration. Parameters names can be any string, many of which are listed in the categories above in the `set()`_ command.
 
-.. _`saveSession()`:
+.. _`saveConfig()`:
 
-*saveSession(session, path)*
+*saveConfig(configuration, path)*
 
-Save all of the configuration parameters in the current Session to disk, given the path to a file. The
-path defaults to ~/.d1/session.json.
+Save all of the configuration parameters in the current Configuration to disk, given the path to a file. The
+path defaults to ~/.d1/configuration.json.
 
-.. _`loadSession()`:
+.. _`loadConfig()`:
 
-*loadSession(path)*
+*loadConfig(path)*
 
-Load all of the configuration parameters from a saved Session on disk from the given path. Returns the
-Session object. The path defaults to ~/.d1/session.json.
+Load all of the configuration parameters from a saved Configuration on disk from the given path. Returns the
+Configuration object. The path defaults to ~/.d1/configuration.json.
 
-.. _`listSession()`:
+.. _`listConfig()`:
 
-*listSession()*
+*listConfig()*
 
-List all of the session parameters from the loaded session a structured object, depending on the script language.
+List all of the configuration parameters from the loaded configuration as structured object, depending on the script language.
 
 Run Manager Provenance Capture
 ------------------------------
