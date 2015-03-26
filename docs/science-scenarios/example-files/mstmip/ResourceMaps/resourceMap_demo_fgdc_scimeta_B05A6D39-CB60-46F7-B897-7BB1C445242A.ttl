@@ -1,0 +1,619 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix ore:     <http://www.openarchives.org/ore/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix provone: <http://purl.org/provone/2015/15/ontology#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix cito:    <http://purl.org/spar/cito/> .
+
+# Resource Map
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A>
+    a ore:ResourceMap;
+    dcterms:identifier "resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A"^^xsd:string;
+    dcterms:creator <urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E>;
+    ore:describes <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+.
+
+# Aggregation
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>
+    a ore:Aggregation;
+    dcterms:identifier "resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation"^^xsd:string;
+    ore:isDescribedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A>;    
+    ore:aggregates <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.1.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.2.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.3.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.4.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.5.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.6.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.7.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.8.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.9.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.10.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.11.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.12.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.1.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.2.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.3.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.4.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.5.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.6.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.7.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.8.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.9.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.10.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.11.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.12.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_SYNMAP_NA_QD.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.xml>,
+    			   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.xml>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_NA_QD.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.1.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.2.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.3.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.4.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.5.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.6.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.7.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.8.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.9.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.10.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.11.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.12.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.1.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.2.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.3.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.4.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.5.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.6.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.7.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.8.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.9.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.10.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.11.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.12.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.nc>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_C3_C4_map_present_NA.m>;
+.
+
+# Metadata Entities
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.1.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.1.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.1.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.2.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.2.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.2.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.3.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.3.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.3.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.4.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.4.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.4.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.5.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.5.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.5.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.6.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.6.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.6.nc>;
+.
+
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.7.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.7.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.7.nc>;
+.
+
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.8.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.8.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.8.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.9.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.9.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.9.nc>;
+.
+
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.10.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.10.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.10.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.11.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.11.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.11.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.12.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.12.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.12.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.1.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.1.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.1.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.2.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.2.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.2.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.3.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.3.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.3.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.4.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.4.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.4.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.5.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.5.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.5.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.6.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.6.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.6.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.7.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.7.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.7.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.8.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.8.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.8.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.9.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.9.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.9.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.10.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.10.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.10.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.11.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.11.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.11.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.12.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.12.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.12.nc>;
+.
+
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_SYNMAP_NA_QD.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_scimeta_SYNMAP_NA_QD.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_NA_QD.nc>;
+.
+
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc>;
+.
+
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.nc>;
+.
+
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_fgdc_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.nc>;
+.
+
+
+# Data Input Entities
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_NA_QD.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_SYNMAP_NA_QD.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_SYNMAP_NA_QD.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.1.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_air.2m_monthly_2000_2010_mean.1.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.1.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.2.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_air.2m_monthly_2000_2010_mean.2.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.2.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.3.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_air.2m_monthly_2000_2010_mean.3.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.3.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.4.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_air.2m_monthly_2000_2010_mean.4.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.4.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.5.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_air.2m_monthly_2000_2010_mean.5.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.5.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.6.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_air.2m_monthly_2000_2010_mean.6.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.6.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.7.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_air.2m_monthly_2000_2010_mean.7.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.7.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.8.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_air.2m_monthly_2000_2010_mean.8.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.8.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.9.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_air.2m_monthly_2000_2010_mean.9.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.9.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.10.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_air.2m_monthly_2000_2010_mean.10.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.10.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.11.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_air.2m_monthly_2000_2010_mean.11.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.11.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.12.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_air.2m_monthly_2000_2010_mean.12.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_air.2m_monthly_2000_2010_mean.12.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.1.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_apcp_monthly_2000_2010_mean.1.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.1.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.2.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_apcp_monthly_2000_2010_mean.2.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.2.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.3.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_apcp_monthly_2000_2010_mean.3.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.3.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.4.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_apcp_monthly_2000_2010_mean.4.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.4.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.5.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_apcp_monthly_2000_2010_mean.5.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.5.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.6.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_apcp_monthly_2000_2010_mean.6.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.6.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.7.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_apcp_monthly_2000_2010_mean.7.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.7.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.8.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_apcp_monthly_2000_2010_mean.8.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.8.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.9.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_apcp_monthly_2000_2010_mean.9.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.9.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.10.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_apcp_monthly_2000_2010_mean.10.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.10.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.11.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_apcp_monthly_2000_2010_mean.11.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.11.xml>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.12.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_apcp_monthly_2000_2010_mean.12.nc"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_scimeta_apcp_monthly_2000_2010_mean.12.xml>;
+.
+
+# Workflow Plan
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_C3_C4_map_present_NA.m>
+    a provone:Program;
+    dcterms:identifier "mstmip_demo_C3_C4_map_present_NA.m"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+.
+
+# Execution Activities
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638>
+    a provone:Execution;
+    dcterms:identifier "execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638"^^xsd:string;
+    prov:used <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_NA_QD.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.1.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.2.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.3.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.4.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.5.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.6.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.7.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.8.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.9.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.10.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.11.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.12.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.1.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.2.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.3.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.4.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.5.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.6.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.7.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.8.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.9.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.10.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.11.nc>,
+              <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.12.nc>;
+    prov:wasAssociatedWith <urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830>;
+    prov:qualifiedAssociation [
+        a prov:Association;
+        prov:hadPlan <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_C3_C4_map_present_NA.m>;
+        prov:agent <urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830>;
+    ];
+.
+
+# Data Output Entities
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.nc"^^xsd:string;
+    ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_SYNMAP_PRESENTVEG_C3Grass_RelaFrac_NA_v2.0.xml>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638>;
+    prov:wasDerivedFrom <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_NA_QD.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.1.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.2.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.3.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.4.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.5.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.6.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.7.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.8.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.9.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.10.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.11.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.12.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.1.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.2.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.3.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.4.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.5.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.6.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.7.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.8.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.9.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.10.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.11.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.12.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.nc"^^xsd:string;
+    ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_SYNMAP_PRESENTVEG_C4Grass_RelaFrac_NA_v2.0.xml>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638>;
+    prov:wasDerivedFrom <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_NA_QD.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.1.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.2.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.3.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.4.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.5.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.6.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.7.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.8.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.9.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.10.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.11.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.12.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.1.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.2.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.3.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.4.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.5.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.6.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.7.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.8.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.9.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.10.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.11.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.12.nc>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.nc>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.nc"^^xsd:string;
+    ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_fgdc_scimeta_B05A6D39-CB60-46F7-B897-7BB1C445242A#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_fgdc_SYNMAP_PRESENTVEG_Grass_Fraction_NA_v2.0.xml>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_5C462D2B-ED42-49E0-BC89-75D3E50FA638>;
+    prov:wasDerivedFrom <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_SYNMAP_NA_QD.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.1.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.2.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.3.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.4.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.5.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.6.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.7.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.8.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.9.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.10.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.11.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_air.2m_monthly_2000_2010_mean.12.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.1.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.2.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.3.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.4.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.5.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.6.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.7.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.8.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.9.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.10.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.11.nc>,
+                        <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_apcp_monthly_2000_2010_mean.12.nc>;
+.
+
+# Users
+<urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830>
+    a provone:User;
+    a foaf:Person;
+    foaf:name "Yaxing Wei"^^xsd:string;
+.
+
+# Software Agents
+<urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E>
+    a dcterms:Agent;
+    foaf:name "DataONE Java Libclient Version 2.0.0"^^xsd:string;
+.

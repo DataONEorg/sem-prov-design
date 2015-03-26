@@ -1,0 +1,112 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix ore:     <http://www.openarchives.org/ore/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix provone: <http://purl.org/provone/2015/15/ontology#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix cito:    <http://purl.org/spar/cito/> .
+
+# Resource Map
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39>
+    a ore:ResourceMap;
+    dcterms:identifier "resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39"^^xsd:string;
+    dcterms:creator <urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E>;
+    ore:describes <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation>;
+.
+
+# Aggregation
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation>
+    a ore:Aggregation;
+    dcterms:identifier "resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation"^^xsd:string;
+    ore:isDescribedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39>;    
+    ore:aggregates <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_number.jpg>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_variable.jpg>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_predrought_effective_variable.jpg>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_recover_time.jpg>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_number.xml>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_predrought_effective_variable.xml>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_variable.xml>,
+                   <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_recover_time.xml>;                  
+.
+
+
+# Metadata Entities
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_number.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_drought_number.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_number.jpg>;
+.
+
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_predrought_effective_variable.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_predrought_effective_variable.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_predrought_effective_variable.jpg>;
+.
+
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_variable.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_drought_variable.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_variable.jpg>;
+.
+
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_recover_time.xml>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_recover_time.xml"^^xsd:string;
+    ore:isAggregatedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation>;
+    cito:documents <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_recover_time.jpg>;
+.
+
+
+# Data Input Entities
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_number.jpg>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_drought_number.jpg"^^xsd:string;
+    ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_number.xml>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_F996C72A-5345-4A5E-93D4-D39555A8C1F8>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_variable.jpg>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_drought_variable.jpg"^^xsd:string;
+    ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_variable.xml>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_F996C72A-5345-4A5E-93D4-D39555A8C1F8>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_predrought_effective_variable.jpg>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_predrought_effective_variable.jpg"^^xsd:string;
+    ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_predrought_effective_variable.xml>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_F996C72A-5345-4A5E-93D4-D39555A8C1F8>;
+.
+
+<https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_recover_time.jpg>
+    a provone:Data;
+    dcterms:identifier "mstmip_demo_recover_time.jpg"^^xsd:string;
+    ore:isAggregatedBy  <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation>;
+    cito:isDocumentedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_recover_time.xml>;
+    prov:wasGeneratedBy <https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_F996C72A-5345-4A5E-93D4-D39555A8C1F8>;
+.
+
+# Users
+<urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830>
+    a provone:User;
+    a foaf:Person;
+    foaf:name "Yaxing Wei"^^xsd:string;
+.
+
+# Software Agents
+<urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E>
+    a dcterms:Agent;
+    foaf:name "DataONE Java Libclient Version 2.0.0"^^xsd:string;
+.

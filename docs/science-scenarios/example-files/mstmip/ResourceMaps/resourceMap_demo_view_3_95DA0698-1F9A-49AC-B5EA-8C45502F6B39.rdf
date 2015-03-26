@@ -1,0 +1,92 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:provone="http://purl.org/provone/2015/15/ontology#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ore="http://www.openarchives.org/ore/terms/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:cito="http://purl.org/spar/cito/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_recover_time.xml">
+    <cito:documents rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_recover_time.jpg"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_demo_recover_time.xml</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation">
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_recover_time.jpg"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_variable.xml"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_recover_time.xml"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation</dcterms:identifier>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_variable.jpg"/>
+    <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_number.xml"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_number.jpg"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_predrought_effective_variable.xml"/>
+    <ore:aggregates rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_predrought_effective_variable.jpg"/>
+    <ore:isDescribedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_recover_time.jpg">
+    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_F996C72A-5345-4A5E-93D4-D39555A8C1F8"/>
+    <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_recover_time.xml"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_demo_recover_time.jpg</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E">
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataONE Java Libclient Version 2.0.0</foaf:name>
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39">
+    <ore:describes rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation"/>
+    <dcterms:creator rdf:resource="urn:uuid:731927C6-F7EE-4C19-83BC-64CC2E8AF57E"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39</dcterms:identifier>
+    <rdf:type rdf:resource="http://www.openarchives.org/ore/terms/ResourceMap"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="urn:uuid:25679c53-cb6c-498c-a434-e7ffe5669830">
+    <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yaxing Wei</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_variable.xml">
+    <cito:documents rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_variable.jpg"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_demo_drought_variable.xml</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_variable.jpg">
+    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_F996C72A-5345-4A5E-93D4-D39555A8C1F8"/>
+    <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_variable.xml"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_demo_drought_variable.jpg</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_number.jpg">
+    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_F996C72A-5345-4A5E-93D4-D39555A8C1F8"/>
+    <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_number.xml"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_demo_drought_number.jpg</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_predrought_effective_variable.xml">
+    <cito:documents rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_predrought_effective_variable.jpg"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_demo_predrought_effective_variable.xml</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_number.xml">
+    <cito:documents rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_drought_number.jpg"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_demo_drought_number.xml</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_predrought_effective_variable.jpg">
+    <prov:wasGeneratedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/execution_F996C72A-5345-4A5E-93D4-D39555A8C1F8"/>
+    <cito:isDocumentedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/mstmip_demo_predrought_effective_variable.xml"/>
+    <ore:isAggregatedBy rdf:resource="https://cn-sandbox-2.test.dataone.org/cn/v1/resolve/resourceMap_demo_view_3_95DA0698-1F9A-49AC-B5EA-8C45502F6B39#aggregation"/>
+    <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mstmip_demo_predrought_effective_variable.jpg</dcterms:identifier>
+    <rdf:type rdf:resource="http://purl.org/provone/2015/15/ontology#Data"/>
+  </rdf:Description>
+</rdf:RDF>
