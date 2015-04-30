@@ -1,4 +1,3 @@
-
 DataONE Use Case 52 (Semantic search)
 ==========================================
 
@@ -10,6 +9,7 @@ Revisions
 2014-10-07: Created
 2014-10-13: Updated to reflect discussion at weekly meeting
 2014-11-21: added a section called "Background" which describes the LTER primary production data discovery problem
+2015-04-29: Started adding specific SOLR queries for testing
 
 Goal
 ----
@@ -20,8 +20,6 @@ Scenario
 --------
 In addition to querying for datapackages using keywords and coverage information, users will be able to query 
 datapackages that include measurement annotations matching desired concepts for Characteristics and Standards.
-
-
 
 
 Five Science Scenarios are included here to illustrate how scientist use data:
@@ -54,8 +52,6 @@ E. Ocean acidification and carbonate chemistry: The ocean has absorbed one-third
 Possible queries the KR will need to address: Q5, Q10
 
 
-
-
 Summary
 -------
 Additional query facets will be specified just like keywords, but will support more precise matches as well as 
@@ -71,45 +67,45 @@ Sequence Diagram
 ----------------
 .. 
     @startuml images/uc_52_seq.png 
-		database "Ontology repository" as ontrepo
-	  	database "Index" as index 
-		participant "Web UI" as webui
-	  	actor "User" as user
-		
-		note left of ontrepo: e.g., BioPortal
-		note left of index: e.g., SOLR
-	  	note left of webui: e.g., MetacatUI
-		
-		user --> webui: enter text
-		note right
-			User begins by entering
-			text for the concept of interest
-		end note
-		webui --> ontrepo: getConcepts(text)
-		note left
-			Query the ontology
-			repository for measurement
-			concepts that may match the
-			entered text
-		end note
-		ontrepo --> webui: concepts	
-		user --> webui: select concept
-		note right
-			User selects one of the
-			suggested concepts
+                database "Ontology repository" as ontrepo
+                  database "Index" as index 
+                participant "Web UI" as webui
+                  actor "User" as user
+                
+                note left of ontrepo: e.g., BioPortal
+                note left of index: e.g., SOLR
+                  note left of webui: e.g., MetacatUI
+                
+                user --> webui: enter text
+                note right
+                        User begins by entering
+                        text for the concept of interest
+                end note
+                webui --> ontrepo: getConcepts(text)
+                note left
+                        Query the ontology
+                        repository for measurement
+                        concepts that may match the
+                        entered text
+                end note
+                ontrepo --> webui: concepts        
+                user --> webui: select concept
+                note right
+                        User selects one of the
+                        suggested concepts
 
-		end note	  
-		webui -> index: query(concept)
-		index -> webui: search results
-		note right
-		  	query against
-		  	semantic fields 
-		  	in index return 
-		  	metadata document
-		  	matches
-		end note
-		webui --> user: rendered results
-	  
+                end note          
+                webui -> index: query(concept)
+                index -> webui: search results
+                note right
+                          query against
+                          semantic fields 
+                          in index return 
+                          metadata document
+                          matches
+                end note
+                webui --> user: rendered results
+          
     @enduml
    
 .. image:: images/uc_52_seq.png
@@ -136,36 +132,60 @@ Sample queries that we can support, in increasing order of complexity.  These wi
 - Queries using only oboe:Characteristic
     - List datasets with measurements of
     
-        Q1: above ground net primary productivity
+        - Q1: List datasets with measurements of above ground net primary productivity
             SELECT ?identifier {
                 ?agnpp a lter:AboveGroundNetPrimaryProduction
                 lter:AboveGroundNetPrimaryProduction a oboe:Characteristic
             }
-        Q2: heterotrophic soil respiration at the ecosystem level
+                PrimaryProduction
+                - NetPrimaryProduction
+                - GrossPrimaryProduction
+            - Attribute 3 of dataset 23 measures GrossPrimaryProduction
+            - index characteristic:{ECSO_123456,ECSO_34567} #includes all of the superclasses, none of the subclasses. depends on annotation being at the lowest level possible.
+        - query interface: takes natural language input, maps to one or more classes
+               - sends those classes in query against index
+        - baseline solr query (Natural language):
+            - https://cn.dataone.org/cn/v1/query/solr/?fl=identifier,title,author&q=formatType:METADATA+AND+(datasource:*LTER+OR+datasource:*KNB)+AND+-obsoletedBy:*+AND+net+primary+productivity&rows=100&start=0
+                - numFound="2101"
+            - https://cn.dataone.org/cn/v1/query/solr/?fl=identifier,title,author&q=formatType:METADATA+AND+(datasource:*LTER+OR+datasource:*KNB)+AND+-obsoletedBy:*+AND+abstract:net+primary+productivity&rows=100&start=0
+                - numFound="1193"
+            - https://cn.dataone.org/cn/v1/query/solr/?fl=identifier,title,author&q=formatType:METADATA+AND+(datasource:*LTER+OR+datasource:*KNB)+AND+-obsoletedBy:*+AND+title:net+primary+productivity&rows=100&start=0
+                - numFound="844"
+            - https://cn.dataone.org/cn/v1/query/solr/?fl=identifier,title,author&q=formatType:METADATA+AND+(datasource:*LTER+OR+datasource:*KNB)+AND+-obsoletedBy:*+AND+(title:NPP+OR+title:net+primary+productivity+OR+abstract:net+primary+productivity)&rows=100&start=0
+                - numFound="844"
+
+        - What solr fields should be in baseline query? (list of choices is here: https://cn.dataone.org/cn/v1/query/solr )
+            - the more we include, we get higher recall, lower precision?
+            - title, abstract, attribute, keyword
+            - methods
+
+        - Ontology search solr query:
+            - https://cn.dataone.org/cn/v1/query/solr/?fl=identifier,title,author&q=formatType:METADATA+AND+(datasource:*LTER+OR+datasource:*KNB)+AND+-obsoletedBy:*+AND+characteristic:ECSO_123456&rows=100&start=0
+
+        - Q2: List datasets with measurements of heterotrophic soil respiration at the ecosystem level
             SELECT ?identifier {
                 ?heterresp a lter:HeterotrophicSoilRespiration
                 lter:HeterotrophicSoilRespiration a oboe:Characteristic
             }
             
-        Q5: concentration of carbonate species in the ocean (C02, bicarbonate, carbonate)
-        
+        - Q5: List datasets with measurements of concentration of carbonate species in the ocean (C02, bicarbonate, carbonate)
         
 - Queries using oboe:Characteristic and oboe:Entity
     - List datasets with measurements of
         
-        Q3: the amount of carbon (grams) in soil microbial communities
+        - Q3: List datasets with measurements of the amount of carbon (grams) in soil microbial communities
             
-        Q4: areal CO2 uptake rate by natural phytoplankton communities  
+        - Q4: List datasets with measurements of areal CO2 uptake rate by natural phytoplankton communities  
     
-        Q6: rate of release of carbon dioxide from soil
+        - Q6: List datasets with measurements of rate of release of carbon dioxide from soil
         
-        Q7: uptake of CO2 in a grassland when CO2 is experimentally added 
+        - Q7: List datasets with measurements of uptake of CO2 in a grassland when CO2 is experimentally added 
         
-        Q8: areal rate of methane released from soil
+        - Q8: List datasets with measurements of areal rate of methane released from soil
         
-        Q9: annual rate of net primary production for coastal macroalgae
+        - Q9: List datasets with measurements of annual rate of net primary production for coastal macroalgae
         
-        Q10: CO2 absorption by the ocean
+        - Q10: List datasets with measurements of CO2 absorption by the ocean
 
 Notes
 -----
@@ -177,5 +197,11 @@ Support for querying entity is not planned (e.g., no "Height of a Tree" criteria
 
 Use Case Implementation Examples
 --------------------------------
+
+For Q1:Q10:
+1 baselne queries to all metadata
+1 baseline query to a subset of metadata (still to decide: what fields) MOB TO DO: find 
+1 semantic query (name of field=___)
+
 
 
