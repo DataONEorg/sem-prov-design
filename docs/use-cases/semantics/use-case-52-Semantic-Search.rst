@@ -203,5 +203,9 @@ For Q1:Q10:
 1 baseline query to a subset of metadata (still to decide: what fields) MOB TO DO: find 
 1 semantic query (name of field=___)
 
-
+-------------------------------
+Query testing: recall and precision
+-------------------------------
+Files for testing recall and precision can be found at:
+https://github.com/DataONEorg/semantic-query
 
