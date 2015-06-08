@@ -204,12 +204,12 @@ For Q1:Q10:
 1 semantic query (name of field=___)
 
 Target 3 types of queries for each plain-english query:
-1) Best SOLR nat lang fields query from UI fields available
+- 1) Best SOLR nat lang fields query from UI fields available
  - ONEMercury
  - MetacatUI (search.test.dataone.org)
-2) Best SOLR nat lang fields query using any fields
+- 2) Best SOLR nat lang fields query using any fields
 (attributeName|attributeLabel|attributeDescription = soil* AND attributeUnits = gram AND abstract|title|methods = hetertroph)
-3) Best semantic fields query
+- 3) Best semantic fields query
 
 
 Query 1
