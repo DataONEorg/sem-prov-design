@@ -204,12 +204,12 @@ For Q1:Q10:
 1 semantic query (name of field=___)
 
 Target 3 types of queries for each plain-english query:
-- 1) Best SOLR nat lang fields query from UI fields available
- - ONEMercury
- - MetacatUI (search.test.dataone.org)
-- 2) Best SOLR nat lang fields query using any fields
-(attributeName|attributeLabel|attributeDescription = soil* AND attributeUnits = gram AND abstract|title|methods = hetertroph)
-- 3) Best semantic fields query
+ - 1) Best SOLR nat lang fields query from UI fields available
+  - ONEMercury
+  - MetacatUI (search.test.dataone.org)
+ - 2) Best SOLR nat lang fields query using any fields
+  - pseudo code: (attributeName|attributeLabel|attributeDescription = soil* AND attributeUnits = gram AND abstract|title|methods = hetertroph)
+ - 3) Best semantic fields query
 
 
 Query 1
@@ -226,10 +226,10 @@ Query 4
  - best semantic: TBD
 
 Query 5
- plain english: List datasets with measurements of concentration of carbonate chemistry species in the ocean 
-  best SOLR: (attribute:\"*carbonate\" or attribute:\"C02\" or attribute:\"carbon dioxide\" AND attribute:micromolePerKilogram) AND (abstract:ocean OR title:ocean) AND (abstract:co2calc OR methods:co2calc)
-  metacat UI fields: carbonate chemistry
-  1Merc UI fields: TBD
+  - Plain english: List datasets with measurements of concentration of carbonate chemistry species in the ocean 
+  - best SOLR: (attribute:\"*carbonate\" or attribute:\"C02\" or attribute:\"carbon dioxide\" AND attribute:micromolePerKilogram) AND (abstract:ocean OR title:ocean) AND (abstract:co2calc OR methods:co2calc)
+  - metacat UI fields: carbonate chemistry
+  - 1Merc UI fields: TBD
   - best semantic: TBD
 
 Query 6
