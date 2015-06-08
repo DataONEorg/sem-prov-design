@@ -205,8 +205,8 @@ For Q1:Q10:
 
 Target 3 types of queries for each plain-english query:
 1) Best SOLR nat lang fields query from UI fields available
-- ONEMercury
-- MetacatUI (search.test.dataone.org)
+ - ONEMercury
+ - MetacatUI (search.test.dataone.org)
 2) Best SOLR nat lang fields query using any fields
 (attributeName|attributeLabel|attributeDescription = soil* AND attributeUnits = gram AND abstract|title|methods = hetertroph)
 3) Best semantic fields query
@@ -219,11 +219,11 @@ Query 2
 Query 3
 
 Query 4
-- Plain english: List datasets with measurements of areal primary productivity rate by oceanic phytoplankton   
-- best SOLR,(attribute:\"*production\" or attribute:\"productivity\" AND attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton) AND (abstract:carbon14)
-- metacat UI fields: phytoplankton productivity
-- 1Merc UI fields: TBD
-- best semantic: TBD
+ - Plain english: List datasets with measurements of areal primary productivity rate by oceanic phytoplankton   
+ - best SOLR,(attribute:\"*production\" or attribute:\"productivity\" AND attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton) AND (abstract:carbon14)
+ - metacat UI fields: phytoplankton productivity
+ - 1Merc UI fields: TBD
+ - best semantic: TBD
 
 Query 5
 
