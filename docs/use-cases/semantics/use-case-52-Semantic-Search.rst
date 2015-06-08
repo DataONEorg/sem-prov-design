@@ -220,15 +220,27 @@ Query 3
 
 Query 4
  - Plain english: List datasets with measurements of areal primary productivity rate by oceanic phytoplankton   
- - best SOLR,(attribute:\"*production\" or attribute:\"productivity\" AND attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton) AND (abstract:carbon14)
+ - best SOLR: (attribute:\"*production\" or attribute:\"productivity\" AND attribute:milligramPerMeterCubedPerDay) AND (abstract:phytoplankton OR title:phytoplankton) AND (abstract:carbon14)
  - metacat UI fields: phytoplankton productivity
  - 1Merc UI fields: TBD
  - best semantic: TBD
 
 Query 5
+ plain english: List datasets with measurements of concentration of carbonate chemistry species in the ocean 
+  best SOLR: (attribute:\"*carbonate\" or attribute:\"C02\" or attribute:\"carbon dioxide\" AND attribute:micromolePerKilogram) AND (abstract:ocean OR title:ocean) AND (abstract:co2calc OR methods:co2calc)
+  metacat UI fields: carbonate chemistry
+  1Merc UI fields: TBD
+  - best semantic: TBD
 
+Query 6
 
+Query 7
 
+Query 8
+
+Query 9
+
+Query 10
 
 -------------------------------
 Query testing: recall and precision
