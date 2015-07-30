@@ -33,10 +33,12 @@ Some examples include:
 * Extended ORE documents	
 * Embedded OA annotations in XML metadata (e.g., EML's additionalMetadata section)
 
-We will initially focus on atomic annotation documents that can be parsed and loaded into a triplestore (which may or may not be persistent)
-and that can then be queried to populate a discovery index (e.g., SOLR)
+We will initially focus on atomic annotation documents that can be parsed queried to populate a discovery index (e.g., SOLR)
 
 Notes:
+
+Our actual implementation has focused on JSON-based annotations that do not fully conform to the OA model. The AnnotatorJS library
+is actively pursuing a JSON-LD format that does conform to Open Annotation, but that is not mature at this point.
 
 The model proposal follows the OA specification as interpreted for our DataONE uses. 
 Please review the section where the 'oa:hasBody' property is used to associate an OBOE concept as there are many possible

@@ -158,18 +158,23 @@ Mapping from AnnotatorJS to OA model
 
 Indexing
 --------
-The Metacat Index component has been enhanced to parse semantic models provided as RDF. 
-The general purpose RdfXmlSubprocessor can be used with SparqlFields to extract key concepts from any given model that is added to the Metacat MN document store.
+The DataONE/Metacat Index component has been enhanced to parse semantic models provided as either AnnotatorJS JSON or RDF/XML.
 
-The processor assumes that the identifier of the RDF document is the name of the graph being inserted into the triple store and provides that graph name to the query engine for substitution in any query syntax ($GRAPH_NAME).
+The AnnotatorSubprocessor uses a SPARQL-based approach to expand tag[s] in an annotation based on loaded ontologies in the index processor.
+Instead of relying on an entire graph, the AnnotatorSubprocessor is only informed by the tagged concept[s] and any expansion/node traversal that can 
+be performed using the loaded ontologies.
+
+The general purpose RdfXmlSubprocessor can be used with SparqlFields to extract key concepts from any given model that is added to the document store.
+
+The RDF processor assumes that the identifier of the RDF document is the name of the graph being inserted into the triple store and provides that graph name to the query engine for substitution in any query syntax ($GRAPH_NAME).
 
 The SPARQL requirements are that the solution[s] return the identifier (pid) of the object being annotated, and the index field being populated with the given value[s].
 If multiple fields are to be extracted from the model for indexing, a distinct SPARQL query should be used for each field.
 
-The query can (and is largely expected to) be constrained to the named graph that contains only that set of annotation triples. While the infrastructure can (and likely will) share the same triple store, 
+For RDF models, the query can (and is largely expected to) be constrained to the named graph that contains only that set of annotation triples. While the infrastructure can (and likely will) share the same triple store, 
 we should not assume other models have been loaded when processing any given graph. This means that any solutions will rely on only the named graph being processed during indexing.
 
-The SPARQL query used to determine the Characteristics measured in a dataset is shown below. Note that the query includes superclasses in the returned solutions so that 
+A sample SPARQL query used to determine the Characteristics measured in a dataset is shown below. Note that the query includes superclasses in the returned solutions so that 
 the index returns a match for both general and specific criteria.
 
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
@@ -201,12 +206,15 @@ the index returns a match for both general and specific criteria.
 Index Fields 
 =============
 
-Currently, these dynamic, multi-valued string fields allow us to index the new semantic content without changing the SOLR schema. 
+Currently, dynamic, multi-valued string fields allow us to index the new semantic content without changing the SOLR schema. 
 They are multi-valued because they will store the entire class subsumption hierarchy (up) for any matching concepts
 and because they will store annotations from the same metadata resources for different attributes.
 
 * ``characteristic_sm`` - indexes the oboe:Characteristic[s] for oboe:Measurement[s] in the datapackage
 * ``standard_sm`` - indexes the oboe:Standard[s] for oboe:Measurement[s] in the datapackage
+
+Since our first prototype, we have added more permanent fields for storing semantic concepts in the index:
+* ``sem_annotation`` - holds tags and expanded concepts from those tags (AnnotatorSubprocessor)
 
 	
 Example
@@ -253,11 +261,13 @@ It would also require authors to actively assert that their ORCIDs are associate
 Annotation serializations
 ==========================
 
-Our initial serialization technique for semantic annotations is to have a distinct file for the model. We have been using RDF/XML, but other syntaxes will likely be supported out of the box 
-because we are using the Jena library for model parsing.
+Our initial serialization technique for annotations is to have a distinct file for the model. 
+We have been using a JSON format specified by AnnotatorJS library, but other syntaxes will likely be supported.
 
 Other methods for serializing the model we have considered and may support in the future include:
 
+* ``JSON-LD`` - The direction Web Annotation is going for supporting Open Annotation model. Hopefully included in AnnotatorJS v2.x
+* ``RDF/XML`` - typical RDF model serialization
 * ``ORE`` - included as additional triples in our current ORE resource map packaging serializations
 * ``RDFa`` - annotations embedded directly within the science metadata
 * ``triplestore`` - triples written directly to a triple store endpoint using an API
