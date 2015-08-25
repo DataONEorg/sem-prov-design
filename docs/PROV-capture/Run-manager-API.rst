@@ -9,7 +9,7 @@ Scientists need a way to easily capture provenance for their data processing and
 
 Several use cases for storing provenance have been outlined: UseCases_
 
-.. _UseCases: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance
+.. _UseCases: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/use-cases-summary.rst
 
 This document summarizes the session “Provenance Capture in R” at Open Science Codefest, a Community Dynamics working group meeting, and other DataONE Semantics and Provenance Working Group discussions and describes the design of a proposed run manager that will be implemented in Matlab and in R.
 
