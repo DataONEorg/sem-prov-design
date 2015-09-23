@@ -5,17 +5,24 @@ DataONE Run Manager and API for Capturing Provenance in Script Executions
 Overview
 --------
 
-Scientists need a way to easily capture provenance for their data processing and analysis and have an automated way to upload provenance and derived data products from their analysis to a data repository such as those in the DataONE network.
+Scientists need a way to easily capture provenance for their data processing and analysis and have 
+an automated way to search and share provenance and derived data products from their analysis.
+
+An approach to capturing provenance with minimal impact on a scientist processing and analysis workflow is with 
+a run manager that manages all the details of recording and storing data provenance.  A run manager will
+capture provenance while a script is running, requiring no modification to the scientist's scripts.  The run 
+manager will determine provenance relationships between objects related to a script execution and record those 
+relationships in a standard format.
+
+This document specifies the Run Manager API that details functions to capture, search, review,
+archive and share data provenance. 
+
+The initial ideas for the Run Manager were developed during the session “Provenance Capture in R” at Open Science Codefest in 2014, 
+as well as a 2014 Community Dynamics working group meeting, and other DataONE Semantics and Provenance Working Group discussions.
 
 Several use cases for storing provenance have been outlined: UseCases_
 
-.. _UseCases: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance/use-cases-summary.rst
-
-This document summarizes the session “Provenance Capture in R” at Open Science Codefest, a Community Dynamics working group meeting, and other DataONE Semantics and Provenance Working Group discussions and describes the design of a proposed run manager that will be implemented in Matlab and in R.
-
-A way to capture provenance as conveniently for the scientist as possible is through a run manager. A run manager can capture provenance while a script is running, requiring very little extra code from the scientist. The run manager is aware of the provenance relationships and how to recognize those relationships based on the actions of the script.
-
-To use the run manager, a user needs to start recording, such as with a function *record()*. All information recorded by the run manager can then be viewed after the script execution has ended. This allows the scientist to re-record the script execution and once satisfied, publish to a DataONE-enabled repository via a method call such as *publish()*.
+.. _UseCases: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance
 
 Run Manager API
 ---------------
@@ -95,6 +102,11 @@ members of the package can be removed, new objects (such as scientific metadata)
 Note: *insertRelationShip* is a method in DataPackage.R.
 The *record()* method should return the runId of the recorded run, and then the Run class should allow the user to get any DataPackages produced, etc.
 
+The *record()* method will archive input files instead of inserting them into the package created for a run. An input file might be read by many
+different runs and storing the same input file in a data package for each run is inefficient and may waste disk space. The Run Manager
+file archive should store an input file once, but allow it to be referred to by any number of runs. Each input file should be easily
+accessible by the Run Manager, for example when a run is published.
+
 The following diagram shows a single invocation of record() and how provenance would be captured for reading a CSV file:
 
 .. image:: ../use-cases/provenance/images/sequence-41.png
@@ -112,6 +124,8 @@ Provenance collection will continue for this execution until the *endRecord()* c
 The use of the *startRecord()* and *endRecord()* functions is an alternative to using the *record()* funciton. Using this alternative approach
 may be appropriate when finer grained control is required that is provided by *record()* or for use with interpreted languages such as R where the user
 is working in the console and wished to record provenance for processing performed in the console environment.
+
+The *startRecord()* method should archive input files as described for *record()*.
 
 .. _`endRecord()`:
   
@@ -420,83 +434,11 @@ metadata-creation tools, such as Morpho or the R EML package_ from rOpenSci.
 The run manager has the potential to create minimal EML to include in the DataPackage in 
 case the scientist does not add any before publishing. We will need to research automated metadata extraction tools.
 
-Implementation
---------------
-The run manager will be implemented in two phases:
-
-Phase I
-
-- Record
-  
-  Overload D1.get() functions to capture provenance
-  
-  Overload D1.create() functions to capture provenance
-  
-  Overload D1.update() functions to capture provenance
-  
-  Capture of script execution details - run time, run environment, etc.
-  
-  Wrap this all in a single API call, record()
-  
-- View
-
-  Create a DataPackage and run manager view() function to output a textual representation of the DataPackage and run manager results
-
-Phase II
-
-- Record
-
-  Overload read.csv() functions to capture provenance
-  
-  Overload write.csv() functions to capture provenance
-  
-- View
-
-  Possibly - Expand the view() function to output a GUI representation of the DataPackage and run manager results
-
 
 Run Manager Storage
 -------------------
 
-The Run Manager stores data objects and provenance information and execution metadata in a local directory
-uniquely named for each *record* invocation, for example "~/.recordr/runs/ED6A8081-65ED-414C-93C6-29C29DF3543D".
-
-Run Manager execution metadata will be serialized to a JSON-LD file as shown by the following example JSON-LD file:
-
-::
-
-  {
-      "@context":
-      {
-          "schemaorg": "http://schema.org/",
-          "foaf": "http://xmlns.com/foaf/0.1/",
-          "account": "foaf:OnlineAccount",
-          "description": "schemaorg:description",
-          "endTime": "schemaorg:endTime",
-          "executionID": "schemaorg:executionID",
-          "errorMessage": "schemaorg:errorMessage"
-          "hostId": "schemaorg:hostid",
-          "startTime": "schemaorg:startTime",
-          "moduleDependencies": "schemaorg:moduleDependencies",
-          "operatingSystem": "schemaorg:operatingSystem",
-          "runtime": "schemaorg:runtime",
-          "SoftwareApplication": "schemaorg:SoftwareApplication"
-     }
-     "description": "Execution of R script rankClock.R run at 2014-09-15T13:00:00-04:00",
-     "executionID": "ED6A8081-65ED-414C-93C6-29C29DF3543D",
-     "account": "smith123"
-     "hostId": "eos.nceas.ucsb.edu",
-     "startTime": "2014-09-15T13:00:00-04:00",
-     "endTime": "2014-09-15T14:10:00-05:00",
-     "operatingSystem": "x86_64-apple-darwin13.1.0 (64-bit)",
-     "runtime": "R version 3.1.1 (2014-07-10)",
-     "SoftwareApplication": "rankClock.R",
-     "moduleDependencies": [ "jsonlite_0.9.12", "dataone_2.0.0", "RCurl_1.95-4.3", "bitops_1.0-6", "stats", "graphics", "grDevices", "utils", "datasets", "methods", "base" ],
-     "errorMessage": ""
-  }
-  
-.. Note::
-
-  This example JSON-LD file is based on a proposed schema for software executions that may be submitted to schema.org.
-  
+The Run Manager stores data objects and provenance information and execution metadata locally in a location
+that can be set or updated by the user. The contents of the Run Manager storage area are not intended
+to be directly accessible to a user, but are managed and accessed by the Run Manager API calls.
 
