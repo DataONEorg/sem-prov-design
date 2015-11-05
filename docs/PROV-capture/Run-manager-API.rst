@@ -5,17 +5,24 @@ DataONE Run Manager and API for Capturing Provenance in Script Executions
 Overview
 --------
 
-Scientists need a way to easily capture provenance for their data processing and analysis and have an automated way to upload provenance and derived data products from their analysis to a data repository such as those in the DataONE network.
+Scientists need a way to easily capture provenance for their data processing and analysis and have 
+an automated way to search and share provenance and derived data products from their analysis.
+
+An approach to capturing provenance with minimal impact on a scientist processing and analysis workflow is with 
+a run manager that manages all the details of recording and storing data provenance.  A run manager will
+capture provenance while a script is running, requiring no modification to the scientist's scripts.  The run 
+manager will determine provenance relationships between objects related to a script execution and record those 
+relationships in a standard format.
+
+This document specifies the Run Manager API that details functions to capture, search, review,
+archive and share data provenance. 
+
+The initial ideas for the Run Manager were developed during the session “Provenance Capture in R” at Open Science Codefest in 2014, 
+as well as a 2014 Community Dynamics working group meeting, and other DataONE Semantics and Provenance Working Group discussions.
 
 Several use cases for storing provenance have been outlined: UseCases_
 
 .. _UseCases: https://github.com/DataONEorg/sem-prov-design/tree/master/docs/use-cases/provenance
-
-This document summarizes the session “Provenance Capture in R” at Open Science Codefest, a Community Dynamics working group meeting, and other DataONE Semantics and Provenance Working Group discussions and describes the design of a proposed run manager that will be implemented in Matlab and in R.
-
-A way to capture provenance as conveniently for the scientist as possible is through a run manager. A run manager can capture provenance while a script is running, requiring very little extra code from the scientist. The run manager is aware of the provenance relationships and how to recognize those relationships based on the actions of the script.
-
-To use the run manager, a user needs to start recording, such as with a function *record()*. All information recorded by the run manager can then be viewed after the script execution has ended. This allows the scientist to re-record the script execution and once satisfied, publish to a DataONE-enabled repository via a method call such as *publish()*.
 
 Run Manager API
 ---------------
@@ -76,6 +83,14 @@ Run Manager API
      - configuration
      - the list of configuration parameters in the given configuration
      - Show all Configuration configuration parameters
+   * - `getMetadata()`_
+     - runId
+     - A metadata object (EML file)
+     - Retrieve metadata describing data objects of an execution
+   * - `putMetadata()`_
+     - runId, file
+     - The unique identifier associated with the metadata object
+     - Store (possibly replace) metadata describing the data objects of an execution
      
 .. _`record()`:
 
@@ -95,6 +110,11 @@ members of the package can be removed, new objects (such as scientific metadata)
 Note: *insertRelationShip* is a method in DataPackage.R.
 The *record()* method should return the runId of the recorded run, and then the Run class should allow the user to get any DataPackages produced, etc.
 
+The *record()* method will archive input files instead of inserting them into the package created for a run. An input file might be read by many
+different runs and storing the same input file in a data package for each run is inefficient and may waste disk space. The Run Manager
+file archive should store an input file once, but allow it to be referred to by any number of runs. Each input file should be easily
+accessible by the Run Manager, for example when a run is published.
+
 The following diagram shows a single invocation of record() and how provenance would be captured for reading a CSV file:
 
 .. image:: ../use-cases/provenance/images/sequence-41.png
@@ -112,6 +132,8 @@ Provenance collection will continue for this execution until the *endRecord()* c
 The use of the *startRecord()* and *endRecord()* functions is an alternative to using the *record()* funciton. Using this alternative approach
 may be appropriate when finer grained control is required that is provided by *record()* or for use with interpreted languages such as R where the user
 is working in the console and wished to record provenance for processing performed in the console environment.
+
+The *startRecord()* method should archive input files as described for *record()*.
 
 .. _`endRecord()`:
   
@@ -349,6 +371,14 @@ The set method sets the value of the named parameter in the given Configuration.
 |                           |                                | capture will be triggered when    |
 |                           |                                | encountering YesWorkflow inline   |
 |                           |                                | comments. Default: true           |
+|                           +--------------------------------+-----------------------------------+
+|                           | package_metadata_template_path | The file path of a metadata       |
+|                           |                                | template that is used to generate |
+|                           |                                | package metadata for a run. The   |
+|                           |                                | default is '~/.d1/or a run. The   |
+|                           |                                | '~/.d1/package_metadata_template  |
+|                           |                                | with a file extention appropriate |
+|                           |                                | for the implementation.           |
 +---------------------------+--------------------------------+-----------------------------------+
 
 .. _`get()`:
@@ -376,6 +406,22 @@ Configuration object. The path defaults to ~/.d1/configuration.json.
 *listConfig()*
 
 List all of the configuration parameters from the loaded configuration as structured object, depending on the script language.
+
+.. _`getMetadata()`:
+
+*getMetadata(runId, seq)*
+
+Retrieve the metadata object for the specified run so that it can be inspected and manually edited if desired. The run identifier
+or sequence identifier for the run can be specified, and the metadata object for the corresponding run will be retrieved. This
+assumes that only one metadata object will be maintained for a run by run manager, and that run manager knows which object
+is the metadata object for a run.
+
+.. _`putMetadata()`:
+
+*putMetadata(runId, seq, file)*
+
+Replace the metadata object for the specified run, specifying the run either with the run identifier, or the sequence number
+for the run.
 
 Run Manager Provenance Capture
 ------------------------------
@@ -408,95 +454,54 @@ The following provenance relationshps will be recorded:
   
   Detection: The run manager will overload the R function source().
 
-Adding Scientific Metadata to the Data Package after Recording a Script Execution
----------------------------------------------------------------------------------
+Generating and Modifying Data Object Metadata  
+---------------------------------------------
 
-.. _package: https://github.com/ropensci/EML
+.. _EMLpackage: https://github.com/ropensci/EML
 
-Since a script may not generate metadata or read it in as a data input, the scientist may have to 
-explicitly add a scientific metadata file to the DataPackage. This can be done using existing 
-metadata-creation tools, such as Morpho or the R EML package_ from rOpenSci.
+.. _XMLSpy: http://www.altova.com/xmlspy.html
 
-The run manager has the potential to create minimal EML to include in the DataPackage in 
-case the scientist does not add any before publishing. We will need to research automated metadata extraction tools.
+.. _Oxygen: http://www.oxygenxml.com
 
-Implementation
---------------
-The run manager will be implemented in two phases:
+.. _EML: https://knb.ecoinformatics.org/#external//emlparser/docs/eml-2.1.1/index.html
 
-Phase I
+The Run Manager assists in the preparation of metadata that describe the objects associated with
+an execution by using an investigator specified template that is
+combined with values derived from the execution. 
+The metadata generated by this process will be in the format specified by the Ecological Metadata Language
+and will include these EML_ elements:
 
-- Record
-  
-  Overload D1.get() functions to capture provenance
-  
-  Overload D1.create() functions to capture provenance
-  
-  Overload D1.update() functions to capture provenance
-  
-  Capture of script execution details - run time, run environment, etc.
-  
-  Wrap this all in a single API call, record()
-  
-- View
+- title
+- creator
+- abstract
+- contact
+- publication date
+- method description
+- spatial coverage
+- temporal coverage
+- otherEntity 
+	- an otherEntity element will be added for each file generated by a run
+	- During the publish() call, the otherEntity/physical/distribution/online/url element value will be updated with the 
+          URL for object being published using the specified membernode, provided that this element exists in the EML at
+          the time publish() is run, and that a value has not already been entered for this element.
+	- The entityName element value will be filed in with the filename of the object.
 
-  Create a DataPackage and run manager view() function to output a textual representation of the DataPackage and run manager results
+The location of the
+template is set with the DataONE Session Configuration parameter *package_metadata_template_path*. If the 
+investigator has not set this parameter then a default template will be used. 
 
-Phase II
+The initial metadata object is created during the record() function, after which it will be 
+available to be retrieved from the Run Manager cache. 
+The function *getMetadata()* can then be used to retrieve the metadata object for a specified run.
 
-- Record
+The metadata can then be reviewed by the investigator for correctness, then manually edited and updated 
+with additional or more detailed information using tools such as the EMLpackage_
+from rOpenSci (for the R implementation of Run Manager) or an XML editor such as 
+XMLSpy_ or Oxygen_. 
 
-  Overload read.csv() functions to capture provenance
-  
-  Overload write.csv() functions to capture provenance
-  
-- View
+Once manual editing is completed for the metdata it can be reinserted into the Run Manager cache using
+the *putMetadata()* function. 
 
-  Possibly - Expand the view() function to output a GUI representation of the DataPackage and run manager results
-
-
-Run Manager Storage
--------------------
-
-The Run Manager stores data objects and provenance information and execution metadata in a local directory
-uniquely named for each *record* invocation, for example "~/.recordr/runs/ED6A8081-65ED-414C-93C6-29C29DF3543D".
-
-Run Manager execution metadata will be serialized to a JSON-LD file as shown by the following example JSON-LD file:
-
-::
-
-  {
-      "@context":
-      {
-          "schemaorg": "http://schema.org/",
-          "foaf": "http://xmlns.com/foaf/0.1/",
-          "account": "foaf:OnlineAccount",
-          "description": "schemaorg:description",
-          "endTime": "schemaorg:endTime",
-          "executionID": "schemaorg:executionID",
-          "errorMessage": "schemaorg:errorMessage"
-          "hostId": "schemaorg:hostid",
-          "startTime": "schemaorg:startTime",
-          "moduleDependencies": "schemaorg:moduleDependencies",
-          "operatingSystem": "schemaorg:operatingSystem",
-          "runtime": "schemaorg:runtime",
-          "SoftwareApplication": "schemaorg:SoftwareApplication"
-     }
-     "description": "Execution of R script rankClock.R run at 2014-09-15T13:00:00-04:00",
-     "executionID": "ED6A8081-65ED-414C-93C6-29C29DF3543D",
-     "account": "smith123"
-     "hostId": "eos.nceas.ucsb.edu",
-     "startTime": "2014-09-15T13:00:00-04:00",
-     "endTime": "2014-09-15T14:10:00-05:00",
-     "operatingSystem": "x86_64-apple-darwin13.1.0 (64-bit)",
-     "runtime": "R version 3.1.1 (2014-07-10)",
-     "SoftwareApplication": "rankClock.R",
-     "moduleDependencies": [ "jsonlite_0.9.12", "dataone_2.0.0", "RCurl_1.95-4.3", "bitops_1.0-6", "stats", "graphics", "grDevices", "utils", "datasets", "methods", "base" ],
-     "errorMessage": ""
-  }
-  
-.. Note::
-
-  This example JSON-LD file is based on a proposed schema for software executions that may be submitted to schema.org.
-  
+This metadata will then be included with any data package that is assembled from a recorded execution, for example
+when a package is prepared and uploaded to DataONE.
 
