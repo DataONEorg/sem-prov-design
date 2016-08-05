@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=1" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1416341924511" name="http://www.pizza.com/ontologies/pizza.owl" uri="pizza.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1416341924511" name="http://www.pizza.com/ontologies/pizza.owl" uri="pizza%20-%20Copy1.owl"/>
-    </group>
-</catalog>

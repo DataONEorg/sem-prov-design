@@ -1,3 +1,0 @@
-you got tis with wget from ifomis.org/bfo
-there are lots of other resources that you cant seem to get with wget. like the overview.
-
