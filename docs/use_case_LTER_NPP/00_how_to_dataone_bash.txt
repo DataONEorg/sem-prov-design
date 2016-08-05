@@ -1,0 +1,13 @@
+# check for existence of data packages in a DataONE environment -- you can just request the system metadata for the object (or even the object itself, which can be much larger). For example, here's the GET URL for the first object in your list:
+
+curl https://cn-sandbox-2.test.dataone.org/cn/v1/meta/https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/1001/7
+
+# it returns system metadata, and so its in the environment.  In contrast, if the object is missing, you'll get a NotFound error back, like so:
+
+curl https://cn-sandbox-2.test.dataone.org/cn/v1/meta/https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/57/5
+
+# To test your whole list, just put that in a bash script and iterate over your list, grepping for NotFound and you should be set.  I checked in a bash script that does this -- all of your data in your list is present in sandbox-2 except for one ID:
+
+  https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/57/5
+
+

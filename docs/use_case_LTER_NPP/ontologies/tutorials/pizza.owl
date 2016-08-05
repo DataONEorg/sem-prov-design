@@ -1,0 +1,645 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.pizza.com/ontologies/pizza.owl#"
+     xml:base="http://www.pizza.com/ontologies/pizza.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.pizza.com/ontologies/pizza.owl">
+        <rdfs:comment>A pizza ontology that describes various pizzas and their toppings</rdfs:comment>
+        <owl:versionIRI rdf:resource="http://www.pizza.com/ontologies/pizza.owl/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_05b921d1_6ed8_4ed1_9ce0_aa0f601242d8 -->
+
+    <owl:ObjectProperty rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_05b921d1_6ed8_4ed1_9ce0_aa0f601242d8">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label>isIngredientOf</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_9524581d_ed4c_46f3_9855_f66c1691335c"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_14a2edd8_9867_4232_af97_fa9d0bf3ecdb -->
+
+    <owl:ObjectProperty rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_14a2edd8_9867_4232_af97_fa9d0bf3ecdb">
+        <rdfs:label>isToppingOf</rdfs:label>
+        <rdfs:range rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_4493d8af_29fa_4cb5_8cec_61d4aacd096d"/>
+        <rdfs:domain rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_ed5ff46b_32b6_42a4_902f_fda7abc5cfc9"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_05b921d1_6ed8_4ed1_9ce0_aa0f601242d8"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b -->
+
+    <owl:ObjectProperty rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b">
+        <rdfs:label>hasTopping</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_4493d8af_29fa_4cb5_8cec_61d4aacd096d"/>
+        <rdfs:range rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_ed5ff46b_32b6_42a4_902f_fda7abc5cfc9"/>
+        <owl:inverseOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_14a2edd8_9867_4232_af97_fa9d0bf3ecdb"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_9524581d_ed4c_46f3_9855_f66c1691335c"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_9524581d_ed4c_46f3_9855_f66c1691335c -->
+
+    <owl:ObjectProperty rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_9524581d_ed4c_46f3_9855_f66c1691335c">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label>hasIngredient</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_ebbd7dc9_0af1_4040_b6b2_fe09361b8c99 -->
+
+    <owl:ObjectProperty rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_ebbd7dc9_0af1_4040_b6b2_fe09361b8c99">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>hasBase</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_4493d8af_29fa_4cb5_8cec_61d4aacd096d"/>
+        <rdfs:range rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b11b2176_d3eb_4152_b65a_28d5fb6d05c1"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_9524581d_ed4c_46f3_9855_f66c1691335c"/>
+        <owl:inverseOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_f23588e4_c2ed_4297_9c57_abaa6b869ce8"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_f23588e4_c2ed_4297_9c57_abaa6b869ce8 -->
+
+    <owl:ObjectProperty rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_f23588e4_c2ed_4297_9c57_abaa6b869ce8">
+        <rdfs:label>IsBaseOf</rdfs:label>
+        <rdfs:range rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_4493d8af_29fa_4cb5_8cec_61d4aacd096d"/>
+        <rdfs:domain rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b11b2176_d3eb_4152_b65a_28d5fb6d05c1"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_05b921d1_6ed8_4ed1_9ce0_aa0f601242d8"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_08aca44d_f4a6_43c0_8e92_880e01b0c70b -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_08aca44d_f4a6_43c0_8e92_880e01b0c70b">
+        <rdfs:label>MushroomTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_1d0df41c_9afd_4c64_b65a_3471903bb399"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_0c68c911_24b6_4f24_82e5_071033c6c37c -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_0c68c911_24b6_4f24_82e5_071033c6c37c">
+        <rdfs:label>AmericanPizza</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b0859a03_3d88_4623_8a33_7a698a5ad360"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b3cb2946_bbba_429e_94f6_f706032bebad"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_8549cecf_6750_45a0_a161_63a1fd5debaf"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_96be5882_11ac_4880_baf6_736cf2a01270"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>a pizza that has only tomato, pepperoni and  mozzarella topings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_1d0df41c_9afd_4c64_b65a_3471903bb399 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_1d0df41c_9afd_4c64_b65a_3471903bb399">
+        <rdfs:label>VegetableTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_ed5ff46b_32b6_42a4_902f_fda7abc5cfc9"/>
+        <owl:disjointWith rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_551c9229_68db_48f0_b8bc_d4733fcfe702"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_2763ad07_d765_4df3_b0c3_c0e384b0279d -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_2763ad07_d765_4df3_b0c3_c0e384b0279d">
+        <rdfs:label>PepperTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_1d0df41c_9afd_4c64_b65a_3471903bb399"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_2ad0084b_7300_4096_9525_3f6a41779d6b -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_2ad0084b_7300_4096_9525_3f6a41779d6b">
+        <rdfs:label>MeatTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_ed5ff46b_32b6_42a4_902f_fda7abc5cfc9"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_315f1c14_7b46_4ca8_a193_f638097ccccb -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_315f1c14_7b46_4ca8_a193_f638097ccccb">
+        <rdfs:label>VegetarianPizza</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_4493d8af_29fa_4cb5_8cec_61d4aacd096d"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_1d0df41c_9afd_4c64_b65a_3471903bb399"/>
+                                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_551c9229_68db_48f0_b8bc_d4733fcfe702"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_35a15c0d_138f_440a_9b19_88920777508c -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_35a15c0d_138f_440a_9b19_88920777508c">
+        <rdfs:label>SalamiTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_2ad0084b_7300_4096_9525_3f6a41779d6b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_3cc25cf6_5d42_4dae_9bbe_3437dc823cb3 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_3cc25cf6_5d42_4dae_9bbe_3437dc823cb3">
+        <rdfs:label>CaperTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_1d0df41c_9afd_4c64_b65a_3471903bb399"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_4493d8af_29fa_4cb5_8cec_61d4aacd096d -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_4493d8af_29fa_4cb5_8cec_61d4aacd096d">
+        <rdfs:label>Pizza</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_ebbd7dc9_0af1_4040_b6b2_fe09361b8c99"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b11b2176_d3eb_4152_b65a_28d5fb6d05c1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b11b2176_d3eb_4152_b65a_28d5fb6d05c1"/>
+        <owl:disjointWith rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_ed5ff46b_32b6_42a4_902f_fda7abc5cfc9"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_44fd000a_d78a_4442_9021_37993b7e8efd -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_44fd000a_d78a_4442_9021_37993b7e8efd">
+        <rdfs:label>PrawnTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_60f0659c_a619_49f3_a440_49678f175270"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_47c53506_4b43_4a6d_86aa_560229f6c8e5 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_47c53506_4b43_4a6d_86aa_560229f6c8e5">
+        <rdfs:label>SpicyBeefTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_2ad0084b_7300_4096_9525_3f6a41779d6b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_4c1f0679_bf91_4f3d_b6c2_f2490852a105 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_4c1f0679_bf91_4f3d_b6c2_f2490852a105">
+        <rdfs:label>DeepPanBase</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b11b2176_d3eb_4152_b65a_28d5fb6d05c1"/>
+        <owl:disjointWith rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_e010c8af_6106_43f2_9116_3353dcc10731"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_5063d315_108c_4a88_abd6_1ff0862b502e -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_5063d315_108c_4a88_abd6_1ff0862b502e">
+        <rdfs:label>SpicyPizza</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_4493d8af_29fa_4cb5_8cec_61d4aacd096d"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_47c53506_4b43_4a6d_86aa_560229f6c8e5"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_64d6d0c7_d7e6_4846_ab75_cf7c24516d17"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_551c9229_68db_48f0_b8bc_d4733fcfe702 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_551c9229_68db_48f0_b8bc_d4733fcfe702">
+        <rdfs:label>CheeseTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_ed5ff46b_32b6_42a4_902f_fda7abc5cfc9"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_60f0659c_a619_49f3_a440_49678f175270 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_60f0659c_a619_49f3_a440_49678f175270">
+        <rdfs:label>SeafoodTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_ed5ff46b_32b6_42a4_902f_fda7abc5cfc9"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_62424ce9_a369_474d_b675_d66b9f5eaba0 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_62424ce9_a369_474d_b675_d66b9f5eaba0">
+        <rdfs:label>TunaTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_60f0659c_a619_49f3_a440_49678f175270"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_64d6d0c7_d7e6_4846_ab75_cf7c24516d17 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_64d6d0c7_d7e6_4846_ab75_cf7c24516d17">
+        <rdfs:label>JalapenoPepperTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_2763ad07_d765_4df3_b0c3_c0e384b0279d"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_66ff6eff_ef75_4834_af96_c34059b26b10 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_66ff6eff_ef75_4834_af96_c34059b26b10">
+        <rdfs:label>ParmesanTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_551c9229_68db_48f0_b8bc_d4733fcfe702"/>
+        <owl:disjointWith rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_96be5882_11ac_4880_baf6_736cf2a01270"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_7870b449_d762_4a30_808a_bc9aaeab83dc -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_7870b449_d762_4a30_808a_bc9aaeab83dc">
+        <rdfs:label>OliveTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_1d0df41c_9afd_4c64_b65a_3471903bb399"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_800ac8b7_ea93_486a_b578_095a2abac597 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_800ac8b7_ea93_486a_b578_095a2abac597">
+        <rdfs:label>HamTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_2ad0084b_7300_4096_9525_3f6a41779d6b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_84409def_8ece_45e2_9921_f25703fbe181 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_84409def_8ece_45e2_9921_f25703fbe181">
+        <rdfs:label>MargheritaPizza</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b0859a03_3d88_4623_8a33_7a698a5ad360"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_8549cecf_6750_45a0_a161_63a1fd5debaf"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_96be5882_11ac_4880_baf6_736cf2a01270"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_8549cecf_6750_45a0_a161_63a1fd5debaf"/>
+                            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_96be5882_11ac_4880_baf6_736cf2a01270"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>a pizza that has only tomato and mozzarella topings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_8549cecf_6750_45a0_a161_63a1fd5debaf -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_8549cecf_6750_45a0_a161_63a1fd5debaf">
+        <rdfs:label>TomatoTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_1d0df41c_9afd_4c64_b65a_3471903bb399"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_8caeea0e_765e_4ae7_9323_56a9598b0376 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_8caeea0e_765e_4ae7_9323_56a9598b0376">
+        <rdfs:label>CheesyPizza</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_4493d8af_29fa_4cb5_8cec_61d4aacd096d"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_551c9229_68db_48f0_b8bc_d4733fcfe702"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_96be5882_11ac_4880_baf6_736cf2a01270 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_96be5882_11ac_4880_baf6_736cf2a01270">
+        <rdfs:label>MozzarellaTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_551c9229_68db_48f0_b8bc_d4733fcfe702"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_b0859a03_3d88_4623_8a33_7a698a5ad360 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b0859a03_3d88_4623_8a33_7a698a5ad360">
+        <rdfs:label>NamedPizza</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_4493d8af_29fa_4cb5_8cec_61d4aacd096d"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_b11b2176_d3eb_4152_b65a_28d5fb6d05c1 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b11b2176_d3eb_4152_b65a_28d5fb6d05c1">
+        <rdfs:label>PizzaBase</rdfs:label>
+        <owl:disjointWith rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_ed5ff46b_32b6_42a4_902f_fda7abc5cfc9"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_b3cb2946_bbba_429e_94f6_f706032bebad -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b3cb2946_bbba_429e_94f6_f706032bebad">
+        <rdfs:label>PepperoniTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_2ad0084b_7300_4096_9525_3f6a41779d6b"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_c0550aab_868f_4d17_9772_b37cb8b0d965 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_c0550aab_868f_4d17_9772_b37cb8b0d965">
+        <rdfs:label>GreenPepperTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_2763ad07_d765_4df3_b0c3_c0e384b0279d"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_cb1a5568_3aaf_4561_ac16_9049965a915c -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_cb1a5568_3aaf_4561_ac16_9049965a915c">
+        <rdfs:label>RedPepperTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_2763ad07_d765_4df3_b0c3_c0e384b0279d"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_d43fef79_775d_43d1_a0be_27298e53b92e -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_d43fef79_775d_43d1_a0be_27298e53b92e">
+        <rdfs:label>AnchovyTopping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_60f0659c_a619_49f3_a440_49678f175270"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_d750e81c_4923_4a5f_aad5_ab3189ecb870 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_d750e81c_4923_4a5f_aad5_ab3189ecb870">
+        <rdfs:label>SohoPizza</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b0859a03_3d88_4623_8a33_7a698a5ad360"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_96be5882_11ac_4880_baf6_736cf2a01270"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_7870b449_d762_4a30_808a_bc9aaeab83dc"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_66ff6eff_ef75_4834_af96_c34059b26b10"/>
+                            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_7870b449_d762_4a30_808a_bc9aaeab83dc"/>
+                            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_8549cecf_6750_45a0_a161_63a1fd5debaf"/>
+                            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_96be5882_11ac_4880_baf6_736cf2a01270"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_8549cecf_6750_45a0_a161_63a1fd5debaf"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_66ff6eff_ef75_4834_af96_c34059b26b10"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>a pizza that has only tomato and mozzarella topings, with olives and parmesan</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_e010c8af_6106_43f2_9116_3353dcc10731 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_e010c8af_6106_43f2_9116_3353dcc10731">
+        <rdfs:label>ThinAndCrispyBase</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b11b2176_d3eb_4152_b65a_28d5fb6d05c1"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_ed5ff46b_32b6_42a4_902f_fda7abc5cfc9 -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_ed5ff46b_32b6_42a4_902f_fda7abc5cfc9">
+        <rdfs:label>PizzaTopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.pizza.com/ontologies/pizza.owl#OWLClass_f384d4a9_da95_4895_bfe2_550095d0ff7f -->
+
+    <owl:Class rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_f384d4a9_da95_4895_bfe2_550095d0ff7f">
+        <rdfs:label>AmericanHotPizza</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b0859a03_3d88_4623_8a33_7a698a5ad360"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_64d6d0c7_d7e6_4846_ab75_cf7c24516d17"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b3cb2946_bbba_429e_94f6_f706032bebad"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_8549cecf_6750_45a0_a161_63a1fd5debaf"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLObjectProperty_28f216e6_5f0a_4bb4_a2c1_fc882a62dc8b"/>
+                <owl:someValuesFrom rdf:resource="http://www.pizza.com/ontologies/pizza.owl#OWLClass_96be5882_11ac_4880_baf6_736cf2a01270"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>a pizza that has only tomato, pepperoni, jalapeno and  mozzarella topings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_2ad0084b_7300_4096_9525_3f6a41779d6b"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_551c9229_68db_48f0_b8bc_d4733fcfe702"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_60f0659c_a619_49f3_a440_49678f175270"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_35a15c0d_138f_440a_9b19_88920777508c"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_47c53506_4b43_4a6d_86aa_560229f6c8e5"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_800ac8b7_ea93_486a_b578_095a2abac597"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_b3cb2946_bbba_429e_94f6_f706032bebad"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_44fd000a_d78a_4442_9021_37993b7e8efd"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_62424ce9_a369_474d_b675_d66b9f5eaba0"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_d43fef79_775d_43d1_a0be_27298e53b92e"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_08aca44d_f4a6_43c0_8e92_880e01b0c70b"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_2763ad07_d765_4df3_b0c3_c0e384b0279d"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_3cc25cf6_5d42_4dae_9bbe_3437dc823cb3"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_7870b449_d762_4a30_808a_bc9aaeab83dc"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_8549cecf_6750_45a0_a161_63a1fd5debaf"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_0c68c911_24b6_4f24_82e5_071033c6c37c"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_84409def_8ece_45e2_9921_f25703fbe181"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_d750e81c_4923_4a5f_aad5_ab3189ecb870"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_f384d4a9_da95_4895_bfe2_550095d0ff7f"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_64d6d0c7_d7e6_4846_ab75_cf7c24516d17"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_c0550aab_868f_4d17_9772_b37cb8b0d965"/>
+            <rdf:Description rdf:about="http://www.pizza.com/ontologies/pizza.owl#OWLClass_cb1a5568_3aaf_4561_ac16_9049965a915c"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

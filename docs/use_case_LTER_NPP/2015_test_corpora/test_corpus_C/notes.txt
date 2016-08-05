@@ -1,0 +1,28 @@
+You need a list of all the datasets in Dataone that were
+
+1. contributed by site=SBC (ie, not ecotrends)
+2. came from pasta.
+
+
+
+run this in a browswer, then save manually.
+
+https://pasta.lternet.edu/package/search/eml?q=SBC&rows=1000
+
+maybe I wasn't patient enough for:
+curl -i -X GET https://pasta.lternet.edu/package/search/eml?q=SBC&rows=1000 > reconcile/pasta_sbcsolr.xml
+but it kept spitting the first 10 records to the screen, with rows=null. so don't know.
+
+THEN
+grep packageId pasta_contents_sbc_20140422.xml | grep  knb-lter-sbc| cut -d'>' -f2 | cut -d'<' -f1 | sort | uniq > sbc_docids.txt
+ 
+
+
+THEN:
+add these 5 on manually. they seem to not match the whole word SBC.
+knb-lter-sbc.21.15
+knb-lter-sbc.68.1
+knb-lter-sbc.69.1
+knb-lter-sbc.70.1
+knb-lter-sbc.71.1
+  

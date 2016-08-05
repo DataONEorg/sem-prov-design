@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<eml:eml xmlns:eml='eml://ecoinformatics.org/eml-2.1.0'
+         xmlns:stmml='http://www.xml-cml.org/schema/stmml-1.1'
+         xmlns:ds='eml://ecoinformatics.org/dataset-2.1.0'
+         xmlns:xs='http://www.w3.org/2001/XMLSchema'
+         xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+         xsi:schemaLocation='eml://ecoinformatics.org/eml-2.1.0 http://nis.lternet.edu/schemas/EML/eml-2.1.0/eml.xsd'
+         packageId='knb-lter-jrn.20020450.1'
+         system='knb'>
+
+<access scope="document" order="allowFirst" authSystem="knb">
+    <allow>
+    <principal>uid=JRN, o=lter, dc=ecoinformatics, dc=org</principal>
+    <permission>all</permission>
+  </allow>
+  <allow>
+    <principal>public</principal>
+    <permission>read</permission>
+  </allow>
+</access>
+<dataset>
+  <shortName>JornadaStudy_011_npp_annual_production</shortName>
+  <title>NPP Study: Annual aboveground net primary production, summary by site</title>
+  <creator>
+    <individualName>
+      <givenName>Debra</givenName>
+      <surName>Peters</surName>
+    </individualName>
+    <organizationName>Jornada LTER</organizationName>
+    <address>
+      <deliveryPoint>
+	USDA-ARS Jornada Experimental Range
+
+	P.O. Box 30003, MSC 3JER
+</deliveryPoint>
+      <city>Las Cruces</city>
+      <administrativeArea>NM</administrativeArea>
+      <postalCode>88003</postalCode>
+      <country>United States</country>
+    </address>
+    <electronicMailAddress>debpeter@nmsu.edu</electronicMailAddress>
+  </creator>
+  <metadataProvider>
+    <organizationName>The Jornada</organizationName>
+    <address>
+      <deliveryPoint>2995 Knox Street</deliveryPoint>
+      <city>Las Cruces</city>
+      <administrativeArea>NM</administrativeArea>
+      <postalCode>88003-8003</postalCode>
+      <country>US</country>
+    </address>
+    <phone phonetype="voice">575-646-4842</phone>
+    <electronicMailAddress>datamanager@jornada-vmail.nmsu.edu</electronicMailAddress>
+    <onlineUrl>http://jornada.nmsu.edu</onlineUrl>
+  </metadataProvider>
+  <pubDate>1989</pubDate>
+  <language>english</language>
+  <abstract>
+    <section>
+      <para> Summarizes mean aboveground net primary production, in g/m2/yr,
+ by year for each of 15 sites. Annual totals derived by summing
+ seasonal production values for winter (October - February),
+ spring (February - May), and fall (May - October) increments for
+ a single calendar year.
+Attention:  These data are not appropriate for estimates of percentage cover. NPP-associated percent cover measurements were developed for and are used solely to provide the best estimate of biomass production. Becuase the methodology results in measurements of overlapping subcanopy systems and canopies of adjacent individuals, NPP percent cover measurements are not an appropriate measure of actual aerial plant cover. Doing so will result in inflated numbers for the "actual" vegetative cover. 
+Attention:  Data through 2003 was replaced online per below on 9/22/2011. Analyses and results for ANPP differ from previous uses of the data from 1989-1998 (Huenneke et al., 2002) in three ways: (1) Yucca elata was removed prior to analysis because its growth form results in large errors in biomass estimates from year-to-year, (2) regressions between biomass and plant volume used an intercept equal to 0 to be consistent with a recent study in a similar system (Muldavin et al., 2008), and (3) reference harvests obtained in extreme years resulted in adjusted regression coefficents through time that reflect year-to-year variation in ANPP. These changes result in ANPP values that are smaller compared (Peters et al. submitted) with previous studies (Huenneke et al., 2002). </para>
+    </section>
+  </abstract>
+  <keywordSet>
+    <keyword>climatic response</keyword>
+    <keyword>longterm</keyword>
+    <keyword>net primary productivity</keyword>
+    <keyword>ongoing</keyword>
+    <keyword>plant</keyword>
+    <keyword>primary production</keyword>
+    <keyword>signature</keyword>
+    <keyword>vegetation dynamics</keyword>
+    <keywordThesaurus>Jornada Keywords</keywordThesaurus>
+  </keywordSet>
+  <additionalInfo>
+    <para>
+      <literalLayout> Fifteen sites (3 in each of 5 ecosystem types) were selected for
+ monitoring of NPP. Sites, abbreviations, and location summarized
+ here and on LTER site map; directions are from stone pillars /
+ gate marking entrance to Jornada Experimental Range, 6.6 mi north
+ of US Hwy 70, east of Las Cruces, on North Jornada Road:
+
+ Creosote - Caliche C-CALI From stone pillars, go 4.1 mi north
+ to South Well. Turn left, drive 3.4 mi
+ to College Ranch HQ. Turn left, drive
+ south 1.3 mi (going through gate and
+ crossing LTER transects); turn right
+ (this is 2nd right) and proceed 0.3 mi.
+ Turn left on small track; site is on
+ right (uphill) of road, 70 m from turn.
+
+ Creosote - Gravel C-GRAV From stone pillars, go 4.1 mi north
+ to South Well. Turn left, drive 3.4 mi
+ to College Ranch HQ. Turn left, drive
+ south 3.4 mi (going through gate and
+ crossing LTER transects, passing Upper
+ Trailer). Site is on left (E) of road.
+ OR - from stone pillars, turn left and
+ proceed 2.6 mi; turn right at gate and
+ go 0.6 mi along power line road, then
+ 0.4 mi along right fork. Site is on
+ right (E) of road.
+
+ Creosote - Sand C-SAND From stone pillars, go 4.1 mi north
+ to South Well. Turn left, drive 3.4 mi
+ to College Ranch HQ. Turn left, drive
+ south 1.6 mi (going through gate and
+ crossing LTER transects). Site is
+ on left (E) of road.
+
+ Grassland - Basin G-BASN From stone pillars, go 4.1 mi north
+ to South Well. Turn left, drive about
+ 1 mi; park in pull-off on left adjacent
+ to fence. Enter fence through gate;
+ site is uphill about 50 m.
+
+ Grassland - IBP G-IBPE From stone pillars, go 4.1 mi north to
+ South Well. Take 2nd left (i.e., AFTER
+ the well) and drive 8 mi (this is SW
+ boundary of Exp. Range). IBP exclosure
+ is on left of road 0.2 mi after it
+ turns north away from boundary.
+ OR - from stone pillars, go 10.2 mi
+ north to JER HQ; past shop area, turn
+ left and go 6.4 mi to West Well. Turn
+ left (S) and go 1.4 mi to exclosure.
+
+ Grassland - Summerford G-SUMM From stone pillars, go 4.1 mi
+ north to South Well. Turn left, drive
+ 3.4 mi to College Ranch HQ. Turn left,
+ drive south 1. mi (going through gate
+ and crossing LTER transects). Turn
+ right (this is 1st right), drive 0.5 mi
+ to power line road, turn left. Site is
+ 0.3 mi from turn, uphill from power
+ line at base of rocks.
+
+ Mesquite - North M-NORT From stone pillars, go 10.2 mi north to
+ JER HQ; past shop area, turn left and
+ go 2.4 mi to junction with pipe line
+ road, turn right. Proceed 0.6 mi N.
+ Park; site is located about 400 m to
+ west inside fenced exclosure.
+
+ Mesquite - Rabbit M-RABB From stone pillars, go 10.2 mi north to
+ JER HQ; past shop area, turn left and
+ go 3.4 mi to Rabbit Rain Gauge parking
+ area. Site is to north (left) of road,
+ about 75 m, inside fenced exclosure.
+
+ Mesquite - West M-WELL From stone pillars, go 10.2 mi north to
+ JER HQ; past shop area, turn left and
+ go 6.4 mi to West Well. Stay on road
+ straight past well; site is about 150 m
+ west of well, on right of road. OR -
+ from IBP grassland exclosure, drive
+ 1.4 mi north, turn left at West Well,
+ site is about 150 m from well.
+
+ Playa - College P-COLL From stone pillars, go 4.1 mi north
+ to South Well. Turn left, drive about
+ 2.5 mi to Lower Trailer (on left); park
+ there and continue on foot along road
+ to stiles over fence on right.
+ Concrete block paths lead to playa.
+ NPP grid is in western portion of
+ fenced area of playa, just east of
+ College Ranch HQ and pasture.
+
+ Playa - Small P-SMAL From stone pillars, go 4.1 mi north
+ to South Well. Turn left, drive about
+ 3.4 mi to College Ranch HQ. Proceed
+ through gate and HQ area; road jogs
+ north and then heads west again.
+ Proceed 3.8 mi from HQ; take small
+ road on left, downslope 0.4 mi
+ (through gate) to playa.
+
+ Playa - Tobosa Tank P-TOBO From stone pillars, drive 10.2 mi north
+ to JER HQ. Jog to right past shop,
+ continue north 3.1 mi. Site is to
+ right of road in fenced portion of
+ large depression.
+
+ Tarbush - East T-EAST From stone pillars, drive 2.6 mi north.
+ Site is on right of road (E), in
+ fenced area.
+
+ Tarbush - Taylor T-TAYL From stone pillars, go 4.1 mi north.
+ Turn right just before South Well.
+ Take jog to left (N) across cattle
+ guard, proceed east 2.3 mi. Site is
+ on right (S) of road about 20 m in
+ fenced area.
+
+ Tarbush - West T-WEST From stone pillars, go 2.4 mi north.
+ Site is on left (W) of road, in
+ fenced area.
+
+ Each site is a grid of 49 quadrats, each 1 m x 1 m, located
+ 10 m from one another in a 7 x 7 square (quadrats make up
+ a 60 m x 60 m square with 10 m buffer zones around boundary).
+ Exception is P-COLL, where limited space forced us to use
+ a 3 x 16 arrangement (48 quadrats).</literalLayout>
+    </para>
+  </additionalInfo>
+  <intellectualRights>
+    <section>
+      <title>Data Policies</title>
+      <para>
+        <literalLayout>Objectives:
+The Jornada Basin LTER Information Management System (JIMS) provides protocol and services for data collection, verification, organization, archives, and distribution in accordance with recommendations and guidelines developed by the LTER Information Managers Committee (http://www.lternet.edu/data/netpolicy.html).
+
+Disclaimer:
+While substantial efforts are made to ensure the accuracy of data and documentation, complete accuracy of data sets cannot be guaranteed. All data are made available "as is". The Jornada Basin LTER shall not be liable for damages resulting from any use or misinterpretation of data sets.
+
+Quality Assurance Policy:
+Data managers interact with researchers during the entire scientific process--from the initial planning of sampling designs and field data collection to archiving and distribution of data. The goal of data management is to build and maintain an archive of Jornada Basin LTER data files that are fully documented, error free, and organized in useful ways. Our protocol for data collection and processing seeks maximum interaction between researchers and data management personnel to avoid confusion and potential loss of data or problems with integrity of data; e.g., identification of historical site treatments that may impact a proposed study or incomplete data set variable descriptions. Site and Data Manager involvement begins during the Project Design phase with the completion of the Jornada Notification of Research form by the researcher prior to the start of work; this alerts both Site and Data Manager to the new study and potential LTER data sets. Upon initiation of a new study, the researcher completes Project Documentation that provides the second level of "metadata" documentation.
+In the Data Collection phase, the data manager helps researchers design field and laboratory data sheets that facilitate data entry and analysis. Prior to JIMS data entry the investigator completes Data Set Documentation to provide the metadata that fully describe the data set. Both Project and Data set documentation are provided with the data set when it is requested or obtained from our Web site. JIMS data entry programs error-check and verify data as they are entered. Computer files are subjected to further verification by graphing and/or error-checking programs, and/or examination by field investigators. Final quality assurance of the data rests with the investigator who submits data for inclusion in the Data Management System. Direct communication with the Site Manager, or through a collaborating JRN P.I., is used to encourage the timely submission of documentation and of data by researchers.
+
+Error-checked data files are stored with associated documentation files on the file server. Archived data files are maintained in ASCII format on 30-yr magneto-optical (MO) disks, portable hard drives, CD-R media, and DVD media to guard against loss of data access that can result from changing technology. This may also include proprietary binary format files to facilitate recovery of working versions. Image data are archived on 8mm tape. Routine tape data backups of the file server are done daily, weekly, and monthly. One set of off-site copies are maintained elsewhere on the NMSU campus of routine backup tapes, MO disks, CD disks, and DVD disks with a second set of MO, CD and DVD disks maintained off-campus in case of a catastrophe on campus. The final responsibility for quality assurance (both in data and documentation content) rests with the principal investigator who submits the data for inclusion in the Jornada Basin LTER Information Management System. To facilitate quality assurance, the data manag ement staff will provide copies of data and documentation submitted by a principal investigator to that investigator upon request.
+
+The final responsibility for quality assurance (both in data and documentation content) rests with the principal investigator who submits the data for inclusion in the Jornada Basin LTER Information Management System. To facilitate quality assurance, the data management staff will provide copies of data and documentation submitted by a principal investigator to that investigator upon request.
+
+Policy on Submission of data:
+Data submission into JIMS is expected from LTER researchers, LTER collaborators, and their graduate students where data and information is derived from publicly funded research in the U.S. LTER Network, totally or partially from LTER funds from NSF, Institutional Cost-Share, or Partner Agency or Institution where a formal memorandum of understanding with LTER has been established. Other Jornada Basin researchers are encouraged to submit their documented data for inclusion within JIMS to provide them with an archived backup, ensure its longevity, and provide online access to encourage synthesis efforts. Minimally, for non-LTER associated researchers, we request that publications be provided of research conducted on the Jornada Basin.
+Initial documentation for a data set must be submitted to the Jornada Basin LTER data manager within 90 days of initiation of data collection. Documentation forms are available at http://jornada-www.nmsu.edu/site/dm/readme.php . These consist of Project Abstract and Data Set and Attribute documentation forms, which include objectives of the study, methods, as well as format and content of the data. All data collected during a calendar year should be submitted to the Jornada Basin LTER data manager prior to July first of the following year. First time data submissions must be submitted with updated standard Jornada Basin LTER forms previously submitted.
+
+Data Access Policy:
+Data will be made publicly available no later than 2 years after submission of the data unless an earlier date is specified by the principal investigator. In the event that an extension of the 2 year period is necessary, the principal investigator may petition the Jornada Basin LTER Executive Committee for a longer protected period. Graduate student research data will be available online after degree completion and they have the opportunity to publish their research.
+
+Policies for re-use, distribution, or the production of derivatives:
+Data re-use, distribution and production of derivative products are governed by the LTER Network data policies (http://www.lternet.edu/data/netpolicy.html) in the spirit of having the potential to increase communication, collaboration and synthesis within and among disciplines. Appropriate citation, acknowledgement, notification and collaboration are outlined and recommended. No commercial redistribution of data and derived products are allowed.
+
+Data Acknowledgment Policy:
+Please send notification to the Information Manager and Responsible Investigator(s) of the data sets you are downloading and your intended use.
+Individuals and institutions utilizing data from the Jornada Basin LTER database are requested to place the following acknowledgment in any publication in which these data are mentioned:
+Data sets were provided by the Jornada Basin Long-Term Ecological Research (LTER) project. Funding for these data was provided by the U.S. National Science Foundation (Grant DEB-0618210).
+
+Please send 1 copy of any publication that cites Jornada Basin LTER data to:
+     John P. Anderson
+     Jornada Experimental Range
+     P.O. Box 30003, MSC 3JER
+     New Mexico State University
+     Las Cruces, NM 88003-0003</literalLayout>
+      </para>
+    </section>
+  </intellectualRights>
+  <distribution>
+    <online>
+      <url function="download">http://jornada-data.nmsu.edu/files/dataset_packages/JornadaStudy_011_npp_annual_production.zip</url>
+    </online>
+  </distribution>
+  <coverage>
+    <temporalCoverage>
+      <rangeOfDates>
+        <beginDate>
+          <calendarDate>1990-01-01</calendarDate>
+        </beginDate>
+        <endDate>
+          <calendarDate>2008-12-31</calendarDate>
+        </endDate>
+      </rangeOfDates>
+    </temporalCoverage>
+  </coverage>
+  <maintenance>
+    <description>
+      <para>
+        <literalLayout> mm/dd/yyyy - Date of Comment
+ Int - Initials of person making Comment
+ LFH = Laura F. Huenneke
+ JPA = John P. Anderson
+ JL = Jim Lenz
+ KR = Ken Ramsey
+ Changes/Updates - List any changes made to document
+
+ mm/dd/yyyy Int Changes/Updates
+ ---------- --- -----------------------------------------------
+ 06/23/1997 LFH Form completed by investigator
+ 01/14/1998 JPA Documentation transferred to new form
+ 12/01/1998 JPA Comment added
+ 08/18/1999 JPA Comment added
+ 06/13/2002 JL Added Dataset ID and Project ID sections.
+ 07/15/2004 JPA Updated Attributes and Other Files sections. See
+ Comments section.
+ 08/30/2004 KR Changed format for Attributes and Associated
+ Files section.
+ Moved Dataset and Project IDs to top of form.
+ Removed Missing/Questionable data section and
+ incorporated into Attributes section.
+ 05/06/2005 KR Added NPP Regression compressed file to
+ Associated Files section.
+ Updated Associated Files section.
+ 01/30/2006 KR Added start column position numbers for all attributes.
+ 11/19/2007 JPA Updated Responsible Investigator.
+ 05/09/2011 KR Updated Attributes Measured section to reflect combined data file
+ and added comment about changes in how biomass is calculated.
+ 09/21/2011 KR Changed attibute format for anpp within Attributes Measured section
+ from I4 to F5.1 to reflect the data file.
+ 09/22/2011 KR Changed data title from "Annual aboveground net primary production, summary"
+ to "NPP Study: Annual aboveground net primary production, summary by site"
+ per Deb Peters. Added "(NPP Study)" to project title
+ to associate dataset title with project title.
+ 11/17/2011 JPA Changed responsible investigator for contact person
+ per Deb Peters</literalLayout>
+      </para>
+    </description>
+  </maintenance>
+  <contact>
+    <individualName>
+      <givenName>Data</givenName>
+      <surName>Manager</surName>
+    </individualName>
+    <organizationName>Jornada LTER</organizationName>
+    <address>
+      <deliveryPoint>PO Box 30003, MSC 3JER</deliveryPoint>
+      <city>Las Cruces</city>
+      <administrativeArea>NM</administrativeArea>
+      <postalCode>88003</postalCode>
+      <country>US</country>
+    </address>
+    <electronicMailAddress>datamanager@jornada-vmail.nmsu.edu</electronicMailAddress>
+  </contact>
+  <pubPlace>The Jornada</pubPlace>
+  <methods>
+    <methodStep>
+      <description>
+        <section>
+          <para>
+            <literalLayout>field data sheets</literalLayout>
+          </para>
+        </section>
+        <section>
+          <para>
+            <literalLayout> Field sampling described in project documentation. Analysis of
+ aboveground biomass by species described in documentation for
+ plant biomass datasets (NQBIOxxy DAT). Productivity for an
+ interval estimated as described in documentation for project;
+ that is, all positive increments in biomass for a species in
+ a quadrat for an interval are summed to total productivity
+ for that square meter. Estimated mean productivity summed for
+ 3 increments in a calendar year (xx winter, xx spring, and xx
+ summer) to yield estimated annual production, October -
+ October.</literalLayout>
+          </para>
+        </section>
+      </description>
+    </methodStep>
+    <qualityControl>
+      <description>
+        <para>
+          <literalLayout> History of Responsible investigator(s):
+ Debra Peters (2004 - ongoing)
+ Laura F. Huenneke (1989 - 2003)
+ *******************************
+
+
+ 12/01/1998 This summary data set was recalculated using corrected data
+ by Laura Huenneke and replaced 1 Dec 1998 by J. Anderson as
+ per LH.
+ 08/18/1999 This summary data set was recalculated using corrected data
+ by Laura Huenneke and replaced 18 Aug 1999 by J. Anderson as
+ per LH.
+ 07/15/2004 Attribute section rewritten to reflect transformation of
+ table data to columnar data. Table structured data can
+ now be found in AP_TABLE.DSD.
+ 05/09/2011 Analyses and results for ANPP differ from previous uses of the data from
+ 1989-1998 (Huenneke et al., 2002) in three ways: (1) Yucca elata was removed
+ prior to analysis because its growth form results in large errors in biomass
+ estimates from year-to-year, (2) regressions between biomass and plant
+ volume used an intercept equal to 0 to be consistent with a recent study in
+ a similar system (Muldavin et al., 2008), and (3) reference harvests
+ obtained in extreme years resulted in adjusted regression coefficents
+ through time that reflect year-to-year variation in ANPP. These changes
+ result in ANPP values that are smaller compared (Peters et al. submitted)
+ with previous studies (Huenneke et al., 2002).</literalLayout>
+        </para>
+      </description>
+    </qualityControl>
+  </methods>
+  <project>
+    <title>Jornada LTER</title>
+    <personnel>
+      <individualName>
+        <salutation>Dr.</salutation>
+        <givenName>Debra</givenName>
+        <surName>Peters</surName>
+      </individualName>
+      <organizationName>Jornada LTER</organizationName>
+      <address>
+        <deliveryPoint>USDA-ARS Jornada Experimental Range</deliveryPoint>
+        <deliveryPoint>P.O. Box 30003, MSC 3JER</deliveryPoint>
+        <deliveryPoint>New Mexico State University</deliveryPoint>
+        <city>Las Cruces</city>
+        <administrativeArea>NM</administrativeArea>
+        <postalCode>88003-8003</postalCode>
+        <country>US</country>
+      </address>
+      <phone phonetype="voice">575-646-2777</phone>
+      <phone phonetype="fax">575-646-5889</phone>
+      <electronicMailAddress>debpeter@nmsu.edu</electronicMailAddress>
+      <role>Lead Principal Investigator</role>
+    </personnel>
+    <personnel>
+      <individualName>
+        <givenName>Data</givenName>
+        <surName>Manager</surName>
+      </individualName>
+      <organizationName>Jornada LTER</organizationName>
+      <address>
+        <deliveryPoint>USDA-ARS Jornada Experimental Range</deliveryPoint>
+        <deliveryPoint>P.O. Box 30003, MSC 3JER</deliveryPoint>
+        <deliveryPoint>New Mexico State University</deliveryPoint>
+        <city>Las Cruces</city>
+        <administrativeArea>NM</administrativeArea>
+        <postalCode>88003-8003</postalCode>
+        <country>US</country>
+      </address>
+      <electronicMailAddress>datamanager@jornada-vmail.nmsu.edu</electronicMailAddress>
+      <role>Information Manager</role>
+    </personnel>
+    <abstract>
+      <para>
+        <literalLayout>The Jornada Basin Long Term Ecological Research program, in collaboration with 
+                         the USDA ARS Jornada Experimental Range, studies the causes and consequences of 
+                         desertification: the broad scale expansion of woody plants into grasslands that 
+                         results in more "desert like" conditions. We are interested in spatial and 
+                         temporal variation in desertification dynamics, and how historic legacies, the 
+                         geomorphic template, transport vectors (wind, water, animals), and environmental 
+                         drivers (climate, land use, disturbance) interact with the patch structure of the 
+                         vegetation to determine past, present, and future ecosystem dynamics across 
+                         scales.
+                        
+                         Our study site is located in the northern Chihuahuan Desert, approximately 25 km 
+                         northeast of Las Cruces, New Mexico, USA (+32.5 N, -106.8 W, elevation 1188 m). 
+                         Annual precipitation is 24 cm and maximum temperatures average 13 C in January 
+                         and 36 C in June. Our study site includes the 78,000 ha Jornada Experimental 
+                         Range operated by the USDA Agricultural Research Service, and the 22,000 ha 
+                         Chihuahuan Desert Rangeland Research Center (CDRRC) operated by New Mexico State 
+                         University. The Jornada Basin LTER project was established in 1982, and is 
+                         administered by New Mexico State University. This site is a member of the LTER 
+                         Network, one of  more than 25 long term sites funded by the U.S. National Science 
+                         Foundation.</literalLayout>
+      </para>
+    </abstract>
+    <funding>
+      <para>
+        <literalLayout>U.S. National Science Foundation (Grant DEB-0618210)</literalLayout>
+      </para>
+    </funding>
+  </project>
+  <dataTable>
+    <entityName>JornadaStudy_011_npp_annual_production_data.csv</entityName>
+    <entityDescription>Data file for the Jornada NPP Annual Production dataset
+</entityDescription>
+    <physical>
+      <objectName>JornadaStudy_011_npp_annual_production_data.csv</objectName>
+      <dataFormat>
+        <textFormat>
+          <numHeaderLines>1</numHeaderLines>
+          <numFooterLines>0</numFooterLines>
+          <recordDelimiter>\r\n</recordDelimiter>
+          <attributeOrientation>column</attributeOrientation>
+          <simpleDelimited>
+            <fieldDelimiter>,</fieldDelimiter>
+            <quoteCharacter>"</quoteCharacter>
+          </simpleDelimited>
+        </textFormat>
+      </dataFormat>
+      <distribution>
+        <online>
+          <url function="download">file:///home/james/JornadaStudy_011_npp_annual_production_data.csv</url>
+        </online>
+      </distribution>
+    </physical>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Location: Our study site is located in the northern Chihuahuan Desert, approximately 25 km northeast of Las Cruces, New Mexico, USA (+32.5 N, -106.8 W, elevation 1188 m). Annual precipitation is 24 cm and maximum temperatures average 13 C in January and 36 C in June. Our study site includes the 78,000 ha Jornada Experimental Range operated by the USDA Agricultural Research Service (http://jornada.nmsu.edu/), and the 22,000 ha Chihuahuan Desert Rangeland Research Center (CDRRC, http://chihuahuansc.nmsu.edu/) operated by New Mexico State University (http://www.nmsu.edu/).
+</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-106.73985</westBoundingCoordinate>
+          <eastBoundingCoordinate>-106.73985</eastBoundingCoordinate>
+          <northBoundingCoordinate>32.61785</northBoundingCoordinate>
+          <southBoundingCoordinate>32.61785</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>1990-01-01</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2008-12-31</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <attributeList>
+      <attribute>
+        <attributeName>year</attributeName>
+        <attributeLabel>variable_jornada_npp_annual_production_year</attributeLabel>
+        <attributeDefinition>year of summed values
+</attributeDefinition>
+        <storageType>date</storageType>
+        <measurementScale>
+          <dateTime>
+            <formatString>YYYY</formatString>
+          </dateTime>
+        </measurementScale>
+      </attribute>
+      <attribute>
+        <attributeName>zone</attributeName>
+        <attributeLabel>variable_jornada_npp_annual_production_zone</attributeLabel>
+        <attributeDefinition>vegetation zone (C=creosotebush, G=grassland, M=mesquite dune, P=playa, T=tarbush)</attributeDefinition>
+        <storageType>string</storageType>
+        <measurementScale>
+          <nominal>
+            <nonNumericDomain>
+              <enumeratedDomain>
+                <codeDefinition>
+                  <code>C</code>
+                  <definition>creosotebush</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>G</code>
+                  <definition>grassland</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>M</code>
+                  <definition>mesquite dune</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>P</code>
+                  <definition>playa</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>T</code>
+                  <definition>tarbush</definition>
+                </codeDefinition>
+              </enumeratedDomain>
+            </nonNumericDomain>
+          </nominal>
+        </measurementScale>
+      </attribute>
+      <attribute>
+        <attributeName>site</attributeName>
+        <attributeLabel>variable_jornada_npp_annual_production_site</attributeLabel>
+        <attributeDefinition>research site (CALI=caliche, GRAV=gravel, SAND=sand, BASN=basin, IBPE=IBP exclosure, SUMM=Mt. Summerford, NORT=north, RABB=rabbit, WELL=well, COLL=college, SMAL=small, TOBO=tobosa tank, EAST=east, TAYL=taylor, WEST=west)
+</attributeDefinition>
+        <storageType>string</storageType>
+        <measurementScale>
+          <nominal>
+            <nonNumericDomain>
+              <enumeratedDomain>
+                <codeDefinition>
+                  <code>CALI</code>
+                  <definition>Caliche creosotebush site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>GRAV</code>
+                  <definition>Gravel creosotebush site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>SAND</code>
+                  <definition>Sand creosotebush site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>BASN</code>
+                  <definition>Basin grassland site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>IBPE</code>
+                  <definition>IBP exclosure grassland site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>SUMM</code>
+                  <definition>Mt. Summerford grassland site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>NORT</code>
+                  <definition>North mesquite site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>RABB</code>
+                  <definition>Rabbit mesquite site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>WELL</code>
+                  <definition>Well mesquite site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>COLL</code>
+                  <definition>College playa site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>SMAL</code>
+                  <definition> Small playa site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>TOBO</code>
+                  <definition>Tobosa tank playa site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>EAST</code>
+                  <definition>East tarbush site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>TAYL</code>
+                  <definition>Taylor tarbush site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>WEST</code>
+                  <definition>West tarbush site</definition>
+                </codeDefinition>
+              </enumeratedDomain>
+            </nonNumericDomain>
+          </nominal>
+        </measurementScale>
+      </attribute>
+      <attribute>
+        <attributeName>annual_npp</attributeName>
+        <attributeLabel>variable_jornada_npp_annual_production_annual_npp</attributeLabel>
+        <attributeDefinition>Annual aboveground net primary production, averaged for all quadrats in site (grams/square meter/year)</attributeDefinition>
+        <measurementScale>
+          <ratio>
+            <unit>
+              <customUnit>gramPerMeterSquaredPerYear</customUnit>
+            </unit>
+            <precision>0.1</precision>
+            <numericDomain>
+              <numberType>real</numberType>
+            </numericDomain>
+          </ratio>
+        </measurementScale>
+      </attribute>
+      <attribute>
+        <attributeName>keyfield</attributeName>
+        <attributeLabel>variable_jornada_npp_annual_production_keyfield</attributeLabel>
+        <attributeDefinition>key field used to relate to associated geographic features</attributeDefinition>
+        <storageType>string</storageType>
+        <measurementScale>
+          <nominal>
+            <nonNumericDomain>
+              <enumeratedDomain>
+                <codeDefinition>
+                  <code>CCALI</code>
+                  <definition>Caliche creosotebush site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>CGRAV</code>
+                  <definition>Gravel creosotebush site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>CSAND</code>
+                  <definition>Sand creosotebush site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>GBASN</code>
+                  <definition>Basin grassland site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>GIBPE</code>
+                  <definition>IBP exclosure grassland site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>GSUMM</code>
+                  <definition>Mt. Summerford grassland site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>MNORT</code>
+                  <definition>North mesquite site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>MRABB</code>
+                  <definition>Rabbit mesquite site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>MWELL</code>
+                  <definition>Well mesquite site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>PCOLL</code>
+                  <definition>College playa site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>PSMAL</code>
+                  <definition> Small playa site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>PTOBO</code>
+                  <definition>Tobosa tank playa site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>TEAST</code>
+                  <definition>East tarbush site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>TTAYL</code>
+                  <definition>Taylor tarbush site</definition>
+                </codeDefinition>
+                <codeDefinition>
+                  <code>TWEST</code>
+                  <definition>West tarbush site</definition>
+                </codeDefinition>
+              </enumeratedDomain>
+            </nonNumericDomain>
+          </nominal>
+        </measurementScale>
+      </attribute>
+      <attribute>
+        <attributeName>datasetid</attributeName>
+        <attributeLabel>variable_jornada_npp_annual_production_datasetid</attributeLabel>
+        <attributeDefinition>dataset identifier</attributeDefinition>
+        <storageType>string</storageType>
+        <measurementScale>
+          <nominal>
+            <nonNumericDomain>
+              <enumeratedDomain>
+                <codeDefinition>
+                  <code>DSL2002045</code>
+                  <definition>Jornada NPP Annual Production dataset identifier</definition>
+                </codeDefinition>
+              </enumeratedDomain>
+            </nonNumericDomain>
+          </nominal>
+        </measurementScale>
+      </attribute>
+      <attribute>
+        <attributeName>POINT_X</attributeName>
+        <attributeLabel>variable_jornada_npp_annual_production_point_x</attributeLabel>
+        <attributeDefinition>x-coordinate GCS (geographic coordinate system) WGS 1984 (datum) in decimal degrees
+</attributeDefinition>
+        <storageType>string</storageType>
+        <measurementScale>
+          <nominal>
+            <nonNumericDomain>
+              <textDomain>
+                <definition>x-coordinate GCS (geographic coordinate system) WGS 1984 (datum) in decimal degrees
+</definition>
+              </textDomain>
+            </nonNumericDomain>
+          </nominal>
+        </measurementScale>
+      </attribute>
+      <attribute>
+        <attributeName>POINT_Y</attributeName>
+        <attributeLabel>variable_jornada_npp_annual_production_point_y</attributeLabel>
+        <attributeDefinition>y-coordinate GCS (geographic coordinate system) WGS 1984 (datum) in decimal degrees
+</attributeDefinition>
+        <storageType>string</storageType>
+        <measurementScale>
+          <nominal>
+            <nonNumericDomain>
+              <textDomain>
+                <definition>y-coordinate GCS (geographic coordinate system) WGS 1984 (datum) in decimal degrees
+</definition>
+              </textDomain>
+            </nonNumericDomain>
+          </nominal>
+        </measurementScale>
+      </attribute>
+    </attributeList>
+  </dataTable>
+</dataset>
+<additionalMetadata>
+  <metadata>
+    <stmml:unitList xsi:schemaLocation="http://www.xml-cml.org/schema/stmml-1.1 http://nis.lternet.edu/schemas/EML/eml-2.1.0/stmml.xsd">
+<stmml:unit id="gramPerMeterSquaredPerYear" name="gramPerMeterSquaredPerYear" abbreviation="g/m&#xB2;/yr" unitType="arealMassDensityRate" parentSI="kilogramsPerMeterSquaredPerSecond" multiplierToSI="0.0000000000317098" constantToSI="0"><stmml:description>grams Per Meter Squared Per Year</stmml:description></stmml:unit>
+
+    </stmml:unitList>
+  </metadata>
+</additionalMetadata>
+</eml:eml>

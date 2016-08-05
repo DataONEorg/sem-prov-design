@@ -1,0 +1,283 @@
+
+from AHM Notes
+
+
+what problems have you solved for the community and what exactly is your plan?
+    what are we doing to accelerate the science? 
+    with some things more fleshed out than others
+    (examples planned are mstmip prov, and lter discovery)
+	Bill: show actual examples of how it has already helped science and not just "it WILL/CAN help science"
+----------------------------------------------------------------------
+	* Use cases
+		* Finalized Provenance Use cases, consensus on product functions and features
+		* Finalized Semantic search use cases, consensus on product functions and features
+		* Review with MSTMIP and LTERNPP? teams on whether use cases meet needs
+	* Web UI design mockup (possibly wireframe) for integrated Prov and Semantics browse/search/display
+	* Detailed development roadmap through Site review in 17 months
+		* Stories and tickets for all development activities, with scheduling and assignments
+		* More detailed for first 11 months
+
+
+Block 3: Provenance Use Cases Discussion
+ 
+
+BL: Discussion about possibility to have 2 types of prov information:
+    - data derivation
+    - workflow
+Steve A.: internal versus external provenance annotations, which are publicly available?
+
+Christopher S: 
+    - it's about transparency, trust in the data product
+    - key thing is transparency
+Debbie:
+    - transparency important
+    - but also integrity critical, and for this versioning issues need to be addressed (version mix-up possible)
+    - example: "you're saying you use V1.0, but looking at the provenance I see you're using V0.99 ... "
+    - reuse of scripts who want to leverage what others have done
+    - wants a way to pick up where she left off for a while with her work by using provenance
+
+
+
+Block 4: Semantics Use Cases Discussion
+--------------------------------------------------------------
+ontology for carbon/productivity related terms
+
+
+
+- New use cases:
+    - XXX: ability to annotate models against the concepts that are incorporated into models
+        - required inputs
+        - possible outputs
+        - model structure: (mstmip)
+	   	        - what algorithm is used to represent photosynthesis?
+			  - light use efficiency, enzyme kinetics, or other...
+			- what parts of a model were 'active' during a given run?
+				- differentiates what is possible from what is used?
+      
+  - XXX: ensure ontology development supports 3 areas:
+	     - Priority 3: driver data inputs 
+		- Priority 1: model outputs (most important? depends on which community). Yaxing: among model output variables, I feel ontology that supports carbon pools is important. 
+		- Priority 2: ground truth data ("reference" datasets, research observations)
+  - 
+ 
+  - XXX: experiment on discoverability
+      - compare annotated versus non-annotated discoverability
+
+ 
+	
+
+
+
+Block 6: Semantics UI Review
+------------------------------------
+Two UI questions to answer:
+	 - How to browse and search annotations
+	- How to generate annotations
+	
+MsTMIP variables mapping(4th part of this document): https://docs.google.com/document/d/1Hs3k0RrfUoQkxKEJBJtU9trFdqC-NdhtwFKSz5wcHXM/edit#
+wikipedia/dbpedia mapping for MsTMIP variables: https://docs.google.com/document/d/18tKNwyonw2sFzbFE0BzPt8WtPA1gVS6EPaGYxeh9dd4/edit#heading=h.fj17u9rk42u
+
+
+Annotation approach -- which do we pursue?
+-----------------------------------------------------------
+- A. Manual annotation
+- B. Automated annotation
+    - coarse grained matching based on text/concept matching and ranking
+    - use structured metadata for finding the closest matches
+- C. Assisted annotation
+	- take, automated, then ask data owner if annotations are correct and if they belong to X ontology
+	- flag unconfirmed annotations as unverified
+	
+Xixi - humans need to be involved somehow - semi-automatic annotations
+
+Annotation experiment
+------------------------------
+- Compare precision and recall for: no annotation (current text search), manual annotations, semi-automated annotation, fully automated annotation 
+    - students create annotations, possibly with the assistance of a python script that builds the structure
+    - automated: based on text match and unit matching algorithm
+    - semi-automated: auto with additional choice/verification by users
+    
+    Only using the attribute/units metadata to automatically annotate concepts based on string matches with concepts in  ontologies; NOT using the other metadata which can be misleading (although might be some exceptions)
+    
+Products/Deliverables
+1. Automated matching algorithm that:
+    - takes attribute name, label, description, units, etc as input
+    - takes ontology with concept name, description, and units/dimensions as input
+    - produces probability score that a given ontology concept matches the attribute
+2. Web UI that modifies a dataone search/display portal to:
+    - shows annotations in attribute descriptions
+    - allows user to choose which concepts are correct/incorrect
+	    - on the Metadata details view: With a dropdown menu next to attribute definition to select an annotation
+	- automated/assumed annotations can be verified by a button
+    - also create UI ability to propogate annotation to other data objects of the same type
+        - this need not be a web UI, may be more effective as a function call in e.g., Matlab
+            - applyAnnotation(sourceObject, targetObjectsToBeAnnotated[])
+    - question: how to deal with:
+        - multiple annotations? (yes) from 3rd parties? (yes)  from Creator?
+            - we support 3rd party annotations
+            - Creator can bless annotation as authoritative
+        - conflicting annotations? allow both?
+        - migrating annotations to new data versions
+            - if annotations are per-revision, then we lose annotations as people revise data sets
+            - new versions get annotated by the automator, and consider the old version annotation, but these are no longer blessed
+        
+
+annotation levels: 3 proposed
+	automated
+	3rd-party
+	authoritative (owner), based on ACL
+the owner can promote an automated or 3rd-party to authoritative, 
+the owner can demote (remove?) an annotation
+
+for new revisions:
+if dataset was annotated before, rerun automated-annotator at submit on 'new' columns. entire annotation becomes non-authoritative
+
+
+Should we consider a separate "type" for scripts/models, as opposed to just "Data"?  Possibly also "Figures"-- so can search packages for:  data, models/scripts, figures, etc.
+MPS-- there is a rich typology of information artifacts in the "Information Artifact Ontology", or google "iao.owl"
+
+
+Question:
+    - Do we generate taxonomy of model types and/or model structure/algorithms
+    - If so, do we support annotations against these models for model inputs/outputs/structure
+    - Answer: this would be valuable, but difficult to get people to actually document/annotate them
+    
+    Question added later (margaret): are annotations regular enough that it would be feasable to create a template that is easy for data providers to fill in with a script and submit along with a dataset? this would be most useful for new revisions.
+    
+:
+	Bill: Use the DataONE newsletter to clarify our vision of our product, outreach to the DataONE community
+	
+	MATLAB & R initial targets for language agnostic approaches to documenting provenance.  MPS: also add SAS, as our 2nd LTER Use case on NPP has many users with SAS scripts (according to Margaret).  SAS already produces excellent provenance trace records that can be harvested into more standard PROV syntax.
+	
+usability (Susie):
+short-term feedback from standing group of scientists (not us) "validated learning"
+make sure needs are clearly delineated. 
+So we can demonstrate that what we are doing is what scientists have directly told us they want. "We did X way because we were told by our users they want it X way" (example from discussions at AHM: vertical vs. horizontal orientation of the provenance browser/graph.)
+
+2 components - usability for the group we designed for ("proof of concept"), plus a list of needs for a broader group.
+lightweight, quick response = product improvement, not research. 
+broader assessment = research = human subjects. needs more time (at least 2 months)
+
+
+
+semantics:
+    biggest challenge will be correct annotations. manual annotaters sometimes get confused by diverse terms. automated can do lots of datasets, but results need to be checked.
+    Bill: Do we have a group of scientists to use as an example, similar to msTMIP with prov? At the 18 months milestone we will need to demonstrate that a specific set of people have benefited from our semantic work - so who will that be?
+
+Matt's 3:
+    1) mechanism during data upload for semantically marked-up data (& discussed at length earlier, improved mechanisms for capturing [documenting & visualizing] provenance, also during the same data upload session) 
+    2) search engine that ties concepts to measurement variables through an improved web UI
+	   need to search not only for kw's but also to enable semantic searches tied to measurement variable
+	 types and mapped to knowledge models
+3) an indexing system that pulls in annotations that tie concepts from the knowledge models to data sets & other domains within that same and linked to other related knowledge networks    (this part may be the biggest challenge because it may be hard to uniquely map a variable to a knowledge type, so this becomes a usability challenge to annotate data sets quickly & accurately)
+	plans to address (3) are to develop (3a) an automated 1st pass, & (3b) build a web UI for data set owners and other experts to edit, flag, etc. to improve the accuracy of annotations, and thereby improve data discovery
+	this approach has the advantage of immediately scaling up to 1000's of data sets & enables oversight by real experts with domain-specific knowledge 
+	
+	
+Ben: a significant set of challenges exists across the broader community about what the concepts of semantics & provenance mean. can we have a webinar to explain it? (ask Carly)
+
+Bill: provenance is an easier sell to the community, but semantics perhaps less so. Q - what would a success story look for in each of these? It is obvious for the former but less so for the latter.
+from deborah:  i thought we planned to have some semantic elements within the provenance use case.  i thought that was one reason why we were having the semantics postdoc do the mapping work in the mstimip setting.  are we really just focusing on provenance alone now in this mstmip setting?  if so, we should have xixi and ben l (at least his time on provenance) focus more on margaret's use case to have separate demos.  let me know if i am missing something by not hearing a lot of the discussion though.
+
+Matt: the main sell is the promise of semantics-enabled searches for data discovery {and also data "discoverability", which potentially benefits the data owner}. One example is Scott Collins's efforts to find data on primary production, and other similar use-cases from the LTER's.  The hypothesis is that semantics-enabled searches (especially using the new measurement semantics) within knowledge networks will improve data discovery and re-use.  And, it would be great to translate the template for this set of adaptive design elements to other research questions, such as nutrient exchange, in anticipation of future data discovery challenges.But timing is tricky. ideally, we have the knowledge model and annotations BEFORE they go looking for the data.
+
+
+
+Dates for potential reviews/demos/feedback
+-----------------------------------------------------------
+2015 January MsTMIP meeting
+2015 May LTER Science council meeting, NPP. Harvard Forest MA (?? possibly a demo or promo?)
+2015 July - DataONE Users Group meeting
+2015 September LTER All scientists meeting, Estes Park CO (session to approve/nitpick annotations, etc - margaret)
+2015 October - Should be done with most work on Sem & Prov to give 6-month time to prepare for review
+2016 April 1 - NSF review
+
+Bob: Maybe send someone from DataONE to Flagstaff to work with the mstmip scientsits for a week to watch how they work, havethem test wireframes or prototypes, etc. - Make sure that the tools actually work well for that specfiic set of scientists
+
+Carly (outreach):
+    - After we have a product ready for production, make screencasts showing how to use these tools
+    - Make videos of people like mstmip with testomonies and interviews about how their work has been made easier becaus eof these sem & prov tools or their NEED for these kind of tools
+	
+Thursday Oct 2 Sem/Prov deliverables/products/roadmap
+-----------------------------------------------------------------------------
+
+Bertram and Paolo: overview inline syntax proposal
+    - [[ CalculateBMI do foo...    ]]
+    - def function CalculateBMI { do foo ... }
+    - Ben: something like Sweave, knitr; Mark-- was thinking more like YAML for simple workflow diagram creation out of code markup
+    
+- Provenance
+    - Product: ProvDesign - Formalized Use Cases and mockups
+	    - Lauren (mockups): Oct 2014
+    - TestCases: Example data and script collection
+          - TODO: Get representative examples of R, Matlab, and Python scripts from Christopher, Debbie, Yaxing, etc.
+          - TODO: Get representative examples of data (netCDF, .mat, etc.)
+          - Oct 2014
+    - Product: Prov document syntax(es) for storage on MNs
+        - Dec 2014
+    - Product: Prov indexer/query API (built on existing query API)
+        - Possible upgrade to Solr 4? if Solr is used as indexer
+        - Dec 2014
+    - Product: Prov browsing web UI
+         - Feature: Prov display of individual data objects
+         - Feature: Prov browser on the data package level
+         - Lauren: Jan 2015
+    - Product: Design API and Language independent comment syntax for provenance markup
+	    - Function API for toolbox
+	    - Comment language
+	    - Nov 2014
+    - Product: Matlab prov toolbox for prov capture, storage, publication
+	    - start Dec 2014, end Feb 2015
+
+- Semantics
+    - Product: Design Use cases and mockups
+        - Xixi, Ben, Matt: Oct 2014
+    - Product: TestCases: Example query collection
+        - Margaret, Matt: Oct 2014
+    - Product: knowledge model of ecological carbon cycle concepts
+        - general enough to cover semantic needs of both MsTMIP and LTER/ANPP use cases
+         -  Mark, Margaret: Nov 2014: 45 mstmip output vars, Jan 2015: LTER methods (simple, typing)
+    - Product: Ontology repository
+        - either adopt (e.g., BioPortal) or possibly productize another (e.g., ESOR)
+        - Ben Dec 2014
+    - Product: Annotation model and syntax
+        - RDFS of the model
+        - Feature: ability to specify agent making the assertion and their authority level
+        - Whole group? Nov 2014 
+    - Product: [CN] Annotation storage
+        - Ben start Dec 1, end Mar 2015
+    - Product: Sem automated annotation algorithm
+        - (does RPI's "matching" (entity linking) algorithm in ESOR assist with this?  Xixi/Deborah to clarify access to grad student code)
+        - Xixi: start Nov 2014, end Mar 2015
+    - Product: Semantic measurements indexing, reasoning, and query system on CN
+	    - Feature: inference, reasoning
+	    - Ben: Dec 2014
+    - Product: Semantic measurement search web UI
+	    - Jan 2015
+    - Product: Integrated annotation web UI design and authentication
+	  - Feature: Semantic type display in web UI
+	  - Feature: general annotation framework for 3rd party commentary; 
+		mechanism for owner to "promote" comment as authoritative
+		mechanism for resolving conflicting annotations
+	  - Feature: Sem annotation review and confirmation web UI
+	  - June 2015
+        
+        
+        
+        
+Deborah McGuinness: do we have a target date for when the use case will be started and/or somewhat complete? and does margaret have the lead on the initial version or someone else?-- still trying to define exact dates and responsibilities now...
+
+Deborah McGuinness: ok - i think if we could get a couple of test cases (line 415 above) even just 1 that is pretty well specified on
+- what the question is
+- what is hard about the question today
+- how we might answer it using some background semantic knowledge
+- how we get the semantic domain knowledge (that is used)
+
+we will be in good shape.  i think getting just one or two examples will really help (more than getting a larger set of questions without the answers to the questions about what is hard today and how we are going to answer the question using background knowledge.
+i am assuming we have (at least) a few angles to highlight
+1 - we can show hopefully somewhat easily that if we know that a is an (exact) synonym for b, then we can integrate data that otherwise we would not be able to and thus answer a question
+2- if we know that a is a subclass of b and the query that refers to b, then we know that a is included (but a does not completely cover b)
+3 - if we have some disjointness information, we can probably show that some queries are necessarily going to have no answers (even without looking at the data just because the query is inconsistent if one looks at background knowledge
+MPS: I agree Deborah, but at this meeting, we've had no discussion about the structure of and axioms we use in the ontology.  But Margaret and I are taking a first pass at structuring it.  We'll be sure to consider all the aspects you mention above.
+
+
