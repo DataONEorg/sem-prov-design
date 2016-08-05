@@ -56,3 +56,27 @@ adding concepts for other CO2 cycle process, e.g., for ocean acidification.
 
 References
 ----------
+
+
+Queries
+----------
+Q1: above ground net primary production in a grassland in dimensions of biomass of plant material (with or without) (area or duration)
+
+Q2: heterotrophic soil respiration as carbon dioxide flux in dimensions of (amount or mass) per (area or volume) per time
+
+Q3: soil carbon content in dimensions of (amount or mass) of carbon per (volume of soil or area of surface)
+
+Q4: phytoplankton productivity as carbon increase in dimensions of (amount or mass) of carbon per (area or volume) per time
+
+Q5: concentration of dissolved carbon dioxide carbonate or bicarbonate in the water of an aquatic system
+
+Q6: ecosystem carbon flux in dimensions of (amount or mass) of (carbon dioxide or carbon) per area per time
+
+Q7: carbon dioxide flux in an enrichment experiment in dimensions of (amount or mass) of carbon per (area or volume) per time
+
+Q8: growth of trees measured as changes in diameter (with or without) duration
+
+Q9: net primary production of coastal macroalgae in dimensions of (amount or mass) of carbon per area per time
+
+Q10: ocean carbon dioxide flux in dimensions of (amount or mass) of carbon per (area or volume) per time
+
