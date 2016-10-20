@@ -5,15 +5,15 @@ Author: Ben Leinfelder
 
 Date: October, 2014: Initial draft of semantic architecture 
 
+Updated: October 2016 to reflect curent state
+
 Goal: Describe components to be used and/or built to support semantic annotation 
 
 Summary:
   
 This architecture attempts to re-use as many existing DataONE components as possible while also building on existing efforts in the 
-annotation realm
-This annotation model uses the OA ontology (http://www.openannotation.org/spec/core/) to describe
-the annotation assertions about metadata resources and fragments. PROV, FOAF, DCTERMS, and OBOE concepts are also utilized.
-There is ongoing investigation in the Open Knowledge Foundation's annotation tools, including: 
+annotation realm.
+Much of the UI is based on the Open Knowledge Foundation's annotation tools, including: 
 AnnotatorJS (http://annotatorjs.org/) and their AnnotateIt (http://annotateit.org/) storage service. 
   
   
@@ -25,151 +25,21 @@ There will be a component for indexing and querying annotations.
 
 Model
 ------------------
-The OA ontology (http://www.openannotation.org/spec/core/) will be used to capture and communicate annotations.
-The serialization of this model can take multiple forms and can be included in other objects that may already be indexed by DataONE.
+The OA ontology (http://www.openannotation.org/spec/core/) is attractive for capturing and transferring annotations. But the AnnotatorJS 
+library does not yet support this serialization in released 1.x versions.
+The serialization of annotations can take multiple forms and can be included in other objects that may already be indexed by DataONE.
 Some examples include:
 
 * Atomic OA documents that contain one or more annotations (sserialized as RDF/XML and/or) JSON-LD
 * Extended ORE documents	
 * Embedded OA annotations in XML metadata (e.g., EML's additionalMetadata section)
 
-We will initially focus on atomic annotation documents that can be parsed queried to populate a discovery index (e.g., SOLR)
+We will focus on atomic annotation documents that can be parsed queried to populate a discovery index (e.g., SOLR)
 
 Notes:
 
 Our actual implementation has focused on JSON-based annotations that do not fully conform to the OA model. The AnnotatorJS library
-is actively pursuing a JSON-LD format that does conform to Open Annotation, but that is not mature at this point.
-
-The model proposal follows the OA specification as interpreted for our DataONE uses. 
-Please review the section where the 'oa:hasBody' property is used to associate an OBOE concept as there are many possible
-ways to reference OBOE concepts depending on the KR we use to define measurements, characteristics and standards.
-Also, take note of how we are targeting the METADATA object using an xpointer to a specific part of the document (XML).
-We have not endeavored to annotate DATA objects directly (e.g., tabular text/csv). In order to accommodate that, 
-'oa:hasSource' would reference a data URI and the selector would be some alternative 'oa:Selector' subclass.
-
-
-.. image:: images/oa_model.png
-
-.. 
-    @startuml images/oa_model.png  
-    
-    object "oa:Annotation" as annotation
-    
-
-    package "tagging" {
-    
-    	object "oa:tagging" as motivation
-    	object "oa:SemanticTag" as semanticTag
-	   	object "rdf:resource" as body {
-	   		There are some options for pointing at a semantic concept in the body.
-	   		Really, any concept in a KR could be referenced.
-	   		For this illustration, we have pulled concepts from the OBOE model,
-	   		but anything is conceivably possible.
-			Also see these for more discussion:
-	   		http://www.openannotation.org/spec/core/core.html#Tagging 
-	   		http://www.openannotation.org/spec/extension/#StructuredBody
-		}
-	    
-	    package "OBOE (optional)" {
-		    
-		    object "oboe:Measurement" as measurement		    
-		   	object "oboe:Characteristic" as characteristic
-	    	object "oboe:Standard" as standard
-	    	
-	    	package optional {
-			    object "oboe:Observation" as observation
-			    object "oboe:Entity" as entity
-			} 
-		}
-
-	}
-	
-	package "metadata pointer" {
-	    object "oa:SpecificResource" as target
-	    object "xs:URI" as source {
-	    	metadata URL
-	    }
-	    object "xs:string" as identifier {
-	    	e.g., metadata.1.2.3
-	    }
-	    object "oa:FragmentSelector" as selector {
-	    	For selecting fragments from
-	    	XML, text, images
-	    }
-	    object "xs:string" as selectorValue {
-	    	e.g., #xpointer(/a/b/c)
-	    }
-	    object "xs:string" as syntax {
-	    	e.g., http://tools.ietf.org/rfc/rfc3023
-	    }
-	}
-	
-	package "data pointer (optional)" {
-	    object "oa:SpecificResource" as d_target
-	    object "xs:URI" as d_source {
-	    	data URL
-	    }
-	    object "xs:string" as d_identifier {
-	    	e.g., data.1.2.3
-	    }
-	    object "oa:DataPositionSelector" as d_selector {
-	    	For selecting ranges 
-	    	within the data bytestream
-	    }
-	    object "xs:integer" as d_start {
-	    	e.g., 0
-	    }
-	    object "xs:integer" as d_end {
-	    	e.g., 20
-	    }
-	}
-    
-    package provenance {
-	    object "prov:Person" as person
-	    object "xs:String" as string
-	    object "xs:URL" as url {
-	    	e.g. ORCID or DN
-	    }
-	}  
-    
-    'setup annotation
-    annotation --> body: "oa:hasBody"
-    annotation --> motivation: "oa:isMotivatedBy"
-    
-    'provenance
-    annotation --> person: "oa:annotatedBy"
-    person --> string : "foaf:name"
-    person --> url : "foaf:account"
-    
-    'the body of the annotation
-    body --> measurement: "rdf:type"
-    body --> semanticTag: "rdf:type"
-    
-    measurement --> characteristic: "oboe:hasCharacteristic"
-    measurement --> standard: "oboe:usesStandard"
-   	measurement <-- observation: "oboe:hasMeasurement"
-   	observation --> entity: "oboe:ofEntity"
-    
-    'data target
-    annotation --> d_target: "oa:hasTarget"
-    d_target --> d_source: "oa:hasSource"
-    d_source --> d_identifier: "dcterms:identifier"
-    d_target --> d_selector: "oa:hasSelector"
-    d_selector --> d_start: "oa:start"
-    d_selector --> d_end: "oa:end"
-    
-    'metadata target
-    annotation --> target: "oa:hasTarget"
-    target --> source: "oa:hasSource"
-    source --> identifier: "dcterms:identifier"
-    target --> selector: "oa:hasSelector"
-    selector --> syntax: "dcterms:conformsTo"
-    selector --> selectorValue: "rdf:value"
-    
-    'relationship between the two
-    'source -> d_source: "cito:documents"    
-    
-    @enduml
+is actively pursuing a JSON-LD format that does conform to Open Annotation, but that is not mature at this point (still, in 2016)
 
 
 Proposed components
@@ -182,7 +52,7 @@ Proposed components
 	  participant "Ontology repository" as ontrepo
 	  participant "Annotation generator" as autoann
 	  participant "Object Store" as store
-	  participant "[Triple Store]" as triplestore
+	  participant "[Semantic Indexer]" as indexer
 	  participant "Index" as index  
 	  participant "Web UI" as webui
 	  actor "User" as user
@@ -190,7 +60,7 @@ Proposed components
 	  note left of ontrepo: e.g., BioPortal
 	  note left of autoann: TBD
 	  note left of store: e.g., Metacat
-	  note left of triplestore: e.g., Jena  
+	  note left of indexer: Expands concepts from ontology   
 	  note left of index: e.g., SOLR
 	  note left of webui: e.g., MetacatUI
 	
@@ -217,13 +87,12 @@ Proposed components
 	  	instance (likely RDF/XML)
 	  end note
 	  
-	  store --> triplestore
+	  store --> indexer
 	  note left
-	  	load OA model into triplestore
+	  	load ontology and expand annotation concepts
 	  end note
-	  triplestore --> index: fields
+	  indexer --> index: fields
 	  note right
-	  	query triplestore
 	  	to populate index
 	  end note
 	   
@@ -253,8 +122,8 @@ Proposed components
 	  	automated annotations
 	  end note
 	  
-	  store --> triplestore: annotation
-	  triplestore --> index: fields
+	  store --> indexer: annotation
+	  indexer --> index: fields
 	  note left
 	  	Annotations reindexed 
 	  	as before
@@ -281,7 +150,7 @@ Annotation life-cycle
 This figure attempts to show the route that annotations take throughout
 the system. First, automated annotations are generated from existing metadata,
 then the annotation is saved to the object store, then an indexing process loads the 
-Open Annotation model in a triplestore to use a semantic query to extract index fields
+referenced ontology to use a semantic query to extract index fields
 from it that are saved to the SOLR index.
 Finally, the UI shows the search results and annotation details for further manual editing 
 of the annotations.
@@ -292,15 +161,14 @@ of the annotations.
     @startuml images/annotation_flow.png
 				
 		partition "Automated annotation" {
-			"get metadata" --> "generate OA model"
-			"get matching concepts" --> "generate OA model"
-			-left-> [object store] "store annotation"
+			"get metadata" --> "generate annotation"
+			"get matching concepts" --> "generate annotation"
+			-left-> "store annotation"
 		}
 		
 		partition Indexing {
-			--> "load OA model"
-			--> "triple store"
-			--> "SPARQL query model"
+			--> "load ontology"
+			--> "query model"
 			--> "index semantic fields"
 			--> "SOLR index"
 			
@@ -311,7 +179,7 @@ of the annotations.
 			"render annotations" -> "metadata UI"
 			"render metadata" --> "metadata UI"
 			"metadata UI" -up-> "create/update annotation"
-			-right-> [object store] "store annotation"
+			-right-> "store annotation"
 			
 		}
 		
@@ -352,15 +220,15 @@ displaying them, and then editing them manually.
 			using existing attribute 
 			metadata
 		end note
-		"Annotation generator" -->[Save OA] "Store"
+		"Annotation generator" -->[Save annotation] "Store"
 		note right
-			Use coordinating node
+			Use member node
 			as the annotation store.
 			Also holds metadata documents
 		end note
 		
-		"Web UI" --> [Save OA] "Store"
-		"Store" --> [Rendered OA] "Web UI"			
+		"Web UI" --> [Save annotation] "Store"
+		"Store" --> [Rendered annotation] "Web UI"			
 		"Store" --> [Rendered Metadata] "Web UI"
 		note left
 			UI renders metadata
@@ -378,20 +246,14 @@ displaying them, and then editing them manually.
 		"Ontology repository" --> [concepts] "Web UI"
 		
 		
-		"Store" --> [Get OA] "Indexer"
+		"Store" --> [Get annotation] "Indexer"
 		note right
 			When annotations are updated,
 			indexer reloads and queries 
 			the model for indexing
 		end note
-		"Indexer" -->[Load OA] "Triple store"
-		note right
-			Optionally expose
-			triple store for 
-			other clients to query
-		end note
-		"Indexer" --> [SPARQL query] "Triple store"	
-		"Triple store" --> [SPARQL results] "Indexer"
+		"Indexer" --> [SPARQL query] "Ontology model"	
+		"Ontology model" --> [SPARQL results] "Indexer"
 		"Indexer"-->[SOLR fields] "SOLR index"
 		note left
 			Existing SOLR index
