@@ -26,11 +26,12 @@ There will be a component for indexing and querying annotations.
 Model
 ------------------
 The OA ontology (http://www.openannotation.org/spec/core/) is attractive for capturing and transferring annotations. But the AnnotatorJS 
-library does not yet support this serialization in released 1.x versions.
+library does not yet support this serialization in released 1.x versions. It is on their roadmap for 2.x releases, but this has been 
+years in the making.
 The serialization of annotations can take multiple forms and can be included in other objects that may already be indexed by DataONE.
 Some examples include:
 
-* Atomic OA documents that contain one or more annotations (sserialized as RDF/XML and/or) JSON-LD
+* Atomic annotation documents that contain one or more annotations (serialized as RDF/XML and/or) JSON-LD
 * Extended ORE documents	
 * Embedded OA annotations in XML metadata (e.g., EML's additionalMetadata section)
 
@@ -144,16 +145,52 @@ Proposed components
 	  
 	@enduml
 	
+
+
+Implementation details
+----------------------
+The following projects, components, and libraries are used for supporting semantic annotation in DataONE.
+
+* annotator - https://github.com/DataONEorg/annotator
+This project contains classes for parsing metadata, querying BioPortal and ESOR services for annotation recommendations, 
+as well as generating AnnotatorJS formatted annotations from manually-constructed spreadsheets for the P/R runs.
+The Annotator project also includes an AnnotatorJS storage implementation that uses the DataONE MN API to store and retrieve 
+annotation objects from a Member Node. The AnnotatorRestServlet exposes the API that AnnotatorJS expects calls the appropriate 
+D1 methods as needed. This servlet can be deployed in any webapp, but currently it is included in the d1_portal_servlet project
+for ease of deployment in a central location. This can seem a little odd in that the servlet is deployed on a CN yet it uses a [configureable]
+MN to store the objects. Remember that CNs do not accept objects directly and can only harvest content from MNs - that's why this is
+structured as it is. 
+
+* d1_portal_servlet - https://repository.dataone.org/software/cicore/trunk/d1_portal_servlet/
+For convenience, the Annotator Servlet is included as another servlet in the portal deployment. There is no 
+requirement that it be deployed here, it was simpler than incorporating into the CN REST webapp during initial 
+development and proof-of-concepting. See the web.xml to un/comment the intializion of the annotator service.
+
+* MetacatUI - https://github.com/NCEAS/metacatui/
+Semantic work has been done on the master branch of MetacatUI, largely in the DataONE theme though it is available in any theme if configured. 
+The UI interacts with many different systems to support semantic search, annotation display and editing. Semantic queries are 
+straightforward in that they act just like any other SOLR field query. We search using concept URIs and a user selects the concepts 
+they are interested in by selecting from a BioPortal-driven ontology tree.
+When viewing the detailed metadata record for a datapackage, all annotations for that objects PID are retrieved from the annotation store 
+by the AnnotatorJS library and the annotations are rendered in the DOM. Note that this relies HEAVILY on the existing DOM structure and the xoaths 
+in each annotation are crucial for aligning the content of the metadata with the annotations that pertain to those sections of the document.
+See the annotation model documentation for more details on each field of the annotation itself.
+
+* BioPortal - http://bioportal.bioontology.org/ontologies/ECSO
+We use BioPortal to store the ECSO ontology so that tree widgets in the MetacatUI can be easily rendered with slick look-aheads 
+and label+definition information programmatically available. The Bioportal API is well-documented and their support personell are
+keen to assist if there are any issues. http://data.bioontology.org/documentation
+
 	
 Annotation life-cycle
 ---------------------
-This figure attempts to show the route that annotations take throughout
-the system. First, automated annotations are generated from existing metadata,
-then the annotation is saved to the object store, then an indexing process loads the 
-referenced ontology to use a semantic query to extract index fields
-from it that are saved to the SOLR index.
-Finally, the UI shows the search results and annotation details for further manual editing 
-of the annotations.
+This figure attempts to show the route that annotations take throughout the system. 
+* First, automated annotations are generated (d1 annotator project) from existing metadata (fetched from a D1 node),
+* Then the annotation is saved to the object store (AnnotatorJS store implementation deployed within d1_portal_servlet), 
+* Then the indexing process (d1_index_processor) loads the referenced ontology and uses a semantic query to find index fields
+that are saved to the SOLR index.
+* Finally, the UI (MetacatUI) shows the search results and annotation details for further manual editing 
+of the annotations (AnnotatorView.js, mostly).
 
 .. image:: images/annotation_flow.png
 
