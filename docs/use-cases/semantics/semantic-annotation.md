@@ -4,6 +4,7 @@ Semantic Annotation proposal
 Author: Ben Leinfelder
 
 Date: May, 2014: Initial draft of semantic annotation model and indexing
+	  March 2017: Updated to reflect current state of prototype system
 
 Goal: Describe the current state of semantic annotation model using OBOE and OA (Open Annotation) concepts
 
@@ -12,17 +13,147 @@ Summary:
   Years of semantic work on the semtools project has informed the current annotation model we are prosing for use in Metacat.
   The model will initially focus on annotating attribute information for characteristics (e.g., Temperature) and Standard (e.g., Celsius).
   The model will be indexed to support fast and simple queries using the existing SOLR index methods used for standard metadata descriptions.
-  This annotation model uses the [OA ontology](http://www.openannotation.org/spec/core/) to describe
-  the annotation assertions about metadata resources and fragments. PROV, FOAF, DCTERMS, and OBOE concepts are also utilized.
+  The annotation model uses the AnnotatorJS serialization to store the MeasurementType-to-attribute relationship.
   
 Overview
 ---------------------------------------
-The primary goal of this initial semantic annotation model is to support querying on measurement standard and characteristic information. 
-The model also supports annotations that describe these observations with their entity context, but that will not be utilized in the first stage of deployment.
+The primary goal of this initial semantic annotation model is to support querying on MeasurementType (Entity and Characteristic) information. This requires the ontology define appropriate MeasurementType concepts to be applied to data table attributes.
 
-Ontology and Model
-------------------
-The [OA ontology](http://www.openannotation.org/spec/core/) will be used to describe the following relationships:
+AnnotatorJS model (JSON)
+------------------------
+In an effort to reduce the amount of de novo development activities we undertake, we've adopted the AnnotatorJS library for adding and editing annotations on metadata records.
+The annotations are stored as JSON objects that loosely correspond to fields in the more formal OA model (described later). The maintainers of the AnnotatorJS library intend to use the OA model for v2.x of 
+the library, but it currently does not "speak" OA natively. Below is an example annotation about a web-accessible resource using their JSON model followed by a mapping of those fields to the OA model described later.
+
+Online documentation for AnnotatorJS model is available [here](http://docs.annotatorjs.org/en/v1.2.x/annotation-format.html). This example shows how one might tag the "T_AIR" column in the metadata to be an Air Temperature concept taken from the ECSO ontology.
+
+
+    {
+      "user": "uid=kepler,o=unaffiliated,dc=ecoinformatics,dc=org", 
+      "consumer": "f780f3e398cf45cbb4e84ed9ec91622a", 
+      "id": "48hAIW6TQJyg4uW5Utq7iA", 
+      "resource": "#xpointer(/eml/dataset/dataTable[1]/attributeList/attribute[3])", 
+      "text": "", 
+      "created": "2014-11-18T05:12:08.331690+00:00", 
+      "pid": "tao.1.6", 
+      "ranges": [
+        {
+          "start": "/section[1]/article[1]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/div[6]/div[1]/div[2]/div[3]/div[1]/div[1]", 
+          "end": "/section[1]/article[1]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/div[6]/div[1]/div[2]/div[3]/div[1]/div[1]", 
+          "startOffset": 0, 
+          "endOffset": 5
+        }
+      ], 
+      "uri": "http://localhost:8080/metacat/d1/mn/v1/object/tao.1.6", 
+      "links": [
+        {
+          "type": "text/html", 
+          "rel": "alternate", 
+          "href": "http://annotateit.org/annotations/48hAIW6TQJyg4uW5Utq7iA"
+        }
+      ], 
+      "permissions": {
+        "read": [
+          "group:__world__"
+        ], 
+        "delete": [], 
+        "admin": [], 
+        "update": []
+      }, 
+      "updated": "2014-11-26T20:46:44.576047+00:00", 
+      "quote": "T_AIR", 
+      "tags": [
+        "http://purl.dataone.org/odo/ECSO_00001225"
+      ]
+    }
+  
+  
+Mapping from AnnotatorJS to OA model
+
+|  JS field                 | OA property               | Comments                           | 
+|---------------------------|---------------------------|------------------------------------|
+| id                        | dcterms:identifier        | identifier of the annotation itself
+| user                      | oa:annotatedBy            | the user who created the annotation
+| created                   | oa:annotatedAt            | timestamp for annotation creation
+| updated                   | oa: annotatedAt           | Allow mutable annotations?
+| uri                       | oa:hasSource              | D1 resolve endpoint
+| pid                       | dcterms:identifier        | identifier of the object being annotated
+| resource                  | oa:hasSelector            | oa:FragmentSelectors allow selction in different kinds of resources
+| ranges                    | oa:hasSelector            | range selector uses xpaths and character offsets to pinpoint the exact part that the annotation applies to
+| quote                     | oa:hasSelector            | the text value of the range being annotated
+| text                      | oa:hasBody                | the text content of the annotation (e.g. comment)
+| tags                      | oa:hasBody                | the URI of one or more tags (this would be our semantic annotation from a controlled vocabulary/ontology)
+
+
+Indexing
+--------
+The DataONE/Metacat Index component has been enhanced to parse semantic annotations provided as either AnnotatorJS JSON or RDF/XML.
+
+The AnnotatorSubprocessor uses a SPARQL-based approach to expand tag[s] in an annotation based on loaded ontologies in the index processor.
+Instead of relying on an entire graph, the AnnotatorSubprocessor is only informed by the tagged concept[s] and any expansion/node traversal that can 
+be performed using the loaded ontologies.
+
+The general purpose RdfXmlSubprocessor can be used with SparqlFields to extract key concepts from the given model.
+
+The RDF processor assumes that the identifier of the RDF document is the name of the graph being inserted into the triple store and provides that graph name to the query engine for substitution in any query syntax ($GRAPH_NAME).
+
+The SPARQL requirements are that the solution[s] return the identifier (pid) of the object being annotated, and the index field being populated with the given value[s].
+If multiple fields are to be extracted from the model for indexing, a distinct SPARQL query should be used for each field.
+
+For RDF models, the query can (and is largely expected to) be constrained to the named graph that contains only that set of annotation triples. While the infrastructure can (and likely will) share the same triple store, 
+we should not assume other models have been loaded when processing any given graph. This means that any solutions will rely on only the named graph being processed during indexing.
+
+A sample SPARQL query used to determine the MeaurementType[s] in a dataset is shown below. Note that the query includes superclasses in the returned solutions so that 
+the index returns a match for both general and specific criteria.
+
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+				PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+				
+				SELECT ?sem_annotation
+				WHERE { 
+						<$CONCEPT_URI> rdfs:subClassOf+ ?sem_annotation .
+				 	}
+	
+
+Index Fields 
+=============
+
+Multi-valued string fields allow us to index the new semantic content. 
+They are multi-valued because they will store the entire class subsumption hierarchy (up) for any matching concepts
+and because they will store annotations from the same metadata resources for different attributes.
+
+* ``sem_anotation`` - indexes the oboe:MeaurementType[s] for annotations on the datapackage (added directly via manual annotation)
+* ``sem_anotation_bioportal_sm`` - holds indexed annotations added by bioportal recommendations
+* ``sem_anotation_esor_sm`` - holds indexed annotations added by ESOR recommendations
+* ``sem_anotation_cosine_sm`` - holds indexed annotations added by ESOR-Cosine recommendations
+
+	
+Example
+========
+
+Continuing with example model, these concepts would be indexed for the data attributes described in the datapackage metadata. So 'Air Temperature' and it's parent,
+'Temperature Measurement Type', and it's grandparent, 'Measurement Type' would all be indexed in sem_annotation.
+
+| Object         |  Field Name       | Field Type          |                                                Value                                |
+|----------------|-------------------|---------------------|-------------------------------------------------------------------------------------|
+| eml.1.1   	 | sem_annotation    | string, multivalued | http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#MeasurementType               |
+| eml.1.1   	 | sem_annotation    | string, multivalued | http://purl.dataone.org/odo/ECSO_00001104                                           |
+| eml.1.1   	 | sem_annotation    | string, multivalued | http://purl.dataone.org/odo/ECSO_00001225  								         |
+
+Queries
+=======
+These indexed fields will be used primarily by MetacatUI to enhance discovery - both in terms of recall (concept hierarchies are exploited) and precision (concepts like Mass, do not result in false-positives for "Massachusetts"). 
+As more aspects of the annotation model (e.g., observation Entity) are included in the index, the queries can incorporate them for greater query precision. Unfortunately, the flat nature of the SOLR index will prevent us from 
+constructing elaborate queries and some of the flashier "semantic" queries may require more indexing fields that use SPARQL to exploit certain concept relationships 
+above and beyond the simple parent/child relationships.
+
+
+OA Ontology and Model (For posterity)
+-------------------------------------
+NOTE: This section is included for reference, but is no long the target implementation (March 2017).
+
+The [OA ontology](http://www.openannotation.org/spec/core/) can be used to describe the following relationships:
 
 * Which concepts describe which resources and/or parts of resources 
 * Where in the structure of a resource a particular annotation applies
@@ -87,162 +218,6 @@ Note that the annotation model uses a slightly different model than the original
 we have found that the current ORE maps are not sufficiently descriptive on their own and any consumers must also consult the metadata to figure out which object is the csv, which is the pdf, which is the script, etc...
 
 By incorporating the metadata pointer within the annotation model, we hope to be able to hanlde data packages that use manu different metadata serializations without having to write custom handlers for each formatId.
-
-AnnotatorJS model (JSON)
-------------------------
-In an effort to reduce the amount of de novo development activities se undertake, we've investigated the AnnotatorJS library for adding and editing annotations for metadata records.
-The annotations are currently stored as JSON objects that loosely correspond to fields in the OA model. The maintainers of the AnnotatorJS library intend to use the OA model for v2.x of 
-the library, but it currently does not "speak" OA natively. Below is an example annotation about a web-accessible resource using their JSON model followed by a mapping of those fields to 
-the more formal OA model described above.
-
-Online docs for AnnotatorJS model is available [here](http://docs.annotatorjs.org/en/v1.2.x/annotation-format.html) but an example is included here where I have tagged the "T_AIR" column in the
-metadata to be a Temperature concept taken from the OBOE ontology.
-
-
-    {
-      "user": "uid=kepler,o=unaffiliated,dc=ecoinformatics,dc=org", 
-      "consumer": "f780f3e398cf45cbb4e84ed9ec91622a", 
-      "id": "48hAIW6TQJyg4uW5Utq7iA", 
-      "resource": "#xpointer(/eml/dataset/dataTable[1]/attributeList/attribute[3])", 
-      "text": "", 
-      "created": "2014-11-18T05:12:08.331690+00:00", 
-      "pid": "tao.1.6", 
-      "ranges": [
-        {
-          "start": "/section[1]/article[1]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/div[6]/div[1]/div[2]/div[3]/div[1]/div[1]", 
-          "end": "/section[1]/article[1]/div[1]/div[1]/form[1]/div[6]/div[1]/div[1]/div[6]/div[1]/div[2]/div[3]/div[1]/div[1]", 
-          "startOffset": 0, 
-          "endOffset": 5
-        }
-      ], 
-      "uri": "http://localhost:8080/metacat/d1/mn/v1/object/tao.1.6", 
-      "links": [
-        {
-          "type": "text/html", 
-          "rel": "alternate", 
-          "href": "http://annotateit.org/annotations/48hAIW6TQJyg4uW5Utq7iA"
-        }
-      ], 
-      "permissions": {
-        "read": [
-          "group:__world__"
-        ], 
-        "delete": [], 
-        "admin": [], 
-        "update": []
-      }, 
-      "updated": "2014-11-26T20:46:44.576047+00:00", 
-      "quote": "T_AIR", 
-      "tags": [
-        "http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Temperature"
-      ]
-    }
-  
-  
-Mapping from AnnotatorJS to OA model
-
-|  JS field                 | OA property               | Comments                  | 
-|---------------------------|---------------------------|---------------------------|
-| id                        | dcterms:identifier        | identifier of the annotaiton itself
-| user                      | oa:annotatedBy            | the user who created the annotation
-| created                   | oa:annotatedAt            | timestamp for annotation creation
-| updated                   | oa: annotatedAt           | Allow mutable annotations?
-| uri                       | oa:hasSource              | D1 resolve endpoint
-| pid                       | dcterms:identifier        | identifier of the object being annotated
-| resource                  | oa:hasSelector            | oa:FragmentSelectors allow selction in different kinds of resources
-| ranges                    | oa:hasSelector            | range selector uses xpaths and character offsets to pinpoint the exact part that the annotation applies to
-| quote                     | oa:hasSelector            | the text value of the range being annotated
-| text                      | oa:hasBody                | the text content of the annotation (e.g. comment)
-| tags                      | oa:hasBody                | the URI of one or more tags (this would be our semantic annotation from a controlled vocabulary/ontology)
-
-
-Indexing
---------
-The DataONE/Metacat Index component has been enhanced to parse semantic models provided as either AnnotatorJS JSON or RDF/XML.
-
-The AnnotatorSubprocessor uses a SPARQL-based approach to expand tag[s] in an annotation based on loaded ontologies in the index processor.
-Instead of relying on an entire graph, the AnnotatorSubprocessor is only informed by the tagged concept[s] and any expansion/node traversal that can 
-be performed using the loaded ontologies.
-
-The general purpose RdfXmlSubprocessor can be used with SparqlFields to extract key concepts from any given model that is added to the document store.
-
-The RDF processor assumes that the identifier of the RDF document is the name of the graph being inserted into the triple store and provides that graph name to the query engine for substitution in any query syntax ($GRAPH_NAME).
-
-The SPARQL requirements are that the solution[s] return the identifier (pid) of the object being annotated, and the index field being populated with the given value[s].
-If multiple fields are to be extracted from the model for indexing, a distinct SPARQL query should be used for each field.
-
-For RDF models, the query can (and is largely expected to) be constrained to the named graph that contains only that set of annotation triples. While the infrastructure can (and likely will) share the same triple store, 
-we should not assume other models have been loaded when processing any given graph. This means that any solutions will rely on only the named graph being processed during indexing.
-
-A sample SPARQL query used to determine the Characteristics measured in a dataset is shown below. Note that the query includes superclasses in the returned solutions so that 
-the index returns a match for both general and specific criteria.
-
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-    PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-    PREFIX oboe-core: <http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#> 
-    PREFIX oa: <http://www.w3.org/ns/oa#>
-    PREFIX dcterms: <http://purl.org/dc/terms/>
-    
-	SELECT ?characteristic_sm ?pid
-	FROM <$GRAPH_NAME>
-	WHERE { 
-			
-			?measurement rdf:type oboe-core:Measurement .
-			?measurement rdf:type ?restriction .
-			?restriction owl:onProperty oboe-core:ofCharacteristic .
-			?restriction owl:allValuesFrom ?characteristic .
-			?characteristic rdfs:subClassOf+ ?characteristic_sm .
-			?characteristic_sm rdfs:subClassOf oboe-core:Characteristic .
-			
-			?annotation oa:hasBody ?measurement .												
-			?annotation oa:hasTarget ?target .
-			?target oa:hasSource ?metadata .
-			?metadata dcterms:identifier ?pid . 
-			
-	 	}
-	
-
-Index Fields 
-=============
-
-Currently, dynamic, multi-valued string fields allow us to index the new semantic content without changing the SOLR schema. 
-They are multi-valued because they will store the entire class subsumption hierarchy (up) for any matching concepts
-and because they will store annotations from the same metadata resources for different attributes.
-
-* ``characteristic_sm`` - indexes the oboe:Characteristic[s] for oboe:Measurement[s] in the datapackage
-* ``standard_sm`` - indexes the oboe:Standard[s] for oboe:Measurement[s] in the datapackage
-
-Since our first prototype, we have added more permanent fields for storing semantic concepts in the index:
-* ``sem_annotation`` - holds tags and expanded concepts from those tags (AnnotatorSubprocessor)
-
-	
-Example
-========
-
-Continuing with example model, these concepts would be indexed for the data attributes described in the datapackage metadata.
-
-| Object                    |  Field Name       | Field Type          |                                                Value                                |
-|---------------------------|-------------------|---------------------|-------------------------------------------------------------------------------------|
-| eml.1.1   			    | characteristic_sm | string, multivalued | http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic                |
-| eml.1.1   			    | characteristic_sm | string, multivalued | http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#PhysicalCharacteristic        |
-| eml.1.1   			    | characteristic_sm | string, multivalued | http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Mass               |
-| eml.1.1 				    | characteristic_sm | string, multivalued | http://ecoinformatics.org/oboe/oboe.1.0/oboe-characteristics.owl#Length             |
-| eml.1.1   			    | characteristic_sm | string, multivalued | http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Name					        |
-| eml.1.1   			    | standard_sm		| string, multivalued | http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Standard 		                |
-| eml.1.1   			    | standard_sm		| string, multivalued | http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Unit			                |
-| eml.1.1   			    | standard_sm		| string, multivalued | http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#BaseUnit		                |
-| eml.1.1   			    | standard_sm		| string, multivalued | http://ecoinformatics.org/oboe/oboe.1.0/oboe-standards.owl#Gram 	                |
-| eml.1.1   			    | standard_sm		| string, multivalued | http://ecoinformatics.org/oboe/oboe.1.0/oboe-standards.owl#Meter 	                |
-
-Queries
-=======
-These indexed fields will be used primarily by MetacatUI to enhance discovery - both in terms of recall (concept hierarchies are exploited) and precision (concepts like Mass, do not result in false-positives for "Massachusetts"). 
-As more aspects of the annotation model (e.g., observation Entity) are included in the index, the queries can incorporate them for greater query precision. Unfortunately, the flat nature of the SOLR index will prevent us from 
-constructing queries that take full advantage of the underlying semantic annotation. We can filter results so that only those that measured Length Characteristics and Tree Entities, 
-but not that we measured the Length of the Tree (it may be that we actually measured the Length of the bird in the tree).
-
-
 
 Extending the model
 ===================
