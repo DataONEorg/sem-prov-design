@@ -91,7 +91,67 @@ Run Manager API
      - runId, file
      - The unique identifier associated with the metadata object
      - Store (possibly replace) metadata describing the data objects of an execution
-     
+   
+   * - `listMultiRuns()`_
+     - runId, startDate, endDate, upstream, downstream, level
+     - A list of unique execution identifier associated with the runId
+     - Query the provenance database to retrieve a set of runs that satisfy the selection criteria
+	 
+   * - `viewMultiRuns()`_
+     - runId, startDate, endDate, upstream, downstream, level, Array{section}
+     - A list of unique execution identifier associated with the runId
+     - Generate a text report for a set of execution metadata objects including three sections: details, used, and generated. 
+	  
+   * - `publishMultiRuns()`_
+     - List<runId>
+     - A boolean value indicating published or not
+     - Publish a list of data packages to DataONE network.
+	
+   * - `isPublishedRun()`_
+     - packageId
+     - A metadata Id from local provenance database
+     - Verify if a package has been published 
+	
+   * - `upstream()`_
+     - runId, level, startDate, endDate
+     - A list of metadata Ids associated with a specific run
+     - Query the provenance database to find a set of upstream execution metadata that are related to a specific runId 
+	 
+   * - `downstream()`_
+     - runId, level, startDate, endDate
+     - A list of metadata Ids associated with a specific run
+     - Query the provenance database to find a set of downstream execution metadata that are related to a specific runId
+
+   * - `plotRun()`_
+     - runId, YW, trace, hybrid
+     - A provenance visulization graph for prospective, retrospective, and hybrid provenance
+     - Render a provannce graph for a single run
+
+   * - `plotMultiRun()`_
+     - List<runId>, YW, trace, hybrid
+     - A provenance visulization graph for prospective, retrospective, and hybrid provenance (multi-run)
+     - Render a provannce graph for multiple runs
+	 
+   * - `compareMultiRun()`_
+     - script, List<runId>
+     - A provenance visulization graph for prospective, retrospective, and hybrid provenance (multi-run)
+     - Compare a set of runs that are produced by the same script such as input, output, running time, parameters, invoking order	 
+	
+   * - `isSubset()`_
+     - dataObject1, dataObject2
+     - A boolean value 
+     - Compare if one dataObject is a subset of another dataObject
+	 
+   * - `findSimilarRuns()`_
+     - runId
+     - A list of runs that have high similarity with a specific runId
+     - Find similar runs associated with a specific runId
+
+   * - `findSimilarDatapackage()`_
+     - packageId
+     - A list of packages that have high similarity with a specific packageId
+     - Find similar packages associated with a specific packageId
+	 	 	  	 	   	   
 .. _`record()`:
 
 *record(filePath)*
