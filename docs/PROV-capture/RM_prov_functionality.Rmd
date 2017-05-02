@@ -142,7 +142,7 @@ A graphical view of the processing workflow can be viewed using the plotRuns com
 graphRuns(rc, seq=2, direction="forward")
 ```
 
-![Provenance trace example.](/tmp/traceGraph.png)
+![Provenance trace example.](https://github.com/DataONEorg/sem-prov-design/raw/master/docs/PROV-capture/traceGraph.png)
 ## Publish Runs From a Pipeline
 Runs from a pipeline can be published to a repository using the `publishRuns` command. In the following example
 the `publishRuns` command arguments that are used perform the same provenance trace as the `graphRuns` command shown earlier,
