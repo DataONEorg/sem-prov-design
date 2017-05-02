@@ -98,8 +98,8 @@ Run Manager API
    * - `viewWorkflow()`_
      - startRunId, startDate, endDate, upstream, downstream, traversalLevel, Array{section}
      - A list of unique execution identifier associated with the startRunId
-     - Generate a text report for a set of execution metadata objects related to the startRunId including three sections: details, used, and generated. 	  
-   * - `publishRuns()`_
+     - Generate a text report for a set of execution metadata objects related to the startRunId. The report includes three sections: details, used, and generated. 	   
+   * - `publishRuns()`_
      - List<runId>
      - A boolean value indicating published or not
      - Publish a list of data packages to DataONE network.	
