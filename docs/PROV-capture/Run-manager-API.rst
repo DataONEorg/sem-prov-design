@@ -101,12 +101,12 @@ Run Manager API
      - Generate a text report for a set of execution metadata objects related to the startRunId. The generated report includes three sections: details, used, and generated. 
    * - `graphRuns()`_
      - startRunId, direction, render
-     - A provenance visulization graph at different levels such as prospective, retrospective, and hybrid
-     - Render a provannce graph for multiple runs	  
+     - View runs from a pipeline graphically. 
+     - This method begins the trace at the specified run and proceeds in upstream or downstream directions at different levels such as prospective, retrospective, and hybrid.	  
    * - `publishRuns()`_
-     - List<runId>
+     - seq, direction, quiet, combineRuns
      - A boolean value indicating published or not
-     - Publish a list of data packages to DataONE network.	
+     - Publish runs from a pipeline to a repository. By default, these runs are published in one package.	
    * - `isPublishedRun()`_
      - packageId
      - A metadata Id from local provenance database
