@@ -102,7 +102,7 @@ Run Manager API
    * - `graphRuns()`_
      - startRunId, direction, render
      - View runs from a pipeline graphically. 
-     - This method begins the trace at the specified run and proceeds in upstream or downstream directions at different levels such as prospective, retrospective, and hybrid.	  
+     - Begins the trace at the specified run and proceeds in upstream or downstream directions at different levels such as prospective, retrospective, and hybrid.	  
    * - `publishRuns()`_
      - seq, direction, quiet, combineRuns
      - A boolean value indicating published or not
