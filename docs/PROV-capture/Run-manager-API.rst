@@ -92,13 +92,17 @@ Run Manager API
      - The unique identifier associated with the metadata object
      - Store (possibly replace) metadata describing the data objects of an execution 
    * - `listRuns()`_
-     - startRunId, startDate, endDate, upstream, downstream, traversalLevel
+     - startRunId, startDate, endDate, direction, step
      - A list of unique execution identifier associated with the startRunId
      - Query the provenance database to retrieve a set of runs that satisfy the selection criteria	 
-   * - `viewWorkflow()`_
-     - startRunId, startDate, endDate, upstream, downstream, traversalLevel, Array{section}
+   * - `viewRuns()`_
+     - startRunId, startDate, endDate, direction, step, Array{section}
      - A list of unique execution identifier associated with the startRunId
-     - Generate a text report for a set of execution metadata objects related to the startRunId. The generated report includes three sections: details, used, and generated. 	  
+     - Generate a text report for a set of execution metadata objects related to the startRunId. The generated report includes three sections: details, used, and generated. 
+   * - `graphRuns()`_
+     - startRunId, direction, render
+     - A provenance visulization graph at different levels such as prospective, retrospective, and hybrid
+     - Render a provannce graph for multiple runs	  
    * - `publishRuns()`_
      - List<runId>
      - A boolean value indicating published or not
@@ -114,11 +118,7 @@ Run Manager API
    * - `downstream()`_
      - startRunId, traversalLevel, startDate, endDate
      - A list of metadata Ids associated with a specific startRunId
-     - Query the provenance database to find a set of downstream execution metadata that are related to a specific startRunId
-   * - `plotWorkflow()`_
-     - startRunId, render
-     - A provenance visulization graph at different levels such as prospective, retrospective, and hybrid
-     - Render a provannce graph for multiple runs	 
+     - Query the provenance database to find a set of downstream execution metadata that are related to a specific startRunId	 
    * - `compareMultiRun()`_
      - script, List<runId>
      - A provenance visulization graph for prospective, retrospective, and hybrid provenance (multi-run)
